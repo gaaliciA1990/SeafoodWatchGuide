@@ -1,5 +1,5 @@
-﻿using ContosoCrafts.WebSite.Models;
-using ContosoCrafts.WebSite.Services;
+﻿
+
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
@@ -12,10 +12,9 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class AboutModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<PrivacyModel> _logger;
 
-        public AboutModel(ILogger<IndexModel> logger,
-            JsonFileProductService productService)
+        public AboutModel(ILogger<PrivacyModel> logger)
         {
             _logger = logger;
             ProductService = productService;

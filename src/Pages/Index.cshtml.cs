@@ -10,6 +10,8 @@ namespace ContosoCrafts.WebSite.Pages
     /// <summary>
     /// Zhuojing Xie
     /// Alicia Garcia
+    /// Carlo Provenzani
+    /// Avery Dinh
     /// </summary>
     public class IndexModel : PageModel
     {
