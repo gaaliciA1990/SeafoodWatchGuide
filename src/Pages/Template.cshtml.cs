@@ -8,17 +8,13 @@ namespace ContosoCrafts.WebSite.Pages
 {
 
     /// <summary>
-    /// Zhuojing Xie
-    /// Alicia Garcia
-    /// Carlo Provenzani
-    /// Avery Dinh
+    /// Template for page creation
     /// </summary>
-    public class IndexModel : PageModel
+    public class TemplateModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger,
-            JsonFileProductService productService)
+        public TemplateModel(ILogger<IndexModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
             ProductService = productService;
