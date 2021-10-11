@@ -5,6 +5,7 @@
     ViewData["Title"] = "Home page";
 }
 
+<!-- This section sets defaults we can call to format our added buttons, images or containers -->
 <head>
     <style type="text/css">
         html, body {
@@ -15,11 +16,23 @@
             position: absolute;
             box-sizing: border-box;
             padding: 20px;
-            border-radius: 25px;
+            border-radius: 15px;
             margin: auto;
             background: rgba(255, 255, 255, 0.85);
             top: 35%;
-            width: 25%;
+            width: 40%;
+            right: 0;
+            left: 0;
+        }
+        div#subnav-wrapper {
+            position: absolute;
+            box-sizing: border-box;
+            padding: 20px;
+            border-radius: 5px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.85);
+            top: 75px;
+            width: 100%;
             right: 0;
             left: 0;
         }
@@ -31,23 +44,35 @@
     </style>
 </head>
 
+<!---This is the information section for users to learn more about the guides-->
+<div class="row">
+    <div id="subnav-wrapper" style="text-align:center; vertical-align:middle">
+        <div class="btn-group">
+            <button type="button" aria-haspopup="true" aria-expanded="false">How to use the guide</button>
+            <button type="button" aria-haspopup="true" aria-expanded="false">Take Action</button>
+            <button type="button" aria-haspopup="true" aria-expanded="false">Resources</button>
+        </div>
+    </div>
+</div>
 
-
+<!---This is the region select dropdown for navigating to the correct guide-->
 <div id="form-wrapper" style="text-align:center; vertical-align:middle">
+    <h2>Which guide would you like to view?</h2> <!---TODO: Add style to the test and center into one line-->
     <div class="btn-group">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Select Region
         </button>
         <div class="dropdown-menu dropdown-menu-right">
-            <button class="dropdown-item" type="button">West</button>
+            <button class="dropdown-item" type="button">West Coast</button>
             <button class="dropdown-item" type="button">Southwest</button>
-            <button class="dropdown-item" type="button">Midwest</button>
+            <button class="dropdown-item" type="button">Central</button>
             <button class="dropdown-item" type="button">Southeast</button>
             <button class="dropdown-item" type="button">Northeast</button>
+            <button class="dropdown-item" type="button">Hawai'i</button>
+            <button class="dropdown-item" type="button">National</button>
         </div>
     </div>
 </div>
-
 
 
 <script src="_framework/blazor.server.js"></script>
