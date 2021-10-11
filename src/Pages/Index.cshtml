@@ -5,4 +5,59 @@
     ViewData["Title"] = "Home page";
 }
 
+<head>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        div#form-wrapper {
+            position: absolute;
+            box-sizing: border-box;
+            padding: 20px;
+            border-radius: 25px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.85);
+            top: 35%;
+            width: 25%;
+            right: 0;
+            left: 0;
+        }
+        body {
+            background-image: url('imgs/underwater.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+
+
+<div id="form-wrapper" style="text-align:center; vertical-align:middle">
+    <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select Region
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+            <button class="dropdown-item" type="button">West</button>
+            <button class="dropdown-item" type="button">Southwest</button>
+            <button class="dropdown-item" type="button">Midwest</button>
+            <button class="dropdown-item" type="button">Southeast</button>
+            <button class="dropdown-item" type="button">Northeast</button>
+        </div>
+    </div>
+</div>
+
+
+
 <script src="_framework/blazor.server.js"></script>
+
+
+
+
+
+
+
+
+
+
