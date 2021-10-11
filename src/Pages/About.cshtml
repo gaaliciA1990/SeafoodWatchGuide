@@ -1,8 +1,8 @@
 ﻿@page
 @using ContosoCrafts.WebSite.Components
-@model IndexModel
+@model AboutModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "About page";
 }
 
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))

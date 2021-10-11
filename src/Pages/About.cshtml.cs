@@ -8,14 +8,13 @@ namespace ContosoCrafts.WebSite.Pages
 {
 
     /// <summary>
-    /// Zhuojing Xie
-    /// Alicia Garcia
+    /// Page place holder for base code from index page
     /// </summary>
-    public class IndexModel : PageModel
+    public class AboutModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger,
+        public AboutModel(ILogger<IndexModel> logger,
             JsonFileProductService productService)
         {
             _logger = logger;
