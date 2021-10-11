@@ -5,7 +5,7 @@
     ViewData["Title"] = "Home page";
 }
 
-<!-- This section sets defaults we can call to format our added buttons, images or containers -->
+<!-- This section sets defaults we can call to format our added buttons, images or containers. ONLY APPLIES TO HOMEPAGE -->
 <head>
     <style type="text/css">
         html, body {
@@ -16,10 +16,10 @@
             position: absolute;
             box-sizing: border-box;
             padding: 20px;
-            border-radius: 15px;
+            border-radius: 10px;
             margin: auto;
             background: rgba(255, 255, 255, 0.85);
-            top: 35%;
+            top: 50%;
             width: 40%;
             right: 0;
             left: 0;
@@ -28,10 +28,22 @@
             position: absolute;
             box-sizing: border-box;
             padding: 20px;
-            border-radius: 5px;
+            border-radius: 0px;
             margin: auto;
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(60, 60, 60, 0.75);
             top: 75px;
+            width: 100%;
+            right: 0;
+            left: 0;
+        }
+        div#text-wrapper {
+            position: absolute;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 0px;
+            margin: auto;
+            background: rgba(210, 210, 210, 0.70);
+            top: 161px;
             width: 100%;
             right: 0;
             left: 0;
@@ -48,28 +60,40 @@
 <div class="row">
     <div id="subnav-wrapper" style="text-align:center; vertical-align:middle">
         <div class="btn-group">
-            <button type="button" aria-haspopup="true" aria-expanded="false">How to use the guide</button>
-            <button type="button" aria-haspopup="true" aria-expanded="false">Take Action</button>
-            <button type="button" aria-haspopup="true" aria-expanded="false">Resources</button>
+            <button type="button" aria-haspopup="true" aria-expanded="false"><a class="nav-link text-dark" asp-area="" asp-page="/HowToGuide">How to use the guide</a></button>
+            <button type="button" aria-haspopup="true" aria-expanded="false"><a class="nav-link text-dark" asp-area="" asp-page="/TakeAction">Take Action</a></button>
+            <button type="button" aria-haspopup="true" aria-expanded="false"><a class="nav-link text-dark" asp-area="" asp-page="/Resources">Resources</a></button>
         </div>
     </div>
 </div>
 
-<!---This is the region select dropdown for navigating to the correct guide-->
+<!--Body of text to provide a brief summary of our site-->
+<div class="text-body">
+    <div id="text-wrapper" style="text-align:left; vertical-align:middle">
+        <h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </h3>
+    </div>
+</div>
+    
+
+<!---This is the region select dropdown for navigating to the correct guide. Each dropdown option will linkg to a new page-->
 <div id="form-wrapper" style="text-align:center; vertical-align:middle">
-    <h2>Which guide would you like to view?</h2> <!---TODO: Add style to the test and center into one line-->
+    <h2>Which guide would you like to view?</h2> <!---TODO: Add style to the text and center into one line-->
     <div class="btn-group">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Select Region
         </button>
         <div class="dropdown-menu dropdown-menu-right">
-            <button class="dropdown-item" type="button">West Coast</button>
-            <button class="dropdown-item" type="button">Southwest</button>
-            <button class="dropdown-item" type="button">Central</button>
-            <button class="dropdown-item" type="button">Southeast</button>
-            <button class="dropdown-item" type="button">Northeast</button>
-            <button class="dropdown-item" type="button">Hawai'i</button>
-            <button class="dropdown-item" type="button">National</button>
+            <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-area="" asp-page="/WestCoastGuide">West Coast</a></button>
+            <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-area="" asp-page="/WestCoastGuide">Southwest</a></button>
+            <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-area="" asp-page="/CentralGuide">Central</a></button>
+            <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-area="" asp-page="/SoutheastGuide">Southeast</a></button>
+            <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-area="" asp-page="/NortheastGuide">Northeast</a></button>
+            <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-area="" asp-page="/HawaiiGuide">Hawai'i</a></button>
+            <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-area="" asp-page="/NationalGuide">National</a></button>
         </div>
     </div>
 </div>
