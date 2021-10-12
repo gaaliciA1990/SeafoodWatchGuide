@@ -1,6 +1,6 @@
 ﻿#wrapper {
     width: 800px;
-    height: 250px;
+    height: 230px;
     background-color: lightskyblue;
     overflow-x: auto;
     margin-left: auto;
@@ -8,7 +8,7 @@
 }
 
 #line {
-    width: calc(150px * 4);
+    width: calc(200px * 4);
     height: 100%;
     overflow: hidden; /* or any clear-fix snippet */
 }
