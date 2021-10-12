@@ -24,6 +24,7 @@ namespace ContosoCrafts.WebSite.Pages
         public IEnumerable<ProductModel> Products { get; private set; }
 
         public void OnGet()
-        {}
+        {
+        }
     }
 }
