@@ -1,0 +1,21 @@
+﻿#wrapper {
+    width: 800px;
+    height: 250px;
+    background-color: lightskyblue;
+    overflow-x: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#line {
+    width: calc(150px * 4);
+    height: 100%;
+    overflow: hidden; /* or any clear-fix snippet */
+}
+
+.member {
+    float: left;
+    width: 200px;
+    height: 100%;
+    background-color: white;
+}
