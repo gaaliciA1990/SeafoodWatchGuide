@@ -11,6 +11,8 @@ namespace ContosoCrafts.WebSite.Pages
     /// Home page for Seafood Watch Guide from GladiatorMonkys 
     /// group in Fundamentals of Software Engineering, CPSC 5110
     /// </summary>
+    /// Adding comment for Alicia Garcia that will be synced
+
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
