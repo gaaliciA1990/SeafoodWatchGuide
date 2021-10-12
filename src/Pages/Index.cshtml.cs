@@ -12,6 +12,7 @@ namespace ContosoCrafts.WebSite.Pages
     /// group in Fundamentals of Software Engineering, CPSC 5110
     /// </summary>
     /// Adding comment for Alicia Garcia that will be synced
+    /// Adding Avery's comment
 
     public class IndexModel : PageModel
     {
