@@ -25,7 +25,6 @@ namespace ContosoCrafts.WebSite.Pages
 
         public void OnGet()
         {
-            Products = ProductService.GetProducts();
         }
     }
 }
