@@ -9,14 +9,13 @@ namespace ContosoCrafts.WebSite.Models
     public class ProductModel
     {
         public string Id { get; set; }
-        public string Maker { get; set; }
-        
+        public string Region { get; set; }
+
         [JsonPropertyName("img")]
         public string Image { get; set; }
-        public string Url { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public int[] Ratings { get; set; }
+        public int Rating { get; set; }
 
         /*
          * The is a toString method that will convert this class (the model) to a string version.
