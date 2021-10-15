@@ -2,17 +2,57 @@
   {
     "Id": "Arctic_Char",
     "Region": "West Coast",
-    "img": "data/Fish_img/Arctic_Char.jpg",
+    "img": "data/Fish_img/Arctic_Char.bmp",
     "Title": "Arctic Char (farmed) ",
-    "Description": " Arctic char is also a 'Best Choice'' when farmed in indoor recirculating tanks with wastewater treatment and a 'Good Alternative' when the wastewater isn't treated. .",
-    "Status": "GOOD ALTERNATIVES"
+    "Description": "Arctic char caught in Canada's Cambridge Bay (Nunavut Territory) with set gillnets is a 'Best Choice.' The stock is considered healthy, and the fishery is managed well. In addition, overall bycatch and habitat impacts are believed to be low because specific measures are in place to minimize these impacts. Local Inuit community members are the only participants in this fishery. This recommendation covers Arctic char caught in the Ekalluktok, Halokvik, Paliryuak and Jayko Rivers.",
+    "Rating": 3
   },
   {
     "Id": "Bass",
     "Region": "West Coast",
-    "img": "data/Fish_img/Bass.jpg",
+    "img": "data/Fish_img/Bass.bmp",
     "Title": "Bass (US farmed) ",
-    "Description": "Use craft items you have around the house, plus two LEDs and a LilyPad battery holder, to create a useful book light for reading in the dark.",
-    "Status": "GOOD ALTERNATIVES"
+    "Description": "Striped bass farmed worldwide in indoor recirculating tanks with wastewater treatment is a Best Choice. Seafood Watch's analysis concludes that producers that use dry pellet feed will, on average, likely have a yellow feed score. Indoor recirculating systems tend to have low chemical use. However, most producers can release up to 10 percent of daily water flow without treatment, and that water may contain chemicals or their byproducts. Similarly, it's unlikely the water that's discharged daily has been disinfected against disease. However, there's a low risk of disease transmission to wild species when fish are farmed in indoor recirculating tanks because it's not common for disease outbreaks to occur.",
+    "Rating": 3
+  },
+  {
+    "Id": "Clams ",
+    "Region": "West Coast",
+    "img": "data/Fish_img/Clams.bmp",
+    "Title": "Clams (US & Canada wild) ",
+    "Description": "Clams farmed worldwide using bottom culture methods are a Best Choice. Shellfish aquaculture is considered a highly sustainable practice because the overall environmental impacts of farming plankton-filtering species are minimal. ",
+    "Rating": 2
+  },
+  {
+    "Id": "Crab",
+    "Region": "West Coast",
+    "img": "data/Fish_img/Crab.bmp",
+    "Title": "Crab: Southern King (Argentina)",
+    "Description": "Blue crab caught in Maryland's Chesapeake Bay waters with trotlines is a Best Choice. The stock is healthy, and overfishing is a low concern. The trotline fishery doesn't catch any other species, and management is rated highly effective. There are no major concerns about seafloor impacts, but ecosystem-based management measures haven't been implemented.",
+    "Rating": 3
+  },
+  {
+    "Id": "Cod",
+    "Region": "West Coast",
+    "img": "data/Fish_img/Cod.bmp",
+    "Title": "Cod: Pacific (Canada & US)",
+    "Description": "Atlantic cod farmed worldwide in indoor recirculating tanks with wastewater treatment is a Best Choice. Seafood Watch's analysis concludes that producers that use dry pellet feed will, on average, likely have a yellow feed score. Indoor recirculating systems tend to have low chemical use. However, most producers can release up to 10 percent of daily water flow without treatment, and that water may contain chemicals or their byproducts. Similarly, it's unlikely the water that's discharged daily has been disinfected against disease. However, there's a low risk of disease transmission to wild species when fish are farmed in indoor recirculating tanks because it's not common for disease outbreaks to occur.",
+    "Rating": 3
+  },
+  {
+    "Id": "Basa_Pangasius_Swai",
+    "Region": "West Coast",
+    "img": "data/Fish_img/Basa_Pangasius_Swai.bmp",
+    "Title": "Basa/Pangasius/Swai ",
+    "Description": "Seafood Watch recommends you purchase seafood from Global Aquaculture Alliance BAP Certified (GAA) certified catfish and shellfish farms. Seafood Watch conducted an eco-certification benchmarking study to identify which standards are consistent with our sustainability criteria. We identified the GAA standard as equivalent to at least our yellow 'Good Alternative' recommendation.",
+    "Rating": 1
+  },
+  {
+    "Id": "Bass_Striped",
+    "Region": "West Coast",
+    "img": "data/Fish_img/Bass_Striped.bmp",
+    "Title": "Bass: Striped (US gillnet, pound net) ",
+    "Description": "Black seabass farmed worldwide in indoor recirculating tanks with wastewater treatment is a Best Choice. Seafood Watch's analysis concludes that producers that use dry pellet feed will, on average, likely have a yellow feed score. Indoor recirculating systems tend to have low chemical use. However, most producers can release up to 10 percent of daily water flow without treatment, and that water may contain chemicals or their byproducts. Similarly, it's unlikely the water that's discharged daily has been disinfected against disease. However, there's a low risk of disease transmission to wild species when fish are farmed in indoor recirculating tanks because it's not common for disease outbreaks to occur.",
+    "Rating": 1
   }
 ]
