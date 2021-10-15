@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "Arctic_Char",
+    "Region": "West Coast",
+    "img": "data/Fish_img/Arctic_Char.jpg",
+    "Title": "Arctic Char (farmed) ",
+    "Description": " Arctic char is also a 'Best Choice'' when farmed in indoor recirculating tanks with wastewater treatment and a 'Good Alternative' when the wastewater isn't treated. .",
+    "Status": "GOOD ALTERNATIVES"
+  },
+  {
+    "Id": "Bass",
+    "Region": "West Coast",
+    "img": "data/Fish_img/Bass.jpg",
+    "Title": "Bass (US farmed) ",
+    "Description": "Use craft items you have around the house, plus two LEDs and a LilyPad battery holder, to create a useful book light for reading in the dark.",
+    "Status": "GOOD ALTERNATIVES"
+  }
+]
