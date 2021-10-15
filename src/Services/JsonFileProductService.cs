@@ -11,18 +11,32 @@ namespace ContosoCrafts.WebSite.Services
 {
    public class JsonFileProductService
     {
+        /*
+         * Constructor method for the web host environment
+         */
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
 
+        /*
+         * A getter method for the webhost
+         */
         public IWebHostEnvironment WebHostEnvironment { get; }
 
+        /*
+         * This simplified the file path for the JSON file so it can be inferred instead
+         * of being hardcoded. Makes tracking data easier
+         */
         private string JsonFileName
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
         }
 
+        /*
+         * This is creating a list of product Models.
+         * IEnumerable is a list type
+         */
         public IEnumerable<ProductModel> GetProducts()
         {
             using(var jsonFileReader = File.OpenText(JsonFileName))
@@ -35,6 +49,9 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
+        /*
+         * This method is appending the ratings to the JSON file. 
+         */
         public void AddRating(string productId, int rating)
         {
             var products = GetProducts();

@@ -1,0 +1,24 @@
+﻿@page
+@using ContosoCrafts.WebSite.Components
+@model TemplateModel
+@{
+    ViewData["Title"] = "Admin";
+}
+
+<!--
+    This button is a placeholder and is referencing the SubmitRating code. Blocked by ProductModel.cs and ProductList.razor
+    work to enable the create new seafood. 
+-->
+<button type="button" aria-haspopup="true" aria-expanded="false" @onclick="(e => SubmitRating(currentStar))>+ Create</a></button>
+
+<!--  
+Commenting out the Product rendered list as we will need to update this to display differently and 
+enable the Admin to update and delete individual items.
+The at sign was removed, needs to be added to render the cards
+
+(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
+
+-->
+
+
+<script src="_framework/blazor.server.js"></script>
