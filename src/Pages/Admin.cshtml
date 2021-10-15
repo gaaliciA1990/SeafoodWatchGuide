@@ -1,19 +1,25 @@
 ﻿@page
 @using ContosoCrafts.WebSite.Components
-@model TemplateModel
+@model AdminModel
 @{
     ViewData["Title"] = "Admin";
 }
-
+<div class="text-body">
+    <div style="text-align:center; vertical-align:middle">
+        <h1>Welcome to the Admin Page!</h1>
+    </div>
+    <div style="text-align:left; vertical-align:middle">
+        <h3>Admins can manage the Seafood lists here. New records can be added, records can be updated or deleted<br /></h3>
+    </div>
+</div>
 <!--
-    This button is a placeholder and is referencing the SubmitRating code. Blocked by ProductModel.cs and ProductList.razor
-    work to enable the create new seafood. 
+    The Create button for adding a new record of Seafood
     TODO: Need to add onclick to button so we can open the text editor
 -->
-<button type="button" aria-haspopup="true" aria-expanded="false">+ Create</button>
+<button type="button" aria-haspopup="true" aria-expanded="false">+Add</button>
 
-<!--  
-Commenting out the Product rendered list as we will need to update this to display differently and 
+<!--
+Commenting out the Product rendered list as we will need to update this to display differently and
 enable the Admin to update and delete individual items.
 The at sign was removed, needs to be added to render the cards
 
@@ -21,5 +27,40 @@ The at sign was removed, needs to be added to render the cards
 
 -->
 
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Region</th>
+        <th>Title</th>
+        <th>Decription</th>
+        <th>Rating</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model.Products)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
 
 <script src="_framework/blazor.server.js"></script>

@@ -1,9 +1,11 @@
-using ContosoCrafts.WebSite.Services;
+﻿using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using ContosoCrafts.WebSite.Data;
 
 namespace ContosoCrafts.WebSite
 {
@@ -25,6 +27,9 @@ namespace ContosoCrafts.WebSite
             services.AddControllers();
             services.AddTransient<JsonFileProductService>();
             services.AddRazorPages().AddRazorRuntimeCompilation();
+
+            services.AddDbContext<ContosoCraftsWebSiteContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("ContosoCraftsWebSiteContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

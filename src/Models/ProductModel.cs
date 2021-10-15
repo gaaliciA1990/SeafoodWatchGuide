@@ -21,8 +21,6 @@ namespace ContosoCrafts.WebSite.Models
          * The is a toString method that will convert this class (the model) to a string version.
          * This is using the JSON mechanism for serializing the model data to a string
          */
-        public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
-
- 
+        public override string ToString() => JsonSerializer.Serialize<ProductModel>(this); 
     }
 }
