@@ -30,7 +30,7 @@ namespace ContosoCrafts.WebSite.Controllers
          */
         public IEnumerable<ProductModel> Get()
         {
-            return ProductService.GetProducts();
+            return ProductService.GetAllData();
         }
 
         [HttpPatch]
@@ -40,7 +40,7 @@ namespace ContosoCrafts.WebSite.Controllers
          */
         public ActionResult Patch([FromBody] RatingRequest request)
         {
-            ProductService.AddRating(request.ProductId, request.Rating);
+            //ProductService.AddRating(request.ProductId, request.Rating);
             
             return Ok();
         }
