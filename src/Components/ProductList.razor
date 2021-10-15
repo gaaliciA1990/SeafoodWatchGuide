@@ -82,9 +82,7 @@
     ProductModel selectedProduct;
     string selectedProductId;
 
-    <!--
-        This code selects a product to display with a click and gets the ratings for that given product    
-    -->
+    // This code selects a product to display with a click and gets the ratings for that given product    
     void SelectProduct(string productId)
     {
         selectedProductId = productId;
@@ -96,10 +94,8 @@
     int voteCount = 0;
     string voteLabel;
 
-    <!-- 
-        This section of code will aggregate the total ratings to be registered for each product and 
-        take the average. The Ratings are also displayed
-    -->
+    // This section of code will aggregate the total ratings to be registered for each product and
+    // take the average. The Ratings are also displayed
 
     void GetCurrentRating()
     {
@@ -118,7 +114,7 @@
         System.Console.WriteLine($"Current rating for {selectedProduct.Id}: {currentRating}");
     }
 
-    <!-- This section of code enables a rating to be registered with each click-->
+    // This section of code enables a rating to be registered with each click
 
     void SubmitRating(int rating)
     {
