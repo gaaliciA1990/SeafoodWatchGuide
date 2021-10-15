@@ -6,27 +6,82 @@
     individual cards. This can be updated to work with new data and rearranged if needed,
     but this data can also be bucketed into contained within a page.
     -->
-
+<h2 class="red-text" style="color: green;"> >BEST CHOICES </h2>
 <div class="card-columns">
     @foreach (var product in ProductService.GetAllData())
     {
-        <div class="card">
-            <div class="card-img" style="background-image: url('@product.Image');">
+        if (product.Rating == 3)
+        {
+            <div class="card">
+                <div class="card-img" style="background-image: url('@product.Image');">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@product.Title</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <button @onclick="(e => SelectProduct(product.Id))"
+                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                            More Info
+                        </button>
+                    </small>
+                </div>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">@product.Title</h5>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">
-                    <button @onclick="(e => SelectProduct(product.Id))"
-                            data-toggle="modal" data-target="#productModal" class="btn btn-primary">
-                        More Info
-                    </button>
-                </small>
-            </div>
-        </div>
+        }
     }
 </div>
+
+<h2 class="red-text" style="color: yellow;"> >GOOD ALTERNATIVES </h2>
+<div class="card-columns">
+    @foreach (var product in ProductService.GetAllData())
+    {
+        if (product.Rating == 2)
+        {
+            <div class="card">
+                <div class="card-img" style="background-image: url('@product.Image');">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@product.Title</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <button @onclick="(e => SelectProduct(product.Id))"
+                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                            More Info
+                        </button>
+                    </small>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+
+<h2 class="red-text" style="color: red;"> >AVOID </h2>
+<div class="card-columns">
+    @foreach (var product in ProductService.GetAllData())
+    {
+        if (product.Rating == 1)
+        {
+            <div class="card">
+                <div class="card-img" style="background-image: url('@product.Image');">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@product.Title</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <button @onclick="(e => SelectProduct(product.Id))"
+                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                            More Info
+                        </button>
+                    </small>
+                </div>
+            </div>
+        }
+    }
+</div>
+
 
 @if (selectedProduct != null)
 {
@@ -74,7 +129,7 @@
     ProductModel selectedProduct;
     string selectedProductId;
 
-    // This code selects a product to display with a click and gets the ratings for that given product    
+    // This code selects a product to display with a click and gets the ratings for that given product
     void SelectProduct(string productId)
     {
         selectedProductId = productId;
