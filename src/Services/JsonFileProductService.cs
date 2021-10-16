@@ -85,6 +85,26 @@ namespace ContosoCrafts.WebSite.Services
 
             File.WriteAllText(JsonFileName, jsonString);
         }
+
+        public void DeleteCard(string Id)
+        {
+
+            var products = GetAllData();
+            // LINQ
+            var query = products.Where(x => (x.Id != Id));
+
+            System.Diagnostics.Debug.WriteLine(query.Count());
+
+
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+            var jsonString = JsonSerializer.Serialize(query, options);
+
+            File.WriteAllText(JsonFileName, jsonString);
+        }
+
     }
 
 }

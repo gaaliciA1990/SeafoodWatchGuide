@@ -3,6 +3,8 @@ using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace ContosoCrafts.WebSite.Pages
 {
@@ -26,6 +28,13 @@ namespace ContosoCrafts.WebSite.Pages
         public void OnGet()
         {
             Products = ProductService.GetAllData();
+        }
+
+        public IActionResult OnGetDelete(string Id)
+        {
+            ProductService.DeleteCard(Id);
+            return Redirect("~/Admin");
+            //return RedirectToAction("Index", "Admin");
         }
     }
 }
