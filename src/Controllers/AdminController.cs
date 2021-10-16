@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,6 +8,15 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ContosoCrafts.WebSite.Data;
 using ContosoCrafts.WebSite.Models;
+using System.Text.Json;
+using Microsoft.AspNetCore.Hosting;
+using ContosoCrafts.WebSite.Services;
+using ContosoCrafts.WebSite.Models;
+using ContosoCrafts.WebSite.Services;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 
 // This file enables the CRUD features to be used in the ADMIN page
 
@@ -16,6 +26,7 @@ namespace ContosoCrafts.WebSite.Components
     public class AdminController : Controller
     {
         private readonly ContosoCraftsWebSiteContext _context;
+        private JsonFileProductService JsonService { get; set; }
 
         public AdminController(ContosoCraftsWebSiteContext context)
         {
@@ -152,5 +163,16 @@ namespace ContosoCrafts.WebSite.Components
         {
             return _context.ProductModel.Any(e => e.Id == id);
         }
+
+
+
+        // UPDATE
+        [HttpPost]
+        public IActionResult UpdateCardForm(Models.ProductModel frm)
+        {
+            JsonService.UpdateCard(frm);
+            return Redirect("~/WestCoastGuide");
+        }
+
     }
 }

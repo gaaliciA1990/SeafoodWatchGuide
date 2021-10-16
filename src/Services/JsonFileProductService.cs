@@ -2,9 +2,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
-
+using System.Net.Http;
 using ContosoCrafts.WebSite.Models;
-
 using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
@@ -49,6 +48,43 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
+        public IEnumerable<ProductModel> GetRegionData(string region)
+        {
+            var data = GetAllData();
+            var test = from d in data
+                       where d.Region == region
+                       select d;
+            return test;
+        }
 
+        public ProductModel? GetDataItem(string id)
+        {
+            var data = GetAllData();
+            var test = from d in data
+                       where d.Id == id
+                       select d;
+
+            return (test.Count() > 0)? test.First(): null;
+        }
+
+        public void UpdateCard(ProductModel model)
+        {
+            var products = GetAllData();
+            // LINQ
+            var query = products.First(x => (x.Id == model.Id && x.Region == model.Region));
+            query.Image = model.Image;
+            query.Rating = model.Rating;
+            query.Title = model.Title;
+            query.Description = model.Description;
+
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+            var jsonString = JsonSerializer.Serialize(products, options);
+
+            File.WriteAllText(JsonFileName, jsonString);
+        }
     }
+
 }
