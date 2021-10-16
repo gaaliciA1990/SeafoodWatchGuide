@@ -33,8 +33,12 @@ namespace ContosoCrafts.WebSite.Pages
         public IActionResult OnGetDelete(string Id)
         {
             ProductService.DeleteCard(Id);
-            return Redirect("~/Admin");
-            //return RedirectToAction("Index", "Admin");
+            return RedirectToPage("Admin");
+        }
+
+        public IActionResult OnGetUpdate(string Id)
+        {
+            return RedirectToPage("Admin/Update", new { id = Id });
         }
     }
 }
