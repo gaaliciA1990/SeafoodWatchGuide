@@ -29,12 +29,13 @@ namespace ContosoCrafts.WebSite.Pages
 
         public void OnGet(string id)
         {
-            if (id is null){
+            if (id is null)
+            {
                 error = "id not selected";
                 return;
             }
             Product = ProductService.GetDataItem(id);
-            if(Product is  null)
+            if (Product is null)
                 error = "id not found";
 
         }
@@ -42,10 +43,8 @@ namespace ContosoCrafts.WebSite.Pages
         public IActionResult OnPost()
         {
             ProductService.UpdateCard(Product);
-            return Redirect("~/WestCoastGuide");
+            // Redirect back to the admin page to continue editing if needed
+            return Redirect("~/Admin");
         }
-
-
-        
     }
 }

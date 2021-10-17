@@ -16,7 +16,7 @@
     The Create button for adding a new record of Seafood
     TODO: Need to add onclick to button so we can open the text editor
 -->
-<button type="button" aria-haspopup="true" aria-expanded="false">+Add</button>
+<button type="button" aria-haspopup="true" aria-expanded="false"><a class="nav-link text-dark" asp-area="" asp-page="Admin/Create">+Create</a></button>
 
 <!--
 Commenting out the Product rendered list as we will need to update this to display differently and
@@ -36,7 +36,6 @@ The at sign was removed, needs to be added to render the cards
         <th>Rating</th>
         <th>Actions</th>
     </tr>
-
     @foreach (var item in Model.Products)
     {
         <tr>
@@ -57,7 +56,7 @@ The at sign was removed, needs to be added to render the cards
             </td>
             <td>
                 <a onclick="return confirm('Do you want to delete this card?');" asp-page-handler="Delete" asp-route-id="@(item.Id)">Delete</a> |
-                <a  asp-page-handler="Update" asp-route-id="@(item.Id)">Update</a>
+                <a asp-page-handler="Update" asp-route-id="@(item.Id)">Update</a>
                 <!--Html.ActionLink("Edit", "Edit", new { id = item.Id }) |-->
                 <!--Html.ActionLink("Delete", "Delete", new { id = item.Id })-->
             </td>

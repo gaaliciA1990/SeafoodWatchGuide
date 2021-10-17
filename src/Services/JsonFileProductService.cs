@@ -66,7 +66,24 @@ namespace ContosoCrafts.WebSite.Services
 
             return (test.Count() > 0)? test.First(): null;
         }
+        /*
+         * This method will pull all of the Seafood products and appeand the data entered in the form
+         * to the JSON file and serialize the data
+         */
+        public void CreateCard(ProductModel model)
+        {
+            var products = GetAllData();
 
+            products = products.Append(model);
+
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+            var jsonString = JsonSerializer.Serialize(products, options);
+
+            File.WriteAllText(JsonFileName, jsonString);
+        }
         public void UpdateCard(ProductModel model)
         {
             var products = GetAllData();
