@@ -55,7 +55,7 @@ The at sign was removed, needs to be added to render the cards
                 @Html.DisplayFor(modelItem => item.Rating)
             </td>
             <td>
-                <a onclick="return confirm('Do you want to delete this card?');" asp-page-handler="Delete" asp-route-id="@(item.Id)">Delete</a> |
+                <a onclick='return confirm("Do you want to delete the card \"@item.Title\" ?");' asp-page-handler="Delete" asp-route-id="@(item.Id)">Delete</a> |
                 <a asp-page-handler="Update" asp-route-id="@(item.Id)">Update</a>
                 <!--Html.ActionLink("Edit", "Edit", new { id = item.Id }) |-->
                 <!--Html.ActionLink("Delete", "Delete", new { id = item.Id })-->
