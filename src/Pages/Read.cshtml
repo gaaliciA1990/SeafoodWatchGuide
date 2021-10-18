@@ -1,0 +1,48 @@
+﻿
+@page
+@using ContosoCrafts.WebSite.Components
+@model ReadModel
+@{
+    ViewData["Title"] = "Item";
+}
+
+<h1>Item Details</h1>
+
+
+
+@if (Model.error != null)
+{
+    <h2>@Model.error</h2>
+}
+else
+{
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            <label>ID</label>
+            <input class="form-control" type="text" asp-for="Product.Id" readonly>
+        </div>
+        <div class="form-group">
+            <label>Region</label>
+            <input class="form-control" type="text" asp-for="Product.Region" readonly>
+        </div>
+        <div class="form-group">
+            <label>Image</label>
+            <input class="form-control" type="text" asp-for="Product.Image" readonly>
+        </div>
+        <div class="form-group">
+            <label>Title</label>
+            <input class="form-control" type="text" asp-for="Product.Title" readonly>
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <textarea class="form-control" asp-for="Product.Description" readonly></textarea>
+        </div>
+        <div class="form-group">
+            <label>Rating</label>
+            <input class="form-control" type="text" asp-for="Product.Rating" readonly>
+        </div>
+        <a onclick='return confirm("Do you want to delete the card?");' asp-page-handler="Delete" asp-route-id="Product.Id">Delete</a> 
+        <a asp-page-handler= "Update"> Update </a>
+}
+}
