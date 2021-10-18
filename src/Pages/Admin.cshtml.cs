@@ -47,5 +47,10 @@ namespace ContosoCrafts.WebSite.Pages
         {
             return RedirectToPage("Admin/Update", new { id = Id });
         }
+
+        public IActionResult OnGetRead(string Id)
+        {
+            return RedirectToPage("Read", new { id = Id });
+        }
     }
 }
