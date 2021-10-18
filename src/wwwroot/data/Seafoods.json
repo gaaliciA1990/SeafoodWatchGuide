@@ -1,13 +1,5 @@
 [
   {
-    "Id": "Arctic_Char",
-    "Region": "West Coast",
-    "img": "data/Fish_img/Arctic_Char.bmp",
-    "Title": "Arctic Char (farmed) ",
-    "Description": "Arctic char caught in Canada\u0027s Cambridge Bay (Nunavut Territory) with set gillnets is a \u0027Best Choice.\u0027 The stock is considered healthy, and the fishery is managed well. In addition, overall bycatch and habitat impacts are believed to be low because specific measures are in place to minimize these impacts. Local Inuit community members are the only participants in this fishery. This recommendation covers Arctic char caught in the Ekalluktok, Halokvik, Paliryuak and Jayko Rivers.",
-    "Rating": 3
-  },
-  {
     "Id": "Bass",
     "Region": "West Coast",
     "img": "data/Fish_img/Bass.bmp",

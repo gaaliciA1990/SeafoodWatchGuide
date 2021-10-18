@@ -40,19 +40,15 @@ namespace ContosoCrafts.WebSite.Pages
             if (Product is null)
                 error = "id not found";
         }
-        /*
-         * 
-         */
-
         public IActionResult OnGetDelete(string Id)
         {
             ProductService.DeleteCard(Id);
-            return RedirectToPage("Admin");
+            return RedirectToPage("Delete", new { id = Id });
         }
 
-        public IActionResult OnGetUpdate()
+        public IActionResult OnGetUpdate(string Id)
         {
-            return RedirectToPage("Admin/Update", new { id = Product.Id });
+            return RedirectToPage("Update", new { id = Id });
         }
     }
 }

@@ -29,28 +29,5 @@ namespace ContosoCrafts.WebSite.Pages
         {
             Products = ProductService.GetAllData();
         }
-        /*
-         * 
-         */
-        public IActionResult OnGetCreate()
-        {
-            return RedirectToPage("Admin/Create");
-        }
-
-        public IActionResult OnGetDelete(string Id)
-        {
-            ProductService.DeleteCard(Id);
-            return RedirectToPage("Admin");
-        }
-
-        public IActionResult OnGetUpdate(string Id)
-        {
-            return RedirectToPage("Admin/Update", new { id = Id });
-        }
-
-        public IActionResult OnGetRead(string Id)
-        {
-            return RedirectToPage("Read", new { id = Id });
-        }
     }
 }

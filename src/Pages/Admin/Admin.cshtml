@@ -19,7 +19,7 @@ can be edited with CRUD implementation
 <!--
     The Create button for adding a new record of Seafood
 -->
-<button type="button" aria-haspopup="true" aria-expanded="false"><a class="nav-link text-dark" asp-area="" asp-page="Admin/Create">+Create</a></button>
+<a class="btn btn-primary" asp-area="" asp-page="Admin/Create">+Create</a>
 
 <!--
 Commenting out the Product rendered list as we will need to update this to display differently and
@@ -58,9 +58,7 @@ The at sign was removed, needs to be added to render the cards
                 @Html.DisplayFor(modelItem => item.Rating)
             </td>
             <td>
-                <a asp-page="Read" asp-route-id="@(item.Id)">Edit</a>
-                <!--Html.ActionLink("Edit", "Edit", new { id = item.Id }) |-->
-                <!--Html.ActionLink("Delete", "Delete", new { id = item.Id })-->
+                <a class="btn btn-primary" asp-page="Read" asp-route-id="@(item.Id)">Edit</a>
             </td>
         </tr>
     }
