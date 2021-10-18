@@ -29,5 +29,9 @@ namespace ContosoCrafts.WebSite.Pages
         {
             Products = ProductService.GetAllData();
         }
+        public IActionResult OnGetCreate()
+        {
+            return RedirectToPage("Create");
+        }
     }
 }
