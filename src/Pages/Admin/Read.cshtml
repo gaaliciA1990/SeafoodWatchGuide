@@ -6,9 +6,11 @@
     ViewData["Title"] = "Item";
 }
 
+<!--
+    This is the read page to view the details of a selected record from the Admin page. Here the user will find an Update and Delete button
+-->
+
 <h1>Item Details</h1>
-
-
 
 @if (Model.error != null)
 {
@@ -42,7 +44,9 @@ else
             <label>Rating</label>
             <input class="form-control" type="text" asp-for="Product.Rating" readonly>
         </div>
-        <a onclick='return confirm("Do you want to delete the card?");' asp-page-handler="Delete" asp-route-id="Product.Id">Delete</a> 
-        <a asp-page-handler= "Update"> Update </a>
-}
+        <!-- User will be redirected to the Delete page to make confirm the delete action-->
+        <a onclick='return confirm("Do you want to delete the card?");' asp-page-handler="Admin/Delete" asp-route-id="Product.Id">Delete</a>
+        <!-- User will be redirected to the Update page to make their edits and Save-->
+        <a asp-page-handler="Admin/Update"> Update </a>
+    }
 }
