@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using ContosoCrafts.WebSite.Models;
+﻿using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ContosoCrafts.WebSite.Pages
 {
@@ -12,21 +11,21 @@ namespace ContosoCrafts.WebSite.Pages
     /// <summary>
     /// Template for page creation
     /// </summary>
-    public class ReadModel : PageModel
+    public class DeleteModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
 
-        public ReadModel(ILogger<IndexModel> logger, JsonFileProductService productService)
+        public DeleteModel(ILogger<IndexModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
             ProductService = productService;
         }
 
         public JsonFileProductService ProductService { get; }
+        [BindProperty]
         public ProductModel Product { get; set; }
 
         public string error = null;
-        public string myID = null;
 
         public void OnGet(string id)
         {
@@ -36,18 +35,20 @@ namespace ContosoCrafts.WebSite.Pages
                 return;
             }
             Product = ProductService.GetDataItem(id);
-
             if (Product is null)
                 error = "id not found";
-        }
-        public IActionResult OnGetDelete(string Id)
-        {
-            return RedirectToPage("Delete", new { id = Id });
+
         }
 
-        public IActionResult OnGetUpdate(string Id)
+        public IActionResult OnPost()
         {
-            return RedirectToPage("Update", new { id = Id });
+            //delete card
+            ProductService.DeleteCard(Product.Id);
+            // Redirect back to the admin page to continue editing if needed
+            return Redirect("Admin");
         }
+
+
+
     }
 }
