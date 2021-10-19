@@ -33,5 +33,7 @@ namespace ContosoCrafts.WebSite.Pages
         {
             return RedirectToPage("Create");
         }
+
+
     }
 }

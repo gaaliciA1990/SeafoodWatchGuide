@@ -48,7 +48,7 @@ namespace ContosoCrafts.WebSite.Pages
         public IActionResult OnPost()
         {
             ProductService.CreateCard(Product);
-            return Redirect("~/Admin");
+            return Redirect("Admin");
         }
     }
 }
