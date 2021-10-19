@@ -1,21 +1,38 @@
 ﻿#wrapper {
-    width: 800px;
-    height: 230px;
-    background-color: lightskyblue;
+    width: 500px;
+    height: 500px;
+    background-color: white;
     overflow-x: auto;
     margin-left: auto;
     margin-right: auto;
 }
 
-#line {
-    width: calc(200px * 4);
-    height: 100%;
+#line1 {
+    width: 500px;
+    height: 250px;
     overflow: hidden; /* or any clear-fix snippet */
+    background-color: white;
 }
 
 .member {
     float: left;
-    width: 200px;
+    width: 230px;
     height: 100%;
     background-color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+#line2 {
+    width: 500px;
+    height: 250px;
+    overflow: hidden; /* or any clear-fix snippet */
+    background-color: white;
+}
+
+.name {
+    float: left;
+    width: 500px;
+    overflow: hidden; /* or any clear-fix snippet */
 }
