@@ -1,6 +1,7 @@
 @using ContosoCrafts.WebSite.Models
 @using ContosoCrafts.WebSite.Services
 @using Microsoft.AspNetCore.Components.Web
+@using ContosoCrafts.WebSite.Data
 @inject JsonFileProductService ProductService
 <!-- This section of HTML is the formatting for how the products are displayed in their
     individual cards. This can be updated to work with new data and rearranged if needed,
@@ -10,7 +11,7 @@
 <div class="card-columns">
     @foreach (var product in ProductService.GetAllData())
     {
-        if (product.Rating == 3)
+        if (product.Rating == Product_Rating.AVOID)
         {
             <div class="card">
                 <div class="card-img" style="background-image: url('@product.Image');">
@@ -35,7 +36,7 @@
 <div class="card-columns">
     @foreach (var product in ProductService.GetAllData())
     {
-        if (product.Rating == 2)
+        if (product.Rating == Product_Rating.GOOD_ALTERNATIVE)
         {
             <div class="card">
                 <div class="card-img" style="background-image: url('@product.Image');">
@@ -61,7 +62,7 @@
 <div class="card-columns">
     @foreach (var product in ProductService.GetAllData())
     {
-        if (product.Rating == 1)
+        if (product.Rating == Product_Rating.BEST_CHOICE)
         {
             <div class="card">
                 <div class="card-img" style="background-image: url('@product.Image');">
@@ -104,11 +105,11 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    @if (selectedProduct.Rating == 3)
+                    @if (selectedProduct.Rating == Product_Rating.AVOID)
                     {
                         <div class="card-footer bg-success text-white">BEST CHOICES </div>
                     }
-                    else if (selectedProduct.Rating == 2)
+                    else if (selectedProduct.Rating == Product_Rating.GOOD_ALTERNATIVE)
                     {
                         <div class="card-footer bg-warning text-white">GOOD ALTERNATIVES </div>
                     }
