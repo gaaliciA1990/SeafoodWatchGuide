@@ -1,5 +1,6 @@
 ﻿@page
 @using ContosoCrafts.WebSite.Components
+@using ContosoCrafts.WebSite.Models;
 @using ContosoCrafts.WebSite.Data
 @model CreateModel
 
@@ -17,27 +18,44 @@ else
 {
     @using (Html.BeginForm())
     {
-        
+
         <div class="form-group">
             <label>ID</label>
 
-            <input class="form-control" type="text" asp-for="Product.Id" value= "@System.Guid.NewGuid().ToString()" readonly>
+            <input class="form-control" type="text" asp-for="Product.Id" value="@System.Guid.NewGuid().ToString()" readonly>
         </div>
         <div class="form-group">
             <label>Region</label>
-            <input class="form-control" type="text" asp-for="Product.Region" value ="Default">
+            <!--<input class="form-control" type="text" asp-for="Product.Region" value ="Default"> -->
+
+            <!-- Automatically parse from already available list of regions supported-->
+            @{
+                //var temp = Model.ProductService.GetAllRegions();
+                ProductModel temp = new ProductModel();
+
+                foreach (string region in temp.Regions)
+                {
+                    <div class="form-check">
+                        <input asp-for="Product.Region" type="radio" value="@region">
+                        <label class="form-check-label">
+                            @region
+                        </label>
+                    </div>
+                }
+            }
+
         </div>
         <div class="form-group">
             <label>Image</label>
-            <input class="form-control" type="text" asp-for="Product.Image" >
+            <input class="form-control" type="text" asp-for="Product.Image">
         </div>
         <div class="form-group">
             <label>Title</label>
-            <input class="form-control" type="text" asp-for="Product.Title" value ="Enter Title">
+            <input class="form-control" type="text" asp-for="Product.Title" value="Enter Title">
         </div>
         <div class="form-group">
             <label>Description</label>
-            <input class="form-control"  type="text" asp-for="Product.Description" value ="Enter Description">
+            <input class="form-control" type="text" asp-for="Product.Description" value="Enter Description">
         </div>
 
         <div class="form-group">
