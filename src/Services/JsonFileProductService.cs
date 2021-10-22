@@ -84,23 +84,30 @@ namespace ContosoCrafts.WebSite.Services
 
             File.WriteAllText(JsonFileName, jsonString);
         }
-        public void UpdateCard(ProductModel model)
+
+        /// <summary>
+        /// Update the item from the System
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public ProductModel UpdateCard(ProductModel data)
         {
             var products = GetAllData();
-            // LINQ
-            var query = products.First(x => (x.Id == model.Id && x.Region == model.Region));
-            query.Image = model.Image;
-            query.Rating = model.Rating;
-            query.Title = model.Title;
-            query.Description = model.Description;
-
-            var options = new JsonSerializerOptions
+            var productData = products.FirstOrDefault(x => x.Id.Equals(data.Id));
+            if (productData == null)
             {
-                WriteIndented = true
-            };
-            var jsonString = JsonSerializer.Serialize(products, options);
+                return null;
+            }
 
-            File.WriteAllText(JsonFileName, jsonString);
+            productData.Title = data.Title;
+            productData.Description = data.Description;
+            productData.Image = data.Image;
+            productData.Rating = data.Rating;
+            productData.Region = data.Region;
+
+            SaveData(products);
+
+            return productData;
         }
 
         private void SaveData(IEnumerable<ProductModel> products)
