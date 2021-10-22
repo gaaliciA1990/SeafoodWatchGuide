@@ -1,5 +1,6 @@
 ﻿@page
 @using ContosoCrafts.WebSite.Components
+@using ContosoCrafts.WebSite.Data
 @model CreateModel
 
 @{
@@ -42,21 +43,21 @@ else
         <div class="form-group">
             <label asp-for="Product.Rating" class="control-label"></label>
             <div class="form-check">
-                <input asp-for="Product.Rating" type="radio" value=1 checked="checked">
+                <input asp-for="Product.Rating" type="radio" value="@Product_Rating.AVOID">
                 <label class="form-check-label" for="gridRadios1">
                     AVOID
                 </label>
             </div>
             <div class="form-check">
-                <input asp-for="Product.Rating" type="radio" value=2>
+                <input asp-for="Product.Rating" type="radio" value="@Product_Rating.GOOD_ALTERNATIVE">
                 <label class="form-check-label" for="gridRadios2">
-                    GOOD ALTERNATIVES
+                    GOOD ALTERNATIVE
                 </label>
             </div>
             <div class="form-check">
-                <input asp-for="Product.Rating" type="radio" value=3>
+                <input asp-for="Product.Rating" type="radio" value="@Product_Rating.BEST_CHOICE">
                 <label class="form-check-label" for="gridRadios3">
-                    BEST CHOICES
+                    BEST CHOICE
                 </label>
             </div>
         </div>
