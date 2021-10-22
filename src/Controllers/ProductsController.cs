@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
+using ContosoCrafts.WebSite.Data;
+
 
 namespace ContosoCrafts.WebSite.Controllers
 {
@@ -11,49 +13,53 @@ namespace ContosoCrafts.WebSite.Controllers
     [Route("[controller]")]
     public class ProductsController : ControllerBase
     {
-        /*
-         * This is a constructor for the controller 
-         */
+        /// <summary>
+        /// This is a constructor for the controller 
+        /// </summary>
+        /// <param name="productService"></param>
         public ProductsController(JsonFileProductService productService)
         {
             ProductService = productService;
         }
 
-        /*
-         * This is a getter method for ProductService
-         */
+        /// <summary>
+        /// This is a getter method for ProductService
+        /// </summary>
         public JsonFileProductService ProductService { get; }
 
+        /// <summary>
+        /// This is retrieving the product information from the JSON file
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
-        /*
-         * This is retrieving the product information from the JSON file
-         */
         public IEnumerable<ProductModel> Get()
         {
             return ProductService.GetAllData();
         }
 
         [HttpPatch]
-        /*
-         *  This code gets the rating from the user, sets the rating in the variable,
-         *  then appends the rating to the JSON file
-         */
+        /// <summary>
+        /// This code gets the rating from the user, sets the rating in the variable,
+        /// then appends the rating to the JSON file
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+
         public ActionResult Patch([FromBody] RatingRequest request)
         {
             //ProductService.AddRating(request.ProductId, request.Rating);
-            
+
             return Ok();
         }
 
-        /*
-         * This is the model for the ratings. Represents the data to be updated
-         * in the JSON file
-         */
-
+        /// <summary>
+        /// This is the model for the ENUM ratings. Represents the data to be updated
+        /// in the JSON file. Will associate a rating with a seafood product
+        /// </summary>
         public class RatingRequest
         {
             public string ProductId { get; set; }
-            public int Rating { get; set; }
+            public Product_Rating Rating { get; set; }
         }
     }
 }
