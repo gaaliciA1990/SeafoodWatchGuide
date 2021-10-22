@@ -103,6 +103,22 @@ namespace ContosoCrafts.WebSite.Services
             File.WriteAllText(JsonFileName, jsonString);
         }
 
+        private void SaveData(IEnumerable<ProductModel> products)
+        {
+
+            using (var outputStream = File.Create(JsonFileName))
+            {
+                JsonSerializer.Serialize<IEnumerable<ProductModel>>(
+                    new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                    {
+                        SkipValidation = true,
+                        Indented = true
+                    }),
+                    products
+                );
+            }
+        }
+
         public void DeleteCard(string Id)
         {
 
