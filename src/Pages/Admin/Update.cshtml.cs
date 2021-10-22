@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace ContosoCrafts.WebSite.Pages
 {
@@ -27,17 +28,14 @@ namespace ContosoCrafts.WebSite.Pages
 
         public string error = null;
 
+
+        /// <summary>
+        /// get the product details 
+        /// </summary>
+        /// <param name="id"></param>
         public void OnGet(string id)
         {
-            if (id is null)
-            {
-                error = "id not selected";
-                return;
-            }
-            Product = ProductService.GetDataItem(id);
-            if (Product is null)
-                error = "id not found";
-
+            Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
         }
 
         /// <summary>
