@@ -34,7 +34,7 @@ else
         //var temp = Model.ProductService.GetAllRegions();
         ProductModel temp = new ProductModel();
 
-        foreach (string region in temp.Regions)
+        (string region in temp.Regions)
         {
             <div class="form-check">
                 <input asp-for="Product.Region" type="radio" value="region">
