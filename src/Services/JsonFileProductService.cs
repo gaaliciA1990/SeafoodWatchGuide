@@ -76,13 +76,7 @@ namespace ContosoCrafts.WebSite.Services
 
             products = products.Append(model);
 
-            var options = new JsonSerializerOptions
-            {
-                WriteIndented = true
-            };
-            var jsonString = JsonSerializer.Serialize(products, options);
-
-            File.WriteAllText(JsonFileName, jsonString);
+            SaveData(products);
         }
 
         /// <summary>
