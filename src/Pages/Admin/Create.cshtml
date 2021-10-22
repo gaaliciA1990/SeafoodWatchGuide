@@ -27,22 +27,23 @@ else
         <div class="form-group">
             <label>Region</label>
             <!--<input class="form-control" type="text" asp-for="Product.Region" value ="Default"> -->
-
             <!-- Automatically parse from already available list of regions supported-->
-            @{
-                //var temp = Model.ProductService.GetAllRegions();
-                ProductModel temp = new ProductModel();
-
-                foreach (string region in temp.Regions)
+            
+    <!-- BUG ERROR!Comment out the region code as it is causing the page load to fail when clicking on the Create button
                 {
-                    <div class="form-check">
-                        <input asp-for="Product.Region" type="radio" value="@region">
-                        <label class="form-check-label">
-                            @region
-                        </label>
-                    </div>
-                }
-            }
+        //var temp = Model.ProductService.GetAllRegions();
+        ProductModel temp = new ProductModel();
+
+        foreach (string region in temp.Regions)
+        {
+            <div class="form-check">
+                <input asp-for="Product.Region" type="radio" value="region">
+                <label class="form-check-label">
+                    region
+                </label>
+            </div>
+        }
+    }-->
 
         </div>
         <div class="form-group">
