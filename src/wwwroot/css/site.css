@@ -146,7 +146,7 @@ ul {
 }
 
 /* Style buttons */
-.btn-admin {
+.btn-nav {
     background-color: lightblue; /* Blue background */
     border: none; /* Remove borders */
     color: black; /* White text */
@@ -157,7 +157,7 @@ ul {
 }
 
 /* Darker background on mouse-over */
-.btn-admin:hover {
+.btn-nav:hover {
     background-color: powderblue;
 }
 
