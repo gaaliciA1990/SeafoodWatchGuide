@@ -17,6 +17,17 @@ namespace ContosoCrafts.WebSite.Models
         public string Description { get; set; }
         public int Rating { get; set; }
 
+        //Place holder for all Regions currently supported (will change once we
+        //get our json files for each region up and running
+        public string[] Regions
+        {
+            get { return (string[]) Regions.Clone(); }
+            set
+            {
+                Regions = new string[7]{"West Coast", "Southwest", "Central", "Southeast",
+                                "Northeast", "Hawai'i", "National"};
+            }
+        }
         /*
          * The is a toString method that will convert this class (the model) to a string version.
          * This is using the JSON mechanism for serializing the model data to a string
