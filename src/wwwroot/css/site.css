@@ -75,6 +75,20 @@ a {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+/* Style buttons */
+.btn-nav {
+    color: #fff;
+    background-color: #add9e6; /* Blue background */
+    border-color: #5c5858; /* Adding borders */
+    color: #000000; /* Black text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 14px; /* Set a font size */
+}
+
+    /* Darker background on mouse-over */
+    .btn-nav:hover {
+        background-color: #357ec7;
+    }
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -143,22 +157,6 @@ ul {
     background: -o-linear-gradient(110deg, #f0fff0 60%, #5f9ea0 60%);
     background: -moz-linear-gradient(110deg, #f0fff0 60%, #5f9ea0 60%);
     background: linear-gradient(110deg, #f0fff0 60%, #5f9ea0 60%);
-}
-
-/* Style buttons */
-.btn-nav {
-    background-color: lightblue; /* Blue background */
-    border: none; /* Remove borders */
-    color: black; /* White text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
-    text-align: right;
-}
-
-/* Darker background on mouse-over */
-.btn-nav:hover {
-    background-color: powderblue;
 }
 
 
