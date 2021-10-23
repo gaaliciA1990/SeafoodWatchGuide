@@ -47,6 +47,13 @@ namespace ContosoCrafts.WebSite.Pages
          */
         public IActionResult OnPost()
         {
+            //Check for input validation, if not valid, return to page
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            //If valid, create the card
             ProductService.CreateCard(Product);
             return Redirect("Admin");
         }
