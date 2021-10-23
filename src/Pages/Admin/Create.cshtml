@@ -18,12 +18,14 @@ else
 {
     @using (Html.BeginForm())
     {
+        <div asp-validation-summary="All"></div>
 
         <div class="form-group">
             <label>ID</label>
 
             <input class="form-control" type="text" asp-for="Product.Id" value="@System.Guid.NewGuid().ToString()" readonly>
         </div>
+
         <div class="form-group">
             <label>Region</label>
             <!--<input class="form-control" type="text" asp-for="Product.Region" value ="Default"> -->
@@ -41,26 +43,33 @@ else
                     </div>
                 }
             }
-
+            <span asp-validation-for="Product.Region" class="text-danger"></span>
 
         </div>
+
+
         <div class="form-group">
             <label>Image</label>
-            <input class="form-control" type="text" asp-for="Product.Image">
+            <input class="form-control" type="text" asp-for="Product.Image"/>
+            <span asp-validation-for="Product.Image" class="text-danger"></span>
         </div>
+
         <div class="form-group">
             <label>Title</label>
-            <input class="form-control" type="text" asp-for="Product.Title" value="Enter Title">
+            <input class="form-control" type="text" asp-for="Product.Title" value="">
+            <span asp-validation-for="Product.Title" class="text-danger"></span>
         </div>
+
         <div class="form-group">
             <label>Description</label>
-            <input class="form-control" type="text" asp-for="Product.Description" value="Enter Description">
+            <input class="form-control" type="text" asp-for="Product.Description" value="">
+            <span asp-validation-for="Product.Description" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label asp-for="Product.Rating" class="control-label"></label>
             <div class="form-check">
-                <input asp-for="Product.Rating" type="radio" value="@Product_Rating.AVOID" checked>
+                <input asp-for="Product.Rating" type="radio" value="@Product_Rating.AVOID">
                 <label class="form-check-label" for="gridRadios1">
                     AVOID
                 </label>
@@ -77,6 +86,8 @@ else
                     BEST CHOICE
                 </label>
             </div>
+
+            <span asp-validation-for="Product.Rating" class="text-danger"></span>
         </div>
         <input class="btn btn-primary" type="submit" id="Submit">
     }
