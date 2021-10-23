@@ -38,7 +38,10 @@ namespace ContosoCrafts.WebSite.Pages
             Product = ProductService.GetDataItem(id);
 
             if (Product is null)
+            {
                 error = "id not found";
+            }
+
         }
         public IActionResult OnGetDelete(string Id)
         {
