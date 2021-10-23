@@ -139,6 +139,17 @@ namespace ContosoCrafts.WebSite.Services
             File.WriteAllText(JsonFileName, jsonString);
         }
 
+        /// <summary>
+        /// Place holder for all Regions currently supported (will change once we
+        /// get our json files for each region up and running
+        /// </summary>
+        public string[] GetAllRegions()
+        {
+            return new string[7]{"West Coast", "Southwest", "Central", "Southeast",
+                                "Northeast", "Hawai'i", "National"};
+
+        }
+
     }
 
 }
