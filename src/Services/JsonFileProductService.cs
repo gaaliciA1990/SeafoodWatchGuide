@@ -120,23 +120,22 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
-        public void DeleteCard(string Id)
+        /// <summary>
+        /// Remove the item from the system
+        /// </summary>
+        /// <returns></returns>
+        public ProductModel DeleteCard(string id)
         {
 
-            var products = GetAllData();
-            // LINQ
-            var query = products.Where(x => (x.Id != Id));
+            // Get the current set, and append the new record to it
+            var dataSet = GetAllData();
+            var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
 
-            System.Diagnostics.Debug.WriteLine(query.Count());
+            var newDataSet = GetAllData().Where(m => m.Id.Equals(id) == false);
 
+            SaveData(newDataSet);
 
-            var options = new JsonSerializerOptions
-            {
-                WriteIndented = true
-            };
-            var jsonString = JsonSerializer.Serialize(query, options);
-
-            File.WriteAllText(JsonFileName, jsonString);
+            return data;
         }
 
         /// <summary>
