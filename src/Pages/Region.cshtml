@@ -1,0 +1,23 @@
+﻿@page
+@using ContosoCrafts.WebSite.Components
+@model RegionModel
+@{
+    ViewData["Title"] = "Region";
+}
+
+<h1>@Model.region</h1>
+
+<head>
+    <style type="text/css">
+        body {
+            background-image: url('imgs/underwater.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<!--This is a page template so we can create new pages for guides and edit as needed-->
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered, new { region = Model.region }))
+
+<script src="_framework/blazor.server.js"></script>

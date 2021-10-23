@@ -3,13 +3,33 @@
 @using Microsoft.AspNetCore.Components.Web
 @using ContosoCrafts.WebSite.Data
 @inject JsonFileProductService ProductService
+@code
+{
+    ProductModel selectedProduct;
+    string selectedProductId;
+
+    [Parameter]
+    public string region { get; set; }
+
+    // This code selects a product to display with a click and gets the ratings for that given product
+    void SelectProduct(string productId)
+    {
+        selectedProductId = productId;
+        selectedProduct = ProductService.GetAllData().First(x => x.Id == productId);
+    }
+}
+@{var regionData = ProductService.GetRegionData(region);}
+
+
+
+
 <!-- This section of HTML is the formatting for how the products are displayed in their
     individual cards. This can be updated to work with new data and rearranged if needed,
     but this data can also be bucketed into contained within a page.
     -->
 <h2 class="red-text" style="color: green;"> >BEST CHOICE </h2>
 <div class="card-columns">
-    @foreach (var product in ProductService.GetAllData())
+    @foreach (var product in regionData)
     {
         if (product.Rating == Product_Rating.AVOID)
         {
@@ -34,7 +54,7 @@
 
 <h2 class="red-text" style="color: yellow;"> >GOOD ALTERNATIVE </h2>
 <div class="card-columns">
-    @foreach (var product in ProductService.GetAllData())
+    @foreach (var product in regionData)
     {
         if (product.Rating == Product_Rating.GOOD_ALTERNATIVE)
         {
@@ -60,7 +80,7 @@
 
 <h2 class="red-text" style="color: red;"> >AVOID </h2>
 <div class="card-columns">
-    @foreach (var product in ProductService.GetAllData())
+    @foreach (var product in regionData)
     {
         if (product.Rating == Product_Rating.BEST_CHOICE)
         {
@@ -124,16 +144,3 @@
 }
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-@code
-{
-    ProductModel selectedProduct;
-    string selectedProductId;
-
-    // This code selects a product to display with a click and gets the ratings for that given product
-    void SelectProduct(string productId)
-    {
-        selectedProductId = productId;
-        selectedProduct = ProductService.GetAllData().First(x => x.Id == productId);
-    }
-}

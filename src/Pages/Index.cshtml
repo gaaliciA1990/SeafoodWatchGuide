@@ -66,13 +66,13 @@
                 Select Region
             </button>
             <div class="dropdown-menu dropdown-menu-right">
-                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-area="" asp-page="/WestCoastGuide">West Coast</a></button>
-                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-area="" asp-page="/WestCoastGuide">Southwest</a></button>
-                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-area="" asp-page="/CentralGuide">Central</a></button>
-                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-area="" asp-page="/SoutheastGuide">Southeast</a></button>
-                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-area="" asp-page="/NortheastGuide">Northeast</a></button>
-                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-area="" asp-page="/HawaiiGuide">Hawai'i</a></button>
-                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-area="" asp-page="/NationalGuide">National</a></button>
+                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("West Coast")'>West Coast</a></button>
+                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Southwest")' >Southwest</a></button>
+                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Central")'   >Central</a></button>
+                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Southeast")' >Southeast</a></button>
+                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Northeast")' >Northeast</a></button>
+                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Hawaii")'    >Hawai'i</a></button>
+                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("National")'  >National</a></button>
             </div>
         </div>
     </div>

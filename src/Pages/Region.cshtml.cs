@@ -3,6 +3,7 @@ using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ContosoCrafts.WebSite.Pages
 {
@@ -10,11 +11,11 @@ namespace ContosoCrafts.WebSite.Pages
     /// <summary>
     /// Template for page creation
     /// </summary>
-    public class TemplateModel : PageModel
+    public class RegionModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<RegionModel> _logger;
 
-        public TemplateModel(ILogger<IndexModel> logger, JsonFileProductService productService)
+        public RegionModel(ILogger<RegionModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
             ProductService = productService;
@@ -23,10 +24,11 @@ namespace ContosoCrafts.WebSite.Pages
         public JsonFileProductService ProductService { get; }
         public IEnumerable<ProductModel> Products { get; private set; }
 
+        public string region;
+
         public void OnGet(string region)
         {
-            System.Diagnostics.Debug.WriteLine(region);
-            Products = ProductService.GetAllData();
+            this.region = region;
         }
     }
 }
