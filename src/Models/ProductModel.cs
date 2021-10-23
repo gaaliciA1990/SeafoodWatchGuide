@@ -25,19 +25,6 @@ namespace ContosoCrafts.WebSite.Models
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public Product_Rating Rating { get; set; }
 
-        /// <summary>
-        /// Place holder for all Regions currently supported (will change once we
-        /// get our json files for each region up and running
-        /// </summary>
-        public static string[] Regions
-        {
-            get { return (string[])Regions.Clone(); }
-            set
-            {
-                Regions = new string[7]{"West Coast", "Southwest", "Central", "Southeast",
-                                "Northeast", "Hawai'i", "National"};
-            }
-        }
 
         /// <summary>
         /// The is a toString method that will convert this class (the model) to a string version. 
