@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -30,19 +31,9 @@ namespace ContosoCrafts.WebSite.Pages
 
         public void OnGet(string id)
         {
-            if (id is null)
-            {
-                error = "id not selected";
-                return;
-            }
-            Product = ProductService.GetDataItem(id);
-
-            if (Product is null)
-            {
-                error = "id not found";
-            }
-
+            Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
         }
+        
         public IActionResult OnGetDelete(string Id)
         {
             return RedirectToPage("Delete", new { id = Id });
@@ -52,5 +43,6 @@ namespace ContosoCrafts.WebSite.Pages
         {
             return RedirectToPage("Update", new { id = Id });
         }
+        
     }
 }
