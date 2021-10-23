@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using ContosoCrafts.WebSite.Data;
@@ -12,17 +14,27 @@ namespace ContosoCrafts.WebSite.Models
     /// </summary>
     public class ProductModel
     {
+        
         public string Id { get; set; }
+
+        [Required(ErrorMessage = "Please choose a region")]
         public string Region { get; set; }
 
+
         [JsonPropertyName("img")]
+        [Required(ErrorMessage = "Please give a valid url link")]
+        [DataType(DataType.Url)]
         public string Image { get; set; }
 
+        [Required(ErrorMessage = "Please provide a Title")]
         public string Title { get; set; }
 
+        [Required(ErrorMessage = "Please provide a description")]
         public string Description { get; set; }
 
+
         [JsonConverter(typeof(JsonStringEnumConverter))]
+        [Required(ErrorMessage = "Please choose a rating")]
         public Product_Rating Rating { get; set; }
 
 
