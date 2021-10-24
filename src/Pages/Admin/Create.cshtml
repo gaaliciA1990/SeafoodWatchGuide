@@ -50,7 +50,8 @@ else
 
         <div class="form-group">
             <label>Image</label>
-            <input class="form-control" type="text" asp-for="Product.Image"/>
+            <input class="form-control" type="url" pattern="https://.*" size="30" required asp-for="Product.Image" />
+
             <span asp-validation-for="Product.Image" class="text-danger"></span>
         </div>
 
