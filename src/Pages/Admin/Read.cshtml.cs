@@ -15,9 +15,9 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class ReadModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<ReadModel> _logger;
 
-        public ReadModel(ILogger<IndexModel> logger, JsonFileProductService productService)
+        public ReadModel(ILogger<ReadModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
             ProductService = productService;
