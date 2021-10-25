@@ -27,6 +27,7 @@ namespace UnitTests.Pages.Read
             };
         }
 
+
         #endregion TestSetup
 
         #region OnGet
@@ -36,12 +37,11 @@ namespace UnitTests.Pages.Read
             // Arrange
             // Act
             var sampleProduct = TestHelper.ProductService.GetAllData().FirstOrDefault();
-            pageModel.OnGetDelete(sampleProduct.Id);
-            var deleted = TestHelper.ProductService.GetAllData().FirstOrDefault(x => x.Id.Equals(sampleProduct.Id));
+            var page = pageModel.OnGetDelete(sampleProduct.Id) as RedirectToPageResult;
 
             // Assert
-            Assert.IsNotNull(sampleProduct);
-            Assert.IsNull(deleted);
+            Assert.AreEqual("Delete", page.PageName);
+            
         }
 
         #endregion OnGet
