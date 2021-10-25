@@ -14,9 +14,9 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class AdminModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<AdminModel> _logger;
 
-        public AdminModel(ILogger<IndexModel> logger, JsonFileProductService productService)
+        public AdminModel(ILogger<AdminModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
             ProductService = productService;
