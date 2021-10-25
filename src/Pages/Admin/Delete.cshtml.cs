@@ -14,9 +14,9 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class DeleteModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<DeleteModel> _logger;
 
-        public DeleteModel(ILogger<IndexModel> logger, JsonFileProductService productService)
+        public DeleteModel(ILogger<DeleteModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
             ProductService = productService;
@@ -38,7 +38,7 @@ namespace ContosoCrafts.WebSite.Pages
             //delete card
             ProductService.DeleteCard(Product.Id);
             // Redirect back to the admin page to continue editing if needed
-            return Redirect("Admin");
+            return RedirectToPage("Admin");
         }
 
 
