@@ -32,7 +32,7 @@ namespace UnitTests.Pages.Read
 
         #region OnGet
         [Test]
-        public void OnGetDelete_delete_card()
+        public void OnGetDelete_redirect()
         {
             // Arrange
             // Act
@@ -42,6 +42,34 @@ namespace UnitTests.Pages.Read
             // Assert
             Assert.AreEqual("Delete", page.PageName);
             
+        }
+
+        
+        [Test]
+        public void OnGet_get_data()
+        {
+            // Arrange
+            // Act
+            var randomProduct = TestHelper.ProductService.GetAllData().FirstOrDefault();
+            var sampleProduct = TestHelper.ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(randomProduct.Id));
+            pageModel.OnGet(sampleProduct.Id);
+
+            // Assert
+            Assert.AreEqual(sampleProduct.Id, pageModel.Product.Id);
+
+        }
+
+        [Test]
+        public void OnGetUpdate_redirect()
+        {
+            // Arrange
+            // Act
+            var sampleProduct = TestHelper.ProductService.GetAllData().FirstOrDefault();
+            var page = pageModel.OnGetUpdate(sampleProduct.Id) as RedirectToPageResult;
+
+            // Assert
+            Assert.AreEqual("Update", page.PageName);
+
         }
 
         #endregion OnGet
