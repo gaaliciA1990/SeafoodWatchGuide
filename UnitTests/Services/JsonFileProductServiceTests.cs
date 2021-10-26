@@ -113,5 +113,21 @@ namespace UnitTests.Services
             Assert.IsEmpty(result);
         }
 
+        [Test]
+        public void GetRegionData_Valid_Product_Should_Return_Not_Empty_IEnumerable()
+        {
+
+            // Arrange
+            string testing_region = "West Coast";
+
+
+            //Act
+            var result = TestHelper.ProductService.GetRegionData(testing_region);
+
+
+            //Assert
+            Assert.IsNotEmpty(result);
+        }
+
     }
 }
