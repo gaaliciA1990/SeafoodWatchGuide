@@ -59,6 +59,30 @@ namespace UnitTests.Pages.Create
 
         }
 
+        [Test]
+        public void OnPost_ValidState_createCard()
+        {
+            //Arrange
+            //Act
+
+            pageModel.Product = new ProductModel
+            {
+                Id = "123",
+                Title = "testTitle",
+                Description = "testDescription",
+                Image = "https://test.com",
+                Rating = ContosoCrafts.WebSite.Data.Product_Rating.AVOID,
+                Region = "West Coast"
+            };
+
+            var result = pageModel.OnPost() as RedirectToPageResult;
+
+            //Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, result.PageName.Contains("Admin"));
+
+        }
+
         #endregion OnPost
     }
 }
