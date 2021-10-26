@@ -86,13 +86,14 @@ namespace UnitTests.Services
 
             //Act
             var result = TestHelper.ProductService.UpdateCard(data);
+            var updated_data = TestHelper.ProductService.GetAllData().FirstOrDefault(x => x.Id.Equals(data.Id));
 
             //Reset
             data.Description = defaultDesription;
             TestHelper.ProductService.UpdateCard(data);
 
             //Assert
-            Assert.AreEqual("Test Test Test", result.Description);
+            Assert.AreEqual("Test Test Test", updated_data.Description);
         }
 
     }
