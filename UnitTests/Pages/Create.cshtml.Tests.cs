@@ -15,6 +15,17 @@ namespace UnitTests.Pages.Create
     public class CreateTests
     {
 
+        #region TestSetup
+        public static CreateModel pageModel;
 
+        [SetUp]
+        public void TestInitialize()
+        {
+            var MockLoggerDirect = Mock.Of<ILogger<CreateModel>>();
+
+            pageModel = new CreateModel(MockLoggerDirect, TestHelper.ProductService)
+            {
+            };
+        }
     }
 }
