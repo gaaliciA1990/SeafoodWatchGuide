@@ -20,11 +20,7 @@ namespace ContosoCrafts.WebSite.Pages
         public RegionModel(ILogger<RegionModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
-            ProductService = productService;
         }
-
-        public JsonFileProductService ProductService { get; }
-        public IEnumerable<ProductModel> Products { get; private set; }
 
         public string region;
 
