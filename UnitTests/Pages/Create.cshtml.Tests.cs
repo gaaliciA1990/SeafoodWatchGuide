@@ -71,7 +71,7 @@ namespace UnitTests.Pages.Create
                 Title = "testTitle",
                 Description = "testDescription",
                 Image = "https://test.com",
-                Rating = ContosoCrafts.WebSite.Data.Product_Rating.AVOID,
+                Rating = ContosoCrafts.WebSite.Data.ProductRating.AVOID,
                 Region = "West Coast"
             };
 

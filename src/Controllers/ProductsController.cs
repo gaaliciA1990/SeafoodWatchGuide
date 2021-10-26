@@ -59,7 +59,7 @@ namespace ContosoCrafts.WebSite.Controllers
         public class RatingRequest
         {
             public string ProductId { get; set; }
-            public Product_Rating Rating { get; set; }
+            public ProductRating Rating { get; set; }
         }
     }
 }

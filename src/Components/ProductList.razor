@@ -31,7 +31,7 @@
 <div class="card-columns">
     @foreach (var product in regionData)
     {
-        if (product.Rating == Product_Rating.BEST_CHOICE)
+        if (product.Rating == ProductRating.BEST_CHOICE)
         {
             <div class="card">
                 <div class="card-img" style="background-image: url('@product.Image');">
@@ -56,7 +56,7 @@
 <div class="card-columns">
     @foreach (var product in regionData)
     {
-        if (product.Rating == Product_Rating.GOOD_ALTERNATIVE)
+        if (product.Rating == ProductRating.GOOD_ALTERNATIVE)
         {
             <div class="card">
                 <div class="card-img" style="background-image: url('@product.Image');">
@@ -82,7 +82,7 @@
 <div class="card-columns">
     @foreach (var product in regionData)
     {
-        if (product.Rating == Product_Rating.AVOID)
+        if (product.Rating == ProductRating.AVOID)
         {
             <div class="card">
                 <div class="card-img" style="background-image: url('@product.Image');">
@@ -125,11 +125,11 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    @if (selectedProduct.Rating == Product_Rating.AVOID)
+                    @if (selectedProduct.Rating == ProductRating.AVOID)
                     {
                         <div class="card-footer bg-success text-white">BEST CHOICES </div>
                     }
-                    else if (selectedProduct.Rating == Product_Rating.GOOD_ALTERNATIVE)
+                    else if (selectedProduct.Rating == ProductRating.GOOD_ALTERNATIVE)
                     {
                         <div class="card-footer bg-warning text-white">GOOD ALTERNATIVES </div>
                     }

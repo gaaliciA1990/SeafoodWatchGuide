@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 /// </summary>
 namespace ContosoCrafts.WebSite.Data
 {
-
-    public enum Product_Rating
+    public enum ProductRating
     {
         // EnumMember value is intened to convert the numerical ratings
         // in the JSON file to their respective ENUM. Still not working, bug logged
         [EnumMember(Value = "3")] BEST_CHOICE,
         [EnumMember(Value = "2")] GOOD_ALTERNATIVE,
         [EnumMember(Value = "1")] AVOID
+
     }
 }
