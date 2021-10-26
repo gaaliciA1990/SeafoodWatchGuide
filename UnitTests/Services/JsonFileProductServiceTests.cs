@@ -96,5 +96,22 @@ namespace UnitTests.Services
             Assert.AreEqual("Test Test Test", updated_data.Description);
         }
 
+
+        [Test]
+        public void GetRegionData_inValid_Product_Should_Return_Empyt_IEnumerable()
+        {
+
+            // Arrange
+            string testing_region = "no exist region";
+
+
+            //Act
+            var result = TestHelper.ProductService.GetRegionData(testing_region);
+
+
+            //Assert
+            Assert.IsEmpty(result);
+        }
+
     }
 }
