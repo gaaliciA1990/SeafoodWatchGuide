@@ -24,5 +24,21 @@ namespace UnitTests.Pages.Privacy
 
         #endregion TestSetup
 
+        #region OnGet
+        [Test]
+        public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
+        {
+            // Arrange
+
+            // Act
+            pageModel.OnGet();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+        }
+
+        #endregion OnGet
     }
 }
