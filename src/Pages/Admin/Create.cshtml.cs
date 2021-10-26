@@ -11,11 +11,11 @@ namespace ContosoCrafts.WebSite.Pages
     public class CreateModel : PageModel
     {
         // ILogger variable
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<CreateModel> _logger;
         /*
          * Constructor method for the Create Page
          */
-        public CreateModel(ILogger<IndexModel> logger, JsonFileProductService productService)
+        public CreateModel(ILogger<CreateModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
             ProductService = productService;
