@@ -129,5 +129,24 @@ namespace UnitTests.Services
             Assert.IsNotEmpty(result);
         }
 
+        [Test]
+        public void GetRegionData_Valid_Product_Should_All_Region()
+        {
+
+            // Arrange
+            
+
+
+            //Act
+            var result = TestHelper.ProductService.GetAllRegions();
+
+
+            //Assert
+            var checking = new string[7]{"West Coast", "Southwest", "Central", "Southeast",
+                                "Northeast", "Hawai'i", "National"};
+            Assert.AreEqual(checking, result);
+        }
+
+
     }
 }
