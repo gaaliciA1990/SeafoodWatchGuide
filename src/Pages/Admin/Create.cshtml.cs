@@ -55,7 +55,7 @@ namespace ContosoCrafts.WebSite.Pages
 
             //If valid, create the card
             ProductService.CreateCard(Product);
-            return Redirect("Admin");
+            return RedirectToPage("Admin");
         }
     }
 }
