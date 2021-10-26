@@ -14,11 +14,8 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class UpdateModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public UpdateModel(ILogger<IndexModel> logger, JsonFileProductService productService)
+        public UpdateModel(JsonFileProductService productService)
         {
-            _logger = logger;
             ProductService = productService;
         }
 
