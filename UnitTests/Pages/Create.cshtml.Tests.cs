@@ -27,5 +27,20 @@ namespace UnitTests.Pages.Create
             {
             };
         }
+
+        #endregion TestSetup
+
+        #region OnGet
+        [Test]
+        public void OnGet_initial_setup()
+        {
+            //Arrange
+            pageModel.OnGet();
+
+            //Assert
+            Assert.AreEqual(null, pageModel.Product);
+
+        }
+        #endregion OnGet
     }
 }
