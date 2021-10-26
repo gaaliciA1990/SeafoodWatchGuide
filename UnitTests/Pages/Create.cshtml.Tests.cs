@@ -42,5 +42,23 @@ namespace UnitTests.Pages.Create
 
         }
         #endregion OnGet
+
+        #region OnPost
+        [Test]
+        public void OnPost_invalidState_returnToPage()
+        {
+            //Arrange
+            //Act
+            pageModel.ModelState.AddModelError("bogus", "bogus error");
+
+            // Act
+            var result = pageModel.OnPost() as ActionResult;
+
+            // Assert
+            Assert.AreEqual(false, pageModel.ModelState.IsValid);
+
+        }
+
+        #endregion OnPost
     }
 }
