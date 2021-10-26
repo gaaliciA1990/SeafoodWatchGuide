@@ -14,7 +14,7 @@ namespace ContosoCrafts.WebSite.Models
     /// </summary>
     public class ProductModel
     {
-        
+
         public string Id { get; set; }
 
         [Required(ErrorMessage = "Please choose a region")]
@@ -35,8 +35,22 @@ namespace ContosoCrafts.WebSite.Models
 
         [JsonConverter(typeof(JsonStringEnumConverter))]
         [Required(ErrorMessage = "Please choose a rating")]
-        public Product_Rating Rating { get; set; }
+        public ProductRating Rating { get; set; }
 
+        /// <summary>
+        /// This will convert the ENUM values to a String format so it's easier for 
+        /// users to read and not in variable format
+        /// </summary>
+        /// <param name="rating"></param>
+        /// <returns></returns>
+        public static string covertToString(ProductRating rating)
+        {
+            string str = Enum.GetName(rating);
+            str = str.Replace("_", " ");
+            str = char.ToUpper(str[0]) + str.Substring(1).ToLower();
+
+            return str;
+        }
 
         /// <summary>
         /// The is a toString method that will convert this class (the model) to a string version. 
