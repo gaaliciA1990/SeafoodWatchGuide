@@ -45,7 +45,21 @@ namespace UnitTests.Pages.Error
             Assert.AreEqual(activity.Id, pageModel.RequestId);
         }
 
+        [Test]
+        public void OnGet_InValid_Activity_Null_Should_Return_TraceIdentifier()
+        {
+            // Arrange
 
+            // Act
+            pageModel.OnGet();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual("trace", pageModel.RequestId);
+            Assert.AreEqual(true, pageModel.ShowRequestId);
+        }
 
         #endregion OnGet
     }
