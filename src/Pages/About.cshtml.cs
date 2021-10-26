@@ -12,16 +12,13 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class AboutModel : PageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
+        private readonly ILogger<AboutModel> _logger;
 
-        public AboutModel(ILogger<PrivacyModel> logger)
+        public AboutModel(ILogger<AboutModel> logger)
         {
             _logger = logger;
             /// ProductService = productService;
         }
-
-        public JsonFileProductService ProductService { get; }
-        public IEnumerable<ProductModel> Products { get; private set; }
 
         public void OnGet()
         {
