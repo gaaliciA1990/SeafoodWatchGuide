@@ -74,5 +74,26 @@ namespace UnitTests.Services
             Assert.AreEqual(result, null);
         }
 
+
+        [Test]
+        public void UpdateCard_Valid_Product_Should_Return_Updated_Product()
+        {
+
+            // Arrange
+            var data = TestHelper.ProductService.GetAllData().First();
+            string defaultDesription = data.Description;
+            data.Description = "Test Test Test";
+
+            //Act
+            var result = TestHelper.ProductService.UpdateCard(data);
+
+            //Reset
+            data.Description = defaultDesription;
+            TestHelper.ProductService.UpdateCard(data);
+
+            //Assert
+            Assert.AreEqual("Test Test Test", result.Description);
+        }
+
     }
 }
