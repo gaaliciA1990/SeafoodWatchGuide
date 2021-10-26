@@ -51,7 +51,7 @@ namespace ContosoCrafts.WebSite.Pages
 
             ProductService.UpdateCard(Product);
             // Redirect back to the admin page to continue editing if needed
-            return Redirect("Admin");
+            return RedirectToPage("./Admin");
         }
     }
 }
