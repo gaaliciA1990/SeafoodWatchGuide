@@ -1,13 +1,5 @@
 [
   {
-    "Id": "6dafdb9e-549d-4751-96ff-d7391a280a5a",
-    "Region": null,
-    "img": "asfgsfdb s",
-    "Title": "ave afad",
-    "Description": "adf eaf",
-    "Rating": "GOOD_ALTERNATIVE"
-  },
-  {
     "Id": "Bass",
     "Region": "West Coast",
     "img": "data/Fish_img/Bass.bmp",
