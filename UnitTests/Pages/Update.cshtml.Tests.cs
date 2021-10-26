@@ -7,7 +7,7 @@ using ContosoCrafts.WebSite.Pages;
 using ContosoCrafts.WebSite.Models;
 using System.Linq;
 
-namespace UnitTests.Pages.Product.Update
+namespace UnitTests.Pages.Update
 {
     public class UpdateTests
     {
