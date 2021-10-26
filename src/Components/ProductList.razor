@@ -31,7 +31,7 @@
 <div class="card-columns">
     @foreach (var product in regionData)
     {
-        if (product.Rating == Product_Rating.AVOID)
+        if (product.Rating == Product_Rating.BEST_CHOICE)
         {
             <div class="card">
                 <div class="card-img" style="background-image: url('@product.Image');">
@@ -82,7 +82,7 @@
 <div class="card-columns">
     @foreach (var product in regionData)
     {
-        if (product.Rating == Product_Rating.BEST_CHOICE)
+        if (product.Rating == Product_Rating.AVOID)
         {
             <div class="card">
                 <div class="card-img" style="background-image: url('@product.Image');">
