@@ -16,7 +16,7 @@
 }
 else
 {
-    <!--This is the form for enter the data for a new Seafood Record. All fields are editable except for Product ID-->
+    <!--This is the form for entering the data for a new Seafood Record. All fields are editable except for Product ID-->
     @using (Html.BeginForm())
     {
         <div asp-validation-summary="All"></div>
@@ -67,28 +67,23 @@ else
         </div>
 
         <div class="form-group">
-            <label asp-for="Product.Rating" class="control-label"></label>
-            <div class="form-check">
-                <input asp-for="Product.Rating" type="radio" value="@Product_Rating.AVOID">
-                <label class="form-check-label" for="gridRadios1">
-                    AVOID
-                </label>
-            </div>
-            <div class="form-check">
-                <input asp-for="Product.Rating" type="radio" value="@Product_Rating.GOOD_ALTERNATIVE">
-                <label class="form-check-label" for="gridRadios2">
-                    GOOD ALTERNATIVE
-                </label>
-            </div>
-            <div class="form-check">
-                <input asp-for="Product.Rating" type="radio" value="@Product_Rating.BEST_CHOICE">
-                <label class="form-check-label" for="gridRadios3">
-                    BEST CHOICE
-                </label>
-            </div>
+            <label>Fish Rating</label>
+            @{
+                var rating = Enum.GetValues(typeof(ProductRating));
 
+                foreach (int i in rating)
+                {
+                    <div class="form-check">
+                        <input asp-for="Product.Rating" type="radio" value="@i">
+                        <label class="form-check-label" for="gridRadios1">
+                            @ProductModel.covertToString((ProductRating) i)
+                        </label>
+                    </div>
+                }
+            }
             <span asp-validation-for="Product.Rating" class="text-danger"></span>
         </div>
+
         <input class="btn btn-primary" type="submit" id="Submit">
     }
 }
