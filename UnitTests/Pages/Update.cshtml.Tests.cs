@@ -41,6 +41,22 @@ namespace UnitTests.Pages.Product.Update
 
 
         #region OnPost
+
+        [Test]
+        public void OnPost_InValid_Model_NotValid_Return_Page()
+        {
+            // Arrange
+
+            // Force an invalid error state
+            pageModel.ModelState.AddModelError("bogus", "bogus error");
+
+            // Act
+            var result = pageModel.OnPost() as ActionResult;
+
+            // Assert
+            Assert.AreEqual(false, pageModel.ModelState.IsValid);
+        }
+
         [Test]
         public void OnPost_Valid_Should_Return_Products()
         {
