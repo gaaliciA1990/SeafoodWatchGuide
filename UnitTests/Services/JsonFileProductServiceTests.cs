@@ -50,5 +50,29 @@ namespace UnitTests.Services
             Assert.AreEqual(origin_data_json, newCreate_json);
         }
 
+        [Test]
+        public void UpdateCard_inValid_Product_Should_Return_Null()
+        {
+
+            // Arrange
+            var origin_data = new ProductModel()
+            {
+                Id = System.Guid.NewGuid().ToString(),
+                Region = "West Coast",
+                Image = "testing image",
+                Title = "testing title",
+                Description = "Enter URL",
+                Rating = ContosoCrafts.WebSite.Data.Product_Rating.AVOID,
+            };
+
+
+            //Act
+            var result = TestHelper.ProductService.UpdateCard(origin_data);
+
+
+            //Assert
+            Assert.AreEqual(result, null);
+        }
+
     }
 }
