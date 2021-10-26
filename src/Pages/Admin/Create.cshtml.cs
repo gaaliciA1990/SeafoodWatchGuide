@@ -12,9 +12,12 @@ namespace ContosoCrafts.WebSite.Pages
     {
         // ILogger variable
         private readonly ILogger<CreateModel> _logger;
-        /*
-         * Constructor method for the Create Page
-         */
+
+        /// <summary>
+        /// Constructor method for the Create Page
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="productService"></param>
         public CreateModel(ILogger<CreateModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
@@ -22,29 +25,30 @@ namespace ContosoCrafts.WebSite.Pages
         }
 
         public JsonFileProductService ProductService { get; }
-        [BindProperty]
 
-        /*
-         * Getter and Setter method for the Creat page
-         */
+        /// <summary>
+        /// Getter and Setter method for the Creat page
+        /// </summary>
+        [BindProperty]
         public ProductModel Product { get; set; }
 
-        /*
-         * Allow an error message to be displayed if the error not null
-         */
+        /// <summary>
+        /// Allow an error message to be displayed if the error not null
+        /// </summary>
         public string error = null;
 
-        /*
-         * Since we are creating a new record in the dataset, we don't need to pull anything for validation
-         */
+        /// <summary>
+        /// Since we are creating a new record in the dataset, we don't need to pull anything for validation
+        /// </summary>
         public void OnGet()
         {
         }
 
-        /*
-         * Upon clicking Create, the update is saved and the user is redirected back to the Admin page to 
-         * so they can update more information
-         */
+        /// <summary>
+        /// Upon clicking Submit, the update is saved and the user is redirected back to the Admin page to 
+        /// so they can update more information
+        /// </summary>
+        /// <returns></returns>
         public IActionResult OnPost()
         {
             //Check for input validation, if not valid, return to page

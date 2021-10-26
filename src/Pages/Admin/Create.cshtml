@@ -16,6 +16,7 @@
 }
 else
 {
+    <!--This is the form for enter the data for a new Seafood Record. All fields are editable except for Product ID-->
     @using (Html.BeginForm())
     {
         <div asp-validation-summary="All"></div>
@@ -28,7 +29,6 @@ else
 
         <div class="form-group">
             <label>Region</label>
-            <!--<input class="form-control" type="text" asp-for="Product.Region" value ="Default"> -->
             <!-- Automatically parse from already available list of regions supported-->
             @{
                 var temp = Model.ProductService.GetAllRegions();
@@ -46,7 +46,6 @@ else
             <span asp-validation-for="Product.Region" class="text-danger"></span>
 
         </div>
-
 
         <div class="form-group">
             <label>Image</label>
