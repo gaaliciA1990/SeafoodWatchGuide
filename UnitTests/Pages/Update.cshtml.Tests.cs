@@ -23,5 +23,19 @@ namespace UnitTests.Pages.Product.Update
 
         #endregion TestSetup
 
+        #region OnGet
+        [Test]
+        public void OnGet_Valid_Should_Return_Products()
+        {
+            // Arrange
+
+            // Act
+            pageModel.OnGet("Crab");
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual("Crab: Southern King (Argentina)", pageModel.Product.Title);
+        }
+        #endregion OnGet
     }
 }
