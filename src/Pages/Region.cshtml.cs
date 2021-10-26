@@ -9,7 +9,9 @@ namespace ContosoCrafts.WebSite.Pages
 {
 
     /// <summary>
-    /// Template for page creation
+    /// The region page will display only the data of the region that is selected from the homepage.
+    /// This removes the need for more than one guide page as we can pass the region string
+    /// to display the data on that page.
     /// </summary>
     public class RegionModel : PageModel
     {
@@ -26,6 +28,11 @@ namespace ContosoCrafts.WebSite.Pages
 
         public string region;
 
+        /// <summary>
+        /// OnGet will retrieve the data from the Seafoods.json file 
+        /// and return only the seafood from the region passed
+        /// </summary>
+        /// <param name="region"></param>
         public void OnGet(string region)
         {
             this.region = region;
