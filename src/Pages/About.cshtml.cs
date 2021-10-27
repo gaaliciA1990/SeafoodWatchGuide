@@ -14,12 +14,20 @@ namespace ContosoCrafts.WebSite.Pages
     {
         private readonly ILogger<AboutModel> _logger;
 
+        /// <summary>
+        /// Constructor for About page
+        /// </summary>
+        /// <param name="logger"></param>
         public AboutModel(ILogger<AboutModel> logger)
         {
             _logger = logger;
             /// ProductService = productService;
         }
 
+
+        /// <summary>
+        /// Placeholder method to fetch info needed
+        /// </summary>
         public void OnGet()
         {
         }
