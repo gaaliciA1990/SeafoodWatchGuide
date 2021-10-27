@@ -12,11 +12,17 @@ using Moq;
 
 namespace UnitTests.Pages.Admin
 {
+    /// <summary>
+    /// Class containing all unit tests for Admin page
+    /// </summary>
     public class AdminTests
     {
         #region TestSetup
         public static AdminModel pageModel;
 
+        /// <summary>
+        /// Test constructor
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -32,6 +38,9 @@ namespace UnitTests.Pages.Admin
 
         #region OnGet
 
+        /// <summary>
+        /// test OnGet function when it fetches all data to be shown
+        /// </summary>
         [Test]
         public void OnGet_get_all_data()
         {
@@ -45,6 +54,10 @@ namespace UnitTests.Pages.Admin
 
         }
 
+        /// <summary>
+        /// Test OnGetCreate when user hits the Create button, they should be
+        /// redirected to the Create page
+        /// </summary>
         [Test]
         public void OnGetCreate_redirect()
         {
