@@ -12,11 +12,17 @@ using Moq;
 
 namespace UnitTests.Pages.Read
 {
+    /// <summary>
+    /// Class containing all unit tests for Read page model
+    /// </summary>
     public class ReadTests
     {
         #region TestSetup
         public static ReadModel pageModel;
 
+        /// <summary>
+        /// Test constructor
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -31,6 +37,10 @@ namespace UnitTests.Pages.Read
         #endregion TestSetup
 
         #region OnGet
+        /// <summary>
+        /// Test OnGetDelete function where it should fetch the correct item to
+        /// be reviewed before deletion on the Delete page
+        /// </summary>
         [Test]
         public void OnGetDelete_redirect()
         {
@@ -44,7 +54,10 @@ namespace UnitTests.Pages.Read
             
         }
 
-        
+        /// <summary>
+        /// Test OnGet function where it should fetch the correct item to show
+        /// details on the Read page
+        /// </summary>
         [Test]
         public void OnGet_get_data()
         {
@@ -59,6 +72,10 @@ namespace UnitTests.Pages.Read
 
         }
 
+        /// <summary>
+        /// Test OnGetUpdate function where it should fetch the correct item to
+        /// get updated on the Update page
+        /// </summary>
         [Test]
         public void OnGetUpdate_redirect()
         {
