@@ -17,6 +17,12 @@ namespace ContosoCrafts.WebSite.Pages
     {
         private readonly ILogger<RegionModel> _logger;
 
+
+        /// <summary>
+        /// Constructor for Region page
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="productService"></param>
         public RegionModel(ILogger<RegionModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
