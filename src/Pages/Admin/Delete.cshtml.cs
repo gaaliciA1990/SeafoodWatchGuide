@@ -16,6 +16,11 @@ namespace ContosoCrafts.WebSite.Pages
     {
         private readonly ILogger<DeleteModel> _logger;
 
+        /// <summary>
+        /// Constructor for Delete Page
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="productService"></param>
         public DeleteModel(ILogger<DeleteModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
@@ -28,11 +33,21 @@ namespace ContosoCrafts.WebSite.Pages
 
         public string error = null;
 
+
+        /// <summary>
+        /// Method for loading the requested item to get deleted
+        /// </summary>
+        /// <param name="id"></param>
         public void OnGet(string id)
         {
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
         }
 
+
+        /// <summary>
+        /// Method for perform deletion and redirect the user back to Admin page
+        /// </summary>
+        /// <returns></returns>
         public IActionResult OnPost()
         {
             //delete card
