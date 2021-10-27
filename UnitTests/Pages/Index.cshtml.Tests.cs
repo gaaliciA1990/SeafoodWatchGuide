@@ -12,11 +12,17 @@ using Moq;
 
 namespace UnitTests.Pages.Index
 {
+    /// <summary>
+    /// Class containing all unit tests for Index page
+    /// </summary>
     public class IndexTests
     {
         #region TestSetup
         public static IndexModel pageModel;
 
+        /// <summary>
+        /// Test constructor
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -31,7 +37,10 @@ namespace UnitTests.Pages.Index
         #endregion TestSetup
 
         #region OnGet
-
+        /// <summary>
+        /// Test OnGet function where all data should be retrieved successfully
+        /// to be shown.
+        /// </summary>
         [Test]
         public void OnGet_get_all_data()
         {
