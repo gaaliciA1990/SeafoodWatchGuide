@@ -12,11 +12,18 @@ using Moq;
 
 namespace UnitTests.Pages.Delete
 {
+    /// <summary>
+    /// Class containing all unit tests for Delete page
+    /// </summary>
     public class DeleteTests
     {
         #region TestSetup
         public static DeleteModel pageModel;
 
+
+        /// <summary>
+        /// Test constructor
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -30,6 +37,9 @@ namespace UnitTests.Pages.Delete
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Test OnGet function, which should fetch the correct item requested
+        /// </summary>
         #region OnGet
         [Test]
         public void OnGet_get_data()
@@ -45,6 +55,11 @@ namespace UnitTests.Pages.Delete
 
         }
 
+
+        /// <summary>
+        /// Test OnPost function where deletion should happen successfully, and
+        /// user gets directed back to Admin page.
+        /// </summary>
         [Test]
         public void OnPost_delete_and_redirect()
         {
