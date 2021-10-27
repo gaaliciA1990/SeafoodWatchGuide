@@ -14,6 +14,9 @@ namespace UnitTests.Pages.Update
         #region TestSetup
         public static UpdateModel pageModel;
 
+        /// <summary>
+        /// test constructor
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -24,6 +27,10 @@ namespace UnitTests.Pages.Update
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Test OnGet function with valid state, which it should then fetch the
+        /// correct item to get updated
+        /// </summary>
         #region OnGet
         [Test]
         public void OnGet_Valid_Should_Return_Products()
@@ -41,7 +48,10 @@ namespace UnitTests.Pages.Update
 
 
         #region OnPost
-
+        /// <summary>
+        /// test OnPost function with invalid state, which it should not allow
+        /// the update to happen. Done by checking if the model state is invalid
+        /// </summary>
         [Test]
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
@@ -57,6 +67,12 @@ namespace UnitTests.Pages.Update
             Assert.AreEqual(false, pageModel.ModelState.IsValid);
         }
 
+        /// <summary>
+        /// Test OnPost function with valid state, which should allow the update
+        /// to happen. Done by checking if the model is in valid state, if update
+        /// happened, the function should also redirect the user back to
+        /// Admin page.
+        /// </summary>
         [Test]
         public void OnPost_Valid_Should_Return_Products()
         {
