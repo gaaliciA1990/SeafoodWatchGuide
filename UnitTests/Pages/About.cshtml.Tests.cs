@@ -5,11 +5,17 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.About
 {
+    /// <summary>
+    /// Class to contain all tests for Privacy page
+    /// </summary>
     public class PrivacyTests
     {
         #region TestSetup
         public static AboutModel AboutModel;
 
+        /// <summary>
+        /// Set up the test framework
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -24,7 +30,12 @@ namespace UnitTests.Pages.About
 
         #endregion TestSetup
 
+
         #region OnGet
+
+        /// <summary>
+        /// Test OnGet function on Privacy model
+        /// </summary>
         [Test]
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
