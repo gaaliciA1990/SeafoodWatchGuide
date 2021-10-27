@@ -52,7 +52,7 @@ namespace ContosoCrafts.WebSite.Pages
         public IActionResult OnPost()
         {
             //Check for input validation, if not valid, return to page
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid == false)
             {
                 return Page();
             }
