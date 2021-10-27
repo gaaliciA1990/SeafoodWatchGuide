@@ -11,13 +11,15 @@ namespace ContosoCrafts.WebSite.Pages
     /// Home page for Seafood Watch Guide from GladiatorMonkys 
     /// group in Fundamentals of Software Engineering, CPSC 5110
     /// </summary>
-    /// Adding comment for Alicia Garcia that will be synced
-    /// Adding Avery's comment
-
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
 
+        /// <summary>
+        /// Constructor for Index page
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="productService"></param>
         public IndexModel(ILogger<IndexModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
@@ -27,6 +29,10 @@ namespace ContosoCrafts.WebSite.Pages
         public JsonFileProductService ProductService { get; }
         public IEnumerable<ProductModel> Products { get; private set; }
 
+
+        /// <summary>
+        /// Method to fetch all items to be shown on the Index page
+        /// </summary>
         public void OnGet()
         {
             Products = ProductService.GetAllData();
