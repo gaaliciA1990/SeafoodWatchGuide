@@ -6,11 +6,18 @@ using System.Diagnostics;
 
 namespace UnitTests.Pages.Error
 {
+    /// <summary>
+    /// Class containing all unit tests for Error page
+    /// </summary>
     public class ErrorTests
     {
         #region TestSetup
         public static ErrorModel pageModel;
 
+
+        /// <summary>
+        /// Test constructor
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -26,6 +33,10 @@ namespace UnitTests.Pages.Error
         #endregion TestSetup
 
         #region OnGet
+        /// <summary>
+        /// Test OnGet function where a valid activity should not cause the error
+        /// page to get called
+        /// </summary>
         [Test]
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
@@ -45,6 +56,11 @@ namespace UnitTests.Pages.Error
             Assert.AreEqual(activity.Id, pageModel.RequestId);
         }
 
+
+        /// <summary>
+        /// Test OnGet function where an invalid activity happened, which caused
+        /// error page to produce a trace
+        /// </summary>
         [Test]
         public void OnGet_InValid_Activity_Null_Should_Return_TraceIdentifier()
         {
