@@ -14,6 +14,12 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class UpdateModel : PageModel
     {
+
+
+        /// <summary>
+        /// Constructor for Update page
+        /// </summary>
+        /// <param name="productService"></param>
         public UpdateModel(JsonFileProductService productService)
         {
             ProductService = productService;
