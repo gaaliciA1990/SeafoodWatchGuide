@@ -17,6 +17,12 @@ namespace ContosoCrafts.WebSite.Pages
     {
         private readonly ILogger<ReadModel> _logger;
 
+
+        /// <summary>
+        /// Constructor for Read Page
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="productService"></param>
         public ReadModel(ILogger<ReadModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
@@ -29,16 +35,36 @@ namespace ContosoCrafts.WebSite.Pages
         public string error = null;
         public string myID = null;
 
+
+        /// <summary>
+        /// Method to load the selected item to be shown
+        /// </summary>
+        /// <param name="id"></param>
         public void OnGet(string id)
         {
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
         }
-        
+
+
+        /// <summary>
+        /// Method for redirecting users to Delete page when they choose to Delete
+        /// the item.
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
         public IActionResult OnGetDelete(string Id)
         {
             return RedirectToPage("Delete", new { id = Id });
         }
 
+
+
+        /// <summary>
+        /// Method for redirecting users to Update page when they choose to
+        /// Update values in the item
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
         public IActionResult OnGetUpdate(string Id)
         {
             return RedirectToPage("Update", new { id = Id });
