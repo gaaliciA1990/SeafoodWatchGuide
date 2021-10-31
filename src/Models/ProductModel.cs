@@ -35,7 +35,7 @@ namespace ContosoCrafts.WebSite.Models
 
         [JsonConverter(typeof(JsonStringEnumConverter))]
         [Required(ErrorMessage = "Please choose a rating")]
-        public ProductRating Rating { get; set; }
+        public ProductRating? Rating { get; set; }
 
         /// <summary>
         /// This will convert the ENUM values to a String format so it's easier for 
