@@ -3,8 +3,12 @@ using Microsoft.Extensions.Logging;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+    /// <summary>
+    /// Class contains the structure for Privacy page and how it should behave
+    /// </summary>
     public class PrivacyModel : PageModel
     {
+        //Logger to help with debugging
         private readonly ILogger<PrivacyModel> _logger;
 
 
