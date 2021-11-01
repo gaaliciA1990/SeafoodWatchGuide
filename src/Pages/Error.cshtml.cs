@@ -11,8 +11,10 @@ namespace ContosoCrafts.WebSite.Pages
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public class ErrorModel : PageModel
     {
+        //Variable to hold the ID of the error request
         public string RequestId { get; set; }
 
+        //Variable to specify whether to show the request ID or not
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
         private readonly ILogger<ErrorModel> _logger;
