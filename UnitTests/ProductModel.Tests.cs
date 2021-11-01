@@ -13,15 +13,17 @@ using Moq;
 
 namespace UnitTests.Model
 {
+    /// <summary>
+    /// This class contains all the tests for the application's ProductModel
+    /// </summary>
     public class ProductModelTests
     {
-        /// <summary>
-        /// Setting up the testing environment for the Region page
-        /// </summary>
         #region TestSetup
+        //ProductModel object used to test Product model's functionalities
         public ProductModel model;
 
         /// <summary>
+        /// Test constructor.
         /// Creating the mock environment for conducting our test against
         /// </summary>
         [SetUp]
