@@ -32,10 +32,12 @@ namespace ContosoCrafts.WebSite.Services
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "Seafoods.json"); }
         }
 
-        /*
-         * This is creating a list of product Models.
-         * IEnumerable is a list type
-         */
+
+        /// <summary>
+        /// This is creating a list of product Models.
+        /// IEnumerable is a list type
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<ProductModel> GetAllData()
         {
             using(var jsonFileReader = File.OpenText(JsonFileName))
