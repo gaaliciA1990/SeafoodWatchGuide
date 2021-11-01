@@ -50,14 +50,14 @@ namespace ContosoCrafts.WebSite.Pages
         /// <returns></returns>
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return Page();
+                ProductService.UpdateCard(Product);
+                // Redirect back to the admin page to continue editing if needed
+                return RedirectToPage("./Admin");
             }
 
-            ProductService.UpdateCard(Product);
-            // Redirect back to the admin page to continue editing if needed
-            return RedirectToPage("./Admin");
+            return Page();
         }
     }
 }
