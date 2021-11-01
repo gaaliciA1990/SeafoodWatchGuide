@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+    /// <summary>
+    /// The Create Model class provides the structure for how the Create
+    /// page should behave.
+    /// </summary>
     public class CreateModel : PageModel
     {
         // ILogger variable
@@ -24,6 +28,7 @@ namespace ContosoCrafts.WebSite.Pages
             ProductService = productService;
         }
 
+        //Product service object to provide all available services
         public JsonFileProductService ProductService { get; }
 
         /// <summary>
