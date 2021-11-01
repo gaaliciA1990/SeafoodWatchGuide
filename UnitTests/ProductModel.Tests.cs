@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Pages;
+using ContosoCrafts.WebSite.Data;
 using Moq;
 
 namespace UnitTests.Model
@@ -74,6 +75,35 @@ namespace UnitTests.Model
             Assert.AreEqual("Avoid", result);
 
         }
+
+        [Test]
+        public void ToString_Serialize()
+        {
+            // Arrange
+            String Json = "{\"Id\":\"id\",\"Region\":\"region\",\"img\":\"image\",\"Title\":\"title\",\"Description\":\"description\",\"Rating\":\""+ProductRating.BEST_CHOICE+"\"}";
+
+            var obj = new ProductModel()
+            {
+                Id = "id",
+                Region = "region",
+                Image = "image",
+                Title = "title",
+                Description = "description",
+                Rating = ProductRating.BEST_CHOICE
+            };
+
+            // Act
+            var serialized = obj.ToString();
+
+            System.Diagnostics.Debug.WriteLine(Json);
+            System.Diagnostics.Debug.WriteLine(serialized);
+            // Assert
+            Assert.AreEqual(serialized, Json);
+        }
+
+
+
+
         #endregion
 
     }
