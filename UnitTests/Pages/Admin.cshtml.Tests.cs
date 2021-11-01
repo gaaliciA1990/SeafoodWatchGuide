@@ -18,6 +18,7 @@ namespace UnitTests.Pages.Admin
     public class AdminTests
     {
         #region TestSetup
+        //AdminModel object used to test Admin page's model
         public static AdminModel pageModel;
 
         /// <summary>
@@ -45,10 +46,9 @@ namespace UnitTests.Pages.Admin
         public void OnGet_get_all_data()
         {
             // Arrange
-            // Act
             var randomProduct = TestHelper.ProductService.GetAllData();
+            // Act
             pageModel.OnGet();
-            
             // Assert
             Assert.AreEqual(pageModel.Products.Count(), randomProduct.Count());
 
