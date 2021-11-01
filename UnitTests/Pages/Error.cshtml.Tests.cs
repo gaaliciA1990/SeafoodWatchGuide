@@ -12,6 +12,7 @@ namespace UnitTests.Pages.Error
     public class ErrorTests
     {
         #region TestSetup
+        //ErrorModel object used to test Error page's model
         public static ErrorModel pageModel;
 
 
