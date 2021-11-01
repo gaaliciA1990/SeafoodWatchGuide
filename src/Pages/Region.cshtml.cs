@@ -15,6 +15,7 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class RegionModel : PageModel
     {
+        //Logger to help with debugging
         private readonly ILogger<RegionModel> _logger;
 
 
@@ -28,6 +29,7 @@ namespace ContosoCrafts.WebSite.Pages
             _logger = logger;
         }
 
+        //Variable to store the ID of the region being requested
         public string region;
 
         /// <summary>
