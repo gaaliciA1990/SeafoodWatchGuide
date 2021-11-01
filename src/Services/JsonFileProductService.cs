@@ -95,6 +95,10 @@ namespace ContosoCrafts.WebSite.Services
             return productData;
         }
 
+        /// <summary>
+        /// private funtion use to save data
+        /// </summary>
+        /// <param name="products"></param>
         private void SaveData(IEnumerable<ProductModel> products)
         {
 
