@@ -13,7 +13,13 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class IndexModel : PageModel
     {
+        //Logger to help with debugging
         private readonly ILogger<IndexModel> _logger;
+
+        //To get connected to all provided services
+        public JsonFileProductService ProductService { get; }
+        //To store all products currently in database
+        public IEnumerable<ProductModel> Products { get; private set; }
 
         /// <summary>
         /// Constructor for Index page
@@ -25,10 +31,6 @@ namespace ContosoCrafts.WebSite.Pages
             _logger = logger;
             ProductService = productService;
         }
-
-        public JsonFileProductService ProductService { get; }
-        public IEnumerable<ProductModel> Products { get; private set; }
-
 
         /// <summary>
         /// Method to fetch all items to be shown on the Index page
