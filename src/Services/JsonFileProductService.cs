@@ -54,10 +54,10 @@ namespace ContosoCrafts.WebSite.Services
             // Get the all current data set
             var data = GetAllData();
             // get all region data from dataset
-            var test = from d in data
+            var regionData = from d in data
                        where d.Region == region
                        select d;
-            return test;
+            return regionData;
         }
 
         /// <summary>
