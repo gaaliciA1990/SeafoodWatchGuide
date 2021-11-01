@@ -51,7 +51,9 @@ namespace ContosoCrafts.WebSite.Services
 
         public IEnumerable<ProductModel> GetRegionData(string region)
         {
+            // Get the all current data set
             var data = GetAllData();
+            // get all region data from dataset
             var test = from d in data
                        where d.Region == region
                        select d;
