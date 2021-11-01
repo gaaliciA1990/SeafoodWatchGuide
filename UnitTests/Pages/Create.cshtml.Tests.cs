@@ -19,6 +19,7 @@ namespace UnitTests.Pages.Create
     {
 
         #region TestSetup
+        //CreteModel object used to test Create page model
         public static CreateModel pageModel;
 
         /// <summary>
