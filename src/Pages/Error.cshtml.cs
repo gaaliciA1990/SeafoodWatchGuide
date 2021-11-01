@@ -17,6 +17,7 @@ namespace ContosoCrafts.WebSite.Pages
         //Variable to specify whether to show the request ID or not
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
+        //Logger to help with debugging when there is an error
         private readonly ILogger<ErrorModel> _logger;
 
 
