@@ -43,7 +43,6 @@ namespace ContosoCrafts.WebSite.Pages
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
         }
 
-
         /// <summary>
         /// Method for perform deletion and redirect the user back to Admin page
         /// </summary>
@@ -55,8 +54,5 @@ namespace ContosoCrafts.WebSite.Pages
             // Redirect back to the admin page to continue editing if needed
             return RedirectToPage("Admin");
         }
-
-
-
     }
 }
