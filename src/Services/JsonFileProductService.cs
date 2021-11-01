@@ -8,37 +8,42 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
 {
-   public class JsonFileProductService
+    /// <summary>
+    /// Class for managing the Service for JSON file
+    /// </summary>
+    public class JsonFileProductService
     {
-        /*
-         * Constructor method for the web host environment
-         */
+        /// <summary>
+        /// Constructor method for the web host environment
+        /// </summary>
+        /// <param name="webHostEnvironment"></param>
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
 
-        /*
-         * A getter method for the webhost
-         */
+        /// <summary>
+        /// A getter method for the webhost
+        /// </summary>
         public IWebHostEnvironment WebHostEnvironment { get; }
 
-        /*
-         * This simplified the file path for the JSON file so it can be inferred instead
-         * of being hardcoded. Makes tracking data easier
-         */
+        /// <summary>
+        /// This simplified the file path for the JSON file so it can be inferred instead
+        /// of being hardcoded. Makes tracking data easier
+        /// </summary>
         private string JsonFileName
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "Seafoods.json"); }
         }
 
-        /*
-         * This is creating a list of product Models.
-         * IEnumerable is a list type
-         */
+        /// <summary>
+        /// This is creating a list of product Models.
+        /// IEnumerable is a list type
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<ProductModel> GetAllData()
         {
-            using(var jsonFileReader = File.OpenText(JsonFileName))
+            using (var jsonFileReader = File.OpenText(JsonFileName))
             {
                 return JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
@@ -57,10 +62,11 @@ namespace ContosoCrafts.WebSite.Services
             return test;
         }
 
-        /*
-         * This method will pull all of the Seafood products and appeand the data entered in the form
-         * to the JSON file and serialize the data
-         */
+        /// <summary>
+        /// This method will pull all of the Seafood products and appeand the data entered in the form
+        /// to the JSON file and serialize the data
+        /// </summary>
+        /// <param name="model"></param>
         public void CreateCard(ProductModel model)
         {
             var products = GetAllData();
@@ -97,7 +103,6 @@ namespace ContosoCrafts.WebSite.Services
 
         private void SaveData(IEnumerable<ProductModel> products)
         {
-
             using (var outputStream = File.Create(JsonFileName))
             {
                 JsonSerializer.Serialize<IEnumerable<ProductModel>>(
@@ -105,7 +110,8 @@ namespace ContosoCrafts.WebSite.Services
                     {
                         SkipValidation = true,
                         Indented = true
-                    }),
+                    }
+                    ),
                     products
                 );
             }
@@ -120,6 +126,7 @@ namespace ContosoCrafts.WebSite.Services
 
             // Get the current set, and append the new record to it
             var dataSet = GetAllData();
+
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
 
             var newDataSet = GetAllData().Where(m => m.Id.Equals(id) == false);
@@ -137,9 +144,6 @@ namespace ContosoCrafts.WebSite.Services
         {
             return new string[7]{"West Coast", "Southwest", "Central", "Southeast",
                                 "Northeast", "Hawai'i", "National"};
-
         }
-
     }
-
 }
