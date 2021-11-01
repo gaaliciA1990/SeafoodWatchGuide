@@ -16,6 +16,17 @@
     read only.
 -->
 
+
+<style>
+    .popover {
+        max-width: 350px;
+    }
+    .popover img {
+        max-width: 250px;
+    }
+</style>
+
+
 @if (Model.error != null)
 {
     <h2>@Model.error</h2>
@@ -36,7 +47,7 @@ else
 
         <div class="form-group">
             <label>Image</label>
-            <input class="form-control" type="url" pattern="https://.*" size="30" required asp-for="Product.Image">
+            <input class="form-control" data-toggle="popover-hover" type="url" pattern="https://.*" size="30" required asp-for="Product.Image">
         </div>
 
         <div class="form-group">
@@ -70,9 +81,18 @@ else
     }
 }
 
-
-
-
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover-hover"]').popover({
+                html: true,
+                trigger: 'hover',
+                placement: 'bottom',
+                content: function () { return '<img src="/' + $(this).val() + '" style="width: 100%" />'; }
+            });
+        });
+    </script>
+}
 
 
 
