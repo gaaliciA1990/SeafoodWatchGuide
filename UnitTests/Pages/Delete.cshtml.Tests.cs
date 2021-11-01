@@ -18,6 +18,7 @@ namespace UnitTests.Pages.Delete
     public class DeleteTests
     {
         #region TestSetup
+        //DeleteModel object used to test Delete page's model
         public static DeleteModel pageModel;
 
 
@@ -45,9 +46,10 @@ namespace UnitTests.Pages.Delete
         public void OnGet_get_data()
         {
             // Arrange
-            // Act
             var randomProduct = TestHelper.ProductService.GetAllData().FirstOrDefault();
             var sampleProduct = TestHelper.ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(randomProduct.Id));
+
+            //Act
             pageModel.OnGet(sampleProduct.Id);
 
             // Assert
@@ -64,10 +66,11 @@ namespace UnitTests.Pages.Delete
         public void OnPost_delete_and_redirect()
         {
             // Arrange
-            // Act
             var randomProduct = TestHelper.ProductService.GetAllData().FirstOrDefault();
             pageModel.Product = randomProduct;
             RedirectToPageResult page;
+
+            //Act
             page = pageModel.OnPost() as RedirectToPageResult;
             var sampleProduct = TestHelper.ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(randomProduct.Id));
 
@@ -77,10 +80,6 @@ namespace UnitTests.Pages.Delete
 
 
         }
-
-
-
-
         #endregion OnGet
     }
 }
