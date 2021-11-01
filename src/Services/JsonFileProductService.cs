@@ -18,9 +18,9 @@ namespace ContosoCrafts.WebSite.Services
             WebHostEnvironment = webHostEnvironment;
         }
 
-        /*
-         * A getter method for the webhost
-         */
+        /// <summary>
+        /// A getter method for the webhost
+        /// </summary>
         public IWebHostEnvironment WebHostEnvironment { get; }
 
 
