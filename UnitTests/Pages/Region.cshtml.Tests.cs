@@ -22,6 +22,8 @@ namespace UnitTests.Pages.Region
         /// Setting up the testing environment for the Region page
         /// </summary>
         #region TestSetup
+
+        //pageModel represents the Model object being used to test
         public static RegionModel pageModel;
 
         /// <summary>
