@@ -57,10 +57,11 @@ namespace ContosoCrafts.WebSite.Services
             return test;
         }
 
-        /*
-         * This method will pull all of the Seafood products and appeand the data entered in the form
-         * to the JSON file and serialize the data
-         */
+        /// <summary>
+        /// This method will pull all of the Seafood products and appeand the data entered in the form
+        /// to the JSON file and serialize the data
+        /// </summary>
+        /// <param name="model"></param>
         public void CreateCard(ProductModel model)
         {
             var products = GetAllData();
