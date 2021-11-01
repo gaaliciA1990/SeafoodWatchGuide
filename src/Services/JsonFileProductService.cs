@@ -23,10 +23,8 @@ namespace ContosoCrafts.WebSite.Services
          */
         public IWebHostEnvironment WebHostEnvironment { get; }
 
-        /*
-         * This simplified the file path for the JSON file so it can be inferred instead
-         * of being hardcoded. Makes tracking data easier
-         */
+
+        // This simplified the file path for the JSON file so it can be inferred instead of being hardcoded. Makes tracking data easier
         private string JsonFileName
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "Seafoods.json"); }
