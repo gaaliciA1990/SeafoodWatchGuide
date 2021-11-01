@@ -11,6 +11,7 @@ namespace UnitTests.Pages.About
     public class PrivacyTests
     {
         #region TestSetup
+        //AboutModel object used to test our About page model
         public static AboutModel AboutModel;
 
         /// <summary>
@@ -27,12 +28,10 @@ namespace UnitTests.Pages.About
                 TempData = TestHelper.TempData,
             };
         }
-
         #endregion TestSetup
 
 
         #region OnGet
-
         /// <summary>
         /// Test OnGet function on Privacy model
         /// </summary>
@@ -47,7 +46,6 @@ namespace UnitTests.Pages.About
             // Assert
             Assert.AreEqual(true, AboutModel.ModelState.IsValid);
         }
-
         #endregion OnGet
     }
 }
