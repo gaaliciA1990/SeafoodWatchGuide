@@ -120,8 +120,9 @@ namespace ContosoCrafts.WebSite.Services
 
             // Get the current set, and append the new record to it
             var dataSet = GetAllData();
+            // Get the single data record from dataset
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
-
+            // get all data except the delete items from Jsonfile
             var newDataSet = GetAllData().Where(m => m.Id.Equals(id) == false);
 
             SaveData(newDataSet);
