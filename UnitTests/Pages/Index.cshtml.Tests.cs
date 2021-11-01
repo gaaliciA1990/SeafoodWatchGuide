@@ -17,7 +17,9 @@ namespace UnitTests.Pages.Index
     /// </summary>
     public class IndexTests
     {
+
         #region TestSetup
+        //pageModel represents the Index model used to get tested
         public static IndexModel pageModel;
 
         /// <summary>
@@ -32,9 +34,8 @@ namespace UnitTests.Pages.Index
             {
             };
         }
-
-
         #endregion TestSetup
+
 
         #region OnGet
         /// <summary>
@@ -45,16 +46,16 @@ namespace UnitTests.Pages.Index
         public void OnGet_get_all_data()
         {
             // Arrange
-            // Act
+            //Dummy variable to store original counts of all products
             var randomProduct = TestHelper.ProductService.GetAllData();
+
+            // Act
+            //Set the page model's product variable
             pageModel.OnGet();
 
             // Assert
             Assert.AreEqual(pageModel.Products.Count(), randomProduct.Count());
-
-
-
-            #endregion OnGet
         }
+        #endregion OnGet
     }
 }
