@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Data;
 using ContosoCrafts.WebSite.Controllers;
+using System.Linq;
 
 namespace UnitTests.Controller
 {
@@ -36,14 +37,14 @@ namespace UnitTests.Controller
         {
             // Arrange
             //Dummy variable to store original counts of all products
-            var Prods = TestHelper.ProductService.GetAllData();
+            var randomProduct = TestHelper.ProductService.GetAllData();
 
             // Act
             //Set the page model's product variable
             var Data = controller.Get();
 
             // Assert
-            Assert.AreEqual(Data, Prods);
+            Assert.AreEqual(Data.Count(), randomProduct.Count());
         }
 
         /// <summary>
