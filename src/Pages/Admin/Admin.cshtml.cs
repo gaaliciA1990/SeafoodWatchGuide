@@ -14,6 +14,7 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class AdminModel : PageModel
     {
+        //Logger
         private readonly ILogger<AdminModel> _logger;
 
         /// <summary>
@@ -27,7 +28,9 @@ namespace ContosoCrafts.WebSite.Pages
             ProductService = productService;
         }
 
+        //Product service object
         public JsonFileProductService ProductService { get; }
+        //Product model object
         public IEnumerable<ProductModel> Products { get; private set; }
 
         /// <summary>
