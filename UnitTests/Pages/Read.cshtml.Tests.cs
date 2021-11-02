@@ -89,6 +89,18 @@ namespace UnitTests.Pages.Read
 
         }
 
+        [Test]
+        public void OnGet_InValid_Id_Bougs_Should_Return_Products()
+        {
+            // Arrange
+
+            // Act
+            var result = pageModel.OnGet("Bogus") as RedirectToPageResult;
+
+            // Assert
+            Assert.AreEqual("./Admin", result.PageName);
+        }
+
         #endregion OnGet
     }
 }
