@@ -27,11 +27,11 @@ namespace ContosoCrafts.WebSite.Pages
             ProductService = productService;
         }
 
+        //Product service object
         public JsonFileProductService ProductService { get; }
+        //Product model object
         [BindProperty]
         public ProductModel Product { get; set; }
-
-        public string error = null;
 
 
         /// <summary>
