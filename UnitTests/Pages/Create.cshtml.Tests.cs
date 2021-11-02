@@ -73,6 +73,11 @@ namespace UnitTests.Pages.Create
 
         }
 
+        /// <summary>
+        /// Test OnPost method when the Title field is just a string with
+        /// numbers and symbols. Should return to Create page with the error
+        /// message
+        /// </summary>
         [Test]
         public void OnPost_Title_Has_Only_Numbers_Return_To_Page()
         {
