@@ -35,7 +35,10 @@ namespace ContosoCrafts.WebSite.Pages
         /// Getter and Setter method for the Creat page
         /// </summary>
         [BindProperty]
-        public ProductModel Product { get; set; }
+        public ProductModel Product
+        {
+            get; set;
+        }
 
         //Since we are creating a new record in the dataset, we don't need to pull anything for validation
         public void OnGet()
@@ -55,6 +58,23 @@ namespace ContosoCrafts.WebSite.Pages
             {
                 return Page();
             }
+
+            //Check if input was just a bunch of numbers in Title
+            bool hasLetters = false;
+            for (int i = 0; i < Product.Title.Length; i++)
+            {
+                if (char.IsLetter(Product.Title[i]))
+                {
+                    hasLetters = true;
+                }
+            }
+
+            if(hasLetters == false)
+            {
+                ModelState.AddModelError(string.Empty, "Title must contain letters");
+                return Page();
+            }
+
 
             //If valid, create the card
             ProductService.CreateCard(Product);
