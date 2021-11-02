@@ -89,7 +89,9 @@ namespace ContosoCrafts.WebSite.Services
         /// <returns></returns>
         public ProductModel UpdateCard(ProductModel data)
         {
+            //Get the current set, and append the new record to it
             var products = GetAllData();
+            // Get the single data record from dataset that has same id
             var productData = products.FirstOrDefault(x => x.Id.Equals(data.Id));
             if (productData == null)
             {
