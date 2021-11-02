@@ -190,5 +190,517 @@
     "Title": "Striped marlin",
     "Description": "Striped marlin caught in the Southwest Pacific with drifting longlines is an Avoid. The population is likely depleted and approaching an overfishing status in this Pacific location. Also, the catch of at-risk or overfished turtles, seabirds, tuna, and sharks is a major concern. Management is rated ineffective overall. There are some measures to reduce bycatch of turtles and seabirds, but their effectiveness is unknown. In addition, there are no limits for non-target species. This fishery catches species that play an essential role in the food web, and there are some measures to protect the ecosystem. Longlines have minimal habitat impacts. ",
     "Rating": "AVOID"
+  },
+
+
+
+
+
+
+  {
+    "Id": "H0",
+    "Region": "Hawaii",
+    "img": "https://thisfish.info/projects/thisfish/data/user/CN_Tuna_Skipjack_560.jpg",
+    "Title": "Aku/Skipjack Tuna (Pacific trolls, pole and lines)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H1",
+    "Region": "Hawaii",
+    "img": "https://image.shutterstock.com/image-photo/bigeye-scad-fish-isolated-on-260nw-1854699007.jpg",
+    "Title": "Akule/Big-eye Scad (HI nets)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H2",
+    "Region": "Hawaii",
+    "img": "https://s3.amazonaws.com/divcomplatform/seafoodsource.com/images/18375de430cbc5a8bb4a00fc6d015ae0.jpeg",
+    "Title": "Arctic Char (farmed)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H3",
+    "Region": "Hawaii",
+    "img": "https://www.maine.gov/ifw/images/largemouthbass.jpg",
+    "Title": "Bass (US farmed)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H4",
+    "Region": "Hawaii",
+    "img": "https://images.squarespace-cdn.com/content/v1/59738817e3df28d8888fe3b1/1604549459268-N4M152Z93I2HL3HDOVHU/DSC_9311.jpg",
+    "Title": "Clams (farmed)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H5",
+    "Region": "Hawaii",
+    "img": "https://media-cdn.greatbritishchefs.com/media/ka5luism/img23555.jpg",
+    "Title": "Cockles",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H6",
+    "Region": "Hawaii",
+    "img": "https://images.squarespace-cdn.com/content/v1/573f3a871d07c098a22edf1c/1464222238551-5AAAO3L06YB1ZNYX1FF2/DSC_0771.jpg?format=2500w",
+    "Title": "Limu/Ogo/Seaweed (farmed)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H7",
+    "Region": "Hawaii",
+    "img": "https://images.theconversation.com/files/417460/original/file-20210823-22-1pz2luo.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+    "Title": "Lionfish (US)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H8",
+    "Region": "Hawaii",
+    "img": "https://kitchenswagger.com/wp-content/uploads/2018/07/beer-steamed-mussels2.jpg",
+    "Title": "Mussels (farmed)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H9",
+    "Region": "Hawaii",
+    "img": "https://aquariumbreeder.com/wp-content/uploads/2019/11/Opae-Ula-Shrimp-Hawaiian-red-shrimp2.jpg",
+    "Title": "'Opae/Shrimp (US farmed)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H10",
+    "Region": "Hawaii",
+    "img": "https://lh3.googleusercontent.com/proxy/9XOBEShJyDyIjBH3iGiLi4YPWr7Weh4MefD9E8rrdZfsNMdGNsidYLrLiaA4DIbu2WcL3aNByOzEV_LeZ7F_hac-cU-gBZnRWNjolZUkoFgUu_D9-OA",
+    "Title": "Opelu/Mackerel Scad (HI nets)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H11",
+    "Region": "Hawaii",
+    "img": "https://images.immediate.co.uk/production/volatile/sites/30/2020/02/oysters-21016d4.jpg?quality=90&resize=418%2C380",
+    "Title": "Oysters (farmed)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H12",
+    "Region": "Hawaii",
+    "img": "https://cdn.shopify.com/s/files/1/2654/2564/files/Screen_Shot_2021-03-08_at_2.38.22_PM_480x480.png?v=1615243221",
+    "Title": "Papa'i/Crab: King Snow & Tanner (AK)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H13",
+    "Region": "Hawaii",
+    "img": "https://resources.stuff.co.nz/content/dam/images/1/9/o/a/y/8/image.related.StuffLandscapeSixteenByNine.1420x800.19iiip.png/1455154667367.jpg",
+    "Title": "Salmon (New Zealand)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H14",
+    "Region": "Hawaii",
+    "img": "https://media-cdn.greatbritishchefs.com/media/zw4go5xj/img83643.jpg?mode=crop&width=768&height=512",
+    "Title": "Scallops (farmed)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H15",
+    "Region": "Hawaii",
+    "img": "http://tropicfishhawaii.com/wp-content/uploads/2018/04/Swordfish.jpg",
+    "Title": "Shutome/Swordfish (handlines, harpoons)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H16",
+    "Region": "Hawaii",
+    "img": "https://www.collinsdictionary.com/images/full/squid_250547749.jpg",
+    "Title": "Squid (CA)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H17",
+    "Region": "Hawaii",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Oreochromis-niloticus-Nairobi.JPG",
+    "Title": "Tilapia (Canada, Ecuador, Peru & US)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H18",
+    "Region": "Hawaii",
+    "img": "https://thisfish.info/projects/thisfish/data/user/Tuao_Luful_u1_Randall_560.jpg",
+    "Title": "Toau/Blacktail",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H19",
+    "Region": "Hawaii",
+    "img": "https://images.heb.com/is/image/HEBGrocery/000373324",
+    "Title": "Snapper",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H20",
+    "Region": "Hawaii",
+    "img": "https://www.inlandseafood.com/uploads/image/image/190/94d7b1636e86bd50.jpg",
+    "Title": "Tombo/AlbacoreTuna(trolls, poleand and lines)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H21",
+    "Region": "Hawaii",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Salmo_trutta_Ozeaneum_Stralsund_HBP_2010-07-02.jpg/1200px-Salmo_trutta_Ozeaneum_Stralsund_HBP_2010-07-02.jpg",
+    "Title": "Trout (US farmed)",
+    "Description": "",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "H22",
+    "Region": "Hawaii",
+    "img": "https://i1.wp.com/underwaterjournal.com/wp-content/uploads/2020/11/025.jpg?fit=1024%2C683&ssl=1",
+    "Title": "'Ahi/Yellowfin Tuna (free school, trolls, pole and lines, US longlines)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H23",
+    "Region": "Hawaii",
+    "img": "https://images.squarespace-cdn.com/content/v1/5f31e9b858f8065dad844df1/1599847653221-N7EGH4K5A1VOQCEF3AD9/skipjack.jpg",
+    "Title": "Aku/Skipjack Tuna (free school, US longlines, imported trolls, pole and lines)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H24",
+    "Region": "Hawaii",
+    "img": "https://images.squarespace-cdn.com/content/v1/59738817e3df28d8888fe3b1/1604549459268-N4M152Z93I2HL3HDOVHU/DSC_9311.jpg",
+    "Title": "Clams (US & Canada wild)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H25",
+    "Region": "Hawaii",
+    "img": "https://lh3.googleusercontent.com/proxy/r2ckrR_V25vr-xXnjfmhowhBRvGPTfuPYrzJ2IGhyMfus5eeUcR0tOZb_FBXU2HOasoyVytqQ3PMNY6aKZ8FAypirJkssM2COUOanwI67W2ZETWaS_192On_ufykakT2dbnq5htTzGJNtB1IIw",
+    "Title": "Ehu/Ruby Snapper (HI)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H26",
+    "Region": "Hawaii",
+    "img": "https://hawaii-seafood.org/wp-content/uploads/2015/06/Hapuu.gif",
+    "Title": "Hapu'upu'u/Hawaiian Grouper (HI)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H27",
+    "Region": "Hawaii",
+    "img": "http://manoa.hawaii.edu/ctahr/pacificfoodguide/wp-content/uploads/2015/06/shortbill-spearfish.jpg",
+    "Title": "Hebi/Shortbill Spearfish (Hawaii)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H28",
+    "Region": "Hawaii",
+    "img": "https://hawaii-seafood.org/wp-content/uploads/2015/06/NewBlueMarlin.gif",
+    "Title": "Kajiki/Blue Marlin (HI)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H29",
+    "Region": "Hawaii",
+    "img": "http://whipsawsportfishing.com/wp-content/uploads/2020/12/mahi-mahi-dolphin2.png",
+    "Title": "Mahi Mahi (Costa Rica, Ecuador, Panama & US longlines)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H30",
+    "Region": "Hawaii",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/snapper/onaga.png",
+    "Title": "Onaga/Yellowstripe Snapper (HI)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H31",
+    "Region": "Hawaii",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/1/16/Acanthocybium_solandri.png",
+    "Title": "Ono/Wahoo (HI & US Atlantic longlines)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H32",
+    "Region": "Hawaii",
+    "img": "https://i0.wp.com/www.petshrimp.com/images/opaeula.jpg?w=980",
+    "Title": "'Opae/Shrimp (Canada & US wild, Ecuador, Honduras & Thailand farmed)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H33",
+    "Region": "Hawaii",
+    "img": "https://hawaii-seafood.org/wp-content/uploads/2015/06/Moonfish.gif",
+    "Title": "Opah/Moonfish (HI)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H34",
+    "Region": "Hawaii",
+    "img": "http://manoa.hawaii.edu/ctahr/pacificfoodguide/wp-content/uploads/2015/06/snapper-pink.jpg",
+    "Title": "Opakapaka/Pink Snapper (HI)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H35",
+    "Region": "Hawaii",
+    "img": "https://images.immediate.co.uk/production/volatile/sites/30/2020/02/oysters-21016d4.jpg?quality=90&resize=418%2C380",
+    "Title": "Oysters (US wild)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H36",
+    "Region": "Hawaii",
+    "img": "https://m.psecn.photoshelter.com/img-get/I00008e5FmGrK5Q8/s/1200/I00008e5FmGrK5Q8.jpg",
+    "Title": "Papa'i/Crab (Argentina)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H37",
+    "Region": "Hawaii",
+    "img": "https://static.turbosquid.com/Preview/2019/07/29__15_30_32/AnimatedSwimsAtlanticSalmonFishRigged3dsmodel001.jpg80D0F360-A637-42DD-89F7-ED45F2C588B5Large.jpg",
+    "Title": "Salmon (CA OR & WA)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H38",
+    "Region": "Hawaii",
+    "img": "https://www.thegardenisland.com/wp-content/uploads/2021/10/web1_SquidBigfinWD.jpeg",
+    "Title": "Squid (Chile & Peru)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H39",
+    "Region": "Hawaii",
+    "img": "https://static01.nyt.com/images/2020/06/05/multimedia/05sp-squid-inyt1/22sp-squid-inyt1-mediumSquareAt3X.jpg",
+    "Title": "Squid: Jumbo (China)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H40",
+    "Region": "Hawaii",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Oreochromis-niloticus-Nairobi.JPG",
+    "Title": "Tilapia (Colombia, Honduras, Indonesia, Mexico & Taiwan)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H41",
+    "Region": "Hawaii",
+    "img": "https://hilofish.com/wp-content/uploads/2018/02/Albacore-Tombo-Tuna.jpg",
+    "Title": "Tombo/Albacore Tuna (US longlines)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H41",
+    "Region": "Hawaii",
+    "img": "https://s3.amazonaws.com/divcomplatform/seafoodsource.com/images/f91e3692572a210ce3ef105ca81ee46d.jpeg",
+    "Title": "Yellowtail (US gillnets)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "H42",
+    "Region": "Hawaii",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Thunnus_obesus_%28bigeye_tuna%29.jpg",
+    "Title": "'Ahi/Bluefin Tuna",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H43",
+    "Region": "Hawaii",
+    "img": "https://i1.wp.com/underwaterjournal.com/wp-content/uploads/2020/11/025.jpg?fit=1024%2C683&ssl=1",
+    "Title": "'Ahi/Yellowfin Tuna (imported longlines, purse seines & Indian Ocean)",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H44",
+    "Region": "Hawaii",
+    "img": "https://www.gourmetsleuth.com/images/default-source/dictionary/aku.jpg?sfvrsn=4",
+    "Title": "Aku/Skipjack Tuna (imported purse, seines & Indian Ocean)",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H45",
+    "Region": "Hawaii",
+    "img": "https://wildlife.ca.gov/Portals/0/Images/Fishing/Inland/StripedBass/StripedBass-DuaneRaver-USFWS.png",
+    "Title": "Bass: Striped (US gillnet pound net)",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H46",
+    "Region": "Hawaii",
+    "img": "https://3try4a3p71br2sde7i3zw7sx-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/Atlantic-Cod-1-770x510.jpg",
+    "Title": "Cod: Atlantic (gillnet longline trawl)",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H47",
+    "Region": "Hawaii",
+    "img": "https://www.thegardenisland.com/wp-content/uploads/2019/07/web1_33bookWD.jpg",
+    "Title": "He'e/Octopus",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H48",
+    "Region": "Hawaii",
+    "img": "https://media.fisheries.noaa.gov/styles/full_width/s3/dam-migration/900x600-pacific-blue-marlin-noaa-ken-neill.jpg?itok=00aeBN2X",
+    "Title": "Kajiki/Blue Marlin",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H49",
+    "Region": "Hawaii",
+    "img": "http://whipsawsportfishing.com/wp-content/uploads/2020/12/mahi-mahi-dolphin2.png",
+    "Title": "Mahi Mahi (Peru & Taiwan)",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H50",
+    "Region": "Hawaii",
+    "img": "https://wpcdn.us-east-1.vip.tn-cloud.net/www.hawaiimagazine.com/content/uploads/2020/12/IMG_8632.jpg",
+    "Title": "Mano/Sharks",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H51",
+    "Region": "Hawaii",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/1/16/Acanthocybium_solandri.png",
+    "Title": "Ono/Wahoo (imported)",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+
+  {
+    "Id": "H452",
+    "Region": "Hawaii",
+    "img": "https://aquariumbreeder.com/wp-content/uploads/2019/11/Opae-Ula-Shrimp-Hawaiian-red-shrimp2.jpg",
+    "Title": "'Opae/Shrimp (other imported sources)",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H53",
+    "Region": "Hawaii",
+    "img": "https://www.motherjones.com/wp-content/uploads/2021/07/Screen-Shot-2021-07-20-at-10.44.05-AM.png?w=1200&h=630&crop=1",
+    "Title": "Opah/Moonfish (imported)",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H54",
+    "Region": "Hawaii",
+    "img": "https://www.msc.org/images/default-source/au-library/content-page-banners---1920x1080-1024x576-640x36/orange-roughy-cb17206d6c9660f47549f1db4de3905c0c1.jpg?sfvrsn=80b2b4de_3",
+    "Title": "Orange Roughy",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H55",
+    "Region": "Hawaii",
+    "img": "https://m.psecn.photoshelter.com/img-get/I00008e5FmGrK5Q8/s/1200/I00008e5FmGrK5Q8.jpg",
+    "Title": "Papa'i/Crab (Asia & Russia)",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H56",
+    "Region": "Hawaii",
+    "img": "https://images.ctfassets.net/lufu0clouua1/Tr9lRGHXCS6GU4Kc8Qkg0/2f3a25a99c3f54c867ef5f8350aca5a3/King-Salmon.jpg",
+    "Title": "Salmon (Canada, Atlantic, Chile, Norway & Scotland)",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H57",
+    "Region": "Hawaii",
+    "img": "https://www.seriouseats.com/thmb/gCf5Tr0ZnOC3TTxloh1-2ORrdoo=/1500x1125/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2018__01__20170117-how-to-clean-sardines-vicky-wasik1-13fbba78ebbd4f78acc258f27d1d471b.jpg",
+    "Title": "Sardines: Atlantic (Mediterranean)",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H58",
+    "Region": "Hawaii",
+    "img": "http://tropicfishhawaii.com/wp-content/uploads/2018/04/Swordfish.jpg",
+    "Title": "Shutome/Swordfish (imported longlines)",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H59",
+    "Region": "Hawaii",
+    "img": "https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/GettyImages-508486981-1024x680.jpg?w=1155&h=3572",
+    "Title": "Squid (Argentina, China, India, Indonesia, Japan & Thailand)",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H60",
+    "Region": "Hawaii",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Oreochromis-niloticus-Nairobi.JPG",
+    "Title": "Tilapia (China)",
+    "Description": "",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "H61",
+    "Region": "Hawaii",
+    "img": "https://hilofish.com/wp-content/uploads/2018/02/Albacore-Tombo-Tuna.jpg",
+    "Title": "Tombo/Albacore Tuna (imported except, trolls, pole and lines)",
+    "Description": "",
+    "Rating": "AVOID"
   }
+
 ]
