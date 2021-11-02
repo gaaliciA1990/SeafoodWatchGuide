@@ -14,6 +14,7 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class AdminModel : PageModel
     {
+        //Logger
         private readonly ILogger<AdminModel> _logger;
 
         /// <summary>
