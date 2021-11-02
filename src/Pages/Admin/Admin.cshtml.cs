@@ -14,6 +14,7 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class AdminModel : PageModel
     {
+        //Logger
         private readonly ILogger<AdminModel> _logger;
 
         /// <summary>
@@ -27,8 +28,24 @@ namespace ContosoCrafts.WebSite.Pages
             ProductService = productService;
         }
 
-        public JsonFileProductService ProductService { get; }
-        public IEnumerable<ProductModel> Products { get; private set; }
+        /// <summary>
+        /// Declares a getter for ProductService
+        /// </summary>
+        /// <returns></returns>
+        public JsonFileProductService ProductService 
+        { 
+            get; 
+        }
+
+        /// <summary>
+        /// Declares a public getter and a private setter for Products
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<ProductModel> Products 
+        { 
+            get; 
+            private set; 
+        }
 
         /// <summary>
         /// Initializing method for Admin page. All products are shown.
@@ -37,8 +54,6 @@ namespace ContosoCrafts.WebSite.Pages
         {
             Products = ProductService.GetAllData();
         }
-
-
 
         /// <summary>
         /// Method to react to an action of clicking on the Create button
@@ -49,7 +64,5 @@ namespace ContosoCrafts.WebSite.Pages
         {
             return RedirectToPage("Create");
         }
-
-
     }
 }

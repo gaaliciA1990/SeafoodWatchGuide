@@ -1,4 +1,3 @@
-
 using Microsoft.AspNetCore.Mvc;
 
 using NUnit.Framework;
@@ -9,6 +8,10 @@ using System.Linq;
 
 namespace UnitTests.Pages.Update
 {
+    /// <summary>
+    /// Unit Tests for the Update.cshtml.cs page. This class will have all 
+    /// test for each method in the Update file
+    /// </summary>
     public class UpdateTests
     {
         #region TestSetup

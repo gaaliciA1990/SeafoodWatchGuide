@@ -8,7 +8,10 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
 {
-   public class JsonFileProductService
+    /// <summary>
+    /// Class for managing the Service for JSON file
+    /// </summary>
+    public class JsonFileProductService
     {
         /// <summary>
         /// Constructor method for the web host environment
@@ -24,13 +27,14 @@ namespace ContosoCrafts.WebSite.Services
         /// </summary>
         public IWebHostEnvironment WebHostEnvironment { get; }
 
-
-        // This simplified the file path for the JSON file so it can be inferred instead of being hardcoded. Makes tracking data easier
+        /// <summary>
+        /// This simplified the file path for the JSON file so it can be inferred instead
+        /// of being hardcoded. Makes tracking data easier
+        /// </summary>
         private string JsonFileName
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "Seafoods.json"); }
         }
-
 
         /// <summary>
         /// This is creating a list of product Models.
@@ -39,7 +43,7 @@ namespace ContosoCrafts.WebSite.Services
         /// <returns></returns>
         public IEnumerable<ProductModel> GetAllData()
         {
-            using(var jsonFileReader = File.OpenText(JsonFileName))
+            using (var jsonFileReader = File.OpenText(JsonFileName))
             {
                 return JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
@@ -109,7 +113,6 @@ namespace ContosoCrafts.WebSite.Services
         /// <param name="products"></param>
         private void SaveData(IEnumerable<ProductModel> products)
         {
-
             using (var outputStream = File.Create(JsonFileName))
             {
                 JsonSerializer.Serialize<IEnumerable<ProductModel>>(
@@ -117,7 +120,8 @@ namespace ContosoCrafts.WebSite.Services
                     {
                         SkipValidation = true,
                         Indented = true
-                    }),
+                    }
+                    ),
                     products
                 );
             }
@@ -150,9 +154,6 @@ namespace ContosoCrafts.WebSite.Services
         {
             return new string[7]{"West Coast", "Southwest", "Central", "Southeast",
                                 "Northeast", "Hawai'i", "National"};
-
         }
-
     }
-
 }

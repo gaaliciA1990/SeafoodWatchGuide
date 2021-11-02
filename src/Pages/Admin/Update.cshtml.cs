@@ -15,7 +15,6 @@ namespace ContosoCrafts.WebSite.Pages
     public class UpdateModel : PageModel
     {
 
-
         /// <summary>
         /// Constructor for Update page
         /// </summary>

@@ -7,13 +7,27 @@ using ContosoCrafts.WebSite.Models;
 
 namespace ContosoCrafts.WebSite.Data
 {
+    /// <summary>
+    /// Class for rendering the website and content
+    /// </summary>
     public class ContosoCraftsWebSiteContext : DbContext
     {
-        public ContosoCraftsWebSiteContext (DbContextOptions<ContosoCraftsWebSiteContext> options)
-            : base(options)
+        /// <summary>
+        /// Constructor method for implementing the webpage on startup
+        /// </summary>
+        /// <param name="options"></param>
+        public ContosoCraftsWebSiteContext (DbContextOptions<ContosoCraftsWebSiteContext> options): base(options)
         {
+
         }
 
-        public DbSet<ContosoCrafts.WebSite.Models.ProductModel> ProductModel { get; set; }
+        /// <summary>
+        /// Declares getter and setter for the ProductModel
+        /// </summary>
+        public DbSet<ContosoCrafts.WebSite.Models.ProductModel> ProductModel 
+        { 
+            get; 
+            set;
+        }
     }
 }
