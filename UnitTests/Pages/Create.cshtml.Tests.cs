@@ -73,6 +73,30 @@ namespace UnitTests.Pages.Create
 
         }
 
+        [Test]
+        public void OnPost_Title_Has_Only_Numbers_Return_To_Page()
+        {
+            //Arrange
+            pageModel.Product = new ProductModel
+            {
+                Id = "123",
+                Title = "12345678(*@#*@#",
+                Description = "testDescription",
+                Image = "https://test.com",
+                Rating = ContosoCrafts.WebSite.Data.ProductRating.AVOID,
+                Region = "West Coast"
+            };
+
+            //Act
+            var result = pageModel.OnPost();
+
+            //Reset
+            pageModel.ModelState.AddModelError("bogus", "bogus error");
+
+            //Assert
+            Assert.AreEqual(false, pageModel.ModelState.IsValid);
+        }
+
         /// <summary>
         /// Test OnPost method when the model state is valid, thus creating
         /// a new card with the provided Product info. After that, redirecting
@@ -82,8 +106,6 @@ namespace UnitTests.Pages.Create
         public void OnPost_ValidState_createCard()
         {
             //Arrange
-            //Act
-
             pageModel.Product = new ProductModel
             {
                 Id = "123",
@@ -93,7 +115,7 @@ namespace UnitTests.Pages.Create
                 Rating = ContosoCrafts.WebSite.Data.ProductRating.AVOID,
                 Region = "West Coast"
             };
-
+            //Act
             var result = pageModel.OnPost() as RedirectToPageResult;
 
             //Assert
