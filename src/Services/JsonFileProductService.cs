@@ -25,7 +25,10 @@ namespace ContosoCrafts.WebSite.Services
         /// <summary>
         /// A getter method for the webhost
         /// </summary>
-        public IWebHostEnvironment WebHostEnvironment { get; }
+        public IWebHostEnvironment WebHostEnvironment 
+        { 
+            get;
+        }
 
         /// <summary>
         /// This simplified the file path for the JSON file so it can be inferred instead
