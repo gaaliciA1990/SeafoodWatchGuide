@@ -56,11 +56,67 @@
     "Rating": "GOOD_ALTERNATIVE"
   },
   {
-    "Id": "6dafdb9e-549d-4751-96ff-d7391a270c9a",
+    "Id": "6d4b44c3-f6af-4b0f-b970-b7b04efa3098",
     "Region": "Central",
-    "img": "asfgsfdb s",
-    "Title": "ave afad",
-    "Description": "adf eaf",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/abalone/abalone.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Abalone",
+    "Description": "Abalone farmed worldwide using enclosed bottom culture methods is a Best Choice because the environmental impacts (or the risk of impacts) are very low.",
     "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "7fea7ce5-ac33-4ca2-9740-0ef6e12fc2e7",
+    "Region": "Central",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/amberjack/greater-amberjack.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Greater amberjack",
+    "Description": "Greater amberjack farmed worldwide in indoor recirculating tanks with wastewater treatment is a Best Choice. Seafood Watch\u0027s analysis concludes that producers that use dry pellet feed will, on average, likely have a yellow feed score. Indoor recirculating systems tend to have low chemical use. However, most producers can release up to 10 percent of daily water flow without treatment, and that water may contain chemicals or their byproducts. Similarly, it\u0027s unlikely the water that\u0027s discharged daily has been disinfected against disease. However, there\u0027s a low risk of disease transmission to wild species when fish are farmed in indoor recirculating tanks because it\u0027s not common for disease outbreaks to occur.",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "68e12cd1-b910-491b-bb95-98df54360f33",
+    "Region": "Central",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/bream/giltheaded-sea-bream.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Gilthead bream",
+    "Description": "Gilthead bream farmed worldwide in indoor recirculating tanks with wastewater treatment is a Best Choice. Seafood Watch\u0027s analysis concludes that producers that use dry pellet feed will, on average, likely have a yellow feed score. Indoor recirculating systems tend to have low chemical use. However, most producers can release up to 10 percent of daily water flow without treatment, and that water may contain chemicals or their byproducts. Similarly, it\u0027s unlikely the water that\u0027s discharged daily has been disinfected against disease. However, there\u0027s a low risk of disease transmission to wild species when fish are farmed in indoor recirculating tanks because it\u0027s not common for disease outbreaks to occur.",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "5d70cbda-bfde-47da-a1f5-2a80757e27c0",
+    "Region": "Central",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/amberjack/yellowtail.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Buri amberjack",
+    "Description": "Buri farmed worldwide in indoor recirculating tanks without wastewater treatment is a Good Alternative. Seafood Watch\u0027s analysis concludes that producers that use dry pellet feed will, on average, likely have a yellow feed score. Wastewater that hasn\u0027t been adequately treated before it\u0027s discharged is unlikely to have nutrient-related impacts beyond the immediate area, but it may contribute to cumulative environmental impacts at the waterbody or regional levels. Indoor recirculating systems tend to have low chemical use. However, most producers can release up to 10 percent of daily water flow without treatment, and that water may contain chemicals or their byproducts. Similarly, it\u0027s unlikely the water that\u0027s discharged daily has been disinfected against disease. However, there\u0027s a low risk of disease transmission to wild species when fish are farmed in indoor recirculating tanks because it\u0027s not common for disease outbreaks to occur.",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "8c32a92e-fb61-40ef-945a-3e2a929d802e",
+    "Region": "Central",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/bass/hybrid-striped-bass.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Sunshine bass",
+    "Description": "Sunshine bass farmed worldwide in indoor recirculating tanks without wastewater treatment is a Good Alternative. Seafood Watch\u0027s analysis concludes that producers that use dry pellet feed will, on average, likely have a yellow feed score. Wastewater that hasn\u0027t been adequately treated before it\u0027s discharged is unlikely to have nutrient-related impacts beyond the immediate area, but it may contribute to cumulative environmental impacts at the waterbody or regional levels. Indoor recirculating systems tend to have low chemical use. However, most producers can release up to 10 percent of daily water flow without treatment, and that water may contain chemicals or their byproducts. Similarly, it\u0027s unlikely the water that\u0027s discharged daily has been disinfected against disease. However, there\u0027s a low risk of disease transmission to wild species when fish are farmed in indoor recirculating tanks because it\u0027s not common for disease outbreaks to occur.",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "edc8f3e9-7723-462a-b00f-39c830303d80",
+    "Region": "Central",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/amberjack/amberjack-yellowtail.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Yellowtail amberjack",
+    "Description": "Yellowtail farmed in Japan in marine net pens is an Avoid. Effluent, chemicals, and feed are rated critical concerns. A significant amount of nitrogen-based effluent is discharged because of the inefficient use of feed. Data on chemical usage is limited, and antibiotics that are important to human health are reportedly used. Information about disease impacts is lacking, and there\u0027s evidence that it\u0027s a significant problem. Almost all farmed yellowtail is sourced from wild stocks. In other words, juveniles are captured, transported to marine net pens, and fattened up for harvesting. ",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "579585a3-be4d-4ad9-910f-29dcbaf732fc",
+    "Region": "Central",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/anchovy/european-anchovy.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "European anchovy",
+    "Description": "European anchovy caught in the Strait of Sicily is an Avoid. There are no goals for maintaining population abundance, so it\u2019s unknown if they are at healthy levels. In addition, anchovies are caught with other vulnerable species. Management is rated ineffective overall because stronger measures are needed to prevent overfishing. Anchovies are an important forage fish (prey for larger predators), and there are concerns about how these fisheries are impacting the food web and ecosystem. ",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "f389bb64-7836-4ddb-9e05-25755f2e3713",
+    "Region": "Central",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/bream/black-seabream.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Black seabream",
+    "Description": "Black seabream caught by U.K. fleets in the English Channel with set gillnets is an Avoid. The stocks haven\u0027t been assessed, but there\u0027s no indication that they\u0027re overfished. However, the catch of overfished Atlantic cod and European seabass is a serious concern. In addition, few management measures are in place to protect black seabream, and very little bycatch data is collected. The set gillnet fishery can have some impact on seafloor habitat.",
+    "Rating": "AVOID"
   }
 ]
