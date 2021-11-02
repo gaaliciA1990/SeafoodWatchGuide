@@ -10,12 +10,7 @@
 
 <h1>Create a New Record</h1>
 
-@if (Model.error != null)
-{
-    <h2>@Model.error</h2>
-}
-else
-{
+
     <!--This is the form for entering the data for a new Seafood Record. All fields are editable except for Product ID-->
     @using (Html.BeginForm())
     {
@@ -86,4 +81,3 @@ else
 
         <input class="btn btn-primary" type="submit" id="Submit">
     }
-}
