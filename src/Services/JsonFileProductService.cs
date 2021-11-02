@@ -70,6 +70,7 @@ namespace ContosoCrafts.WebSite.Services
         /// <param name="model"></param>
         public void CreateCard(ProductModel model)
         {
+            //Get the current set, and append the new record to it
             var products = GetAllData();
 
             products = products.Append(model);
