@@ -49,6 +49,9 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
+        /// <summary>
+        /// This returns a list all cards belonging to a region.
+        /// </summary>
         public IEnumerable<ProductModel> GetRegionData(string region)
         {
             // Get the all current data set
