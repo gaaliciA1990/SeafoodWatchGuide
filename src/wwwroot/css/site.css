@@ -222,4 +222,27 @@ input.input-validation-error {
 
 .validation-summary-valid {
     display: none;
-}  
+}
+
+
+/* Format for How to Use Guide*/
+#howtoheader {
+    text-align: center;
+    vertical-align: middle;
+}
+#best {
+    color: green;
+    font-size: large;
+    font-weight: bold;
+}
+#good {
+    color: yellowgreen;
+    font-size: large;
+    font-weight: bold;
+}
+#avoid {
+    color: red;
+    font-size: large;
+    font-weight: bold;
+}
+
