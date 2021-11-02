@@ -40,7 +40,9 @@ namespace ContosoCrafts.WebSite.Pages
             get; set;
         }
 
-        //Since we are creating a new record in the dataset, we don't need to pull anything for validation
+        /// <summary>
+        /// Since we are creating a new record in the dataset, we don't need to pull anything for validation
+        /// </summary>
         public void OnGet()
         {
 
