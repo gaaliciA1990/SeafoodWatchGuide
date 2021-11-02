@@ -118,5 +118,77 @@
     "Title": "Black seabream",
     "Description": "Black seabream caught by U.K. fleets in the English Channel with set gillnets is an Avoid. The stocks haven\u0027t been assessed, but there\u0027s no indication that they\u0027re overfished. However, the catch of overfished Atlantic cod and European seabass is a serious concern. In addition, few management measures are in place to protect black seabream, and very little bycatch data is collected. The set gillnet fishery can have some impact on seafloor habitat.",
     "Rating": "AVOID"
+  },
+  {
+    "Id": "302b303d-fae0-4b62-963c-438816681ae1",
+    "Region": "Southwest",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/bream/black-seabream.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Black seabream",
+    "Description": "Black seabream caught by U.K. fleets in the English Channel with set gillnets is an Avoid. The stocks haven\u0027t been assessed, but there\u0027s no indication that they\u0027re overfished. However, the catch of overfished Atlantic cod and European seabass is a serious concern. In addition, few management measures are in place to protect black seabream, and very little bycatch data is collected. The set gillnet fishery can have some impact on seafloor habitat.",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "b25945bf-c905-4209-ae0c-b21a65b37b34",
+    "Region": "Southwest",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/cockles/common-cockle.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "New Zealand cockle",
+    "Description": "New Zealand cockles caught in the Otago Peninsula with hand dredges are a Best Choice. The populations are considered healthy, and bycatch impacts are a low concern. If undersized cockles and other species are caught, they\u2019re returned to the ocean. Cockles are harvested from the top portion of sandy seafloor habitat, so moderate impacts occur. However, certain areas are closed to reduce ecosystem impacts.",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "8ed48e1f-6efc-40f4-bbc0-3cb18634c947",
+    "Region": "Southwest",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/crab/crab-blue-swimmer.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Blue swimming crab",
+    "Description": "Blue swimming crab caught in New South Wales, Australia, with pots is a Best Choice. Bycatch and habitat impacts are minimal, and the fishery is managed well. The population\u0027s status in New South Wales is uncertain due to limited assessment information.",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "5cc18dc2-a2ae-43d3-902a-228efc73541c",
+    "Region": "Southwest",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/tuna/yellowfin_tuna.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Yellowfin tuna",
+    "Description": "Yellowfin tuna caught in the Northwest, Southwest, or Western Central Pacific with trolling lines is a Best Choice. The population is healthy, and overfishing isn\u0027t occurring. Management is rated moderately effective overall because some measures prevent overfishing and reduce bycatch, but they need strengthening. Species that play an essential role in the food web are caught or used for bait, and this fishery\u0027s impact on the ecosystem is unknown. Trolling lines don\u0027t impact habitat. ",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "3cbbcdf1-fe27-4a7b-bfa3-636da62a1d6b",
+    "Region": "Southwest",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/butterfish/antarctic-butterfish.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Antarctic butterfish",
+    "Description": "Antarctic butterfish (a.k.a., bluenose) caught in New Zealand\u0027s BNS1 Management Area with midwater trawls is a Good Alternative. Even though catch reductions have been implemented, there continues to be moderate concerns about the stock in New Zealand waters. In addition, there\u2019s bycatch of albatrosses and other seabirds that are listed as \u0022Near Threatened\u0022 or \u0022Vulnerable\u0022 by the International Union for Conservation of Nature. The management measures relating to the harvest of bluenose are generally robust, but the lack of data on other species that are caught with it limits overall management effectiveness. The midwater trawl fishery has no impact on seafloor habitat.",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "7295462f-7388-41df-b84e-6b377572031a",
+    "Region": "Southwest",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/snapper/squirefish.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Squirefish",
+    "Description": "Squirefish caught in New Zealand\u0027s SNA7 management area with set longlines is a Good Alternative. The population isn\u0027t depleted or experiencing overfishing in this region. Bycatch information is limited and likely includes seabirds and fish, though this fishery\u0027s impact on affected species isn\u0027t a major concern. Management is rated moderately effective overall, mainly because bycatch monitoring needs strengthening. The area and seasonal closures are too small or limited to significantly mitigate overall seafloor impacts. Moving towards ecosystem-based management is a stated goal for this fishery, and policies are being researched. The SNA7 management area includes west South Island. ",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "d498ef9d-1586-4f85-898b-3a885332df1f",
+    "Region": "Southwest",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/tuna/skipjack-tuna.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Skipjack tuna",
+    "Description": "Skipjack tuna caught in the Northwest, Southwest, or Western Central Pacific with unassociated purse seines (non-FAD) is a Good Alternative. The population is healthy in these Pacific locations, and overfishing is unlikely. However, this fishery catches at-risk rays and whale sharks. Management is rated moderately effective overall because some measures prevent overfishing and reduce bycatch, but they need strengthening. This fishery catches species that play an essential role in the food web, and there are some measures to protect the ecosystem. Purses seines have minimal habitat impacts. ",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "76bfa686-0bf6-48f1-a573-eea7c0af24e7",
+    "Region": "Southwest",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/butterfish/antarctic-butterfish.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Antarctic butterfish",
+    "Description": "Antarctic butterfish (a.k.a., bluenose) caught in New Zealand\u0027s BNS2 Management Area with bottom trawls is an Avoid. Even though catch reductions have been implemented, there continues to be moderate concerns about the stock in New Zealand waters. In addition, there\u2019s bycatch of albatrosses and other seabirds that are listed as \u0022Near Threatened\u0022 or \u0022Vulnerable\u0022 by the International Union for Conservation of Nature, and the bottom trawl fishery can damage coldwater corals, sponges, and seafloor habitat. The management measures relating to the harvest of bluenose are generally robust, but the lack of data on other species that are caught with it limits overall management effectiveness.",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "09fee2da-bbca-4fd0-8555-57edb79debdb",
+    "Region": "Southwest",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/marlin/striped-marlin.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Striped marlin",
+    "Description": "Striped marlin caught in the Southwest Pacific with drifting longlines is an Avoid. The population is likely depleted and approaching an overfishing status in this Pacific location. Also, the catch of at-risk or overfished turtles, seabirds, tuna, and sharks is a major concern. Management is rated ineffective overall. There are some measures to reduce bycatch of turtles and seabirds, but their effectiveness is unknown. In addition, there are no limits for non-target species. This fishery catches species that play an essential role in the food web, and there are some measures to protect the ecosystem. Longlines have minimal habitat impacts. ",
+    "Rating": "AVOID"
   }
 ]
