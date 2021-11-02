@@ -9,16 +9,32 @@ using ContosoCrafts.WebSite.Data;
 
 namespace ContosoCrafts.WebSite
 {
+    /// <summary>
+    /// This is the class that enables startup for the website
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Constructor for the startup process
+        /// </summary>
+        ///  <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        /// <summary>
+        /// Declares a getter for the Config on startup
+        /// </summary>
+        public IConfiguration Configuration 
+        { 
+            get; 
+        }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to add services to the container.
+        /// </summary>
+        ///  <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
@@ -32,7 +48,11 @@ namespace ContosoCrafts.WebSite
                     options.UseSqlServer(Configuration.GetConnectionString("ContosoCraftsWebSiteContext")));
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// </summary>
+        ///  <param name="app"></param>
+        ///  <param name="env"></param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
