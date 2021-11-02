@@ -10,7 +10,7 @@ namespace ContosoCrafts.WebSite.Pages
 {
 
     /// <summary>
-    /// Template for page creation
+    /// Class for Delete page in CRUDi implementation
     /// </summary>
     public class DeleteModel : PageModel
     {
