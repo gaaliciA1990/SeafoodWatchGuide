@@ -8,37 +8,11 @@ namespace ContosoCrafts.WebSite.Pages
 {
 
     /// <summary>
-    /// Home page for Seafood Watch Guide from GladiatorMonkys 
-    /// group in Fundamentals of Software Engineering, CPSC 5110
+    /// Take Action page for Seafood Watch Guide to provide site users with
+    /// more information on how they can help. Shouldn't need a model, but 
+    /// keeping just in case
     /// </summary>
     public class TakeActionModel : PageModel
     {
-
-        //Logger to help with debugging
-        private readonly ILogger<TakeActionModel> _logger;
-
-        //To get connected to all provided services
-        public JsonFileProductService ProductService { get; }
-        //To store all products currently in database
-        public IEnumerable<ProductModel> Products { get; private set; }
-
-        /// <summary>
-        /// Constructor for Index page
-        /// </summary>
-        /// <param name="logger"></param>
-        /// <param name="productService"></param>
-        public TakeActionModel(ILogger<TakeActionModel> logger, JsonFileProductService productService)
-        {
-            _logger = logger;
-            ProductService = productService;
-        }
-
-        /// <summary>
-        /// Method to fetch all items to be shown on the Index page
-        /// </summary>
-        public void OnGet()
-        {
-            Products = ProductService.GetAllData();
-        }
     }
 }
