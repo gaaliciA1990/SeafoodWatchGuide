@@ -12,12 +12,6 @@
 
 <h1>Item Details</h1>
 
-@if (Model.error != null)
-{
-    <h2>@Model.error</h2>
-}
-else
-{
     @using (Html.BeginForm())
     {
         <div class="form-group">
@@ -56,4 +50,3 @@ else
         Html.ActionLink("Delete", "Delete", new { id = item.Id });
          -->
     }
-}
