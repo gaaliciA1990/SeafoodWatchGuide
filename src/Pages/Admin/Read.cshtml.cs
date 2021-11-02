@@ -15,7 +15,14 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class ReadModel : PageModel
     {
+        //Logger to help with debugging
         private readonly ILogger<ReadModel> _logger;
+
+        //Product Service object used to access application's services
+        public JsonFileProductService ProductService { get; }
+
+        //Product object contains information about the product being shown
+        public ProductModel Product { get; set; }
 
 
         /// <summary>
@@ -28,12 +35,6 @@ namespace ContosoCrafts.WebSite.Pages
             _logger = logger;
             ProductService = productService;
         }
-
-        public JsonFileProductService ProductService { get; }
-        public ProductModel Product { get; set; }
-
-        public string error = null;
-        public string myID = null;
 
 
         /// <summary>
