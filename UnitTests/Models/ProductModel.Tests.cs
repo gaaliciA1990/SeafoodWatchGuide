@@ -33,13 +33,12 @@ namespace UnitTests.Model
         }
         #endregion
 
+
+        #region ConvertToString
         /// <summary>
         /// This tests the convertToSTring in ProductModel.cs to confirm that the correct string is displayed 
-        /// when converted from the productrating ENUM. 
-        /// TODO: Update method code to capitalize the first letter of each word.
+        /// when Best Choice is converted from the productrating ENUM.
         /// </summary>
-        #region ConvertToString
-
         [Test]
         public void ConvertToString_Valid_String_For_BestChoice_ENUM()
         {
@@ -52,6 +51,10 @@ namespace UnitTests.Model
             Assert.AreEqual("Best choice", result);
         }
 
+        /// <summary>
+        /// This tests the convertToSTring in ProductModel.cs to confirm that the correct string is displayed 
+        /// when Good Alternative is converted from the productrating ENUM.
+        /// </summary>
         [Test]
         public void ConvertToString_Valid_String_For_GoodAlt_ENUM()
         {
@@ -65,6 +68,10 @@ namespace UnitTests.Model
 
         }
 
+        /// <summary>
+        /// This tests the convertToSTring in ProductModel.cs to confirm that the correct string is displayed 
+        /// when Avoid is converted from the productrating ENUM.
+        /// </summary>
         [Test]
         public void ConvertToString_Valid_String_For_Avoid_ENUM()
         {
@@ -78,6 +85,10 @@ namespace UnitTests.Model
 
         }
 
+        /// <summary>
+        /// UT for testing the serializer is acting as expected. Author
+        /// unknown?
+        /// </summary>
         [Test]
         public void ToString_Serialize()
         {
@@ -102,11 +113,6 @@ namespace UnitTests.Model
             // Assert
             Assert.AreEqual(serialized, Json);
         }
-
-
-
-
         #endregion
-
     }
 }
