@@ -37,16 +37,10 @@ namespace ContosoCrafts.WebSite.Pages
         [BindProperty]
         public ProductModel Product { get; set; }
 
-        /// <summary>
-        /// Allow an error message to be displayed if the error not null
-        /// </summary>
-        public string error = null;
-
-        /// <summary>
-        /// Since we are creating a new record in the dataset, we don't need to pull anything for validation
-        /// </summary>
+        //Since we are creating a new record in the dataset, we don't need to pull anything for validation
         public void OnGet()
         {
+
         }
 
         /// <summary>
