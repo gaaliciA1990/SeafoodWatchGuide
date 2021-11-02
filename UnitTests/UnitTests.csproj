@@ -18,4 +18,11 @@
     <ProjectReference Include="..\src\ContosoCrafts.WebSite.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controller\" />
+    <Folder Include="Components\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 </Project>
