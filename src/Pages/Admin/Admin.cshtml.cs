@@ -28,24 +28,11 @@ namespace ContosoCrafts.WebSite.Pages
             ProductService = productService;
         }
 
-        /// <summary>
-        /// Declares a getter for ProductService
-        /// </summary>
-        /// <returns></returns>
-        public JsonFileProductService ProductService 
-        { 
-            get; 
-        }
+        // Declares a getter for ProductService
+        public JsonFileProductService ProductService { get; }
 
-        /// <summary>
-        /// Declares a public getter and a private setter for Products
-        /// </summary>
-        /// <returns></returns>
-        public IEnumerable<ProductModel> Products 
-        { 
-            get; 
-            private set; 
-        }
+        // Declares a public getter and a private setter for Products
+        public IEnumerable<ProductModel> Products { get; private set; }
 
         /// <summary>
         /// Initializing method for Admin page. All products are shown.
