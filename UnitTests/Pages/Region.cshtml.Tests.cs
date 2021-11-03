@@ -24,7 +24,7 @@ namespace UnitTests.Pages.Region
         #region TestSetup
 
         //pageModel represents the Model object being used to test
-        public static RegionModel pageModel;
+        public static RegionModel PageModel;
 
         /// <summary>
         /// Creating the mock environment for conducting our test against
@@ -34,7 +34,7 @@ namespace UnitTests.Pages.Region
         {
             var MockLoggerDirect = Mock.Of<ILogger<RegionModel>>();
 
-            pageModel = new RegionModel(MockLoggerDirect, TestHelper.ProductService)
+            PageModel = new RegionModel(MockLoggerDirect, TestHelper.ProductService)
             {
             };
         }
@@ -52,10 +52,12 @@ namespace UnitTests.Pages.Region
             string region = "Central";
 
             // Act
-            pageModel.OnGet(region);
+            PageModel.OnGet(region);
+
+            //Reset
 
             // Assert
-            Assert.AreEqual("Central", pageModel.region);
+            Assert.AreEqual("Central", PageModel.region);
         }
         #endregion
     }
