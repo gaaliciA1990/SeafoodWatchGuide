@@ -19,7 +19,7 @@ namespace UnitTests.Pages.Delete
     {
         #region TestSetup
         //DeleteModel object used to test Delete page's model
-        public static DeleteModel pageModel;
+        public static DeleteModel PageName;
 
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace UnitTests.Pages.Delete
         {
             var MockLoggerDirect = Mock.Of<ILogger<DeleteModel>>();
 
-            pageModel = new DeleteModel(MockLoggerDirect, TestHelper.ProductService)
+            PageName = new DeleteModel(MockLoggerDirect, TestHelper.ProductService)
             {
             };
         }
@@ -50,10 +50,12 @@ namespace UnitTests.Pages.Delete
             var sampleProduct = TestHelper.ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(randomProduct.Id));
 
             //Act
-            pageModel.OnGet(sampleProduct.Id);
+            PageName.OnGet(sampleProduct.Id);
+
+            //Reset
 
             // Assert
-            Assert.AreEqual(sampleProduct.Id, pageModel.Product.Id);
+            Assert.AreEqual(sampleProduct.Id, PageName.Product.Id);
 
         }
 
@@ -67,12 +69,14 @@ namespace UnitTests.Pages.Delete
         {
             // Arrange
             var randomProduct = TestHelper.ProductService.GetAllData().FirstOrDefault();
-            pageModel.Product = randomProduct;
+            PageName.Product = randomProduct;
             RedirectToPageResult page;
 
             //Act
-            page = pageModel.OnPost() as RedirectToPageResult;
+            page = PageName.OnPost() as RedirectToPageResult;
             var sampleProduct = TestHelper.ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(randomProduct.Id));
+
+            //Reset
 
             // Assert
             Assert.AreEqual(null, sampleProduct);
