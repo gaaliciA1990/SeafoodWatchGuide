@@ -20,7 +20,7 @@ namespace UnitTests.Pages.Index
 
         #region TestSetup
         //pageModel represents the Index model used to get tested
-        public static IndexModel pageModel;
+        public static IndexModel PageModel;
 
         /// <summary>
         /// Test constructor
@@ -30,7 +30,7 @@ namespace UnitTests.Pages.Index
         {
             var MockLoggerDirect = Mock.Of<ILogger<IndexModel>>();
 
-            pageModel = new IndexModel(MockLoggerDirect, TestHelper.ProductService)
+            PageModel = new IndexModel(MockLoggerDirect, TestHelper.ProductService)
             {
             };
         }
@@ -51,10 +51,12 @@ namespace UnitTests.Pages.Index
 
             // Act
             //Set the page model's product variable
-            pageModel.OnGet();
+            PageModel.OnGet();
+
+            //Reset
 
             // Assert
-            Assert.AreEqual(pageModel.Products.Count(), randomProduct.Count());
+            Assert.AreEqual(PageModel.Products.Count(), randomProduct.Count());
         }
         #endregion OnGet
     }
