@@ -13,7 +13,7 @@ namespace UnitTests.Controller
     {
         #region TestSetup
         //ProductsController object used to test Product controller's functionalities
-        public ProductsController controller;
+        public ProductsController Controller;
 
         /// <summary>
         /// Test constructor.
@@ -22,7 +22,7 @@ namespace UnitTests.Controller
         [SetUp]
         public void TestInitialize()
         {
-            controller = new ProductsController(TestHelper.ProductService);
+            Controller = new ProductsController(TestHelper.ProductService);
         }
         #endregion
 
@@ -41,7 +41,9 @@ namespace UnitTests.Controller
 
             // Act
             //Set the page model's product variable
-            var Data = controller.Get();
+            var Data = Controller.Get();
+
+            //Reset
 
             // Assert
             Assert.AreEqual(Data.Count(), randomProduct.Count());
@@ -60,6 +62,8 @@ namespace UnitTests.Controller
             RatingReq.ProductId= "testId";
             RatingReq.Rating = ProductRating.AVOID;
 
+            //Reset
+
             // Assert
             Assert.AreEqual(RatingReq.ProductId, "testId");
             Assert.AreEqual(RatingReq.Rating, ProductRating.AVOID);
@@ -77,7 +81,9 @@ namespace UnitTests.Controller
             RatingReq.Rating = ProductRating.AVOID;
 
             // Act
-            var OkResult = controller.Patch(RatingReq) as OkObjectResult;
+            var OkResult = Controller.Patch(RatingReq) as OkObjectResult;
+
+            //Reset
 
 
             // Assert
