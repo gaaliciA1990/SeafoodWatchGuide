@@ -1600,6 +1600,14 @@
     "Rating": "GOOD_ALTERNATIVE"
   },
   {
+    "Id": "35947de5-7c80-4227-ab9e-20b0c81372ec",
+    "Region": "Southeast",
+    "img": "https://www.seachoice.org/wp-content/uploads/2019/06/800px-Katsuwonus_pelamis_Cyprus-800x380.jpg",
+    "Title": "Skipjack Tuna: (free school, imported trolls, pole and lines, US longlines)",
+    "Description": "Also known as: Aku, Canned Light Tuna, Katsuo, Lesser Tuna, Maguro, Ocean Bonito\t",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
     "Id": "0b671722-864e-4da0-9d15-e913b8c6ee92",
     "Region": "Southeast",
     "img": "https://files.nc.gov/ncdeq/styles/main-image/public/yellowfin-tuna_0.jpg?itok=7n8tbPiJ",
@@ -1725,14 +1733,6 @@
     "img": "https://caseagrant.ucsd.edu/sites/default/files/Market-Squid-fishwatch_0.JPG",
     "Title": "Squid (Argentina, China, India, Indonesia, Japan \u0026 Thailand)",
     "Description": "Also known as: Calamari, California Squid, Ika, Market Squid, Opal Squid, Opalescent Inshore Squid. Sourced from California\t",
-    "Rating": "AVOID"
-  },
-  {
-    "Id": "35947de5-7c80-4227-ab9e-20b0c81372ec",
-    "Region": "Southeast",
-    "img": "https://www.seachoice.org/wp-content/uploads/2019/06/800px-Katsuwonus_pelamis_Cyprus-800x380.jpg",
-    "Title": "Skipjack Tuna: (free school, imported trolls, pole and lines, US longlines)",
-    "Description": "Also known as: Aku, Canned Light Tuna, Katsuo, Lesser Tuna, Maguro, Ocean Bonito\t",
     "Rating": "AVOID"
   },
   {
