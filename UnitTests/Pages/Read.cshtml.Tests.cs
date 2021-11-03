@@ -18,7 +18,8 @@ namespace UnitTests.Pages.Read
     public class ReadTests
     {
         #region TestSetup
-        public static ReadModel pageModel;
+        //Read model used to test Read page model's behaviors
+        public static ReadModel PageModel;
 
         /// <summary>
         /// Test constructor
@@ -28,7 +29,7 @@ namespace UnitTests.Pages.Read
         {
             var MockLoggerDirect = Mock.Of<ILogger<ReadModel>>();
 
-            pageModel = new ReadModel(MockLoggerDirect, TestHelper.ProductService)
+            PageModel = new ReadModel(MockLoggerDirect, TestHelper.ProductService)
             {
             };
         }
@@ -47,7 +48,9 @@ namespace UnitTests.Pages.Read
             // Arrange
             // Act
             var sampleProduct = TestHelper.ProductService.GetAllData().FirstOrDefault();
-            var page = pageModel.OnGetDelete(sampleProduct.Id) as RedirectToPageResult;
+            var page = PageModel.OnGetDelete(sampleProduct.Id) as RedirectToPageResult;
+
+            //Reset
 
             // Assert
             Assert.AreEqual("Delete", page.PageName);
@@ -65,10 +68,12 @@ namespace UnitTests.Pages.Read
             // Act
             var randomProduct = TestHelper.ProductService.GetAllData().FirstOrDefault();
             var sampleProduct = TestHelper.ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(randomProduct.Id));
-            pageModel.OnGet(sampleProduct.Id);
+            PageModel.OnGet(sampleProduct.Id);
+
+            //Reset
 
             // Assert
-            Assert.AreEqual(sampleProduct.Id, pageModel.Product.Id);
+            Assert.AreEqual(sampleProduct.Id, PageModel.Product.Id);
 
         }
 
@@ -82,7 +87,9 @@ namespace UnitTests.Pages.Read
             // Arrange
             // Act
             var sampleProduct = TestHelper.ProductService.GetAllData().FirstOrDefault();
-            var page = pageModel.OnGetUpdate(sampleProduct.Id) as RedirectToPageResult;
+            var page = PageModel.OnGetUpdate(sampleProduct.Id) as RedirectToPageResult;
+
+            //Reset
 
             // Assert
             Assert.AreEqual("Update", page.PageName);
@@ -95,7 +102,9 @@ namespace UnitTests.Pages.Read
             // Arrange
 
             // Act
-            var result = pageModel.OnGet("Bogus") as RedirectToPageResult;
+            var result = PageModel.OnGet("Bogus") as RedirectToPageResult;
+
+            //Reset
 
             // Assert
             Assert.AreEqual("./Admin", result.PageName);
