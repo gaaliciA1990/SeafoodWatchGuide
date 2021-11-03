@@ -12,6 +12,7 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class AboutModel : PageModel
     {
+        //Logger to help with debugging
         private readonly ILogger<AboutModel> _logger;
 
         /// <summary>
