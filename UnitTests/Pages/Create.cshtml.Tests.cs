@@ -19,8 +19,8 @@ namespace UnitTests.Pages.Create
     {
 
         #region TestSetup
-        //CreteModel object used to test Create page model
-        public static CreateModel pageModel;
+        //CreateModel object used to test Create page model
+        public static CreateModel PageModel;
 
         /// <summary>
         /// Test constructor
@@ -30,7 +30,7 @@ namespace UnitTests.Pages.Create
         {
             var MockLoggerDirect = Mock.Of<ILogger<CreateModel>>();
 
-            pageModel = new CreateModel(MockLoggerDirect, TestHelper.ProductService)
+            PageModel = new CreateModel(MockLoggerDirect, TestHelper.ProductService)
             {
             };
         }
@@ -45,10 +45,14 @@ namespace UnitTests.Pages.Create
         public void OnGet_initial_setup()
         {
             //Arrange
-            pageModel.OnGet();
+
+            //Act
+            PageModel.OnGet();
+
+            //Reset
 
             //Assert
-            Assert.AreEqual(null, pageModel.Product);
+            Assert.AreEqual(null, PageModel.Product);
 
         }
         #endregion OnGet
@@ -62,14 +66,15 @@ namespace UnitTests.Pages.Create
         public void OnPost_invalidState_returnToPage()
         {
             //Arrange
-            //Act
-            pageModel.ModelState.AddModelError("bogus", "bogus error");
+            PageModel.ModelState.AddModelError("bogus", "bogus error");
 
             // Act
-            var result = pageModel.OnPost() as ActionResult;
+            var result = PageModel.OnPost() as ActionResult;
+
+            //Reset
 
             // Assert
-            Assert.AreEqual(false, pageModel.ModelState.IsValid);
+            Assert.AreEqual(false, PageModel.ModelState.IsValid);
 
         }
 
@@ -82,7 +87,7 @@ namespace UnitTests.Pages.Create
         public void OnPost_Title_Has_Only_Numbers_Return_To_Page()
         {
             //Arrange
-            pageModel.Product = new ProductModel
+            PageModel.Product = new ProductModel
             {
                 Id = "123",
                 Title = "12345678(*@#*@#",
@@ -93,13 +98,13 @@ namespace UnitTests.Pages.Create
             };
 
             //Act
-            var result = pageModel.OnPost();
+            var result = PageModel.OnPost();
 
             //Reset
-            pageModel.ModelState.AddModelError("bogus", "bogus error");
+            PageModel.ModelState.AddModelError("bogus", "bogus error");
 
             //Assert
-            Assert.AreEqual(false, pageModel.ModelState.IsValid);
+            Assert.AreEqual(false, PageModel.ModelState.IsValid);
         }
 
         /// <summary>
@@ -111,7 +116,7 @@ namespace UnitTests.Pages.Create
         public void OnPost_ValidState_createCard()
         {
             //Arrange
-            pageModel.Product = new ProductModel
+            PageModel.Product = new ProductModel
             {
                 Id = "123",
                 Title = "testTitle",
@@ -121,10 +126,12 @@ namespace UnitTests.Pages.Create
                 Region = "West Coast"
             };
             //Act
-            var result = pageModel.OnPost() as RedirectToPageResult;
+            var result = PageModel.OnPost() as RedirectToPageResult;
+
+            //Reset
 
             //Assert
-            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, PageModel.ModelState.IsValid);
             Assert.AreEqual(true, result.PageName.Contains("Admin"));
 
         }
