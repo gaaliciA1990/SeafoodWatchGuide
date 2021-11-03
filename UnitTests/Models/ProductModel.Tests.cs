@@ -20,7 +20,7 @@ namespace UnitTests.Model
     {
         #region TestSetup
         //ProductModel object used to test Product model's functionalities
-        public ProductModel model;
+        public ProductModel Model;
 
         /// <summary>
         /// Test constructor.
@@ -29,7 +29,7 @@ namespace UnitTests.Model
         [SetUp]
         public void TestInitialize()
         {
-            model = new ProductModel();
+            Model = new ProductModel();
         }
         #endregion
 
@@ -45,10 +45,10 @@ namespace UnitTests.Model
             // Arrange - not needed
 
             // Act
-            var result = ProductModel.covertToString(ContosoCrafts.WebSite.Data.ProductRating.BEST_CHOICE);
+            var Result = ProductModel.covertToString(ContosoCrafts.WebSite.Data.ProductRating.BEST_CHOICE);
 
             // Assert
-            Assert.AreEqual("Best choice", result);
+            Assert.AreEqual("Best choice", Result);
         }
 
         /// <summary>
@@ -61,10 +61,10 @@ namespace UnitTests.Model
             // Arrange - not needed
 
             // Act
-            var result = ProductModel.covertToString(ContosoCrafts.WebSite.Data.ProductRating.GOOD_ALTERNATIVE);
+            var Result = ProductModel.covertToString(ContosoCrafts.WebSite.Data.ProductRating.GOOD_ALTERNATIVE);
 
             // Assert
-            Assert.AreEqual("Good alternative", result);
+            Assert.AreEqual("Good alternative", Result);
 
         }
 
@@ -78,10 +78,10 @@ namespace UnitTests.Model
             // Arrange - not needed
 
             // Act
-            var result = ProductModel.covertToString(ContosoCrafts.WebSite.Data.ProductRating.AVOID);
+            var Result = ProductModel.covertToString(ContosoCrafts.WebSite.Data.ProductRating.AVOID);
 
             // Assert
-            Assert.AreEqual("Avoid", result);
+            Assert.AreEqual("Avoid", Result);
 
         }
 
