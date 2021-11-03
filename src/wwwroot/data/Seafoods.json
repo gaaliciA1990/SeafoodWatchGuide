@@ -768,51 +768,499 @@
     "Rating": "GOOD_ALTERNATIVE"
   },
   {
-    "Id": "6da90d04-82ae-4980-b3b6-5497bad955f6",
+    "Id": "NE1",
     "Region": "Northeast",
-    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/skate/big-skate.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
-    "Title": "Big skate",
-    "Description": "Big skate caught on the U.S. West Coast with bottom trawls is a Good Alternative. The stock status is unknown, but management is rated effective. This fishery catches other species that are depleted, vulnerable to overfishing, or both, but they\u0027re not being overfished. Habitat protection measures like closed areas or gear modifications reduce seafloor impacts, and policies are being developed to protect the ecosystem.",
-    "Rating": "GOOD_ALTERNATIVE"
-  },
-  {
-    "Id": "7f6c826c-e3aa-4548-82e2-6f3592ff5bbd",
-    "Region": "Northeast",
-    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/clams/geoduck.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
-    "Title": "Pacific geoduck",
-    "Description": "Pacific geoduck farmed on the seafloor in Washington is a Good Alternative. The environmental impacts of farming plankton-filtering species are typically very low. However, there\u0027s a heavy reliance on plastic tubing to protect growing Pacific geoduck, and a better understanding of the ecosystem impacts of this practice is needed.",
-    "Rating": "GOOD_ALTERNATIVE"
-  },
-  {
-    "Id": "fff1b727-9c77-4563-82be-8fc4d97abbbd",
-    "Region": "Northeast",
-    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/lingcod/lingcod2.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
-    "Title": "Lingcod",
-    "Description": "Lingcod caught in Canada with midwater trawls is a Good Alternative. The stock is healthy, and overfishing is a very low concern. This fishery catches other species that are depleted, vulnerable to overfishing, or both. A moderately effective management framework is in place, but implementation has been uneven, and many species haven\u0027t been assessed. Seafloor impacts are minimal, and policies are being developed to protect the ecosystem.",
-    "Rating": "GOOD_ALTERNATIVE"
-  },
-  {
-    "Id": "a961aa3b-3ebb-4cbe-8ee7-4a89e2ac8b6b",
-    "Region": "Northeast",
-    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/barnacle/leaf-barnacle.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
-    "Title": "Leaf barnacle",
-    "Description": "Leaf barnacles collected with hand implements in British Columbia, Canada, are a Best Choice. There are no concerns with the stock\u0027s health, bycatch of other species, or habitat impacts. In addition, the conservation measures for this fishery are rated highly effective.     ",
-    "Rating": "GOOD_ALTERNATIVE"
-  },
-  {
-    "Id": "c70490cb-a6b4-4251-bb66-7622845a635e",
-    "Region": "Northeast",
-    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/salmon/pink-salmon.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
-    "Title": "Pink salmon",
-    "Description": "Pink salmon caught in Washington with lift nets is a Best Choice. The populations are healthy, and management is effective. In addition, if salmon other than sockeye and pink are caught, they\u0027re returned to the water alive. Many salmon runs on the U.S. West Coast are augmented by large numbers of hatchery-raised salmon, which could reduce the ability of wild populations to survive.",
+    "img": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/bass-fish-amanda-diehl.jpg",
+    "Title": "Bass (US Farmed)",
+    "Description": "Sunshine Bass, also known as Hybrid Striped, Hybrid White, Stripe and Suzuki",
     "Rating": "BEST_CHOICE"
   },
   {
-    "Id": "64a4f3b6-4a6c-4785-9972-3067c382ec2d",
+    "Id": "NE2",
     "Region": "Northeast",
-    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/sanddab/pacific-sanddab.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
-    "Title": "Pacific sanddab",
-    "Description": "Pacific sanddab caught on the U.S. West Coast with bottom trawls is a Best Choice. The stock is healthy, but this fishery also catches other species from stocks that are overfished or rebuilding. However, effective management reduces the likelihood of overfishing as well as impacts on seafloor habitat. Policies are being developed to protect the ecosystem. ",
+    "img": "https://image.shutterstock.com/image-photo/bluefish-pomatomus-saltatrix-7-pound-260nw-1867379185.jpg",
+    "Title": "Bluefish (US Handlines)",
+    "Description": "",
     "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE3",
+    "Region": "Northeast",
+    "img": "https://www.sweetandsavorybyshinee.com/wp-content/uploads/2020/01/How-to-Clean-and-Prep-Shortneck-Clam-7.jpg",
+    "Title": "Clams (farmed)",
+    "Description": "Also known as: Blood Clam, Chinese Razor Clam, Hamachi, Hard Clam, Japanese Hard Clam, Littleneck Clam, Lyrate Hard Clam, Mirugai, Northern Quahog Clam, Razor Clam, Venus",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE3",
+    "Region": "Northeast",
+    "img": "https://media-cdn.greatbritishchefs.com/media/ka5luism/img23555.jpg",
+    "Title": "Cockles",
+    "Description": "Also known as: Atlantic Giant Cockle, Basket Cockle, California Cockle, Common Cockle, Dock Cockle, Greenland Cockle, Knotted Cockle, New Zealand Cockle, Spiny Cockle",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE4",
+    "Region": "Northeast",
+    "img": "https://www.nwf.org/-/media/NEW-WEBSITE/Shared-Folder/Wildlife/Invertebrates/invertebrate_blue-crab_molefranz-GettyImages_600x300.ashx",
+    "Title": "Blue Crab: (MD trotline)",
+    "Description": "Also known as: Blue-claw, Hardshell crab, Kani, Softshell Crab",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE5",
+    "Region": "Northeast",
+    "img": "https://www.pacificseafood.com/pac-incoming/2018/05/King_Crab_Whole.jpg",
+    "Title": "King, Snow \u0026 Tanner Crab: (AK)",
+    "Description": "Harvested by fishing pots in Alaska",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE6",
+    "Region": "Northeast",
+    "img": "https://honestcooking.com/wp-content/uploads/2015/03/1a-crawfish-boil.jpg",
+    "Title": "Atlantic Croaker: (Beach seines)",
+    "Description": "Also known as: Corbina, Corvina, Crocus, Grumbler, Hardheads, King Billy, Nibe, Pinheads, Roncadina",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE7",
+    "Region": "Northeast",
+    "img": "https://images.theconversation.com/files/417460/original/file-20210823-22-1pz2luo.jpg?ixlib=rb-1.1.0\u0026q=45\u0026auto=format\u0026w=1200\u0026h=1200.0\u0026fit=crop",
+    "Title": "Lionfish (US)",
+    "Description": "Also known as: Firefish, Devil Firefish, Peacock Lionfish, Red Firefish, Red Lionfish, Turkeyfish, Zebrafish",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE8",
+    "Region": "Northeast",
+    "img": "https://www.saveur.com/app/uploads/2019/03/18/3VJWIX5J6IC7CD556FEHTYV77A.jpg",
+    "Title": "Mussels (farmed)",
+    "Description": "Also known as: Blue Mussel, Chilean Mussel, Green Mussel, Mediterranean Mussel, New Zealand Green Mussel, South American Rock Mussel, Muurugai",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE9",
+    "Region": "Northeast",
+    "img": "https://hips.hearstapps.com/del.h-cdn.co/assets/16/43/1477667425-gettyimages-523418309.jpg",
+    "Title": "Oysters (farmed)",
+    "Description": "Also known as: American Cupped Oyster, Cluster Oysters, Kaki, Oyster",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE10",
+    "Region": "Northeast",
+    "img": "https://www.thespruceeats.com/thmb/Doak8NADiBD8VDwWs6lReHo3lKY=/3456x2592/smart/filters:no_upscale()/fresh-sea-scallops-154961718-582140443df78cc2e843df74.jpg",
+    "Title": "Scallops (farmed)",
+    "Description": "Farming method should be bottom culture",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE11",
+    "Region": "Northeast",
+    "img": "https://images-global.nhst.tech/image/N3FBaE9NWGRzUTZDMGFOeWxwNkI5L2FlS1YzbDdZOEJKSjZjajNJQnMrbz0=/nhst/binary/7104b0c465111baf4b6259cd36ea83f1",
+    "Title": "Salmon (New Zealand)",
+    "Description": "Also known as: Sake",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE12",
+    "Region": "Northeast",
+    "img": "https://www.treehugger.com/thmb/UBcpYKYrHuDW5pQja7JlvBBax0Y=/2121x1193/smart/filters:no_upscale()/GettyImages-824639076-7ad92343bc224818804b82fe45c5d46a.jpg",
+    "Title": "Shrimp (US farmed)",
+    "Description": "Also known as: Ebi, Tiger Prawn/Shrimp, Asian Tiger Shrimp, Freshwater Shrimp, Prawn, Scampi",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE13",
+    "Region": "Northeast",
+    "img": "https://media-cdn.greatbritishchefs.com/media/eu2gmdcn/img26784.jpg?mode=crop&width=1423&height=711&center=0.51,0.4915",
+    "Title": "Seaweed (farmed)",
+    "Description": "Also known as: Arame, Asian Kelp, Hijiki, Horsetail, Ito-wakame, Japanese Kelp, Kelp, Kizami-wakame, Kombu, Nambu wakame, Nori, Ogonori, Sugar Kelp, Wakame, Winged Kelp",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE14",
+    "Region": "Northeast",
+    "img": "https://caseagrant.ucsd.edu/sites/default/files/Market-Squid-fishwatch_0.JPG",
+    "Title": "Squid (CA)",
+    "Description": "Also known as: Calamari, California Squid, Ika, Market Squid, Opal Squid, Opalescent Inshore Squid. Sourced from California",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE15",
+    "Region": "Northeast",
+    "img": "https://divcomplatformstaging.s3.amazonaws.com/nf-staging.divcomstaging.com/images/d4857d071c89fc15625d0eae6c58954a.jpeg",
+    "Title": "Swordfish (handlines, harpoons)",
+    "Description": "Also known as: Broadbill Swordfish, Kajiki Maguro, Mekajiki, Shutome",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE16",
+    "Region": "Northeast",
+    "img": "https://chefsmandala.com/wp-content/uploads/2018/03/Tilapia.jpg",
+    "Title": "Tilapia (Canada, Ecuador, Peru \u0026 US)",
+    "Description": "Also known as: Izumidai, Saint Peter Fish",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE17",
+    "Region": "Northeast",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/410edFkBRmL.__AC_SY300_SX300_QL70_ML2_.jpg",
+    "Title": "Trout (US Farmed)",
+    "Description": "Also known as: Great Lakes Trout, Grey Trout, Lake Char/Charr, Laker, Mackinaw, Mountain Trout, Namaycush, Salmon Trout, Togue, Touladi, Trout",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE18",
+    "Region": "Northeast",
+    "img": "https://a-z-animals.com/media/2021/01/Tuna-Albacore-swimming.jpg",
+    "Title": "Albacore Tuna: (trolls, pole and lines)",
+    "Description": "Also known as: Canned White Tuna, Germon, Longfinned Tuna, Maguro, Tombo, Tombo Ahi, Shiro Maguro",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE19",
+    "Region": "Northeast",
+    "img": "https://www.seachoice.org/wp-content/uploads/2019/06/800px-Katsuwonus_pelamis_Cyprus-800x380.jpg",
+    "Title": "Skipjack Tuna (Pacific trolls, pole and lines)",
+    "Description": "Also known as: Aku, Canned Light Tuna, Katsuo, Lesser Tuna, Maguro, Ocean Bonito",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "NE20",
+    "Region": "Northeast",
+    "img": "https://image.shutterstock.com/image-photo/bluefish-pomatomus-saltatrix-7-pound-260nw-1867379185.jpg",
+    "Title": "Bluefish (US gillnets and trawls)",
+    "Description": "",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE21",
+    "Region": "Northeast",
+    "img": "https://media.fisheries.noaa.gov/dam-migration/900x600-hard-clam-noaa-shutterstock.jpg",
+    "Title": "Clams (US \u0026 Canada wild) ",
+    "Description": "Also known as: Cherrystones, Chowders, Hamaguri, Littleneck Clam, Mirugai, Quahog, Topnecks",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE22",
+    "Region": "Northeast",
+    "img": "https://3try4a3p71br2sde7i3zw7sx-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/Atlantic-Cod-1-770x510.jpg",
+    "Title": "Atlantic Cod: (handlines, pole and lines)",
+    "Description": "Also known as: Cod, Codfish, Scrod, True Cod, Whitefish",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE23",
+    "Region": "Northeast",
+    "img": "https://images.fineartamerica.com/images-medium-large-5/atlantic-rock-crab-holding-female-andrew-j-martinez.jpg",
+    "Title": "Atlantic Rock Crab: (Canada \u0026 MA)",
+    "Description": "Also known as: Kani, Peekytoe Crab, Quick Crab, Rock Crab, Sand Crab",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE24",
+    "Region": "Northeast",
+    "img": "https://www.nwf.org/-/media/NEW-WEBSITE/Shared-Folder/Wildlife/Invertebrates/invertebrate_blue-crab_molefranz-GettyImages_600x300.ashx",
+    "Title": "Blue Crab: (AL, DE, MD \u0026 NJ pots)",
+    "Description": "Also known as: Blue-claw, Hardshell crab, Kani, Softshell Crab",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE25",
+    "Region": "Northeast",
+    "img": "https://media.gettyimages.com/photos/market-scene-with-closeup-of-king-crab-for-sale-in-the-market-hall-in-picture-id460400468?s=612x612",
+    "Title": "Southern King Crab: (Argentina)",
+    "Description": "Also known as: Kani, Nova Crab, Santolla Crab, Southern Red Crab",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE26",
+    "Region": "Northeast",
+    "img": "https://caseagrant.ucsd.edu/sites/default/files/images/CA%20spiny%20lobsters-KateMasury.png",
+    "Title": "Spiny Lobster: (US)",
+    "Description": "Also known as: Bug, Crawfish, Red Lobster, Rock Lobster, Spiny Lobster, Lobster",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE27",
+    "Region": "Northeast",
+    "img": "https://cdn.shopify.com/s/files/1/0230/8793/9662/files/Jumping_Mahi_Mahi_Adrian_Gray.jpg?v=1608240992",
+    "Title": "Mahi Mahi (Costa Rica, Ecuador, Panama \u0026 US longlines)",
+    "Description": "Also known as: Dorado, Dolphinfish",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE28",
+    "Region": "Northeast",
+    "img": "https://hips.hearstapps.com/del.h-cdn.co/assets/16/43/1477667425-gettyimages-523418309.jpg",
+    "Title": "Oysters (US wild) ",
+    "Description": "Also known as: American Cupped Oyster, Cluster Oysters, Kaki, Oyster",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE29",
+    "Region": "Northeast",
+    "img": "https://cdn.shopify.com/s/files/1/1111/6422/articles/dreamstime_s_87884133.jpg?v=1594093044",
+    "Title": "Atlantic Salmon: (BC \u0026 ME farmed)",
+    "Description": "Also known as: Sake",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE30",
+    "Region": "Northeast",
+    "img": "https://www.thespruceeats.com/thmb/2Vfmr20PsL0XggbY9NKCwjZXtL4=/3000x2000/filters:fill(auto,1)/types-of-salmon-4098993_final-90fc3a7ecb4745638e64cf3c46ac0549.png",
+    "Title": "Salmon (CA, OR \u0026 WA)",
+    "Description": "Also known as: King Salmon, Quinnat Salmon, Sake, Spring Salmon, Tyee Salmon, Chum, Keta Salmon, Coho, Medium Red Salmon, Silver Salmon, Humpback Salmon, Pink, Blueback Salmon, Red Salmon, Sockeye",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE31",
+    "Region": "Northeast",
+    "img": "https://www.treehugger.com/thmb/UBcpYKYrHuDW5pQja7JlvBBax0Y=/2121x1193/smart/filters:no_upscale()/GettyImages-824639076-7ad92343bc224818804b82fe45c5d46a.jpg",
+    "Title": "Shrimp (Canada \u0026 US wild, Ecuador, Honduras \u0026 Thailand farmed)",
+    "Description": "Also known as: Ebi, Tiger Prawn/Shrimp, Asian Tiger Shrimp, Freshwater Shrimp, Prawn, Scampi",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE32",
+    "Region": "Northeast",
+    "img": "https://caseagrant.ucsd.edu/sites/default/files/Market-Squid-fishwatch_0.JPG",
+    "Title": "Squid (Chile \u0026 Peru) ",
+    "Description": "Also known as: Calamari, California Squid, Ika, Market Squid, Opal Squid, Opalescent Inshore Squid. Sourced from California",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE33",
+    "Region": "Northeast",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Dosidicus_gigas.jpg/220px-Dosidicus_gigas.jpg",
+    "Title": "Jumbo Squid: (China)",
+    "Description": "Also known as: Calamari, Giant Calamari, Humboldt Squid, Ika, Jumbo Flying Squid, Squid",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE34",
+    "Region": "Northeast",
+    "img": "https://divcomplatformstaging.s3.amazonaws.com/nf-staging.divcomstaging.com/images/d4857d071c89fc15625d0eae6c58954a.jpeg",
+    "Title": "Swordfish (US, trolls)",
+    "Description": "Also known as: Broadbill Swordfish, Kajiki Maguro, Mekajiki, Shutome",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE35",
+    "Region": "Northeast",
+    "img": "https://chefsmandala.com/wp-content/uploads/2018/03/Tilapia.jpg",
+    "Title": "Tilapia (Colombia, Honduras, Indonesia, Mexico \u0026 Taiwan)",
+    "Description": "Also known as: Izumidai, Saint Peter Fish",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE36",
+    "Region": "Northeast",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/410edFkBRmL.__AC_SY300_SX300_QL70_ML2_.jpg",
+    "Title": "Trout (Canada \u0026 Chile farmed)",
+    "Description": "Also known as: Great Lakes Trout, Grey Trout, Lake Char/Charr, Laker, Mackinaw, Mountain Trout, Namaycush, Salmon Trout, Togue, Touladi, Trout",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE37",
+    "Region": "Northeast",
+    "img": "https://a-z-animals.com/media/2021/01/Tuna-Albacore-swimming.jpg",
+    "Title": "Albacore Tuna: (US longlines)",
+    "Description": "Also known as: Canned White Tuna, Germon, Longfinned Tuna, Maguro, Tombo, Tombo Ahi, Shiro Maguro",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE38",
+    "Region": "Northeast",
+    "img": "https://files.nc.gov/ncdeq/styles/main-image/public/yellowfin-tuna_0.jpg?itok=7n8tbPiJ",
+    "Title": "Yellowfin Tuna: (free school, trolls, pole and lines, US longlines)",
+    "Description": "Also known as: Ahi, Canned Light Tuna, Maguro",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE39",
+    "Region": "Northeast",
+    "img": "https://s3.amazonaws.com/divcomplatform/seafoodsource.com/images/8a1c8c7ee8d86f905f21630e1d11fd5e.jpeg",
+    "Title": "Haddock",
+    "Description": "Also known as: Scrod",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE40",
+    "Region": "Northeast",
+    "img": "https://media.fisheries.noaa.gov/styles/original/s3/dam-migration/silver_hake.png?itok=TlWNQuI1",
+    "Title": "Silver Hake (US)",
+    "Description": "Also known as: Whiting",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE41",
+    "Region": "Northeast",
+    "img": "https://www.mashed.com/img/gallery/what-is-monkfish-and-is-it-poisonous/l-intro-1622583319.jpg",
+    "Title": "Monkfish (US)",
+    "Description": "Also known as: Abbot, Allmouth, Angler, Ankimo, Ankoh, Fishing Frog, Lotte, Molligut, Goosefish, Monktails",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE42",
+    "Region": "Northeast",
+    "img": "https://www.rifishing.com/wp-content/uploads/2018/05/pollock.png",
+    "Title": "Pollock (Canada longlines, gillnets \u0026 US)",
+    "Description": "Also known as: Atlantic Pollock, Blue Snapper, Boston Bluefish, Coalfish, Coley, Saithe",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "NE43",
+    "Region": "Northeast",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/7/74/Morone_saxatilis_SI2.jpg",
+    "Title": "Striped Bass: (US gillnet, pound net)",
+    "Description": "Also known as: Greenhead, Linesides, Striper, Suzuki",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE44",
+    "Region": "Northeast",
+    "img": "https://clovegarden.com/ingred/img/sf_basseu02g.jpg",
+    "Title": "European Sea Bass (Mediterranean farmed)",
+    "Description": "Also known as: Branzini, Branzino, Loup de Mer, Mediterranean Seabass, Suzuki",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE45",
+    "Region": "Northeast",
+    "img": "https://3try4a3p71br2sde7i3zw7sx-wpengine.netdna-ssl.com/wp-content/uploads/2014/08/Atlantic-Cod-1-770x510.jpg",
+    "Title": "Atlantic Cod: (gillnet, longline, trawl)",
+    "Description": "Also known as: Cod, Codfish, Scrod, True Cod, Whitefish",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE46",
+    "Region": "Northeast",
+    "img": "https://images.fineartamerica.com/images-medium-large-5/atlantic-rock-crab-holding-female-andrew-j-martinez.jpg",
+    "Title": "Atlantic Rock Crab: (US, except MA)",
+    "Description": "Also known as: Kani, Peekytoe Crab, Quick Crab, Rock Crab, Sand Crab",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE47",
+    "Region": "Northeast",
+    "img": "https://www.nwf.org/-/media/NEW-WEBSITE/Shared-Folder/Wildlife/Invertebrates/invertebrate_blue-crab_molefranz-GettyImages_600x300.ashx",
+    "Title": "Blue Crab: (FL, GA, LA,MS, NC, SC, TX \u0026VA)",
+    "Description": "Also known as: Blue-claw, Hardshell crab, Kani, Softshell Crab",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE48",
+    "Region": "Northeast",
+    "img": "https://www.fishwatch.gov/sites/default/files/styles/large/public/2%20-%20nefsc.jpg?itok=y6T-84vb",
+    "Title": "Atlantic Halbut (wild)",
+    "Description": "Also known as: Halibut, Hirame",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE49",
+    "Region": "Northeast",
+    "img": "https://cdn.shopify.com/s/files/1/0230/8793/9662/files/Jumping_Mahi_Mahi_Adrian_Gray.jpg?v=1608240992",
+    "Title": "Mahi Mahi (Peru \u0026 Taiwan) ",
+    "Description": "Also known as: Dorado, Dolphinfish",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE50",
+    "Region": "Northeast",
+    "img": "https://c8.alamy.com/comp/W1E5BW/orange-roughy-W1E5BW.jpg",
+    "Title": "Orange Roughy",
+    "Description": "Also known as: Slimehead",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE51",
+    "Region": "Northeast",
+    "img": "https://www.rifishing.com/wp-content/uploads/2018/05/pollock.png",
+    "Title": "Pollock (Canada trawls \u0026 Russia)",
+    "Description": "Also known as: Atlantic Pollock, Blue Snapper, Boston Bluefish, Coalfish, Coley, Saithe",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE52",
+    "Region": "Northeast",
+    "img": "https://www.thespruceeats.com/thmb/2Vfmr20PsL0XggbY9NKCwjZXtL4=/3000x2000/filters:fill(auto,1)/types-of-salmon-4098993_final-90fc3a7ecb4745638e64cf3c46ac0549.png",
+    "Title": "Salmon (Canada Atlantic, Chile, Norway \u0026 Scotland)",
+    "Description": "Also known as: King Salmon, Quinnat Salmon, Sake, Spring Salmon, Tyee Salmon, Chum, Keta Salmon, Coho, Medium Red Salmon, Silver Salmon, Humpback Salmon, Pink, Blueback Salmon, Red Salmon, Sockeye",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE53",
+    "Region": "Northeast",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Isurus_oxyrinchus_by_mark_conlin2.JPG",
+    "Title": "Sharks",
+    "Description": "AVOID ALL SHARKS, THERE IS NO GOOD OPTION HERE!",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE54",
+    "Region": "Northeast",
+    "img": "https://www.treehugger.com/thmb/UBcpYKYrHuDW5pQja7JlvBBax0Y=/2121x1193/smart/filters:no_upscale()/GettyImages-824639076-7ad92343bc224818804b82fe45c5d46a.jpg",
+    "Title": "Shrimp (other imported sources)",
+    "Description": "Also known as: Ebi, Tiger Prawn/Shrimp, Asian Tiger Shrimp, Freshwater Shrimp, Prawn, Scampi\t",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE55",
+    "Region": "Northeast",
+    "img": "https://caseagrant.ucsd.edu/sites/default/files/Market-Squid-fishwatch_0.JPG",
+    "Title": "Squid (Argentina, China, India, Indonesia, Japan \u0026 Thailand)",
+    "Description": "Also known as: Calamari, California Squid, Ika, Market Squid, Opal Squid, Opalescent Inshore Squid. Sourced from California\t",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE56",
+    "Region": "Northeast",
+    "img": "https://divcomplatformstaging.s3.amazonaws.com/nf-staging.divcomstaging.com/images/d4857d071c89fc15625d0eae6c58954a.jpeg",
+    "Title": "Swordfish (imported longlines)",
+    "Description": "Also known as: Broadbill Swordfish, Kajiki Maguro, Mekajiki, Shutome\t",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE57",
+    "Region": "Northeast",
+    "img": "https://chefsmandala.com/wp-content/uploads/2018/03/Tilapia.jpg",
+    "Title": "Tilapia (China)",
+    "Description": "Also known as: Izumidai, Saint Peter Fish\t",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE58",
+    "Region": "Northeast",
+    "img": "https://a-z-animals.com/media/2021/01/Tuna-Albacore-swimming.jpg",
+    "Title": "Albacore Tuna: (imported except trolls, pole and lines)",
+    "Description": "Also known as: Canned White Tuna, Germon, Longfinned Tuna, Maguro, Tombo, Tombo Ahi, Shiro Maguro",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE59",
+    "Region": "Northeast",
+    "img": "https://scx2.b-cdn.net/gfx/news/hires/2016/atlanticblue.jpg",
+    "Title": "Bluefin Tuna",
+    "Description": "Also known as: Atlantic Bluefin Tuna, Giant Bluefin Tuna, Hon Maguro, Kuro Maguro, Maguro, Northern Bluefin Tuna, Toro, Tunny",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE60",
+    "Region": "Northeast",
+    "img": "https://www.seachoice.org/wp-content/uploads/2019/06/800px-Katsuwonus_pelamis_Cyprus-800x380.jpg",
+    "Title": "Skipjack Tuna: (imported purse seines \u0026 Indian Ocean)",
+    "Description": "Also known as: Aku, Canned Light Tuna, Katsuo, Lesser Tuna, Maguro, Ocean Bonito\t",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "NE61",
+    "Region": "Northeast",
+    "img": "https://files.nc.gov/ncdeq/styles/main-image/public/yellowfin-tuna_0.jpg?itok=7n8tbPiJ",
+    "Title": "Yellowfin Tuna: (imported longlines, purse seines \u0026 Indian Ocean)",
+    "Description": "Also known as: Ahi, Canned Light Tuna, Maguro\t",
+    "Rating": "AVOID"
   }
 ]
