@@ -10,8 +10,10 @@ namespace UnitTests.Pages.Privacy
     /// </summary>
     public class PrivacyTests
     {
+
         #region TestSetup
-        public static PrivacyModel pageModel;
+        //Privacy Model used to test our Privacy page model's behaviors
+        public static PrivacyModel PageModel;
 
         /// <summary>
         /// test constructor
@@ -21,7 +23,7 @@ namespace UnitTests.Pages.Privacy
         {
             var MockLoggerDirect = Mock.Of<ILogger<PrivacyModel>>();
 
-            pageModel = new PrivacyModel(MockLoggerDirect)
+            PageModel = new PrivacyModel(MockLoggerDirect)
             {
                 PageContext = TestHelper.PageContext,
                 TempData = TestHelper.TempData,
@@ -40,12 +42,12 @@ namespace UnitTests.Pages.Privacy
             // Arrange
 
             // Act
-            pageModel.OnGet();
+            PageModel.OnGet();
 
             // Reset
 
             // Assert
-            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, PageModel.ModelState.IsValid);
         }
 
         #endregion OnGet
