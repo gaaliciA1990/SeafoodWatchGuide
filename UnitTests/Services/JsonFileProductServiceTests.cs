@@ -16,6 +16,9 @@ namespace UnitTests.Services
     class JsonFileProductServiceTests
     {
          #region TestSetup
+        /// <summary>
+        /// Place holder for setting up the test
+        /// </summary>
         [SetUp]
         public void Setup()
         {
@@ -79,6 +82,8 @@ namespace UnitTests.Services
             //Act
             var result = TestHelper.ProductService.UpdateCard(origin_data);
 
+            //Reset
+
 
             //Assert
             Assert.AreEqual(result, null);
@@ -124,6 +129,8 @@ namespace UnitTests.Services
             //Act
             var result = TestHelper.ProductService.GetRegionData(testing_region);
 
+            //Reset
+
 
             //Assert
             Assert.IsEmpty(result);
@@ -143,6 +150,8 @@ namespace UnitTests.Services
 
             //Act
             var result = TestHelper.ProductService.GetRegionData(testing_region);
+
+            //Reset
 
 
             //Assert
