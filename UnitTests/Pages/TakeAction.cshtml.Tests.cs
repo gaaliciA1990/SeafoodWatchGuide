@@ -11,8 +11,8 @@ namespace UnitTests.Pages.TakeAction
     public class TakeActionTests
     {
         #region TestSetup
-        //AboutModel object used to test our About page model
-        public static AboutModel AboutModel;
+        //TakeAction object used to test our About page model
+        public static AboutModel PageModel;
 
         /// <summary>
         /// Set up the test framework
@@ -22,7 +22,7 @@ namespace UnitTests.Pages.TakeAction
         {
             var MockLoggerDirect = Mock.Of<ILogger<AboutModel>>();
 
-            AboutModel = new AboutModel(MockLoggerDirect)
+            PageModel = new AboutModel(MockLoggerDirect)
             {
                 PageContext = TestHelper.PageContext,
                 TempData = TestHelper.TempData,
@@ -41,10 +41,10 @@ namespace UnitTests.Pages.TakeAction
             // Arrange
 
             // Act
-            AboutModel.OnGet();
+            PageModel.OnGet();
 
             // Assert
-            Assert.AreEqual(true, AboutModel.ModelState.IsValid);
+            Assert.AreEqual(true, PageModel.ModelState.IsValid);
         }
         #endregion OnGet
     }
