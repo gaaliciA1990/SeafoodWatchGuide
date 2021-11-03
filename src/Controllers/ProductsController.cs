@@ -9,6 +9,9 @@ using ContosoCrafts.WebSite.Data;
 
 namespace ContosoCrafts.WebSite.Controllers
 {
+    /// <summary>
+    /// This class is the controller for handling interactions with our products
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class ProductsController : ControllerBase
@@ -22,9 +25,7 @@ namespace ContosoCrafts.WebSite.Controllers
             ProductService = productService;
         }
 
-        /// <summary>
-        /// This is a getter method for ProductService
-        /// </summary>
+        // This is a getter method for ProductService
         public JsonFileProductService ProductService { get; }
 
         /// <summary>
@@ -44,11 +45,9 @@ namespace ContosoCrafts.WebSite.Controllers
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-
         public ActionResult Patch([FromBody] RatingRequest request)
         {
             //ProductService.AddRating(request.ProductId, request.Rating);
-
             return Ok();
         }
 
