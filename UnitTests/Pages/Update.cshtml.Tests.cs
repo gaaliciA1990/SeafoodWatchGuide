@@ -15,7 +15,8 @@ namespace UnitTests.Pages.Update
     public class UpdateTests
     {
         #region TestSetup
-        public static UpdateModel pageModel;
+        //Update model object used to test Update page model's behaviors
+        public static UpdateModel PageModel;
 
         /// <summary>
         /// test constructor
@@ -23,7 +24,7 @@ namespace UnitTests.Pages.Update
         [SetUp]
         public void TestInitialize()
         {
-            pageModel = new UpdateModel(TestHelper.ProductService)
+            PageModel = new UpdateModel(TestHelper.ProductService)
             {
             };
         }
@@ -41,11 +42,13 @@ namespace UnitTests.Pages.Update
             // Arrange
 
             // Act
-            pageModel.OnGet("Crab");
+            PageModel.OnGet("Crab");
+
+            //Reset
 
             // Assert
-            Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual("Crab: Southern King (Argentina)", pageModel.Product.Title);
+            Assert.AreEqual(true, PageModel.ModelState.IsValid);
+            Assert.AreEqual("Crab: Southern King (Argentina)", PageModel.Product.Title);
         }
         #endregion OnGet
 
@@ -61,13 +64,15 @@ namespace UnitTests.Pages.Update
             // Arrange
 
             // Force an invalid error state
-            pageModel.ModelState.AddModelError("bogus", "bogus error");
+            PageModel.ModelState.AddModelError("bogus", "bogus error");
 
             // Act
-            var result = pageModel.OnPost() as ActionResult;
+            var result = PageModel.OnPost() as ActionResult;
+
+            //Reset
 
             // Assert
-            Assert.AreEqual(false, pageModel.ModelState.IsValid);
+            Assert.AreEqual(false, PageModel.ModelState.IsValid);
         }
 
         /// <summary>
@@ -81,7 +86,7 @@ namespace UnitTests.Pages.Update
         {
             // Arrange
 
-            pageModel.Product = new ProductModel
+            PageModel.Product = new ProductModel
             {
                 Id = "Crab",
                 Image = "data/Fish_img/Crab.bmp",
@@ -93,10 +98,12 @@ namespace UnitTests.Pages.Update
             
 
             // Act
-            var result = pageModel.OnPost() as RedirectToPageResult;
+            var result = PageModel.OnPost() as RedirectToPageResult;
+
+            //Reset
 
             // Assert
-            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, PageModel.ModelState.IsValid);
             Assert.AreEqual(true, result.PageName.Contains("Admin"));
         }
         #endregion OnPost
