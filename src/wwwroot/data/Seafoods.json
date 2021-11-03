@@ -766,5 +766,53 @@
     "Title": "Northern quahog",
     "Description": "Northern quahog clams harvested in New York with hand implements are a Good Alternative. The stocks aren\u0027t formally assessed, so their status and if overfishing is occurring are unknown. Management is rated moderately effective overall. Local governments have implemented various conservation measures, but a statewide management plan is needed. Handheld rakes, hoes, and shovels are selective harvest methods, so there are no concerns about bycatch. However, these gears can impact habitat, and fishing areas are only closed when the water quality is poor.",
     "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "6da90d04-82ae-4980-b3b6-5497bad955f6",
+    "Region": "Northeast",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/skate/big-skate.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Big skate",
+    "Description": "Big skate caught on the U.S. West Coast with bottom trawls is a Good Alternative. The stock status is unknown, but management is rated effective. This fishery catches other species that are depleted, vulnerable to overfishing, or both, but they\u0027re not being overfished. Habitat protection measures like closed areas or gear modifications reduce seafloor impacts, and policies are being developed to protect the ecosystem.",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "7f6c826c-e3aa-4548-82e2-6f3592ff5bbd",
+    "Region": "Northeast",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/clams/geoduck.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Pacific geoduck",
+    "Description": "Pacific geoduck farmed on the seafloor in Washington is a Good Alternative. The environmental impacts of farming plankton-filtering species are typically very low. However, there\u0027s a heavy reliance on plastic tubing to protect growing Pacific geoduck, and a better understanding of the ecosystem impacts of this practice is needed.",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "fff1b727-9c77-4563-82be-8fc4d97abbbd",
+    "Region": "Northeast",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/lingcod/lingcod2.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Lingcod",
+    "Description": "Lingcod caught in Canada with midwater trawls is a Good Alternative. The stock is healthy, and overfishing is a very low concern. This fishery catches other species that are depleted, vulnerable to overfishing, or both. A moderately effective management framework is in place, but implementation has been uneven, and many species haven\u0027t been assessed. Seafloor impacts are minimal, and policies are being developed to protect the ecosystem.",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "a961aa3b-3ebb-4cbe-8ee7-4a89e2ac8b6b",
+    "Region": "Northeast",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/barnacle/leaf-barnacle.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Leaf barnacle",
+    "Description": "Leaf barnacles collected with hand implements in British Columbia, Canada, are a Best Choice. There are no concerns with the stock\u0027s health, bycatch of other species, or habitat impacts. In addition, the conservation measures for this fishery are rated highly effective.     ",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "c70490cb-a6b4-4251-bb66-7622845a635e",
+    "Region": "Northeast",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/salmon/pink-salmon.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Pink salmon",
+    "Description": "Pink salmon caught in Washington with lift nets is a Best Choice. The populations are healthy, and management is effective. In addition, if salmon other than sockeye and pink are caught, they\u0027re returned to the water alive. Many salmon runs on the U.S. West Coast are augmented by large numbers of hatchery-raised salmon, which could reduce the ability of wild populations to survive.",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "64a4f3b6-4a6c-4785-9972-3067c382ec2d",
+    "Region": "Northeast",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/sanddab/pacific-sanddab.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Pacific sanddab",
+    "Description": "Pacific sanddab caught on the U.S. West Coast with bottom trawls is a Best Choice. The stock is healthy, but this fishery also catches other species from stocks that are overfished or rebuilding. However, effective management reduces the likelihood of overfishing as well as impacts on seafloor habitat. Policies are being developed to protect the ecosystem. ",
+    "Rating": "BEST_CHOICE"
   }
 ]
