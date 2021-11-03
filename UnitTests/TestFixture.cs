@@ -4,6 +4,9 @@ using NUnit.Framework;
 
 namespace UnitTests
 {
+    /// <summary>
+    /// This class holds the behaviors for testing environment
+    /// </summary>
     [SetUpFixture]
     public class TestFixture
     {
@@ -13,6 +16,9 @@ namespace UnitTests
         // Path to the data folder for the content
         public static string DataContentRootPath = "./data/";
 
+        /// <summary>
+        /// Set up before running tests
+        /// </summary>
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
@@ -51,6 +57,9 @@ namespace UnitTests
             }
         }
 
+        /// <summary>
+        /// Clean up after any tests
+        /// </summary>
         [OneTimeTearDown]
         public void RunAfterAnyTests()
         {
