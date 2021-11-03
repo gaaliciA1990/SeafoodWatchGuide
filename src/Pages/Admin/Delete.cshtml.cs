@@ -14,6 +14,7 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class DeleteModel : PageModel
     {
+        //Logger to help with debugging
         private readonly ILogger<DeleteModel> _logger;
 
         /// <summary>
@@ -29,6 +30,7 @@ namespace ContosoCrafts.WebSite.Pages
 
         //Product service object
         public JsonFileProductService ProductService { get; }
+
         //Product model object
         [BindProperty]
         public ProductModel Product { get; set; }
