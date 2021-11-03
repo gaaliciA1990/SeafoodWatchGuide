@@ -191,12 +191,6 @@
     "Description": "Striped marlin caught in the Southwest Pacific with drifting longlines is an Avoid. The population is likely depleted and approaching an overfishing status in this Pacific location. Also, the catch of at-risk or overfished turtles, seabirds, tuna, and sharks is a major concern. Management is rated ineffective overall. There are some measures to reduce bycatch of turtles and seabirds, but their effectiveness is unknown. In addition, there are no limits for non-target species. This fishery catches species that play an essential role in the food web, and there are some measures to protect the ecosystem. Longlines have minimal habitat impacts. ",
     "Rating": "AVOID"
   },
-
-
-
-
-
-
   {
     "Id": "H0",
     "Region": "Hawaii",
@@ -256,7 +250,7 @@
   {
     "Id": "H7",
     "Region": "Hawaii",
-    "img": "https://images.theconversation.com/files/417460/original/file-20210823-22-1pz2luo.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+    "img": "https://images.theconversation.com/files/417460/original/file-20210823-22-1pz2luo.jpg?ixlib=rb-1.1.0\u0026q=45\u0026auto=format\u0026w=1200\u0026h=1200.0\u0026fit=crop",
     "Title": "Lionfish (US)",
     "Description": "",
     "Rating": "BEST_CHOICE"
@@ -273,7 +267,7 @@
     "Id": "H9",
     "Region": "Hawaii",
     "img": "https://aquariumbreeder.com/wp-content/uploads/2019/11/Opae-Ula-Shrimp-Hawaiian-red-shrimp2.jpg",
-    "Title": "'Opae/Shrimp (US farmed)",
+    "Title": "\u0027Opae/Shrimp (US farmed)",
     "Description": "",
     "Rating": "BEST_CHOICE"
   },
@@ -288,7 +282,7 @@
   {
     "Id": "H11",
     "Region": "Hawaii",
-    "img": "https://images.immediate.co.uk/production/volatile/sites/30/2020/02/oysters-21016d4.jpg?quality=90&resize=418%2C380",
+    "img": "https://images.immediate.co.uk/production/volatile/sites/30/2020/02/oysters-21016d4.jpg?quality=90\u0026resize=418%2C380",
     "Title": "Oysters (farmed)",
     "Description": "",
     "Rating": "BEST_CHOICE"
@@ -297,7 +291,7 @@
     "Id": "H12",
     "Region": "Hawaii",
     "img": "https://cdn.shopify.com/s/files/1/2654/2564/files/Screen_Shot_2021-03-08_at_2.38.22_PM_480x480.png?v=1615243221",
-    "Title": "Papa'i/Crab: King Snow & Tanner (AK)",
+    "Title": "Papa\u0027i/Crab: King Snow \u0026 Tanner (AK)",
     "Description": "",
     "Rating": "BEST_CHOICE"
   },
@@ -312,7 +306,7 @@
   {
     "Id": "H14",
     "Region": "Hawaii",
-    "img": "https://media-cdn.greatbritishchefs.com/media/zw4go5xj/img83643.jpg?mode=crop&width=768&height=512",
+    "img": "https://media-cdn.greatbritishchefs.com/media/zw4go5xj/img83643.jpg?mode=crop\u0026width=768\u0026height=512",
     "Title": "Scallops (farmed)",
     "Description": "",
     "Rating": "BEST_CHOICE"
@@ -337,7 +331,7 @@
     "Id": "H17",
     "Region": "Hawaii",
     "img": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Oreochromis-niloticus-Nairobi.JPG",
-    "Title": "Tilapia (Canada, Ecuador, Peru & US)",
+    "Title": "Tilapia (Canada, Ecuador, Peru \u0026 US)",
     "Description": "",
     "Rating": "BEST_CHOICE"
   },
@@ -376,8 +370,8 @@
   {
     "Id": "H22",
     "Region": "Hawaii",
-    "img": "https://i1.wp.com/underwaterjournal.com/wp-content/uploads/2020/11/025.jpg?fit=1024%2C683&ssl=1",
-    "Title": "'Ahi/Yellowfin Tuna (free school, trolls, pole and lines, US longlines)",
+    "img": "https://i1.wp.com/underwaterjournal.com/wp-content/uploads/2020/11/025.jpg?fit=1024%2C683\u0026ssl=1",
+    "Title": "\u0027Ahi/Yellowfin Tuna (free school, trolls, pole and lines, US longlines)",
     "Description": "",
     "Rating": "GOOD_ALTERNATIVE"
   },
@@ -393,7 +387,7 @@
     "Id": "H24",
     "Region": "Hawaii",
     "img": "https://images.squarespace-cdn.com/content/v1/59738817e3df28d8888fe3b1/1604549459268-N4M152Z93I2HL3HDOVHU/DSC_9311.jpg",
-    "Title": "Clams (US & Canada wild)",
+    "Title": "Clams (US \u0026 Canada wild)",
     "Description": "",
     "Rating": "GOOD_ALTERNATIVE"
   },
@@ -409,7 +403,7 @@
     "Id": "H26",
     "Region": "Hawaii",
     "img": "https://hawaii-seafood.org/wp-content/uploads/2015/06/Hapuu.gif",
-    "Title": "Hapu'upu'u/Hawaiian Grouper (HI)",
+    "Title": "Hapu\u0027upu\u0027u/Hawaiian Grouper (HI)",
     "Description": "",
     "Rating": "GOOD_ALTERNATIVE"
   },
@@ -433,7 +427,7 @@
     "Id": "H29",
     "Region": "Hawaii",
     "img": "http://whipsawsportfishing.com/wp-content/uploads/2020/12/mahi-mahi-dolphin2.png",
-    "Title": "Mahi Mahi (Costa Rica, Ecuador, Panama & US longlines)",
+    "Title": "Mahi Mahi (Costa Rica, Ecuador, Panama \u0026 US longlines)",
     "Description": "",
     "Rating": "GOOD_ALTERNATIVE"
   },
@@ -449,7 +443,7 @@
     "Id": "H31",
     "Region": "Hawaii",
     "img": "https://upload.wikimedia.org/wikipedia/commons/1/16/Acanthocybium_solandri.png",
-    "Title": "Ono/Wahoo (HI & US Atlantic longlines)",
+    "Title": "Ono/Wahoo (HI \u0026 US Atlantic longlines)",
     "Description": "",
     "Rating": "GOOD_ALTERNATIVE"
   },
@@ -457,7 +451,7 @@
     "Id": "H32",
     "Region": "Hawaii",
     "img": "https://i0.wp.com/www.petshrimp.com/images/opaeula.jpg?w=980",
-    "Title": "'Opae/Shrimp (Canada & US wild, Ecuador, Honduras & Thailand farmed)",
+    "Title": "\u0027Opae/Shrimp (Canada \u0026 US wild, Ecuador, Honduras \u0026 Thailand farmed)",
     "Description": "",
     "Rating": "GOOD_ALTERNATIVE"
   },
@@ -480,7 +474,7 @@
   {
     "Id": "H35",
     "Region": "Hawaii",
-    "img": "https://images.immediate.co.uk/production/volatile/sites/30/2020/02/oysters-21016d4.jpg?quality=90&resize=418%2C380",
+    "img": "https://images.immediate.co.uk/production/volatile/sites/30/2020/02/oysters-21016d4.jpg?quality=90\u0026resize=418%2C380",
     "Title": "Oysters (US wild)",
     "Description": "",
     "Rating": "GOOD_ALTERNATIVE"
@@ -489,7 +483,7 @@
     "Id": "H36",
     "Region": "Hawaii",
     "img": "https://m.psecn.photoshelter.com/img-get/I00008e5FmGrK5Q8/s/1200/I00008e5FmGrK5Q8.jpg",
-    "Title": "Papa'i/Crab (Argentina)",
+    "Title": "Papa\u0027i/Crab (Argentina)",
     "Description": "",
     "Rating": "GOOD_ALTERNATIVE"
   },
@@ -497,7 +491,7 @@
     "Id": "H37",
     "Region": "Hawaii",
     "img": "https://static.turbosquid.com/Preview/2019/07/29__15_30_32/AnimatedSwimsAtlanticSalmonFishRigged3dsmodel001.jpg80D0F360-A637-42DD-89F7-ED45F2C588B5Large.jpg",
-    "Title": "Salmon (CA OR & WA)",
+    "Title": "Salmon (CA OR \u0026 WA)",
     "Description": "",
     "Rating": "GOOD_ALTERNATIVE"
   },
@@ -505,7 +499,7 @@
     "Id": "H38",
     "Region": "Hawaii",
     "img": "https://www.thegardenisland.com/wp-content/uploads/2021/10/web1_SquidBigfinWD.jpeg",
-    "Title": "Squid (Chile & Peru)",
+    "Title": "Squid (Chile \u0026 Peru)",
     "Description": "",
     "Rating": "GOOD_ALTERNATIVE"
   },
@@ -521,7 +515,7 @@
     "Id": "H40",
     "Region": "Hawaii",
     "img": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Oreochromis-niloticus-Nairobi.JPG",
-    "Title": "Tilapia (Colombia, Honduras, Indonesia, Mexico & Taiwan)",
+    "Title": "Tilapia (Colombia, Honduras, Indonesia, Mexico \u0026 Taiwan)",
     "Description": "",
     "Rating": "GOOD_ALTERNATIVE"
   },
@@ -545,15 +539,15 @@
     "Id": "H42",
     "Region": "Hawaii",
     "img": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Thunnus_obesus_%28bigeye_tuna%29.jpg",
-    "Title": "'Ahi/Bluefin Tuna",
+    "Title": "\u0027Ahi/Bluefin Tuna",
     "Description": "",
     "Rating": "AVOID"
   },
   {
     "Id": "H43",
     "Region": "Hawaii",
-    "img": "https://i1.wp.com/underwaterjournal.com/wp-content/uploads/2020/11/025.jpg?fit=1024%2C683&ssl=1",
-    "Title": "'Ahi/Yellowfin Tuna (imported longlines, purse seines & Indian Ocean)",
+    "img": "https://i1.wp.com/underwaterjournal.com/wp-content/uploads/2020/11/025.jpg?fit=1024%2C683\u0026ssl=1",
+    "Title": "\u0027Ahi/Yellowfin Tuna (imported longlines, purse seines \u0026 Indian Ocean)",
     "Description": "",
     "Rating": "AVOID"
   },
@@ -561,7 +555,7 @@
     "Id": "H44",
     "Region": "Hawaii",
     "img": "https://www.gourmetsleuth.com/images/default-source/dictionary/aku.jpg?sfvrsn=4",
-    "Title": "Aku/Skipjack Tuna (imported purse, seines & Indian Ocean)",
+    "Title": "Aku/Skipjack Tuna (imported purse, seines \u0026 Indian Ocean)",
     "Description": "",
     "Rating": "AVOID"
   },
@@ -585,7 +579,7 @@
     "Id": "H47",
     "Region": "Hawaii",
     "img": "https://www.thegardenisland.com/wp-content/uploads/2019/07/web1_33bookWD.jpg",
-    "Title": "He'e/Octopus",
+    "Title": "He\u0027e/Octopus",
     "Description": "",
     "Rating": "AVOID"
   },
@@ -601,7 +595,7 @@
     "Id": "H49",
     "Region": "Hawaii",
     "img": "http://whipsawsportfishing.com/wp-content/uploads/2020/12/mahi-mahi-dolphin2.png",
-    "Title": "Mahi Mahi (Peru & Taiwan)",
+    "Title": "Mahi Mahi (Peru \u0026 Taiwan)",
     "Description": "",
     "Rating": "AVOID"
   },
@@ -621,19 +615,18 @@
     "Description": "",
     "Rating": "AVOID"
   },
-
   {
     "Id": "H452",
     "Region": "Hawaii",
     "img": "https://aquariumbreeder.com/wp-content/uploads/2019/11/Opae-Ula-Shrimp-Hawaiian-red-shrimp2.jpg",
-    "Title": "'Opae/Shrimp (other imported sources)",
+    "Title": "\u0027Opae/Shrimp (other imported sources)",
     "Description": "",
     "Rating": "AVOID"
   },
   {
     "Id": "H53",
     "Region": "Hawaii",
-    "img": "https://www.motherjones.com/wp-content/uploads/2021/07/Screen-Shot-2021-07-20-at-10.44.05-AM.png?w=1200&h=630&crop=1",
+    "img": "https://www.motherjones.com/wp-content/uploads/2021/07/Screen-Shot-2021-07-20-at-10.44.05-AM.png?w=1200\u0026h=630\u0026crop=1",
     "Title": "Opah/Moonfish (imported)",
     "Description": "",
     "Rating": "AVOID"
@@ -650,7 +643,7 @@
     "Id": "H55",
     "Region": "Hawaii",
     "img": "https://m.psecn.photoshelter.com/img-get/I00008e5FmGrK5Q8/s/1200/I00008e5FmGrK5Q8.jpg",
-    "Title": "Papa'i/Crab (Asia & Russia)",
+    "Title": "Papa\u0027i/Crab (Asia \u0026 Russia)",
     "Description": "",
     "Rating": "AVOID"
   },
@@ -658,7 +651,7 @@
     "Id": "H56",
     "Region": "Hawaii",
     "img": "https://images.ctfassets.net/lufu0clouua1/Tr9lRGHXCS6GU4Kc8Qkg0/2f3a25a99c3f54c867ef5f8350aca5a3/King-Salmon.jpg",
-    "Title": "Salmon (Canada, Atlantic, Chile, Norway & Scotland)",
+    "Title": "Salmon (Canada, Atlantic, Chile, Norway \u0026 Scotland)",
     "Description": "",
     "Rating": "AVOID"
   },
@@ -681,8 +674,8 @@
   {
     "Id": "H59",
     "Region": "Hawaii",
-    "img": "https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/GettyImages-508486981-1024x680.jpg?w=1155&h=3572",
-    "Title": "Squid (Argentina, China, India, Indonesia, Japan & Thailand)",
+    "img": "https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/GettyImages-508486981-1024x680.jpg?w=1155\u0026h=3572",
+    "Title": "Squid (Argentina, China, India, Indonesia, Japan \u0026 Thailand)",
     "Description": "",
     "Rating": "AVOID"
   },
@@ -701,6 +694,77 @@
     "Title": "Tombo/Albacore Tuna (imported except, trolls, pole and lines)",
     "Description": "",
     "Rating": "AVOID"
+  },
+  {
+    "Id": "f6ec3d38-87c7-421c-8faf-6a3ac46b680a",
+    "Region": "National",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/eel/american-eel.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "American eel",
+    "Description": "American eel caught in the U.S. (excluding North Carolina) with pots is an Avoid. American eels are depleted, and it\u0027s unknown if overfishing is occurring. Bycatch information is limited, and the possible catch of diamondback terrapins is a serious concern in the pot fishery. Management is rated moderately effective and includes measures to mitigate bycatch, monitor landings in season, and limit quota overages. There are no major concerns about bottom habitat impacts, but policies to protect ecosystem functioning are needed. This recommendation covers the life stage when American eels are referred to as \u0022yellow\u0022 eels.",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "38f7db1d-ab71-4458-8173-13aafeb4913e",
+    "Region": "National",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/flounder/winter-flounder.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Blackback",
+    "Description": "Blackback caught in the U.S. Atlantic with bottom trawls is an Avoid. Blackback is considered overfished in the U.S. Atlantic. While overfishing isn\u0027t occurring, fishing levels may still be too high to allow for the stock\u0027s recovery. In addition, many bycatch species are caught and some are endangered, threatened, or overfished. Management is rated moderately effective overall. New measures were implemented in 2010 to rebuild historically depleted stocks and reduce bycatch, but further improvements are needed. Some measures are in place to reduce the fishery\u0027s impacts on important habitat, and policies are being developed to protect the ecosystem. ",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "ba8951b1-5d53-4f3c-ba7b-0f2311f08706",
+    "Region": "National",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/grouper/black-grouper.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Black grouper",
+    "Description": "Black grouper caught in the U.S. Gulf of Mexico with set longlines is an Avoid. The stock\u0027s status is unknown, but overfishing isn\u0027t occurring. However, the catch of other endangered, overfished, or highly vulnerable species is a serious concern. Management is rated moderately effective overall, but the lack of formal stock assessment for several species hinders management effectiveness. Closed areas and gear restrictions reduce seafloor impacts, and policies to protect groupers\u0027 role in the ecosystem are in place.",
+    "Rating": "AVOID"
+  },
+  {
+    "Id": "4eb9177e-0f1b-4b11-8189-3e70beaa7d99",
+    "Region": "National",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/crayfish/crawfish.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Red swamp crayfish",
+    "Description": "Red swamp crayfish farmed in the U.S. in ponds is a Best Choice because this aquaculture industry has low environmental impacts. No antibiotics, pesticides, disinfectants, or feeds are used. Also, the occurrence of disease or pathogens among farmed crayfish is rare. Red swamp crayfish are native to Louisiana, so the risk of farmed crayfish impacting wild populations is minimal.",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "9c86ce08-37d8-4018-8d22-8852dd81dd7f",
+    "Region": "National",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/crab/snow-crab.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Snow crab",
+    "Description": "Snow crab caught in Alaska\u0027s Bering Sea with pots is a Best Choice. The population is healthy, bycatch and habitat impacts are minimal, and management is highly effective.",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "df9fb91d-b164-4945-b7db-7a13d3189a20",
+    "Region": "National",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/crab/king-crab.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Golden king crab",
+    "Description": "Golden king crab caught in Alaska\u0027s Bristol Bay Red King Crab and the Aleutian Islands Golden King Crab Fishery with pots is a Best Choice. While there\u0027s some uncertainty about the stock status, overfishing isn\u0027t occurring. Bycatch is low, and management is rated highly effective.  ",
+    "Rating": "BEST_CHOICE"
+  },
+  {
+    "Id": "c9e13b22-e43f-4bfe-a79b-d7e09185c130",
+    "Region": "National",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/amberjack/almaco-jack.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Almaco jack",
+    "Description": "Almaco jack farmed in the U.S. in marine net pens is a Good Alternative. While the marine-based ingredients in almaco jack feed are sourced from sustainable fisheries, a high amount of marine products are still required to produce the farmed fish. The open design of net pens means there\u0027s a high risk of escapes. However, genetic impacts on the wild almaco jack population are a low concern because the farmed fish are genetically similar to them. As with any open system, there\u0027s also a risk of disease and parasite transfer between farmed and wild fish, but strong measures are in place to prevent and monitor for outbreaks.",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "4eb56835-505c-404b-ba42-e8dfc991bce4",
+    "Region": "National",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/cabezon/cabezon.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Cabezon",
+    "Description": "Cabezon caught in California with handlines and hand-operated pole-and-lines is a Good Alternative. The stock is likely healthy, and overfishing isn\u0027t occurring. Cabezon are caught with California sheephead, which are likely depleted and experiencing overfishing. Habitat impacts are minimal, and policies are being developed to protect the ecosystem.   ",
+    "Rating": "GOOD_ALTERNATIVE"
+  },
+  {
+    "Id": "0597e465-c673-4800-8a9d-db5c401cc665",
+    "Region": "National",
+    "img": "https://www.seafoodwatch.org/globalassets/sfw-data-blocks/species/clams/clams-hard.png?width=274\u0026height=189\u0026format=webp\u0026quality=70",
+    "Title": "Northern quahog",
+    "Description": "Northern quahog clams harvested in New York with hand implements are a Good Alternative. The stocks aren\u0027t formally assessed, so their status and if overfishing is occurring are unknown. Management is rated moderately effective overall. Local governments have implemented various conservation measures, but a statewide management plan is needed. Handheld rakes, hoes, and shovels are selective harvest methods, so there are no concerns about bycatch. However, these gears can impact habitat, and fishing areas are only closed when the water quality is poor.",
+    "Rating": "GOOD_ALTERNATIVE"
   }
-
 ]
