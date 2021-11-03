@@ -19,7 +19,7 @@ namespace UnitTests.Pages.Admin
     {
         #region TestSetup
         //AdminModel object used to test Admin page's model
-        public static AdminModel pageModel;
+        public static AdminModel PageModel;
 
         /// <summary>
         /// Test constructor
@@ -29,7 +29,7 @@ namespace UnitTests.Pages.Admin
         {
             var MockLoggerDirect = Mock.Of<ILogger<AdminModel>>();
 
-            pageModel = new AdminModel(MockLoggerDirect, TestHelper.ProductService)
+            PageModel = new AdminModel(MockLoggerDirect, TestHelper.ProductService)
             {
             };
         }
@@ -48,9 +48,12 @@ namespace UnitTests.Pages.Admin
             // Arrange
             var randomProduct = TestHelper.ProductService.GetAllData();
             // Act
-            pageModel.OnGet();
+            PageModel.OnGet();
+
+            //Reset
+
             // Assert
-            Assert.AreEqual(pageModel.Products.Count(), randomProduct.Count());
+            Assert.AreEqual(PageModel.Products.Count(), randomProduct.Count());
 
         }
 
@@ -63,7 +66,9 @@ namespace UnitTests.Pages.Admin
         {
             // Arrange
             // Act
-            var page = pageModel.OnGetCreate() as RedirectToPageResult;
+            var page = PageModel.OnGetCreate() as RedirectToPageResult;
+
+            //Reset
 
             // Assert
             Assert.AreEqual("Create", page.PageName);
