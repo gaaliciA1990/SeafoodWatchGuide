@@ -47,6 +47,8 @@ namespace UnitTests.Model
             // Act
             var Result = ProductModel.covertToString(ContosoCrafts.WebSite.Data.ProductRating.BEST_CHOICE);
 
+            //Reset
+
             // Assert
             Assert.AreEqual("Best choice", Result);
         }
@@ -62,6 +64,8 @@ namespace UnitTests.Model
 
             // Act
             var Result = ProductModel.covertToString(ContosoCrafts.WebSite.Data.ProductRating.GOOD_ALTERNATIVE);
+
+            //Reset
 
             // Assert
             Assert.AreEqual("Good alternative", Result);
@@ -79,6 +83,8 @@ namespace UnitTests.Model
 
             // Act
             var Result = ProductModel.covertToString(ContosoCrafts.WebSite.Data.ProductRating.AVOID);
+
+            //Reset
 
             // Assert
             Assert.AreEqual("Avoid", Result);
@@ -110,6 +116,9 @@ namespace UnitTests.Model
 
             System.Diagnostics.Debug.WriteLine(Json);
             System.Diagnostics.Debug.WriteLine(serialized);
+
+            //Reset
+
             // Assert
             Assert.AreEqual(serialized, Json);
         }
