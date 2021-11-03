@@ -43,6 +43,8 @@ namespace UnitTests.Pages.About
             // Act
             AboutModel.OnGet();
 
+            //Reset
+
             // Assert
             Assert.AreEqual(true, AboutModel.ModelState.IsValid);
         }
