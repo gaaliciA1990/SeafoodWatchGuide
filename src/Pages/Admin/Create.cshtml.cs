@@ -31,14 +31,9 @@ namespace ContosoCrafts.WebSite.Pages
         //Product service object to provide all available services
         public JsonFileProductService ProductService { get; }
 
-        /// <summary>
-        /// Getter and Setter method for the Creat page
-        /// </summary>
+        // Getter and Setter method for the Creat page
         [BindProperty]
-        public ProductModel Product
-        {
-            get; set;
-        }
+        public ProductModel Product { get; set; }
 
         /// <summary>
         /// Since we are creating a new record in the dataset, we don't need to pull anything for validation
