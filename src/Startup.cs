@@ -43,9 +43,6 @@ namespace ContosoCrafts.WebSite
             services.AddControllers();
             services.AddTransient<JsonFileProductService>();
             services.AddRazorPages().AddRazorRuntimeCompilation();
-
-            services.AddDbContext<ContosoCraftsWebSiteContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("ContosoCraftsWebSiteContext")));
         }
 
         /// <summary>
