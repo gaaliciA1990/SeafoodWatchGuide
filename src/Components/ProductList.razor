@@ -78,7 +78,7 @@
 </div>
 
 
-<h2 class="red-text" style="color: red;"> >AVOID </h2>
+<h2 class="red-text" style="color: red;">AVOID </h2>
 <div class="card-columns">
     @foreach (var product in regionData)
     {
@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    @if (selectedProduct.Rating == ProductRating.AVOID)
+                    @if (selectedProduct.Rating == ProductRating.BEST_CHOICE)
                     {
                         <div class="card-footer bg-success text-white">BEST CHOICES </div>
                     }
