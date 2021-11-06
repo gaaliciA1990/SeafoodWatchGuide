@@ -45,7 +45,7 @@ namespace UnitTests.Model
             // Arrange - not needed
 
             // Act
-            var Result = ProductModel.covertToString(ContosoCrafts.WebSite.Data.ProductRating.BEST_CHOICE);
+            var Result = ProductModel.convertToString(ContosoCrafts.WebSite.Data.ProductRating.BEST_CHOICE);
 
             //Reset
 
@@ -63,7 +63,7 @@ namespace UnitTests.Model
             // Arrange - not needed
 
             // Act
-            var Result = ProductModel.covertToString(ContosoCrafts.WebSite.Data.ProductRating.GOOD_ALTERNATIVE);
+            var Result = ProductModel.convertToString(ContosoCrafts.WebSite.Data.ProductRating.GOOD_ALTERNATIVE);
 
             //Reset
 
@@ -82,7 +82,7 @@ namespace UnitTests.Model
             // Arrange - not needed
 
             // Act
-            var Result = ProductModel.covertToString(ContosoCrafts.WebSite.Data.ProductRating.AVOID);
+            var Result = ProductModel.convertToString(ContosoCrafts.WebSite.Data.ProductRating.AVOID);
 
             //Reset
 
