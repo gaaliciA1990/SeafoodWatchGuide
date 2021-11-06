@@ -42,7 +42,7 @@ namespace ContosoCrafts.WebSite.Models
         //Contains the rating of the product, should be 1 of the specified enums
         [JsonConverter(typeof(JsonStringEnumConverter))]
         [Required(ErrorMessage = "Please choose a rating")]
-        public ProductRating? Rating { get; set; }
+        public ProductRating Rating { get; set; }
 
         /// <summary>
         /// This will convert the ENUM values to a String format so it's easier for 
@@ -50,7 +50,7 @@ namespace ContosoCrafts.WebSite.Models
         /// </summary>
         /// <param name="rating"></param>
         /// <returns></returns>
-        public static string covertToString(ProductRating rating)
+        public static string convertToString(ProductRating rating)
         {
             string str = Enum.GetName(rating);
             str = str.Replace("_", " ");
