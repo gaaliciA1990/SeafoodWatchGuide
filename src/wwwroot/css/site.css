@@ -246,3 +246,11 @@ input.input-validation-error {
     font-weight: bold;
 }
 
+/*Formatting for truncating long text*/
+.truncate {
+    width: 300px;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+
