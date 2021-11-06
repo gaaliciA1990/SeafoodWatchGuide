@@ -9,60 +9,55 @@ This is the Index page where all records from the Seafoods.JSON file are display
 can be edited with CRUD implementation
 -->
 <head>
-    <div class="text-body">
-        <div style="text-align:center; vertical-align:middle">
-            <h1>Welcome to the Admin Page!</h1>
-        </div>
-        <div style="text-align:left; vertical-align:middle">
-            <h3>Admins can manage the Seafood lists here. New records can be added, records can be updated or deleted<br /></h3>
-        </div>
-    </div>
 </head>
 <body>
-    <!--
-        The Create button for adding a new record of Seafood
-    -->
-    <a class="btn btn-primary" asp-page-handler="Create"> Create</a>
+    <div class="container">
+        <!--Table header and description-->
+        <div class="text-body">
+            <div style="text-align:center; vertical-align:middle">
+                <h2>Welcome to the Admin Page!</h2>
+            </div>
+            <div style="text-align:center; vertical-align:middle">
+                <p>Admins can manage the Seafood lists here. New records can be added, records can be updated or deleted<br /></p>
+            </div>
+        </div>
+        <!--The Create button for adding a new record of Seafood-->
+        <a class="btn btn-primary" asp-page-handler="Create"> Create</a>
+        <!--Table to display all of the seafood records-->
+        <table class="table">
+            <tr>
+                <!--<th>ID</th> - commenting out this code as we don't need to show users the ID-->
+                <th>Title</th>
+                <th>Region</th>
+                <th>Fish Rating</th>
+                <th>Decription</th>
+                <th>Actions</th>
+            </tr>
+            @foreach (var item in Model.Products)
+            {
+                <tr>
+                    <!--<td>Html.DisplayFor(modelItem => item.Id)</td> - commenting out this code as we don't need to show users the ID-->
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Region)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rating)
+                    </td>
+                    <td>
+                        <div class="truncate">
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </div>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" asp-page="Read" asp-route-id="@(item.Id)">Edit</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
 
-    <!--
-    Commenting out the Product rendered list as we will need to update this to display differently and
-    enable the Admin to update and delete individual items.
-    The at sign was removed, needs to be added to render the cards
-
-    (await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
-
-    -->
-
-    <table class="table">
-        <tr>
-            <!--<th>ID</th> - commenting out this code as we don't need to show users the ID-->
-            <th>Title</th>
-            <th>Region</th>
-            <th>Rating</th>
-            <th>Decription</th>
-            <th>Actions</th>
-        </tr>
-        @foreach (var item in Model.Products)
-        {
-    <tr>
-        <!--<td>Html.DisplayFor(modelItem => item.Id)</td> - commenting out this code as we don't need to show users the ID-->
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Region)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Rating)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            <a class="btn btn-primary" asp-page="Read" asp-route-id="@(item.Id)">Edit</a>
-        </td>
-    </tr>
-        }
-    </table>
 </body>
 <script src="_framework/blazor.server.js"></script>
