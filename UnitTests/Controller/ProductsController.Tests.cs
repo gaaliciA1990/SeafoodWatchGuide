@@ -53,7 +53,7 @@ namespace UnitTests.Controller
         /// This tests construction of a RatingRequest object 
         /// </summary>
         [Test]
-        public void RatingRequest_Get_Set()
+        public void RatingRequest_Valid_Should_Return_True()
         {
             // Arrange
             var RatingReq = new ProductsController.RatingRequest();
