@@ -73,7 +73,7 @@ namespace UnitTests.Controller
         /// This tests the return of Ok ActionResult
         /// </summary>
         [Test]
-        public void Patch_Return_Ok()
+        public void RatingRequest_Invalid_Should_Return_Null()
         {
             // Arrange
             var RatingReq = new ProductsController.RatingRequest();
