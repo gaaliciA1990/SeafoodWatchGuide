@@ -33,7 +33,7 @@ namespace UnitTests.Controller
         /// when Best Choice is converted from the productrating ENUM.
         /// </summary>
         [Test]
-        public void Get_Get_All_Data()
+        public void GetAllData_Valid_Should_Return_True()
         {
             // Arrange
             //Dummy variable to store original counts of all products
