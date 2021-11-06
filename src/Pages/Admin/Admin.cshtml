@@ -35,35 +35,33 @@ can be edited with CRUD implementation
 
     <table class="table">
         <tr>
-            <th>ID</th>
-            <th>Region</th>
+            <!--<th>ID</th> - commenting out this code as we don't need to show users the ID-->
             <th>Title</th>
-            <th>Decription</th>
+            <th>Region</th>
             <th>Rating</th>
+            <th>Decription</th>
             <th>Actions</th>
         </tr>
         @foreach (var item in Model.Products)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Region)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Rating)
-                </td>
-                <td>
-                    <a class="btn btn-primary" asp-page="Read" asp-route-id="@(item.Id)">Edit</a>
-                </td>
-            </tr>
+    <tr>
+        <!--<td>Html.DisplayFor(modelItem => item.Id)</td> - commenting out this code as we don't need to show users the ID-->
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Region)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            <a class="btn btn-primary" asp-page="Read" asp-route-id="@(item.Id)">Edit</a>
+        </td>
+    </tr>
         }
     </table>
 </body>
