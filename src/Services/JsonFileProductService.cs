@@ -66,6 +66,7 @@ namespace ContosoCrafts.WebSite.Services
             // get all region data from dataset
             var regionData = from d in data
                        where d.Region == region
+                       orderby d.Title
                        select d;
             return regionData;
         }
