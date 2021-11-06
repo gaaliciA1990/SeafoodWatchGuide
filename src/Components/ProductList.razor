@@ -27,7 +27,7 @@
     individual cards. This can be updated to work with new data and rearranged if needed,
     but this data can also be bucketed into contained within a page.
     -->
-<h2 class="red-text" style="color: green;"> >BEST CHOICE </h2>
+<h2 class="red-text" style="color: green;">BEST CHOICE</h2>
 <div class="card-columns">
     @foreach (var product in regionData)
     {
@@ -52,7 +52,7 @@
     }
 </div>
 
-<h2 class="red-text" style="color: yellow;"> >GOOD ALTERNATIVE </h2>
+<h2 class="red-text" style="color: yellow;">GOOD ALTERNATIVE</h2>
 <div class="card-columns">
     @foreach (var product in regionData)
     {
@@ -78,7 +78,7 @@
 </div>
 
 
-<h2 class="red-text" style="color: red;">AVOID </h2>
+<h2 class="red-text" style="color: red;">AVOID</h2>
 <div class="card-columns">
     @foreach (var product in regionData)
     {
@@ -127,15 +127,15 @@
                 <div class="modal-footer">
                     @if (selectedProduct.Rating == ProductRating.BEST_CHOICE)
                     {
-                        <div class="card-footer bg-success text-white">BEST CHOICES</div>
+                        <div class="card-footer bg-success text-white">@ProductModel.convertToString(selectedProduct.Rating)</div>
                     }
                     else if (selectedProduct.Rating == ProductRating.GOOD_ALTERNATIVE)
                     {
-                        <div class="card-footer bg-warning text-white">GOOD ALTERNATIVES</div>
+                <div class="card-footer bg-warning text-white">@ProductModel.convertToString(selectedProduct.Rating)</div>
                     }
                     else
                     {
-                        <div class="card-footer bg-danger text-white">AVOID</div>
+                <div class="card-footer bg-danger text-white">@ProductModel.convertToString(selectedProduct.Rating)</div>
                     }
                 </div>
             </div>
