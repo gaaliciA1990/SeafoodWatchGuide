@@ -24,12 +24,16 @@ namespace ContosoCrafts.WebSite.Pages
         //Product object contains information about the product being shown
         public ProductModel Product { get; set; }
 
+        //Variable to notify if an error has happened
+        public bool errorOccurred = false;
+
 
         /// <summary>
         /// Constructor for Read Page
         /// </summary>
         /// <param name="logger"></param>
         /// <param name="productService"></param>
+
         public ReadModel(ILogger<ReadModel> logger, JsonFileProductService productService)
         {
             _logger = logger;
@@ -46,7 +50,8 @@ namespace ContosoCrafts.WebSite.Pages
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
             if (Product == null)
             {
-                return RedirectToPage("./Admin");
+                errorOccurred = true;
+                //return RedirectToPage("./Admin");
             }
 
             return Page();
@@ -76,6 +81,5 @@ namespace ContosoCrafts.WebSite.Pages
         {
             return RedirectToPage("Update", new { id = Id });
         }
-        
     }
 }
