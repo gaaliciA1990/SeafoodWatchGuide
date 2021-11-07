@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
-using System.Net.Http;
 using ContosoCrafts.WebSite.Models;
 using Microsoft.AspNetCore.Hosting;
 
@@ -13,6 +12,9 @@ namespace ContosoCrafts.WebSite.Services
     /// </summary>
     public class JsonFileProductService
     {
+        // Class member variable for setting our JSON writing options when reading data
+        private JsonWriterOptions writerOptions = new JsonWriterOptions { SkipValidation = false, Indented = true };
+
         /// <summary>
         /// Constructor method for the web host environment
         /// </summary>
@@ -25,8 +27,8 @@ namespace ContosoCrafts.WebSite.Services
         /// <summary>
         /// A getter method for the webhost
         /// </summary>
-        public IWebHostEnvironment WebHostEnvironment 
-        { 
+        public IWebHostEnvironment WebHostEnvironment
+        {
             get;
         }
 
@@ -65,9 +67,9 @@ namespace ContosoCrafts.WebSite.Services
             var data = GetAllData();
             // get all region data from dataset
             var regionData = from d in data
-                       where d.Region == region
-                       orderby d.Title
-                       select d;
+                             where d.Region == region
+                             orderby d.Title
+                             select d;
             return regionData;
         }
 
@@ -114,22 +116,18 @@ namespace ContosoCrafts.WebSite.Services
         }
 
         /// <summary>
-        /// private funtion use to save data
+        /// private funtion used to save data
         /// </summary>
         /// <param name="products"></param>
         private void SaveData(IEnumerable<ProductModel> products)
         {
+            // this checks out the JSON file for us to edit and ensures
+            // nothing else can edit it while we are using it
             using (var outputStream = File.Create(JsonFileName))
             {
-                JsonSerializer.Serialize<IEnumerable<ProductModel>>(
-                    new Utf8JsonWriter(outputStream, new JsonWriterOptions
-                    {
-                        SkipValidation = true,
-                        Indented = true
-                    }
-                    ),
-                    products
-                );
+                // This is writing the entered data from our form and saving it to the JSON file with our 
+                // preset writer options
+                JsonSerializer.Serialize(new Utf8JsonWriter(outputStream, writerOptions), products);
             }
         }
 
