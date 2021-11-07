@@ -49,14 +49,31 @@ namespace ContosoCrafts.WebSite.Pages
         /// <returns></returns>
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid)
+            //Check for input validation, if not valid, return to page
+            if (ModelState.IsValid == false)
             {
-                ProductService.UpdateCard(Product);
-                // Redirect back to the admin page to continue editing if needed
-                return RedirectToPage("./Admin");
+                return Page();
             }
 
-            return Page();
+            //Check if input was just a bunch of numbers in Title
+            bool hasLetters = false;
+            for (int i = 0; i < Product.Title.Length; i++)
+            {
+                if (char.IsLetter(Product.Title[i]))
+                {
+                    hasLetters = true;
+                }
+            }
+
+            if (hasLetters == false)
+            {
+                ModelState.AddModelError("numbers", "Title must contain letters");
+                return Page();
+            }
+
+            ProductService.UpdateCard(Product);
+            // Redirect back to the admin page to continue editing if needed
+            return RedirectToPage("./Admin");
         }
     }
 }
