@@ -50,16 +50,23 @@
         <label>Fish Rating</label>
         @{
             var rating = Enum.GetValues(typeof(ProductRating));
+            var currentRating = (int) @Model.Product.Rating;
 
             foreach (int i in rating)
             {
+
                 // Do not show the Unknown rating on the form
                 if (i == 0)
                 {
                     continue;
                 }
                 <div class="form-check">
-                    <input asp-for="Product.Rating" type="radio" value="@i">
+                    @if (i == currentRating){
+                        <input required asp-for="Product.Rating" type="radio" value="@i" checked>
+                    }
+                    else{
+                        <input required asp-for="Product.Rating" type="radio" value="@i">
+                    }
                     <label class="form-check-label" for="gridRadios1">
                         @ProductModel.convertToString((ProductRating)i)
                     </label>
