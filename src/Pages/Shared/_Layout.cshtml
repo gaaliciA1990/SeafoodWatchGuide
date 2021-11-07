@@ -37,6 +37,25 @@
                         <li class="nav-item">
                             <a class="btn btn-nav font-weight-bold" style="margin:5px" asp-area="" asp-page="/About">About Us</a>
                         </li>
+
+                        @if (@Model.GetType().GetField("region") != null)
+                        {
+
+                            <div class="btn-group ml-auto">
+                                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @Model.region
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("West Coast")'>West Coast</a></button>
+                                    <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Southwest")'>Southwest</a></button>
+                                    <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Central")'>Central</a></button>
+                                    <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Southeast")'>Southeast</a></button>
+                                    <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Northeast")'>Northeast</a></button>
+                                    <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Hawaii")'>Hawai'i</a></button>
+                                    <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("National")'>National</a></button>
+                                </div>
+                            </div>
+                        }
                     </ul>
 
                 </div>
