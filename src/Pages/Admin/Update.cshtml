@@ -94,16 +94,21 @@
 }
 
 @section scripts{
-    <script>$(document).ready(function () {
+    <script>
+        $(document).ready(function () {
             $('[data-toggle="popover-hover"]').popover({
                 html: true,
                 trigger: 'hover',
                 placement: 'bottom',
-                content: function () { return '<img src="/' + $(this).val() + '" style="width: 100%" />'; }
+                content: function () {
+                    if ($(this).val().match('^(?:[a-z]+:)?//'))
+                        return '<img src="' + $(this).val() + '" style="width: 100%";/>';
+                    return '<img src="' + $(this).val().replace(/^([^/])/, '/$1') + '" style="width: 100%";/>';
+                }
             });
-        });</script>
+        });
+    </script>
 }
-
 
 
 
