@@ -9,6 +9,7 @@
 <!--
     This is the read page to view the details of a selected record from the Admin page. Here the user will find an Update and Delete button
 -->
+<link rel="stylesheet" href="~/css/site.css" type="text/css">
 
 <h1>Item Details</h1>
 
@@ -40,8 +41,11 @@
     </div>
 
     <div class="form-group">
-        <label>Image</label>
-        <input class="form-control" type="text" asp-for="Product.Image" readonly>
+        <label>Image</label> <br>
+        <!--<input class="form-control" type="text" asp-for="Product.Image" readonly> -->
+        <div class="readwrapper">
+            <img id="imgcontainer" src="@Model.Product.Image">
+        </div>
     </div>
 
     <!-- User will be redirected to the Delete page to make confirm the delete action-->
