@@ -17,26 +17,32 @@
         <label>ID</label>
         <input class="form-control" type="text" asp-for="Product.Id" readonly>
     </div>
-    <div class="form-group">
-        <label>Region</label>
-        <input class="form-control" type="text" asp-for="Product.Region" readonly>
-    </div>
-    <div class="form-group">
-        <label>Image</label>
-        <input class="form-control" type="text" asp-for="Product.Image" readonly>
-    </div>
+
     <div class="form-group">
         <label>Title</label>
         <input class="form-control" type="text" asp-for="Product.Title" readonly>
     </div>
+
     <div class="form-group">
-        <label>Description</label>
-        <textarea class="form-control" asp-for="Product.Description" readonly></textarea>
+        <label>Region</label>
+        <input class="form-control" type="text" asp-for="Product.Region" readonly>
     </div>
+
     <div class="form-group">
         <label>Rating</label>
         <input class="form-control" type="text" asp-for="Product.Rating" readonly>
     </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        <textarea class="form-control" asp-for="Product.Description" readonly></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Image</label>
+        <input class="form-control" type="text" asp-for="Product.Image" readonly>
+    </div>
+
     <button type="submit" class="btn btn-danger">Delete</button>
 }
 

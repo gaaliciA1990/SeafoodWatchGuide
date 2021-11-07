@@ -53,6 +53,11 @@
 
             foreach (int i in rating)
             {
+                // Do not show the Unknown rating on the form
+                if (i == 0)
+                {
+                    continue;
+                }
                 <div class="form-check">
                     <input required asp-for="Product.Rating" type="radio" value="@i">
                     <label class="form-check-label" for="gridRadios1">

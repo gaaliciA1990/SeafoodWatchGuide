@@ -12,41 +12,41 @@
 
 <h1>Item Details</h1>
 
-    @using (Html.BeginForm())
-    {
-        <div class="form-group">
-            <label>ID</label>
-            <input class="form-control" type="text" asp-for="Product.Id" readonly>
-        </div>
-        <div class="form-group">
-            <label>Region</label>
-            <input class="form-control" type="text" asp-for="Product.Region" readonly>
-        </div>
-        <div class="form-group">
-            <label>Image</label>
-            <input class="form-control" type="text" asp-for="Product.Image" readonly>
-        </div>
-        <div class="form-group">
-            <label>Title</label>
-            <input class="form-control" type="text" asp-for="Product.Title" readonly>
-        </div>
-        <div class="form-group">
-            <label>Description</label>
-            <textarea class="form-control" asp-for="Product.Description" readonly></textarea>
-        </div>
-        <div class="form-group">
-            <label>Rating</label>
-            <input class="form-control" type="text" asp-for="Product.Rating" readonly>
-        </div>
-        <!-- User will be redirected to the Delete page to make confirm the delete action-->
-        <a asp-page-handler="Delete" asp-route-id="@(Model.Product.Id)" class="btn btn-primary">Delete</a>
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label>ID</label>
+        <input class="form-control" type="text" asp-for="Product.Id" readonly>
+    </div>
 
-        <!-- User will be redirected to the Update page to make their edits and Save-->
-        <a asp-page-handler="Update" asp-route-id="@(Model.Product.Id)" class="btn btn-primary">Update</a>
+    <div class="form-group">
+        <label>Title</label>
+        <input class="form-control" type="text" asp-for="Product.Title" readonly>
+    </div>
 
-        <!--
-        onclick = 'return confirm("Do you want to delete the card?"); -- This code enables the popup for Delete and the button is clicked
-        Html.ActionLink("Edit", "Edit", new { id = item.Id });
-        Html.ActionLink("Delete", "Delete", new { id = item.Id });
-         -->
-    }
+    <div class="form-group">
+        <label>Region</label>
+        <input class="form-control" type="text" asp-for="Product.Region" readonly>
+    </div>
+
+    <div class="form-group">
+        <label>Rating</label>
+        <input class="form-control" type="text" asp-for="Product.Rating" readonly>
+    </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        <textarea class="form-control" asp-for="Product.Description" readonly></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Image</label>
+        <input class="form-control" type="text" asp-for="Product.Image" readonly>
+    </div>
+
+    <!-- User will be redirected to the Delete page to make confirm the delete action-->
+    <a asp-page-handler="Delete" asp-route-id="@(Model.Product.Id)" class="btn btn-primary">Delete</a>
+
+    <!-- User will be redirected to the Update page to make their edits and Save-->
+    <a asp-page-handler="Update" asp-route-id="@(Model.Product.Id)" class="btn btn-primary">Update</a>
+}

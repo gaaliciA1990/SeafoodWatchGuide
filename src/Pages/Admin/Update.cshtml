@@ -21,9 +21,10 @@
     .popover {
         max-width: 350px;
     }
-    .popover img {
-        max-width: 250px;
-    }
+
+        .popover img {
+            max-width: 250px;
+        }
 </style>
 
 
@@ -36,23 +37,13 @@
     </div>
 
     <div class="form-group">
-        <label>Region</label>
-        <input class="form-control" type="text" asp-for="Product.Region" readonly>
-    </div>
-
-    <div class="form-group">
-        <label>Image</label>
-        <input class="form-control" data-toggle="popover-hover" type="url" pattern="https://.*" size="30" required asp-for="Product.Image">
-    </div>
-
-    <div class="form-group">
         <label>Title</label>
         <input class="form-control" type="text" required asp-for="Product.Title">
     </div>
 
     <div class="form-group">
-        <label>Description</label>
-        <textarea class="form-control" required asp-for="Product.Description"></textarea>
+        <label>Region</label>
+        <input class="form-control" type="text" asp-for="Product.Region" readonly>
     </div>
 
     <div class="form-group">
@@ -62,6 +53,11 @@
 
             foreach (int i in rating)
             {
+                // Do not show the Unknown rating on the form
+                if (i == 0)
+                {
+                    continue;
+                }
                 <div class="form-check">
                     <input asp-for="Product.Rating" type="radio" value="@i">
                     <label class="form-check-label" for="gridRadios1">
@@ -72,9 +68,19 @@
         }
         <span asp-validation-for="Product.Rating" class="text-danger"></span>
     </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        <textarea class="form-control" required asp-for="Product.Description"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Image</label>
+        <input class="form-control" data-toggle="popover-hover" type="url" pattern="https://.*" size="30" required asp-for="Product.Image">
+    </div>
+
     <input class="btn btn-primary" type="submit" id="Submit">
 }
-
 
 @section scripts{
     <script>
