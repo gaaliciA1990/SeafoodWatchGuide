@@ -23,76 +23,47 @@
 
 
 
+
 <!-- This section of HTML is the formatting for how the products are displayed in their
     individual cards. This can be updated to work with new data and rearranged if needed,
     but this data can also be bucketed into contained within a page.
     -->
-<h2 class="red-text" style="color: green;">BEST CHOICE</h2>
-<div class="card-columns">
-    @foreach (var product in regionData)
+@foreach (ProductRating ev in Enum.GetValues(typeof(ProductRating)))
+{
+    if (ev == ProductRating.BEST_CHOICE)
     {
-        if (product.Rating == ProductRating.BEST_CHOICE)
-        {
-            <div class="card">
-                <div class="card-img" style="background-image: url('@product.Image');">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">@product.Title</h5>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">
-                        <button @onclick="(e => SelectProduct(product.Id))"data-toggle="modal" data-target="#productModal" class="btn btn-primary">More Info</button>
-                    </small>
-                </div>
-            </div>
-        }
+        <h2 class="red-text" style="color: green;">BEST CHOICE</h2>
     }
-</div>
-
-<h2 class="red-text" style="color: yellow;">GOOD ALTERNATIVE</h2>
-<div class="card-columns">
-    @foreach (var product in regionData)
+    else if (ev == ProductRating.GOOD_ALTERNATIVE)
     {
-        if (product.Rating == ProductRating.GOOD_ALTERNATIVE)
-        {
-            <div class="card">
-                <div class="card-img" style="background-image: url('@product.Image');">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">@product.Title</h5>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">
-                        <button @onclick="(e => SelectProduct(product.Id))"data-toggle="modal" data-target="#productModal" class="btn btn-primary">More Info</button>
-                    </small>
-                </div>
-            </div>
-        }
+        <h2 class="red-text" style="color: yellow;">GOOD ALTERNATIVE</h2>
     }
-</div>
-
-
-<h2 class="red-text" style="color: red;">AVOID</h2>
-<div class="card-columns">
-    @foreach (var product in regionData)
+    else if (ev == ProductRating.AVOID)
     {
-        if (product.Rating == ProductRating.AVOID)
-        {
-            <div class="card">
-                <div class="card-img" style="background-image: url('@product.Image');">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">@product.Title</h5>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">
-                        <button @onclick="(e => SelectProduct(product.Id))"data-toggle="modal" data-target="#productModal" class="btn btn-primary">More Info</button>
-                    </small>
-                </div>
-            </div>
-        }
+        <h2 class="red-text" style="color: red;">AVOID</h2>
     }
-</div>
+
+    <div class="card-columns">
+        @foreach (var product in regionData)
+        {
+            if (product.Rating == ev)
+            {
+                <div class="card">
+                    <div class="card-img" style="background-image: url('@product.Image');">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Title</h5>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                            <button @onclick="(e => SelectProduct(product.Id))" data-toggle="modal" data-target="#productModal" class="btn btn-primary">More Info</button>
+                        </small>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+}
 
 
 @if (selectedProduct != null)
@@ -122,11 +93,11 @@
                     }
                     else if (selectedProduct.Rating == ProductRating.GOOD_ALTERNATIVE)
                     {
-                <div class="card-footer bg-warning text-white">@ProductModel.convertToString(selectedProduct.Rating)</div>
+                        <div class="card-footer bg-warning text-white">@ProductModel.convertToString(selectedProduct.Rating)</div>
                     }
                     else
                     {
-                <div class="card-footer bg-danger text-white">@ProductModel.convertToString(selectedProduct.Rating)</div>
+                        <div class="card-footer bg-danger text-white">@ProductModel.convertToString(selectedProduct.Rating)</div>
                     }
                 </div>
             </div>
