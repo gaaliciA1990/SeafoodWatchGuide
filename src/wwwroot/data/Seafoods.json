@@ -874,7 +874,7 @@
   {
     "Id": "NE13",
     "Region": "Northeast",
-    "img": "https://media-cdn.greatbritishchefs.com/media/eu2gmdcn/img26784.jpg?mode=crop&width=1423&height=711&center=0.51,0.4915",
+    "img": "https://media-cdn.greatbritishchefs.com/media/eu2gmdcn/img26784.jpg?mode=crop\u0026width=1423\u0026height=711\u0026center=0.51,0.4915",
     "Title": "Seaweed (farmed)",
     "Description": "Also known as: Arame, Asian Kelp, Hijiki, Horsetail, Ito-wakame, Japanese Kelp, Kelp, Kizami-wakame, Kombu, Nambu wakame, Nori, Ogonori, Sugar Kelp, Wakame, Winged Kelp",
     "Rating": "BEST_CHOICE"
