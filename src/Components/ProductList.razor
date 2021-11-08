@@ -29,18 +29,25 @@
     -->
 @foreach (ProductRating ev in Enum.GetValues(typeof(ProductRating)))
 {
+    var myStyle = "";
+    var title = "";
     if (ev == ProductRating.BEST_CHOICE)
     {
-        <h2 class="red-text" style="color: green;">BEST CHOICE</h2>
+        myStyle = "color: green;";
+        title = "Best Choice";
     }
     else if (ev == ProductRating.GOOD_ALTERNATIVE)
     {
-        <h2 class="red-text" style="color: yellow;">GOOD ALTERNATIVE</h2>
+        myStyle = "color: yellow;";
+        title = "Good Alternative";
     }
     else if (ev == ProductRating.AVOID)
     {
-        <h2 class="red-text" style="color: red;">AVOID</h2>
+        myStyle = "color: red;";
+        title = "Avoid";
     }
+
+    <h2 class="red-text" style="@myStyle">@title</h2>
 
     <div class="card-columns">
         @foreach (var product in regionData)
