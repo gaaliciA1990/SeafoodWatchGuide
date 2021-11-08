@@ -107,7 +107,8 @@ namespace UnitTests.Pages.Read
             //Reset
 
             // Assert
-            Assert.AreEqual("./Admin", result.PageName);
+            Assert.AreEqual(null, PageModel.Product);
+            Assert.AreEqual(true, PageModel.errorOccurred);
         }
 
         #endregion OnGet
