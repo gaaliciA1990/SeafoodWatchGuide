@@ -99,8 +99,7 @@ namespace UnitTests.Model
         public void ToString_Serialize()
         {
             // Arrange
-            String Json = "{\"Id\":\"id\",\"Region\":\"region\",\"img\":\"image\",\"Title\":\"title\",\"Description\":\"description\",\"Rating\":\""+ProductRating.BEST_CHOICE+"\"}";
-
+            String Json = "{\"Id\":\"id\",\"Title\":\"title\",\"Region\":\"region\",\"Rating\":\"" + ProductRating.BEST_CHOICE + "\",\"Description\":\"description\",\"img\":\"image\"}";
             var obj = new ProductModel()
             {
                 Id = "id",
