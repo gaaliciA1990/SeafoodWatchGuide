@@ -57,6 +57,36 @@ can be edited with CRUD implementation
 
                 </div>
 
+                <!--Drop down filter options for Ratings <a asp-page-handler="Filter" class="btn btn-success">Apply</a>-->
+                <div class="form-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Rating Filter
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        @{
+                            var rating = Enum.GetValues(typeof(ProductRating));
+
+                            foreach (int i in rating)
+                            {
+                                // Do not show the Unknown rating on the form
+                                if (i == 0)
+                                {
+                                    continue;
+                                }
+                                <div class="form-check">
+                                    <input asp-for="@Model.Filter.Rating" type="radio" value="@i">
+                                    <label class="form-check-label">
+                                        @ProductModel.convertToString((ProductRating)i)
+                                    </label>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Apply" class="btn btn-success" />
+                </div>
 
             </div>
         </form>
