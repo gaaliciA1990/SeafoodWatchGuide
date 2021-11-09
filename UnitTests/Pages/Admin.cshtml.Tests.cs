@@ -75,6 +75,37 @@ namespace UnitTests.Pages.Admin
 
         }
 
+        /// <summary>
+        /// Test OnGetClear method which clears all data from the filter
+        /// </summary>
+        [Test]
+        public void OnGetClear_Should_Clear_All_Filter_Data()
+        {
+            // Arrange
+            PageModel.Filter.Region = "West Coast";
+            PageModel.Filter.Rating = ContosoCrafts.WebSite.Data.ProductRating.BEST_CHOICE;
+
+            var testOriginal = new FilterModel()
+            {
+                Region = PageModel.Filter.Region,
+                Rating = PageModel.Filter.Rating
+            };
+            
+            // Act
+            PageModel.OnGetClear();
+
+            //Reset
+
+            //Assert
+            Assert.AreEqual("West Coast", testOriginal.Region);
+            Assert.AreEqual(ContosoCrafts.WebSite.Data.ProductRating.BEST_CHOICE, testOriginal.Rating);
+
+            Assert.AreEqual(null, PageModel.Filter.Region);
+            Assert.AreEqual(ContosoCrafts.WebSite.Data.ProductRating.UNKNOWN, PageModel.Filter.Rating);
+        }
+
         #endregion OnGet
+
+        
     }
 }
