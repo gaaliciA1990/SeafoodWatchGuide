@@ -86,5 +86,18 @@ namespace ContosoCrafts.WebSite.Pages
             return Page();
         }
 
+        /// <summary>
+        /// Method to react to clicking of Clear button. Calls a clear data
+        /// function in FilterModel to clear all filter data and reset the
+        /// current selection of Products to be showing all Products
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult OnGetClear()
+        {
+            Filter.ClearData();
+            Products = ProductService.GetAllData();
+
+            return Page();
+        }
     }
 }
