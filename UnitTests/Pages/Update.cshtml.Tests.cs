@@ -75,6 +75,30 @@ namespace UnitTests.Pages.Update
             Assert.AreEqual(false, PageModel.ModelState.IsValid);
         }
 
+        [Test]
+        public void OnPost_InValid_Title_Input_NotValid_Return_Page()
+        {
+            // Arrange
+            PageModel.Product = new ProductModel
+            {
+                Id = "Crab",
+                Image = "data/Fish_img/Crab.bmp",
+                Rating = ContosoCrafts.WebSite.Data.ProductRating.AVOID,
+                Description = "Blue crab caught in Maryland's Chesapeake Bay waters with trotlines is a Best Choice. The stock is healthy, and overfishing is a low concern. The trotline fishery doesn't catch any other species, and management is rated highly effective. There are no major concerns about seafloor impacts, but ecosystem-based management measures haven't been implemented.",
+                Region = "West Coast",
+                Title = "392847#($*#$"
+            };
+            
+
+            // Act
+            var result = PageModel.OnPost() as ActionResult;
+
+            //Reset
+
+            // Assert
+            Assert.AreEqual(false, PageModel.ModelState.IsValid);
+        }
+
         /// <summary>
         /// Test OnPost function with valid state, which should allow the update
         /// to happen. Done by checking if the model is in valid state, if update
