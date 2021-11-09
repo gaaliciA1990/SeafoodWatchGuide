@@ -2,9 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using ContosoCrafts.WebSite.Models;
-using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Pages;
@@ -83,7 +81,7 @@ namespace UnitTests.Pages.Admin
         {
             // Arrange
             PageModel.Filter.Region = "West Coast";
-            PageModel.Filter.Rating = ContosoCrafts.WebSite.Data.ProductRating.BEST_CHOICE;
+            PageModel.Filter.Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE;
 
             var testOriginal = new FilterModel()
             {
@@ -98,10 +96,10 @@ namespace UnitTests.Pages.Admin
 
             //Assert
             Assert.AreEqual("West Coast", testOriginal.Region);
-            Assert.AreEqual(ContosoCrafts.WebSite.Data.ProductRating.BEST_CHOICE, testOriginal.Rating);
+            Assert.AreEqual(ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE, testOriginal.Rating);
 
             Assert.AreEqual(null, PageModel.Filter.Region);
-            Assert.AreEqual(ContosoCrafts.WebSite.Data.ProductRating.UNKNOWN, PageModel.Filter.Rating);
+            Assert.AreEqual(ContosoCrafts.WebSite.RatingEnums.ProductRating.UNKNOWN, PageModel.Filter.Rating);
         }
 
         #endregion OnGet
@@ -115,11 +113,11 @@ namespace UnitTests.Pages.Admin
         {
             //Arrange
             PageModel.Filter.Region = "West Coast";
-            PageModel.Filter.Rating = ContosoCrafts.WebSite.Data.ProductRating.BEST_CHOICE;
+            PageModel.Filter.Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE;
 
             IEnumerable<ProductModel> productList = PageModel.ProductService.GetAllData();
             productList = productList.Where(m => m.Region.Equals("West Coast"));
-            productList = productList.Where(m => m.Rating.Equals(ContosoCrafts.WebSite.Data.ProductRating.BEST_CHOICE));
+            productList = productList.Where(m => m.Rating.Equals(ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE));
 
 
             //Act
