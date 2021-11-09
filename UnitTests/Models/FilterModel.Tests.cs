@@ -1,7 +1,6 @@
-﻿
-using ContosoCrafts.WebSite.Models;
+﻿using ContosoCrafts.WebSite.Models;
 using NUnit.Framework;
-using ContosoCrafts.WebSite.Data;
+using ContosoCrafts.WebSite.RatingEnums;
 
 namespace UnitTests.Model
 {
