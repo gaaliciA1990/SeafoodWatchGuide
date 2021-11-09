@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System;
-using System.Text.Json;
-using ContosoCrafts.WebSite.Data;
+﻿using ContosoCrafts.WebSite.Data;
 
 namespace ContosoCrafts.WebSite.Models
 {
