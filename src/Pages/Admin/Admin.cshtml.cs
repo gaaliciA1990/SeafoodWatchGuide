@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-
+using System.Linq;
 
 namespace ContosoCrafts.WebSite.Pages
 {
@@ -17,6 +17,10 @@ namespace ContosoCrafts.WebSite.Pages
         //Logger
         private readonly ILogger<AdminModel> _logger;
 
+        //Filter model to hold all criteria
+        [BindProperty]
+        public FilterModel Filter { get; set;}
+
         /// <summary>
         /// Constructor method for Admin Page
         /// </summary>
@@ -26,6 +30,7 @@ namespace ContosoCrafts.WebSite.Pages
         {
             _logger = logger;
             ProductService = productService;
+            Filter = new FilterModel();
         }
 
         // Declares a getter for ProductService
@@ -42,6 +47,7 @@ namespace ContosoCrafts.WebSite.Pages
             Products = ProductService.GetAllData();
         }
 
+
         /// <summary>
         /// Method to react to an action of clicking on the Create button
         /// on the Admin page. User gets redirected to Create page.
@@ -51,5 +57,34 @@ namespace ContosoCrafts.WebSite.Pages
         {
             return RedirectToPage("Create");
         }
+
+        /// <summary>
+        /// Method to react to action of submitting a filter via the Apply
+        /// button. User gets the refreshed page with stated filters.
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult OnPost()
+        {
+            Products = ProductService.GetAllData();
+
+            //Filter by Region first, if chosen
+            if (Filter.Region != null)
+            {
+                string val = Filter.Region;
+                
+                //Start with region
+                Products = Products.Where(m => m.Region.Equals(val));
+            }
+            //Then filter by rating
+            if (Filter.Rating != Data.ProductRating.UNKNOWN)
+            {
+                var rating = Filter.Rating;
+                //Narrow down to rating
+                Products = Products.Where(m => m.Rating.Equals(rating));
+            }
+
+            return Page();
+        }
+
     }
 }
