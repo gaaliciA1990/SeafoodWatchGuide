@@ -1,5 +1,4 @@
-﻿
-@page
+﻿@page
 @using ContosoCrafts.WebSite.Components
 @using ContosoCrafts.WebSite.Models;
 @using ContosoCrafts.WebSite.Data
@@ -15,19 +14,6 @@
     that they are allowed to update. Static values from creation that are expected to not be modified by users are
     read only.
 -->
-
-
-<style>
-    .popover {
-        max-width: 350px;
-    }
-
-        .popover img {
-            max-width: 250px;
-        }
-</style>
-
-
 
 @using (Html.BeginForm())
 {
@@ -102,13 +88,10 @@
                 placement: 'bottom',
                 content: function () {
                     if ($(this).val().match('^(?:[a-z]+:)?//'))
-                        return '<img src="' + $(this).val() + '" style="width: 100%";/>';
-                    return '<img src="' + $(this).val().replace(/^([^/])/, '/$1') + '" style="width: 100%";/>';
+                        return '<img src="' + $(this).val() + '";/>';
+                    return '<img src="' + $(this).val().replace(/^([^/])/, '/$1') + '";/>';
                 }
             });
         });
     </script>
 }
-
-
-
