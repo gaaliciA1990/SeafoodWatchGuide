@@ -1,5 +1,10 @@
 ﻿@page
 @using ContosoCrafts.WebSite.Components
+@using ContosoCrafts.WebSite.Models
+@using ContosoCrafts.WebSite.Services
+@using Microsoft.AspNetCore.Components.Web
+@using ContosoCrafts.WebSite.Data
+@inject JsonFileProductService ProductService
 @model AdminModel
 @{
     ViewData["Title"] = "Admin";
@@ -8,6 +13,8 @@
 This is the Index page where all records from the Seafoods.JSON file are display and
 can be edited with CRUD implementation
 -->
+<link rel="stylesheet" href="~/css/site.css" type="text/css">
+
 <head>
 </head>
 <body>
@@ -23,40 +30,72 @@ can be edited with CRUD implementation
         </div>
         <!--The Create button for adding a new record of Seafood-->
         <a class="btn btn-primary" asp-page-handler="Create"> Create</a>
-        <!--Table to display all of the seafood records-->
-        <table class="table">
-            <tr>
-                <!--<th>ID</th> - commenting out this code as we don't need to show users the ID-->
-                <th>Title</th>
-                <th>Region</th>
-                <th>Fish Rating</th>
-                <th>Decription</th>
-                <th>Actions</th>
-            </tr>
-            @foreach (var item in Model.Products)
-            {
+
+        <!-- Drop down menus for Region and Rating filters-->
+        <form method="post">
+            <div id="li">
+                <!--Drop down filter options for Region -->
+                <div class="form-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Region Filter
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        @{
+                            var temp = Model.ProductService.GetAllRegions();
+
+                            foreach (string region in temp)
+                            {
+                                <div class="form-check">
+                                    <input asp-for="@Model.Filter.Region" type="radio" value="@region">
+                                    <label class="form-check-label">
+                                        @region
+                                    </label>
+                                </div>
+                            }
+                        }
+                    </div>
+
+                </div>
+
+
+            </div>
+        </form>
+
+
+            <!--Table to display all of the seafood records-->
+            <table class="table">
                 <tr>
-                    <!--<td>Html.DisplayFor(modelItem => item.Id)</td> - commenting out this code as we don't need to show users the ID-->
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Title)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Region)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Rating)
-                    </td>
-                    <td>
-                        <div class="truncate">
-                            @Html.DisplayFor(modelItem => item.Description)
-                        </div>
-                    </td>
-                    <td>
-                        <a class="btn btn-primary" asp-page="Read" asp-route-id="@(item.Id)">Edit</a>
-                    </td>
+                    <!--<th>ID</th> - commenting out this code as we don't need to show users the ID-->
+                    <th>Title</th>
+                    <th>Region</th>
+                    <th>Fish Rating</th>
+                    <th>Decription</th>
+                    <th>Actions</th>
                 </tr>
-            }
-        </table>
+                @foreach (var item in Model.Products)
+                {
+                    <tr>
+                        <!--<td>Html.DisplayFor(modelItem => item.Id)</td> - commenting out this code as we don't need to show users the ID-->
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Region)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Rating)
+                        </td>
+                        <td>
+                            <div class="truncate">
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </div>
+                        </td>
+                        <td>
+                            <a class="btn btn-primary" asp-page="Read" asp-route-id="@(item.Id)">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </table>
     </div>
 
 </body>
