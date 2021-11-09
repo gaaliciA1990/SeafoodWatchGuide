@@ -5,51 +5,11 @@
     ViewData["Title"] = "Home page";
 }
 
-<!-- This section sets defaults we can call to format our added buttons, images or containers. ONLY APPLIES TO HOMEPAGE -->
-<head>
-    <style type="text/css">
-        html, body {
-            height: 100%;
-            width: 100%;
-        }
 
-        div#form-wrapper {
-            position: absolute;
-            box-sizing: border-box;
-            padding: 20px;
-            border-radius: 10px;
-            margin: auto;
-            background: rgba(255, 255, 255, 0.85);
-            top: 50%;
-            width: 40%;
-            right: 0;
-            left: 0;
-        }
-
-        div#text-wrapper {
-            position: absolute;
-            box-sizing: border-box;
-            padding: 10px;
-            border-radius: 0px;
-            margin: auto;
-            background: rgba(240, 248, 255, 0.75);
-            top: 120px;
-            width: 100%;
-            right: 0;
-            left: 0;
-        }
-
-        body {
-            background-image: url('imgs/underwater.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-        }
-    </style>
-</head>
 <!-- Place holder -->
-<body>
+<body id="mainPageBody">
     <div class="text-body navbar-expand-sm navbar-toggleable-sm">
-        <div id="text-wrapper" style="text-align:left; vertical-align:middle">
+        <div id="text-wrapper">
             <h3>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
@@ -59,7 +19,7 @@
     </div>
 
     <!---This is the region select dropdown for navigating to the correct guide. Each dropdown option will link to a new page-->
-    <div id="form-wrapper" style="text-align:center; vertical-align:middle">
+    <div id="form-wrapper" class="text-center">
         <h2>Which guide would you like to view?</h2> <!---TODO: Add style to the text and center into one line-->
         <div class="btn-group">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -67,25 +27,15 @@
             </button>
             <div class="dropdown-menu dropdown-menu-right">
                 <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("West Coast")'>West Coast</a></button>
-                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Southwest")' >Southwest</a></button>
-                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Central")'   >Central</a></button>
-                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Southeast")' >Southeast</a></button>
-                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Northeast")' >Northeast</a></button>
-                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Hawaii")'    >Hawai'i</a></button>
-                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("National")'  >National</a></button>
+                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Southwest")'>Southwest</a></button>
+                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Central")'>Central</a></button>
+                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Southeast")'>Southeast</a></button>
+                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Northeast")'>Northeast</a></button>
+                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Hawaii")'>Hawai'i</a></button>
+                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("National")'>National</a></button>
             </div>
         </div>
     </div>
 </body>
 
 <script src="_framework/blazor.server.js"></script>
-
-
-
-
-
-
-
-
-
-
