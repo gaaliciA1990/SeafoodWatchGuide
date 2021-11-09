@@ -1,10 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-
 using NUnit.Framework;
-
 using ContosoCrafts.WebSite.Pages;
 using ContosoCrafts.WebSite.Models;
-using System.Linq;
 
 namespace UnitTests.Pages.Update
 {
