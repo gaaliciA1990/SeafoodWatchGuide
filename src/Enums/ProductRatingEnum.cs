@@ -1,10 +1,4 @@
-﻿using System;
-using System.Runtime.Serialization;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-/// <summary>
+﻿/// <summary>
 /// This is the ENUM class for seafood ratings, which are displayed on each card and dictate
 /// which section of the guide the fish card is displayed on.
 /// </summary>
