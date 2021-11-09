@@ -4,10 +4,13 @@ using ContosoCrafts.WebSite.RatingEnums;
 
 namespace UnitTests.Model
 {
+    /// <summary>
+    /// Class contains unit tests for FilterModel.cs
+    /// </summary>
     public class FilterModelTests
     {
         #region TestSetup
-        //ProductModel object used to test FilterModel's functionalities
+        //FilterModel object used to test FilterModel's functionalities
         public FilterModel Model;
 
         /// <summary>
@@ -39,8 +42,8 @@ namespace UnitTests.Model
                 Region = Model.Region
             };
 
-        // Act
-        Model.ClearData();
+            // Act
+            Model.ClearData();
 
             //Reset
 
