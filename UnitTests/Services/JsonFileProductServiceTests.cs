@@ -37,7 +37,7 @@ namespace UnitTests.Services
                 Image = "testing image",
                 Title = "testing title",
                 Description = "Enter URL",
-                Rating = ContosoCrafts.WebSite.Data.ProductRating.AVOID,
+                Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.AVOID,
             };
 
             //Act
@@ -71,7 +71,7 @@ namespace UnitTests.Services
                 Image = "testing image",
                 Title = "testing title",
                 Description = "Enter URL",
-                Rating = ContosoCrafts.WebSite.Data.ProductRating.AVOID,
+                Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.AVOID,
             };
 
 

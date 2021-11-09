@@ -1,7 +1,7 @@
 ﻿using System;
 using ContosoCrafts.WebSite.Models;
 using NUnit.Framework;
-using ContosoCrafts.WebSite.Data;
+using ContosoCrafts.WebSite.RatingEnums;
 
 namespace UnitTests.Model
 {
@@ -37,7 +37,7 @@ namespace UnitTests.Model
             // Arrange - not needed
 
             // Act
-            var Result = ProductModel.convertToString(ContosoCrafts.WebSite.Data.ProductRating.BEST_CHOICE);
+            var Result = ProductModel.convertToString(ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE);
 
             //Reset
 
@@ -55,7 +55,7 @@ namespace UnitTests.Model
             // Arrange - not needed
 
             // Act
-            var Result = ProductModel.convertToString(ContosoCrafts.WebSite.Data.ProductRating.GOOD_ALTERNATIVE);
+            var Result = ProductModel.convertToString(ContosoCrafts.WebSite.RatingEnums.ProductRating.GOOD_ALTERNATIVE);
 
             //Reset
 
@@ -74,7 +74,7 @@ namespace UnitTests.Model
             // Arrange - not needed
 
             // Act
-            var Result = ProductModel.convertToString(ContosoCrafts.WebSite.Data.ProductRating.AVOID);
+            var Result = ProductModel.convertToString(ContosoCrafts.WebSite.RatingEnums.ProductRating.AVOID);
 
             //Reset
 

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NUnit.Framework;
-using ContosoCrafts.WebSite.Data;
+using ContosoCrafts.WebSite.RatingEnums;
 using ContosoCrafts.WebSite.Controllers;
 using System.Linq;
 

@@ -1,4 +1,4 @@
-﻿using ContosoCrafts.WebSite.Data;
+﻿using ContosoCrafts.WebSite.RatingEnums;
 
 namespace ContosoCrafts.WebSite.Models
 {

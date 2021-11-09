@@ -2,7 +2,7 @@
 /// This is the ENUM class for seafood ratings, which are displayed on each card and dictate
 /// which section of the guide the fish card is displayed on.
 /// </summary>
-namespace ContosoCrafts.WebSite.Data
+namespace ContosoCrafts.WebSite.RatingEnums
 {
     /// <summary>
     /// Method declares the ENUMs for our product ratings

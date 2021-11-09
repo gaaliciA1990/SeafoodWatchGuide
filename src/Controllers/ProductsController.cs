@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
-using ContosoCrafts.WebSite.Data;
+using ContosoCrafts.WebSite.RatingEnums;
 
 
 namespace ContosoCrafts.WebSite.Controllers

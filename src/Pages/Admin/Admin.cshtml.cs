@@ -76,7 +76,7 @@ namespace ContosoCrafts.WebSite.Pages
                 Products = Products.Where(m => m.Region.Equals(val));
             }
             //Then filter by rating
-            if (Filter.Rating != Data.ProductRating.UNKNOWN)
+            if (Filter.Rating != RatingEnums.ProductRating.UNKNOWN)
             {
                 var rating = Filter.Rating;
                 //Narrow down to rating

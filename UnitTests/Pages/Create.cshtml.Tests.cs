@@ -88,7 +88,7 @@ namespace UnitTests.Pages.Create
                 Title = "12345678(*@#*@#",
                 Description = "testDescription",
                 Image = "https://test.com",
-                Rating = ContosoCrafts.WebSite.Data.ProductRating.AVOID,
+                Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.AVOID,
                 Region = "West Coast"
             };
 
@@ -117,7 +117,7 @@ namespace UnitTests.Pages.Create
                 Title = "testTitle",
                 Description = "testDescription",
                 Image = "https://test.com",
-                Rating = ContosoCrafts.WebSite.Data.ProductRating.AVOID,
+                Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.AVOID,
                 Region = "West Coast"
             };
             //Act
