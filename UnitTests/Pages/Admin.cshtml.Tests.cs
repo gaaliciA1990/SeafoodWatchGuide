@@ -106,6 +106,31 @@ namespace UnitTests.Pages.Admin
 
         #endregion OnGet
 
-        
+        #region OnPost
+        /// <summary>
+        /// Tests OnPost method where product list is filtered by stated criteria
+        /// </summary>
+        [Test]
+        public void OnPost_Should_Return_Product_According_To_Filter()
+        {
+            //Arrange
+            PageModel.Filter.Region = "West Coast";
+            PageModel.Filter.Rating = ContosoCrafts.WebSite.Data.ProductRating.BEST_CHOICE;
+
+            IEnumerable<ProductModel> productList = PageModel.ProductService.GetAllData();
+            productList = productList.Where(m => m.Region.Equals("West Coast"));
+            productList = productList.Where(m => m.Rating.Equals(ContosoCrafts.WebSite.Data.ProductRating.BEST_CHOICE));
+
+
+            //Act
+            PageModel.OnPost();
+
+            //Reset
+
+            //Assert
+            Assert.AreEqual(productList.ToString(), PageModel.Products.ToString());
+        }
+
+        #endregion OnPost
     }
 }
