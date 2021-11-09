@@ -189,9 +189,6 @@ html {
 }
 
 body {
-    /* Navbar top padding*/
-    padding-top: 70px;
-
     /* Margin bottom by footer height */
     margin-bottom: 60px;
 }
