@@ -37,7 +37,7 @@ namespace UnitTests.Pages.Index
         /// to be shown.
         /// </summary>
         [Test]
-        public void OnGet_get_all_data()
+        public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
             //Dummy variable to store original counts of all products
