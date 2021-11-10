@@ -304,3 +304,14 @@ input.input-validation-error {
     max-width: 100%;
     max-height: 100%;
 }
+.BEST_CHOICE_color {
+    color: green;
+}
+
+.GOOD_ALTERNATIVE_color {
+    color: yellow;
+}
+
+.AVOID_color {
+    color: red;
+}
