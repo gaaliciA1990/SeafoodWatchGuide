@@ -82,7 +82,7 @@ namespace UnitTests.Pages.Admin
             // Arrange
             PageModel.Filter.Region = "West Coast";
             PageModel.Filter.Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE;
-            
+
             // Act
             PageModel.OnGetClear();
 
@@ -193,4 +193,6 @@ namespace UnitTests.Pages.Admin
             //Assert
             Assert.AreEqual(true, PageModel.Products.Any());
         }
+        #endregion OnPost
+    }
 }
