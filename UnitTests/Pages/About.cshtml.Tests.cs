@@ -6,9 +6,9 @@ using ContosoCrafts.WebSite.Pages;
 namespace UnitTests.Pages.About
 {
     /// <summary>
-    /// Class to contain all tests for Privacy page
+    /// Class to contain all tests for About page
     /// </summary>
-    public class PrivacyTests
+    public class AboutTests
     {
         #region TestSetup
         //AboutModel object used to test our About page model
@@ -33,10 +33,10 @@ namespace UnitTests.Pages.About
 
         #region OnGet
         /// <summary>
-        /// Test OnGet function on Privacy model
+        /// Test OnGet function on About model
         /// </summary>
         [Test]
-        public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
+        public void OnGet_Valid_Activity_Set_Should_Return_Valid_Model()
         {
             // Arrange
 
