@@ -33,25 +33,22 @@
     var collapse = "";
     if (ev == ProductRating.BEST_CHOICE)
     {
-        myStyle = "color: green;";
         title = "Best Choice";
         collapse = "collapse1";
     }
     else if (ev == ProductRating.GOOD_ALTERNATIVE)
     {
-        myStyle = "color: yellow;";
         title = "Good Alternative";
         collapse = "collapse2";
     }
     else if (ev == ProductRating.AVOID)
     {
-        myStyle = "color: red;";
         title = "Avoid";
         collapse = "collapse3";
     }
 
-    <a data-toggle="collapse" aria-expanded="false"  href=#@collapse>
-        <h2 class="red-text" style="@myStyle">@title</h2>
+    <a data-toggle="collapse" aria-expanded="false" href=#@collapse>
+        <h2 class="@(ev + "_color")">@title</h2>
     </a>
 
     <div id=@collapse class="collapse">
