@@ -109,7 +109,50 @@ namespace UnitTests.Pages.Admin
         /// Tests OnPost method where product list is filtered by stated criteria
         /// </summary>
         [Test]
-        public void OnPost_Should_Return_Product_According_To_Filter()
+        public void OnPost_Should_Return_Product_According_To_Region_Filter()
+        {
+            //Arrange
+            PageModel.Filter.Region = "West Coast";
+
+            IEnumerable<ProductModel> productList = PageModel.ProductService.GetAllData();
+            productList = productList.Where(m => m.Region.Equals("West Coast"));
+
+            //Act
+            PageModel.OnPost();
+
+            //Reset
+
+            //Assert
+            Assert.AreEqual(productList.ToString(), PageModel.Products.ToString());
+        }
+
+        /// <summary>
+        /// Tests OnPost method where product list is filtered by stated criteria
+        /// </summary>
+        [Test]
+        public void OnPost_Should_Return_Product_According_To_Rating_Filter()
+        {
+            //Arrange
+            PageModel.Filter.Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE;
+
+            IEnumerable<ProductModel> productList = PageModel.ProductService.GetAllData();
+            productList = productList.Where(m => m.Rating.Equals(ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE));
+
+
+            //Act
+            PageModel.OnPost();
+
+            //Reset
+
+            //Assert
+            Assert.AreEqual(productList.ToString(), PageModel.Products.ToString());
+        }
+
+        /// <summary>
+        /// Tests OnPost method where product list is filtered by stated criteria
+        /// </summary>
+        [Test]
+        public void OnPost_Should_Return_Product_According_To_Region_And_Rating_Filters()
         {
             //Arrange
             PageModel.Filter.Region = "West Coast";
@@ -128,7 +171,6 @@ namespace UnitTests.Pages.Admin
             //Assert
             Assert.AreEqual(productList.ToString(), PageModel.Products.ToString());
         }
-
         #endregion OnPost
     }
 }
