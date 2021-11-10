@@ -37,7 +37,7 @@ namespace UnitTests.Pages.Create
         /// Test empty OnGet function. Should not change the state of the CreateModel object
         /// </summary>
         [Test]
-        public void OnGet_initial_setup()
+        public void OnGet_Valid_Should_Return_Null_Product()
         {
             //Arrange
 
@@ -58,7 +58,7 @@ namespace UnitTests.Pages.Create
         /// the user back to the original Create page. 
         /// </summary>
         [Test]
-        public void OnPost_invalidState_returnToPage()
+        public void OnPost_Invalid_Bogus_Should_Return_Invalid_Model_State()
         {
             //Arrange
             PageModel.ModelState.AddModelError("bogus", "bogus error");
@@ -79,7 +79,7 @@ namespace UnitTests.Pages.Create
         /// message
         /// </summary>
         [Test]
-        public void OnPost_Title_Has_Only_Numbers_Return_To_Page()
+        public void OnPost_Invalid_Title_Only_Numbers_Should_Return_To_Invalid_Model()
         {
             //Arrange
             PageModel.Product = new ProductModel
@@ -108,7 +108,7 @@ namespace UnitTests.Pages.Create
         /// the user back to Admin page to view all available items.
         /// </summary>
         [Test]
-        public void OnPost_ValidState_createCard()
+        public void OnPost_Valid_ProductModel_Should_Return_Valid_Model_State()
         {
             //Arrange
             PageModel.Product = new ProductModel
