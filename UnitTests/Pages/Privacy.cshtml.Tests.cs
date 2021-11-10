@@ -37,7 +37,7 @@ namespace UnitTests.Pages.Privacy
         /// test OnGet function where the model should be in valid state 
         /// </summary>
         [Test]
-        public void OnGet_Valid_State()
+        public void OnGet_Valid_State_Should_Return_Valid_Model()
         {
             // Arrange
 
