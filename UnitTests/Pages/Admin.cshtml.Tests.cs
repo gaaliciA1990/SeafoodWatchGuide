@@ -127,6 +127,44 @@ namespace UnitTests.Pages.Admin
         }
 
         /// <summary>
+        /// The Region can be be a bogus value not found on any product
+        /// When it is bogus, it returns an empty set, so Any will be false
+        /// </summary>
+        [Test]
+        public void OnPost_InValid_Region_Bogus_Should_Return_Null()
+        {
+            //Arrange
+            PageModel.Filter.Region = "Bogus";
+
+            //Act
+            PageModel.OnPost();
+
+            //Reset
+
+            //Assert
+            Assert.AreEqual(false, PageModel.Products.Any());
+        }
+
+        /// <summary>
+        /// The Region can be null, so need to pass in a null region to test
+        /// When it is null, it returns the full product list
+        /// </summary>
+        [Test]
+        public void OnPost_InValid_Region_Null_Should_Return_FullList()
+        {
+            //Arrange
+            PageModel.Filter.Region = null;
+
+            //Act
+            PageModel.OnPost();
+
+            //Reset
+
+            //Assert
+            Assert.AreEqual(true, PageModel.Products.Any());
+        }
+
+        /// <summary>
         /// Tests OnPost method where product list is filtered by stated criteria
         /// </summary>
         [Test]
