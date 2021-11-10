@@ -36,7 +36,7 @@ namespace UnitTests.Pages.TakeAction
         /// Test OnGet function on Privacy model
         /// </summary>
         [Test]
-        public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
+        public void OnGet_Valid_Activity_Set_Should_Return_Valid_Model_State()
         {
             // Arrange
 
