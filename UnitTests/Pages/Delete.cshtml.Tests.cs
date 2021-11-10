@@ -38,7 +38,7 @@ namespace UnitTests.Pages.Delete
         /// </summary>
         #region OnGet
         [Test]
-        public void OnGet_get_data()
+        public void OnGet_Valid_ID_Should_Return_Product()
         {
             // Arrange
             var randomProduct = TestHelper.ProductService.GetAllData().FirstOrDefault();
@@ -60,7 +60,7 @@ namespace UnitTests.Pages.Delete
         /// user gets directed back to Admin page.
         /// </summary>
         [Test]
-        public void OnPost_delete_and_redirect()
+        public void OnPost_Valid_ID_Should_Delete_Product_And_Return_To_Admin_Page()
         {
             // Arrange
             var randomProduct = TestHelper.ProductService.GetAllData().FirstOrDefault();
