@@ -38,7 +38,7 @@ namespace UnitTests.Pages.Read
         /// be reviewed before deletion on the Delete page
         /// </summary>
         [Test]
-        public void OnGetDelete_redirect()
+        public void OnGetDelete_Valid_Should_Return_Delete_Page()
         {
             // Arrange
             // Act
@@ -57,7 +57,7 @@ namespace UnitTests.Pages.Read
         /// details on the Read page
         /// </summary>
         [Test]
-        public void OnGet_get_data()
+        public void OnGet_Valid_ID_Should_Return_Product()
         {
             // Arrange
             // Act
@@ -77,7 +77,7 @@ namespace UnitTests.Pages.Read
         /// get updated on the Update page
         /// </summary>
         [Test]
-        public void OnGetUpdate_redirect()
+        public void OnGetUpdate_Valid_State_Should_Return_Update_Page()
         {
             // Arrange
             // Act
@@ -91,8 +91,12 @@ namespace UnitTests.Pages.Read
 
         }
 
+        /// <summary>
+        /// Tests invalid id, which the model will return a null product because
+        /// it is not in our database
+        /// </summary>
         [Test]
-        public void OnGet_InValid_Id_Bougs_Should_Return_Products()
+        public void OnGet_InValid_Id_Bougs_Should_Return_Null_Product()
         {
             // Arrange
 
