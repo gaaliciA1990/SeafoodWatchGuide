@@ -41,7 +41,7 @@ namespace UnitTests.Pages.Admin
         /// test OnGet function when it fetches all data to be shown
         /// </summary>
         [Test]
-        public void OnGet_get_all_data()
+        public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
             var randomProduct = TestHelper.ProductService.GetAllData();
@@ -60,7 +60,7 @@ namespace UnitTests.Pages.Admin
         /// redirected to the Create page
         /// </summary>
         [Test]
-        public void OnGetCreate_redirect()
+        public void OnGetCreate_Valid_Should_Return_Create_Page()
         {
             // Arrange
             // Act
@@ -77,17 +77,11 @@ namespace UnitTests.Pages.Admin
         /// Test OnGetClear method which clears all data from the filter
         /// </summary>
         [Test]
-        public void OnGetClear_Should_Clear_All_Filter_Data()
+        public void OnGetClear_Valid_Should_Clear_All_Filters()
         {
             // Arrange
             PageModel.Filter.Region = "West Coast";
             PageModel.Filter.Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE;
-
-            var testOriginal = new FilterModel()
-            {
-                Region = PageModel.Filter.Region,
-                Rating = PageModel.Filter.Rating
-            };
             
             // Act
             PageModel.OnGetClear();
@@ -95,9 +89,6 @@ namespace UnitTests.Pages.Admin
             //Reset
 
             //Assert
-            Assert.AreEqual("West Coast", testOriginal.Region);
-            Assert.AreEqual(ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE, testOriginal.Rating);
-
             Assert.AreEqual(null, PageModel.Filter.Region);
             Assert.AreEqual(ContosoCrafts.WebSite.RatingEnums.ProductRating.UNKNOWN, PageModel.Filter.Rating);
         }
@@ -106,10 +97,10 @@ namespace UnitTests.Pages.Admin
 
         #region OnPost
         /// <summary>
-        /// Tests OnPost method where product list is filtered by stated criteria
+        /// Tests OnPost method where product list is filtered by a valid Region
         /// </summary>
         [Test]
-        public void OnPost_Should_Return_Product_According_To_Region_Filter()
+        public void OnPost_Valid_Region_West_Coast_Should_Return_Filtered_List()
         {
             //Arrange
             PageModel.Filter.Region = "West Coast";
@@ -123,7 +114,7 @@ namespace UnitTests.Pages.Admin
             //Reset
 
             //Assert
-            Assert.AreEqual(productList.ToString(), PageModel.Products.ToString());
+            Assert.AreEqual(productList.Count(), PageModel.Products.Count());
         }
 
         /// <summary>
@@ -165,17 +156,14 @@ namespace UnitTests.Pages.Admin
         }
 
         /// <summary>
-        /// Tests OnPost method where product list is filtered by stated criteria
+        /// The Region can be be a bogus value not found on any product
+        /// When it is bogus, it returns an empty set, so Any will be false
         /// </summary>
         [Test]
-        public void OnPost_Should_Return_Product_According_To_Rating_Filter()
+        public void OnPost_InValid_Rating_Bogus_Should_Return_Null()
         {
             //Arrange
-            PageModel.Filter.Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE;
-
-            IEnumerable<ProductModel> productList = PageModel.ProductService.GetAllData();
-            productList = productList.Where(m => m.Rating.Equals(ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE));
-
+            PageModel.Filter.Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.UNKNOWN;
 
             //Act
             PageModel.OnPost();
@@ -183,23 +171,19 @@ namespace UnitTests.Pages.Admin
             //Reset
 
             //Assert
-            Assert.AreEqual(productList.ToString(), PageModel.Products.ToString());
+            Assert.AreEqual(true, PageModel.Products.Any());
         }
+
 
         /// <summary>
-        /// Tests OnPost method where product list is filtered by stated criteria
+        /// The Region can be be a bogus value not found on any product
+        /// When it is bogus, it returns an empty set, so Any will be false
         /// </summary>
         [Test]
-        public void OnPost_Should_Return_Product_According_To_Region_And_Rating_Filters()
+        public void OnPost_Valid_Rating_Best_Choice_Should_Return_Filtered_List()
         {
             //Arrange
-            PageModel.Filter.Region = "West Coast";
             PageModel.Filter.Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE;
-
-            IEnumerable<ProductModel> productList = PageModel.ProductService.GetAllData();
-            productList = productList.Where(m => m.Region.Equals("West Coast"));
-            productList = productList.Where(m => m.Rating.Equals(ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE));
-
 
             //Act
             PageModel.OnPost();
@@ -207,8 +191,6 @@ namespace UnitTests.Pages.Admin
             //Reset
 
             //Assert
-            Assert.AreEqual(productList.ToString(), PageModel.Products.ToString());
+            Assert.AreEqual(true, PageModel.Products.Any());
         }
-        #endregion OnPost
-    }
 }
