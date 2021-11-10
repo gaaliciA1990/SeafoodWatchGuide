@@ -39,7 +39,7 @@ namespace UnitTests.Pages.Region
         /// </summary>
         #region OnGet
         [Test]
-        public void OnGet_Valid_Region_For_Data_Pulled()
+        public void OnGet_Valid_Region_For_Data_Pulled_Should_Return_Requested_Region()
         {
             // Arrange
             string region = "Central";
