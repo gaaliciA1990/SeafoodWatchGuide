@@ -72,6 +72,10 @@ namespace UnitTests.Pages.Update
             Assert.AreEqual(false, PageModel.ModelState.IsValid);
         }
 
+        /// <summary>
+        /// Tests Onpost with invalid title input, model state should be invalid
+        /// and page gets returned without submission.
+        /// </summary>
         [Test]
         public void OnPost_InValid_Title_Input_NotValid_Return_Page()
         {
