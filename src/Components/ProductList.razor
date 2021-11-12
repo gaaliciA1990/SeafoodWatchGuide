@@ -3,26 +3,6 @@
 @using ContosoCrafts.WebSite.RatingEnums
 @using Microsoft.AspNetCore.Components.Web
 @inject JsonFileProductService ProductService
-@code
-{
-    ProductModel selectedProduct;
-    string selectedProductId;
-
-    [Parameter]
-    public string region { get; set; }
-
-    // This code selects a product to display with a click and gets the ratings for that given product
-    void SelectProduct(string productId)
-    {
-        selectedProductId = productId;
-        selectedProduct = ProductService.GetAllData().First(x => x.Id == productId);
-    }
-}
-@{var regionData = ProductService.GetRegionData(region);}
-
-
-<span> &nbsp; &nbsp; &nbsp;</span>
-
 <!-- This section of HTML is the formatting for how the products are displayed in their
     individual cards. This can be updated to work with new data and rearranged if needed,
     but this data can also be bucketed into contained within a page.
@@ -54,6 +34,8 @@
     <a data-toggle="collapse" aria-expanded="false" href=#@collapse>
         <h2 class="@(ev + "_color")">@title</h2>
     </a>
+
+    var regionData = ProductService.GetRegionData(region);
 
     <div id=@collapse class="collapse">
         <div class="card-columns">
@@ -103,15 +85,15 @@
                 <div class="modal-footer">
                     @if (selectedProduct.Rating == ProductRating.BEST_CHOICE)
                     {
-                        <div class="card-footer bg-success text-white">@ProductModel.convertToString(selectedProduct.Rating)</div>
+                        <div class="card-footer bg-success text-white">@EnumExtensions.convertToString(selectedProduct.Rating)</div>
                     }
                     else if (selectedProduct.Rating == ProductRating.GOOD_ALTERNATIVE)
                     {
-                        <div class="card-footer bg-warning text-white">@ProductModel.convertToString(selectedProduct.Rating)</div>
+                        <div class="card-footer bg-warning text-white">@EnumExtensions.convertToString(selectedProduct.Rating)</div>
                     }
                     else
                     {
-                        <div class="card-footer bg-danger text-white">@ProductModel.convertToString(selectedProduct.Rating)</div>
+                        <div class="card-footer bg-danger text-white">@EnumExtensions.convertToString(selectedProduct.Rating)</div>
                     }
                 </div>
             </div>
@@ -120,3 +102,20 @@
 }
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- C# code for implementing functionality-->
+@code
+{
+    ProductModel selectedProduct;
+    string selectedProductId;
+
+    // This code selects a product to display with a click and gets the ratings for that given product
+    void SelectProduct(string productId)
+    {
+        selectedProductId = productId;
+        selectedProduct = ProductService.GetAllData().First(x => x.Id == productId);
+    }
+
+    [Parameter]
+    public string region { get; set; }
+}
