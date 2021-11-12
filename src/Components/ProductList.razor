@@ -1,6 +1,7 @@
 @using ContosoCrafts.WebSite.Models
 @using ContosoCrafts.WebSite.Services
 @using ContosoCrafts.WebSite.RatingEnums
+@using Microsoft.AspNetCore.Components.Web
 @inject JsonFileProductService ProductService
 @code
 {
@@ -33,16 +34,19 @@
     var collapse = "";
     if (ev == ProductRating.BEST_CHOICE)
     {
+        myStyle = "color: green;";
         title = "Best Choice";
         collapse = "collapse1";
     }
     else if (ev == ProductRating.GOOD_ALTERNATIVE)
     {
+        myStyle = "color: yellow;";
         title = "Good Alternative";
         collapse = "collapse2";
     }
     else if (ev == ProductRating.AVOID)
     {
+        myStyle = "color: red;";
         title = "Avoid";
         collapse = "collapse3";
     }
