@@ -99,5 +99,63 @@ namespace UnitTests.ProductRatingEnum
 
         }
         #endregion
+
+        #region EnumExtensionTests
+        /// <summary>
+        /// This tests the convertToSTring in ProductModel.cs to confirm that the correct string is displayed 
+        /// when Best Choice is converted from the productrating ENUM.
+        /// </summary>
+        [Test]
+        public void ConvertToString_Valid_String_For_BestChoice_ENUM()
+        {
+            // Arrange - not needed
+
+            // Act
+            var Result = EnumExtensions.convertToString(ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE);
+
+            //Reset
+
+            // Assert
+            Assert.AreEqual("Best choice", Result);
+        }
+
+        /// <summary>
+        /// This tests the convertToSTring in ProductModel.cs to confirm that the correct string is displayed 
+        /// when Good Alternative is converted from the productrating ENUM.
+        /// </summary>
+        [Test]
+        public void ConvertToString_Valid_String_For_GoodAlt_ENUM()
+        {
+            // Arrange - not needed
+
+            // Act
+            var Result = EnumExtensions.convertToString(ContosoCrafts.WebSite.RatingEnums.ProductRating.GOOD_ALTERNATIVE);
+
+            //Reset
+
+            // Assert
+            Assert.AreEqual("Good alternative", Result);
+
+        }
+
+        /// <summary>
+        /// This tests the convertToSTring in ProductModel.cs to confirm that the correct string is displayed 
+        /// when Avoid is converted from the productrating ENUM.
+        /// </summary>
+        [Test]
+        public void ConvertToString_Valid_String_For_Avoid_ENUM()
+        {
+            // Arrange - not needed
+
+            // Act
+            var Result = EnumExtensions.convertToString(ContosoCrafts.WebSite.RatingEnums.ProductRating.AVOID);
+
+            //Reset
+
+            // Assert
+            Assert.AreEqual("Avoid", Result);
+
+        }
     }
+    #endregion
 }
