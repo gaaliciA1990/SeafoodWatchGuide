@@ -61,7 +61,7 @@
                 <div class="form-check">
                     <input required asp-for="Product.Rating" type="radio" value="@i">
                     <label class="form-check-label" for="gridRadios1">
-                        @ProductModel.convertToString((ProductRating)i)
+                        @EnumExtensions.convertToString((ProductRating)i)
                     </label>
                 </div>
             }
