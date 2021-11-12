@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using ContosoCrafts.WebSite.RatingEnums;
@@ -40,21 +39,6 @@ namespace ContosoCrafts.WebSite.Models
         [Required]
         [DataType(DataType.Url)]
         public string Image { get; set; }
-
-        /// <summary>
-        /// This will convert the ENUM values to a String format so it's easier for 
-        /// users to read and not in variable format
-        /// </summary>
-        /// <param name="rating"></param>
-        /// <returns></returns>
-        public static string convertToString(ProductRating rating)
-        {
-            string str = Enum.GetName(rating);
-            str = str.Replace("_", " ");
-            str = char.ToUpper(str[0]) + str.Substring(1).ToLower();
-
-            return str;
-        }
 
         /// <summary>
         /// The is a toString method that will convert this class (the model) to a string version. 
