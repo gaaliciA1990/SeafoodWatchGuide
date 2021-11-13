@@ -7,6 +7,17 @@
 @{
     ViewData["Title"] = "Create";
 }
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#btnAddField').click(function (e) {
+                var numOfSources = $("#sources").children().length;
+                $("#sources").append(`<input class="form-control" name="Product.Sources[${numOfSources}]" value=""/>`);
+            });
+        });
+    </script>
+}
+
 
 <h1>Create a New Record</h1>
 
@@ -16,10 +27,10 @@
 {
     <div asp-validation-summary="All"></div>
 
-        <div class="form-group">
-            <label>ID</label>
-            <input class="form-control" type="text" asp-for="Product.Id" value="@System.Guid.NewGuid().ToString()" readonly>
-        </div>
+    <div class="form-group">
+        <label>ID</label>
+        <input class="form-control" type="text" asp-for="Product.Id" value="@System.Guid.NewGuid().ToString()" readonly>
+    </div>
 
     <div class="form-group">
         <label>Title</label>
@@ -68,6 +79,18 @@
         }
         <span asp-validation-for="Product.Rating" class="text-danger"></span>
     </div>
+
+    <div class="form-group">
+        <label>Source</label>
+        <br />
+        <div id="sources">
+        </div>
+        <br />
+        <button id="btnAddField" type="button" class="btn btn-secondary">+ Add a source</button>
+        <span asp-validation-for="Product.Sources" class="text-danger"></span>
+    </div>
+    <br />
+
 
     <div class="form-group">
         <label>Description</label>
