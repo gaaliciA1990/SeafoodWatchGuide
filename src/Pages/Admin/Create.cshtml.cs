@@ -56,18 +56,16 @@ namespace ContosoCrafts.WebSite.Pages
             }
 
             //Check if input was just a bunch of numbers in Title
-            bool hasLetters = false;
-            for (int i = 0; i < Product.Title.Length; i++)
+            if(hasLetters(Product.Title) == false)
             {
-                if (char.IsLetter(Product.Title[i]))
-                {
-                    hasLetters = true;
-                }
+                ModelState.AddModelError(string.Empty, "Title must contain text.");
+                return Page();
             }
 
-            if(hasLetters == false)
+            //Check if Description only has a bunch of numbers and symbols
+            if(hasLetters(Product.Description) == false)
             {
-                ModelState.AddModelError(string.Empty, "Title must contain letters");
+                ModelState.AddModelError(string.Empty, "Description must contain text.");
                 return Page();
             }
 
@@ -75,6 +73,23 @@ namespace ContosoCrafts.WebSite.Pages
             //If valid, create the card
             ProductService.CreateCard(Product);
             return RedirectToPage("Admin");
+        }
+
+        /// <summary>
+        /// Function tests whether the string t
+        /// </summary>
+        /// <returns></returns>
+        private bool hasLetters(string strToCheck)
+        {
+            for (int i = 0; i < strToCheck.Length; i++)
+            {
+                if (char.IsLetter(strToCheck[i]))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }
