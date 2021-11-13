@@ -109,6 +109,7 @@ namespace ContosoCrafts.WebSite.Services
             productData.Image = data.Image;
             productData.Rating = data.Rating;
             productData.Region = data.Region;
+            productData.Sources = data.Sources;
 
             SaveData(products);
 
