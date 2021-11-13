@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -39,6 +40,8 @@ namespace ContosoCrafts.WebSite.Models
         [Required]
         [DataType(DataType.Url)]
         public string Image { get; set; }
+
+        public List<string> Sources { get; set; }
 
         /// <summary>
         /// The is a toString method that will convert this class (the model) to a string version. 
