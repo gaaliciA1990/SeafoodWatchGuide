@@ -66,6 +66,26 @@
         <span asp-validation-for="Product.Rating" class="text-danger"></span>
     </div>
 
+
+    <div class="form-group">
+        <label>Source</label>
+        <br />
+        <div id="sources">
+            @if (Model.Product.Sources != null && Model.Product.Sources.Count > 0)
+            {
+                @for (var i = 0; i < Model.Product.Sources.Count; i++)
+                {
+                    <input class="form-control" type="text" name="Product.Sources[@i]" value="@Model.Product.Sources[i]">
+                }
+            }
+        </div>
+        <br />
+        <button id="btnAddField" type="button" class="btn btn-secondary">+ Add a source</button>
+        <span asp-validation-for="Product.Sources" class="text-danger"></span>
+    </div>
+
+
+
     <div class="form-group">
         <label>Description</label>
         <textarea class="form-control" required asp-for="Product.Description"></textarea>
@@ -91,6 +111,10 @@
                         return '<img src="' + $(this).val() + '";/>';
                     return '<img src="' + $(this).val().replace(/^([^/])/, '/$1') + '";/>';
                 }
+            });
+            $('#btnAddField').click(function (e) {
+                var numOfSources = $("#sources").children().length;
+                $("#sources").append(`<input class="form-control" name="Product.Sources[${numOfSources}]" value=""/>`);
             });
         });
     </script>
