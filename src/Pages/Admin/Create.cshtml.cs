@@ -69,10 +69,35 @@ namespace ContosoCrafts.WebSite.Pages
                 return Page();
             }
 
+            //Check on url, whether the link leads to a valid image file
+            if(validURL() == false)
+            {
+                ModelState.AddModelError(string.Empty, "Please enter a valid image url.");
+                return Page();
+            }
+
 
             //If valid, create the card
             ProductService.CreateCard(Product);
             return RedirectToPage("Admin");
+        }
+
+        /// <summary>
+        /// Function tests whether the input url directs to an actual image.
+        /// Accepted image extensions are: jpg, jpeg, png and gif
+        /// </summary>
+        /// <returns></returns>
+        private bool validURL()
+        {
+            string[] acceptedExtensions = { ".jpg", ".jpeg", ".png", ".gif" };
+            foreach (string ext in acceptedExtensions) {
+                if (Product.Image.Contains(ext))
+                {
+                    return true;
+                }
+            }
+            
+            return false;
         }
 
         /// <summary>
