@@ -116,7 +116,7 @@ namespace UnitTests.Pages.Create
                 Id = "123",
                 Title = "testTitle",
                 Description = "testDescription",
-                Image = "https://test.com",
+                Image = "https://tesesurl.jpg",
                 Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.AVOID,
                 Region = "West Coast"
             };
