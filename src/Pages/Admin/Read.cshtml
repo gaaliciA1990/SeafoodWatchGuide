@@ -1,5 +1,4 @@
-﻿
-@page
+﻿@page
 @using ContosoCrafts.WebSite.Components
 @model ReadModel
 @{
@@ -13,7 +12,7 @@
 
 <h1>Item Details</h1>
 
-@if(@Model.errorOccurred == true)
+@if (@Model.errorOccurred == true)
 {
     <div>
         <h1> <b> Error: Item not found. <br>Click 'Okay' to get redirected back to Administrator page.</b> </h1>
@@ -38,6 +37,19 @@
         <div class="form-group">
             <label>Region</label>
             <input class="form-control" type="text" asp-for="Product.Region" readonly>
+        </div>
+
+        <div class="form-group">
+            @if (Model.Product.Sources != null && Model.Product.Sources.Count > 0)
+            {
+                <label>Sources</label>
+                <ul>
+                    @foreach (string source in Model.Product.Sources)
+                    {
+                        <li><input class="form-control" type="text" value="@source" readonly></li>
+                    }
+                </ul>
+            }
         </div>
 
         <div class="form-group">
