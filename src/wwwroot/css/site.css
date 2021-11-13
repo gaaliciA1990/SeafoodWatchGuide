@@ -22,10 +22,13 @@ p, h1, ul {
     }
 }
 
+
+/*
 a {
     color: #0366d6;
     margin: 5px;
 }
+*/
 
 .btn-primary {
     color: #fff;
@@ -68,30 +71,24 @@ a {
 }
 
 div#form-wrapper {
-    position: absolute;
-    box-sizing: border-box;
-    padding: 20px;
-    border-radius: 10px;
     margin: auto;
-    background: rgba(255, 255, 255, 0.85);
-    top: 50%;
-    width: 40%;
-    right: 0;
-    left: 0;
+    box-sizing: border-box;
+    width: 50%;
+    border-radius: 10px;
+    background: rgba(255, 254, 242, 0.70);
+    padding: 10px;
 }
 
 div#text-wrapper {
-    position: absolute;
+    width: 100vw;
     box-sizing: border-box;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
     padding: 10px;
-    border-radius: 0px;
-    margin: auto;
-    background: rgba(240, 248, 255, 0.75);
-    top: 120px;
-    width: 100%;
-    right: 0;
-    left: 0;
+    background: rgba(255, 254, 242, 0.70);
 }
+
 
 
 /* cards
@@ -145,6 +142,11 @@ a.navbar-brand {
     word-break: break-all;
 }
 
+.nav .img-responsive {
+    height: auto;
+    width: auto;
+}
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;
     background-color: #1b6ec2;
@@ -156,7 +158,7 @@ a.navbar-brand {
     background-color: #add9e6; /* Blue background */
     border-color: #5c5858; /* Adding borders */
     color: #000000; /* Black text */
-    padding: 12px 16px; /* Some padding */
+    padding: 6px 8px; /* Some padding */
     font-size: 14px; /* Set a font size */
 }
 
@@ -239,53 +241,6 @@ input.input-validation-error {
 }
 
 
-
-
-
-
-
-
-
-/* Format for About page*/
-#wrapper {
-    width: 500px;
-    height: 500px;
-    background-color: white;
-    overflow-x: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#line1 {
-    width: 500px;
-    height: 250px;
-    overflow: hidden; /* or any clear-fix snippet */
-    background-color: white;
-}
-
-.member {
-    float: left;
-    width: 230px;
-    height: 100%;
-    background-color: white;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-
-#line2 {
-    width: 500px;
-    height: 250px;
-    overflow: hidden; /* or any clear-fix snippet */
-    background-color: white;
-}
-
-.name {
-    float: left;
-    width: 500px;
-    overflow: hidden; /* or any clear-fix snippet */
-}
-
 /*Formatting for truncating long text*/
 .truncate {
     width: 300px;
@@ -304,6 +259,7 @@ input.input-validation-error {
     max-width: 100%;
     max-height: 100%;
 }
+
 .BEST_CHOICE_color {
     color: green;
 }
@@ -314,4 +270,10 @@ input.input-validation-error {
 
 .AVOID_color {
     color: red;
+}
+
+.emoji {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
