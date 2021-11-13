@@ -13,53 +13,50 @@
 </head>
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-md navbar-toggleable-md navbar-light bg-navbar border-bottom box-shadow mb-3 ">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Seafood Watch Guide</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-md-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="btn btn-nav font-weight-bold" asp-area="" asp-page="/HowToUseGuide"> Guide How To </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-nav font-weight-bold" asp-area="" asp-page="/TakeAction"> Take Action </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-nav font-weight-bold" asp-area="" asp-page="/Admin/Admin"> Administrator </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-nav font-weight-bold" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-nav font-weight-bold" asp-area="" asp-page="/About">About Us</a>
-                        </li>
+        <nav class="navbar fixed-top navbar-expand-md navbar-toggleable-md bg-navbar border-bottom box-shadow py-0 navbar-light bg-light py-md-0">
+            <a href="/"><img src="https://placeholder.pics/svg/150x50/888888/EEE/Logo" class="img-responsive" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+                <ul class="navbar-nav w-100 justify-content-center">
+                    <li class="nav-item  ml-2">
+                        <a class="btn btn-nav font-weight-bold btn-sm" asp-area="" asp-page="/HowToUseGuide"> Guide How To </a>
+                    </li>
+                    <li class="nav-item ml-2">
+                        <a class="btn btn-nav font-weight-bold btn-sm" asp-area="" asp-page="/TakeAction"> Take Action </a>
+                    </li>
+                    <li class="nav-item ml-2">
+                        <a class="btn btn-nav font-weight-bold btn-sm" asp-area="" asp-page="/Admin/Admin"> Administrator </a>
+                    </li>
+                    <li class="nav-item ml-2">
+                        <a class="btn btn-nav font-weight-bold btn-sm" asp-area="" asp-page="/Privacy">Privacy</a>
+                    </li>
+                    <li class="nav-item ml-2">
+                        <a class="btn btn-nav font-weight-bold btn-sm" asp-area="" asp-page="/About">About Us</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+                    @if (@Model.GetType().GetField("region") != null)
+                    {
 
-                        @if (@Model.GetType().GetField("region") != null)
-                        {
-
-                            <div class="btn-group ml-auto">
-                                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    @Model.region
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("West Coast")'>West Coast</a></button>
-                                    <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Southwest")'>Southwest</a></button>
-                                    <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Central")'>Central</a></button>
-                                    <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Southeast")'>Southeast</a></button>
-                                    <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Northeast")'>Northeast</a></button>
-                                    <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Hawaii")'>Hawai'i</a></button>
-                                    <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("National")'>National</a></button>
-                                </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                @Model.region
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("West Coast")'>West Coast</a></button>
+                                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Southwest")'>Southwest</a></button>
+                                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Central")'>Central</a></button>
+                                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Southeast")'>Southeast</a></button>
+                                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Northeast")'>Northeast</a></button>
+                                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("Hawaii")'>Hawai'i</a></button>
+                                <button class="dropdown-item" type="button"><a class="nav-link text-dark" asp-page="Region" asp-route-region='@("National")'>National</a></button>
                             </div>
-                        }
-                    </ul>
-
-                </div>
+                        </div>
+                    }
+                </ul>
             </div>
-
         </nav>
     </header>
     <div class="container">
