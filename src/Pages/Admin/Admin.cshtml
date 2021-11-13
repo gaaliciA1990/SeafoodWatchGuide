@@ -8,6 +8,8 @@
 @model AdminModel
 @{
     ViewData["Title"] = "Admin";
+    var regions = Model.ProductService.GetAllRegions();
+    var fishRatings = Enum.GetValues(typeof(ProductRating));
 }
 <!--
 This is the Index page where all records from the Seafoods.JSON file are display and
@@ -31,78 +33,45 @@ can be edited with CRUD implementation
         <!--The Create button for adding a new record of Seafood-->
         <a class="btn btn-primary" asp-page-handler="Create"> Create</a>
 
-        <!-- Drop down menus for Region and Rating filters-->
-        <form method="post">
-            <div id="li">
-                <!--Drop down filter options for Region -->
-                <div class="form-group">
-                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Region Filter
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        @{
-                            var temp = Model.ProductService.GetAllRegions();
-
-                            foreach (string region in temp)
-                            {
-                                <div class="form-check">
-                                    <input asp-for="@Model.Filter.Region" type="radio" value="@region">
-                                    <label class="form-check-label">
-                                        @region
-                                    </label>
-                                </div>
-                            }
-                        }
-                    </div>
-
-                </div>
-
-                <!--Drop down filter options for Ratings <a asp-page-handler="Filter" class="btn btn-success">Apply</a>-->
-                <div class="form-group">
-                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Rating Filter
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        @{
-                            var rating = Enum.GetValues(typeof(ProductRating));
-
-                            foreach (int i in rating)
-                            {
-                                // Do not show the Unknown rating on the form
-                                if (i == 0)
-                                {
-                                    continue;
-                                }
-                                <div class="form-check">
-                                    <input asp-for="@Model.Filter.Rating" type="radio" value="@i">
-                                    <label class="form-check-label">
-                                        @EnumExtensions.convertToString((ProductRating)i)
-                                    </label>
-                                </div>
-                            }
-                        }
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <input type="submit" value="Apply" class="btn btn-success" />
-                </div>
-
-                <a class="btn btn-danger" asp-page-handler="Clear"> Clear </a>
-            </div>
-        </form>
-
 
         <!--Table to display all of the seafood records-->
         <table class="table">
-            <tr>
-                <!--<th>ID</th> - commenting out this code as we don't need to show users the ID-->
-                <th>Title</th>
-                <th>Region</th>
-                <th>Fish Rating</th>
-                <th>Decription</th>
-                <th>Actions</th>
-            </tr>
+            <form method="post">
+                <tr>
+                    <th>Title</th>
+                    <th>
+                        <select class="custom-select" asp-for="@Model.Filter.Region" onchange="this.form.submit()">
+                            <option value="@null">Regions</option>
+                            @{
+                                foreach (string region in regions)
+                                {
+                                    <option value="@region">@region</option>
+                                }
+                            }
+                        </select>
+                    </th>
+                    <th>
+                        <select class="custom-select" asp-for="@Model.Filter.Rating" onchange="this.form.submit()">
+                            <option value="@null">Ratings</option>
+                            @{
+                                var rating = Enum.GetValues(typeof(ProductRating));
+
+                                foreach (int i in rating)
+                                {
+                                    // Do not show the Unknown rating on the form
+                                    if (i == 0)
+                                    {
+                                        continue;
+                                    }
+                                    <option value="@i">@EnumExtensions.convertToString((ProductRating)i)</option>
+                                }
+                            }
+                        </select>
+                    </th>
+                    <th>Decription</th>
+                    <th>Actions</th>
+                </tr>
+            </form>
             @foreach (var item in Model.Products)
             {
                 <tr>
@@ -131,3 +100,18 @@ can be edited with CRUD implementation
 
 </body>
 <script src="_framework/blazor.server.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

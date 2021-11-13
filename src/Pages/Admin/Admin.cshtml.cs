@@ -65,8 +65,25 @@ namespace ContosoCrafts.WebSite.Pages
         /// <returns></returns>
         public IActionResult OnPost()
         {
-            Products = ProductService.GetAllData();
+            System.Diagnostics.Debug.WriteLine(Filter.Region);
+            System.Diagnostics.Debug.WriteLine(Filter.Region);
+            System.Diagnostics.Debug.WriteLine(Filter.Region);
+            System.Diagnostics.Debug.WriteLine(Filter.Region);
+            System.Diagnostics.Debug.WriteLine(Filter.Region);
+            System.Diagnostics.Debug.WriteLine(Filter.Region);
 
+            System.Diagnostics.Debug.WriteLine(Filter.Rating);
+            System.Diagnostics.Debug.WriteLine(Filter.Rating);
+            System.Diagnostics.Debug.WriteLine(Filter.Rating);
+            System.Diagnostics.Debug.WriteLine(Filter.Rating);
+            System.Diagnostics.Debug.WriteLine(Filter.Rating);
+            System.Diagnostics.Debug.WriteLine(Filter.Rating);
+
+
+
+
+            Products = ProductService.GetAllData();
+            
             //Filter by Region first, if chosen
             if (Filter.Region != null)
             {
