@@ -131,6 +131,34 @@ namespace UnitTests.Pages.Create
 
         }
 
+        /// <summary>
+        /// Test OnPost method when the Title field is just a string with
+        /// numbers and symbols. Should return to Create page with the error
+        /// message
+        /// </summary>
+        [Test]
+        public void OnPost_Invalid_Description_Only_Numbers_Should_Return_Invalid_Model()
+        {
+            //Arrange
+            PageModel.Product = new ProductModel
+            {
+                Id = "123",
+                Title = "Test_Fish",
+                Description = "3248380@)(#*)@!",
+                Image = "https://test.com",
+                Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.AVOID,
+                Region = "West Coast"
+            };
+
+            //Act
+            var result = PageModel.OnPost();
+
+            //Reset
+            PageModel.ModelState.AddModelError("bogus", "bogus error");
+
+            //Assert
+            Assert.AreEqual(false, PageModel.ModelState.IsValid);
+        }
         #endregion OnPost
     }
 }
