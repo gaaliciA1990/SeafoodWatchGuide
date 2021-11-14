@@ -39,6 +39,7 @@ can be edited with CRUD implementation
             <form method="post">
                 <tr>
                     <th>Title</th>
+
                     <th>
                         <select class="custom-select" asp-for="@Model.Filter.Region" onchange="this.form.submit()">
                             <option value="@null">Regions</option>
@@ -100,18 +101,3 @@ can be edited with CRUD implementation
 
 </body>
 <script src="_framework/blazor.server.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
