@@ -32,7 +32,7 @@ namespace UnitTests.Model
         /// unknown?
         /// </summary>
         [Test]
-        public void ToString_Serialize()
+        public void ToString_Valid_Check_Serialize_Is_Working()
         {
             // Arrange
             String Json = "{\"Id\":\"id\",\"Title\":\"title\",\"Region\":\"region\",\"Rating\":\"" + ProductRating.BEST_CHOICE + "\",\"Description\":\"description\",\"img\":\"image\"}";
