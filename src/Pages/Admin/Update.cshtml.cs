@@ -24,6 +24,8 @@ namespace ContosoCrafts.WebSite.Pages
 
         //Product service object
         public JsonFileProductService ProductService { get; }
+
+
         //Product model object
         [BindProperty]
         public ProductModel Product { get; set; }
