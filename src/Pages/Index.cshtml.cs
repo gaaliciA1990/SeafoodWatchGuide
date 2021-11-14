@@ -19,6 +19,7 @@ namespace ContosoCrafts.WebSite.Pages
 
         //To get connected to all provided services
         public JsonFileProductService ProductService { get; }
+
         //To store all products currently in database
         public IEnumerable<ProductModel> Products { get; private set; }
 
