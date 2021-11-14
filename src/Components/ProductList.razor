@@ -106,7 +106,10 @@
 <!-- C# code for implementing functionality-->
 @code
 {
+    //Holds the selected product
     ProductModel selectedProduct;
+
+    //Holds selected product's id
     string selectedProductId;
 
     // This code selects a product to display with a click and gets the ratings for that given product
@@ -116,6 +119,7 @@
         selectedProduct = ProductService.GetAllData().First(x => x.Id == productId);
     }
 
+    //Holds name of selected region
     [Parameter]
     public string region { get; set; }
 }
