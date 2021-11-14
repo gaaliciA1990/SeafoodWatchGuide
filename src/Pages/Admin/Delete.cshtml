@@ -55,5 +55,6 @@
         <input class="form-control" type="text" asp-for="Product.Image" readonly>
     </div>
 
+    <a class="btn btn-primary" asp-page="Read" asp-route-id="@(Model.Product.Id)">Cancel</a>
     <button type="submit" class="btn btn-danger">Delete</button>
 }
