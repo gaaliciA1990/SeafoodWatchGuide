@@ -101,6 +101,21 @@
                         </div>
                         <div class="card-body">
                             <p class="card-text">@selectedProduct.Description</p>
+                            @{
+                                string showSource = "";
+                                int i = 0;
+                                foreach (string source in selectedProduct.Sources)
+                                {
+                                    showSource += source;
+                                    if (i < selectedProduct.Sources.Count() - 1)
+                                    {
+                                        showSource += ", ";
+                                    }
+
+                                    i++;
+                                }
+                                <p class="card-text">Source(s): @showSource</p>
+                            }
                         </div>
                     </div>
                 </div>
