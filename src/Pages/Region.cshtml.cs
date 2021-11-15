@@ -1,6 +1,8 @@
 ﻿using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc;
+using ContosoCrafts.WebSite.Models;
 
 namespace ContosoCrafts.WebSite.Pages
 {
@@ -15,7 +17,6 @@ namespace ContosoCrafts.WebSite.Pages
         //Logger to help with debugging
         private readonly ILogger<RegionModel> _logger;
 
-
         /// <summary>
         /// Constructor for Region page
         /// </summary>
@@ -28,15 +29,20 @@ namespace ContosoCrafts.WebSite.Pages
 
         //Variable to store the ID of the region being requested
         public string region;
+        //Variable to store seafood search string
+        public string search;
 
         /// <summary>
         /// OnGet will retrieve the data from the Seafoods.json file 
         /// and return only the seafood from the region passed
+        /// use filter to search serach seafood data in the region
         /// </summary>
         /// <param name="region"></param>
-        public void OnGet(string region)
+        /// <param name="filter"></param>
+        public void OnGet(string region, string search = "")
         {
             this.region = region;
+            this.search = search;
         }
     }
 }
