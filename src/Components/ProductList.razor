@@ -1,12 +1,19 @@
 @using ContosoCrafts.WebSite.Models
 @using ContosoCrafts.WebSite.Services
 @using ContosoCrafts.WebSite.RatingEnums
+@using Microsoft.AspNetCore.Components.Web
 @inject JsonFileProductService ProductService
 <!-- This section of HTML is the formatting for how the products are displayed in their
     individual cards. This can be updated to work with new data and rearranged if needed,
     but this data can also be bucketed into contained within a page.
     -->
-
+@{
+    var regionData = ProductService.GetRegionData(region);
+    if(!String.IsNullOrEmpty(search))
+    {
+        regionData = regionData.Where(m => m.Title.ToLower().Contains(search.ToLower()));
+    }
+}
 @foreach (ProductRating ev in Enum.GetValues(typeof(ProductRating)))
 {
     if (ev == ProductRating.UNKNOWN)
@@ -25,33 +32,30 @@
     {
         collapse = "collapse3";
     }
+    var ratingData = regionData.Where(m => m.Rating.Equals(ev));
 
-    var regionData = ProductService.GetRegionData(region);
 
     <div class="region-container">
         <button type="button" class="region-block @(ev + "_color")" data-toggle="collapse" aria-expanded="false" href=#@collapse>
-            <h2 class="region_container_text">@EnumExtensions.convertToString(ev)</h2>
+            <h2 class="region_container_text">@EnumExtensions.convertToString(ev) (@ratingData.Count())</h2>
         </button>
 
         <div id=@collapse class="collapse">
             <div class="card-columns">
-                @foreach (var product in regionData)
+                @foreach (var product in ratingData)
                 {
-                    if (product.Rating == ev)
-                    {
-                        <div class="card">
-                            <div class="card-img" style="background-image: url('@product.Image');">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">@product.Title</h5>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">
-                                    <button @onclick="(e => SelectProduct(product.Id))" data-toggle="modal" data-target="#productModal" class="btn btn-primary">More Info</button>
-                                </small>
-                            </div>
+                    <div class="card">
+                        <div class="card-img" style="background-image: url('@product.Image');">
                         </div>
-                    }
+                        <div class="card-body">
+                            <h5 class="card-title">@product.Title</h5>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">
+                                <button @onclick="(e => SelectProduct(product.Id))" data-toggle="modal" data-target="#productModal" class="btn btn-primary">More Info</button>
+                            </small>
+                        </div>
+                    </div>
                 }
             </div>
         </div>
@@ -119,4 +123,8 @@
     //Holds name of selected region
     [Parameter]
     public string region { get; set; }
+
+    //Holds search string
+    [Parameter]
+    public string search { get; set; }
 }
