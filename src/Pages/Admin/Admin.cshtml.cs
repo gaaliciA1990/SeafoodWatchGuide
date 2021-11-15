@@ -66,7 +66,14 @@ namespace ContosoCrafts.WebSite.Pages
         public IActionResult OnPost()
         {
             Products = ProductService.GetAllData();
-            
+
+            //Filter by Title
+            if (Filter.Name != null)
+            {
+                var filterName = Filter.Name;
+                Products = Products.Where(m => m.Title.Contains(filterName));
+            }
+
             //Filter by Region first, if chosen
             if (Filter.Region != null)
             {
