@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using ContosoCrafts.WebSite.Models;
 using NUnit.Framework;
 using ContosoCrafts.WebSite.RatingEnums;
@@ -35,7 +36,11 @@ namespace UnitTests.Model
         public void ToString_Valid_Check_Serialize_Is_Working()
         {
             // Arrange
-            String Json = "{\"Id\":\"id\",\"Title\":\"title\",\"Region\":\"region\",\"Rating\":\"" + ProductRating.BEST_CHOICE + "\",\"Description\":\"description\",\"img\":\"image\"}";
+            // declare a list of strings to implement the source field
+            List<string> sources = new List<string>();
+            sources.Add("source");
+
+            String Json = "{\"Id\":\"id\",\"Title\":\"title\",\"Region\":\"region\",\"Rating\":\"" + ProductRating.BEST_CHOICE + "\",\"Description\":\"description\",\"img\":\"image\",\"Sources\":[\"source\"]}";
             var obj = new ProductModel()
             {
                 Id = "id",
@@ -43,7 +48,8 @@ namespace UnitTests.Model
                 Image = "image",
                 Title = "title",
                 Description = "description",
-                Rating = ProductRating.BEST_CHOICE
+                Rating = ProductRating.BEST_CHOICE,
+                Sources = sources
             };
 
             // Act
