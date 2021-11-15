@@ -14,6 +14,7 @@
         regionData = regionData.Where(m => m.Title.ToLower().Contains(search.ToLower()));
     }
 }
+
 @foreach (ProductRating ev in Enum.GetValues(typeof(ProductRating)))
 {
     if (ev == ProductRating.UNKNOWN)
@@ -34,7 +35,6 @@
     }
     var ratingData = regionData.Where(m => m.Rating.Equals(ev));
 
-
     <div class="region-container">
         <button type="button" class="region-block @(ev + "_color")" data-toggle="collapse" aria-expanded="false" href=#@collapse>
             <h2 class="region_container_text">@EnumExtensions.convertToString(ev) (@ratingData.Count())</h2>
@@ -49,6 +49,27 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">@product.Title</h5>
+                            @{
+                                string showSource = "";
+                                int i = 0;
+                                foreach (string source in product.Sources)
+                                {
+                                    if (i > 1)
+                                    {
+                                        showSource += "...";
+                                        break;
+                                    }
+                                    showSource += source;
+                                    if (i < product.Sources.Count() - 1)
+                                    {
+                                        showSource += ", ";
+                                    }
+
+                                    i++;
+                                }
+                                <h5 class="card-title">Source(s): @showSource</h5>
+                            }
+                            <h5 class="card-header">.</h5>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">
