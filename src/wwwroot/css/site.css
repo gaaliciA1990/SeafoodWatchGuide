@@ -69,17 +69,12 @@ a {
     background-attachment: fixed;
 }
 
-#backgroundPageColor {
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 div#form-wrapper {
     margin: auto;
     box-sizing: border-box;
     width: 50%;
     border-radius: 10px;
-    background: rgba(204, 235, 199, 0.85);
+    background: rgba(170, 241, 248, 0.85);
     padding: 10px;
 }
 
@@ -90,6 +85,16 @@ div#text-wrapper {
     border-radius: 10px;
     padding: 10px;
     background: rgba(204, 235, 199, 0.85);
+}
+
+.logo-img {
+    height: auto;
+    width: auto;
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-bottom: 10px;
 }
 
 /* cards
