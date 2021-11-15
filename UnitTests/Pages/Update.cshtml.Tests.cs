@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Pages;
 using ContosoCrafts.WebSite.Models;
+using System;
 
 namespace UnitTests.Pages.Update
 {
@@ -13,7 +14,7 @@ namespace UnitTests.Pages.Update
     {
         #region TestSetup
         //Update model object used to test Update page model's behaviors
-        public static UpdateModel PageModel;
+        public UpdateModel PageModel;
 
         /// <summary>
         /// test constructor
@@ -39,13 +40,13 @@ namespace UnitTests.Pages.Update
             // Arrange
 
             // Act
-            PageModel.OnGet("Crab");
+            PageModel.OnGet("H1");
 
             //Reset
 
             // Assert
             Assert.AreEqual(true, PageModel.ModelState.IsValid);
-            Assert.AreEqual("Crab: Southern King (Argentina)", PageModel.Product.Title);
+            Assert.AreEqual("Bigeye Scad", PageModel.Product.Title);
         }
         #endregion OnGet
 
