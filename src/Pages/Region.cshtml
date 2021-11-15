@@ -6,12 +6,9 @@
 }
 
 <h1>@Model.region</h1>
-<!-- Background image for Region page -->
-
 
 <body id="mainPageBody">
 </body>
-
 
 <!--This is a page template so we can create new pages for guides and edit as needed-->
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered, new { region = Model.region }))
