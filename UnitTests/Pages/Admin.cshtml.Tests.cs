@@ -121,7 +121,7 @@ namespace UnitTests.Pages.Admin
         /// Tests OnPost method where product list is filtered by a invalid Title
         /// </summary>
         [Test]
-        public void OnPost_InValid_Region_Search_Name_Should_Return_Empty_List()
+        public void OnPost_InValid_Title_Search_Name_Should_Return_Empty_List()
         {
             //Arrange
             PageModel.Filter.Name = "Bogus";
