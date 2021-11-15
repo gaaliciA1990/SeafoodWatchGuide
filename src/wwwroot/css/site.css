@@ -22,7 +22,6 @@ p, h1, ul {
     }
 }
 
-
 /*
 a {
     color: #0366d6;
@@ -93,8 +92,6 @@ div#text-wrapper {
     background: rgba(204, 235, 199, 0.85);
 }
 
-
-
 /* cards
 -------------------------------------------------- */
 .card-columns .card:hover .card-img {
@@ -134,7 +131,6 @@ div#text-wrapper {
 .card-footer {
     background: #fbfafd;
 }
-
 
 /* navbar
 -------------------------------------------------- */
@@ -197,7 +193,6 @@ a.navbar-brand {
     border-radius: 0.75rem;
 }
 
-
 /* Sticky footer styles
 -------------------------------------------------- */
 .border-top {
@@ -216,7 +211,6 @@ button.accept-policy {
     font-size: 1rem;
     line-height: inherit;
 }
-
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -262,7 +256,6 @@ input.input-validation-error {
 .validation-summary-valid {
     display: none;
 }
-
 
 /*Formatting for truncating long text*/
 .truncate {
