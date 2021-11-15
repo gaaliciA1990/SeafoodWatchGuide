@@ -71,7 +71,7 @@ namespace ContosoCrafts.WebSite.Pages
             if (Filter.Name != null)
             {
                 var filterName = Filter.Name;
-                Products = Products.Where(m => m.Title.Contains(filterName));
+                Products = Products.Where(m => m.Title.ToLower().Contains(filterName.ToLower()));
             }
 
             //Filter by Region first, if chosen
