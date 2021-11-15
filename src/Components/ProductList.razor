@@ -6,56 +6,54 @@
     individual cards. This can be updated to work with new data and rearranged if needed,
     but this data can also be bucketed into contained within a page.
     -->
+
 @foreach (ProductRating ev in Enum.GetValues(typeof(ProductRating)))
 {
-    var myStyle = "";
-    var title = "";
+    if (ev == ProductRating.UNKNOWN)
+        continue;
+
     var collapse = "";
     if (ev == ProductRating.BEST_CHOICE)
     {
-        myStyle = "color: green;";
-        title = "Best Choice";
         collapse = "collapse1";
     }
     else if (ev == ProductRating.GOOD_ALTERNATIVE)
     {
-        myStyle = "color: yellow;";
-        title = "Good Alternative";
         collapse = "collapse2";
     }
     else if (ev == ProductRating.AVOID)
     {
-        myStyle = "color: red;";
-        title = "Avoid";
         collapse = "collapse3";
     }
 
-    <a data-toggle="collapse" aria-expanded="false" href=#@collapse>
-        <h2 class="@(ev + "_color")">@title</h2>
-    </a>
-
     var regionData = ProductService.GetRegionData(region);
 
-    <div id=@collapse class="collapse">
-        <div class="card-columns">
-            @foreach (var product in regionData)
-            {
-                if (product.Rating == ev)
+    <div class="region-container">
+        <button type="button" class="region-block @(ev + "_color")" data-toggle="collapse" aria-expanded="false" href=#@collapse>
+            <h2 class="region_container_text">@EnumExtensions.convertToString(ev)</h2>
+        </button>
+
+        <div id=@collapse class="collapse">
+            <div class="card-columns">
+                @foreach (var product in regionData)
                 {
-                    <div class="card">
-                        <div class="card-img" style="background-image: url('@product.Image');">
+                    if (product.Rating == ev)
+                    {
+                        <div class="card">
+                            <div class="card-img" style="background-image: url('@product.Image');">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">@product.Title</h5>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">
+                                    <button @onclick="(e => SelectProduct(product.Id))" data-toggle="modal" data-target="#productModal" class="btn btn-primary">More Info</button>
+                                </small>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title">@product.Title</h5>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">
-                                <button @onclick="(e => SelectProduct(product.Id))" data-toggle="modal" data-target="#productModal" class="btn btn-primary">More Info</button>
-                            </small>
-                        </div>
-                    </div>
+                    }
                 }
-            }
+            </div>
         </div>
     </div>
 }
