@@ -139,6 +139,27 @@ namespace UnitTests.Pages.Admin
         }
 
         /// <summary>
+        /// Tests OnPost method where product list is filtered by a valid Title
+        /// </summary>
+        [Test]
+        public void OnPost_Valid_Title_Search_Name_Should_Return_Filter_List()
+        {
+            //Arrange
+            PageModel.Filter.Name = "Bass";
+
+            IEnumerable<ProductModel> productList = PageModel.ProductService.GetAllData();
+            productList = productList.Where(m => m.Title.Contains("Bass"));
+
+            //Act
+            PageModel.OnPost();
+
+            //Reset
+
+            //Assert
+            Assert.AreEqual(productList.Count(), PageModel.Products.Count());
+        }
+
+        /// <summary>
         /// The Region can be be a bogus value not found on any product
         /// When it is bogus, it returns an empty set, so Any will be false
         /// </summary>
