@@ -41,7 +41,7 @@ can be edited with CRUD implementation
                     <div class="col">
                         <input id="search" type="text" asp-for="@Model.Filter.Name" />
                         <button class="btn btn-success">Search</button>
-                        <button class="btn btn-danger">Cancel</button>
+                        <button class="btn btn-danger" onclick="$('#search').val('')">Cancel</button>
                     </div>
                 </div>
                     <tr>
