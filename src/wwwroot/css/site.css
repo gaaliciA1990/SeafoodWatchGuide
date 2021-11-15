@@ -70,23 +70,27 @@ a {
     background-attachment: fixed;
 }
 
+#backgroundPageColor {
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 div#form-wrapper {
     margin: auto;
     box-sizing: border-box;
     width: 50%;
     border-radius: 10px;
-    background: rgba(255, 254, 242, 0.70);
+    background: rgba(204, 235, 199, 0.85);
     padding: 10px;
 }
 
 div#text-wrapper {
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
-    position: relative;
-    margin-left: -50vw;
-    left: 50%;
+    position: center;
+    border-radius: 10px;
     padding: 10px;
-    background: rgba(255, 254, 242, 0.70);
+    background: rgba(204, 235, 199, 0.85);
 }
 
 
@@ -172,6 +176,25 @@ a.navbar-brand {
     background: -o-linear-gradient(110deg, #5f9ea0 60%, #f0fff0 60%);
     background: -moz-linear-gradient(110deg, #5f9ea0 60%, #f0fff0 60%);
     background: linear-gradient(110deg, #5f9ea0 60%, #f0fff0 60%);
+}
+
+.region-block {
+    display: block;
+    width: 100%;
+    border: outset;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.75rem;
+    margin-bottom: 20px;
+}
+
+.region-container {
+    width: 110%;
+    border: medium;
+    background-color: #DCFFF8;
+    border-radius: 0.75rem;
 }
 
 
@@ -261,15 +284,19 @@ input.input-validation-error {
 }
 
 .BEST_CHOICE_color {
-    color: green;
+    background-color: #5DCA02;
 }
 
 .GOOD_ALTERNATIVE_color {
-    color: yellow;
+    background-color: #EFE21E;
 }
 
 .AVOID_color {
-    color: red;
+    background-color: #F92020;
+}
+
+.region_container_text {
+    color: #FFFFFF;
 }
 
 .emoji {
