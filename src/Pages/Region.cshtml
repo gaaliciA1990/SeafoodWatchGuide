@@ -4,6 +4,26 @@
 @{
     ViewData["Title"] = "Region";
 }
+
+<div class="padding-bottom-lg">
+    <div class="row">
+        <div class="col-lg-8 col-md-6 col-sm-4"></div>
+        <div class="col-sm-8 col-md-6 col-lg-4">
+            @using (Html.BeginForm(FormMethod.Get))
+            {
+                @Html.Hidden("region", Model.region)
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" asp-for="@Model.search" placeholder="Find fish..." asp->
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="submit">Search</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
 <div class="region-container">
     <h1 style="text-align:center"><b><u>@Model.region</u></b></h1>
     <p style="text-align:center" padding="50px">
@@ -16,10 +36,10 @@
     </p>
     <h1 style="text-align:center"><b>Fish Ratings</b></h1>
 </div>
-
-<body id="mainPageBody"></body>
+<body id="mainPageBody">
+</body>
 
 <!--This is a page template so we can create new pages for guides and edit as needed-->
-@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered, new { region = Model.region }))
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered, new { region = Model.region, search = Model.search}))
 
 <script src="_framework/blazor.server.js"></script>
