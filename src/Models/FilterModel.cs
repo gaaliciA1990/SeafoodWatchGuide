@@ -10,6 +10,8 @@ namespace ContosoCrafts.WebSite.Models
         //Store which Region was chosen for filtering
         public string Region { get; set; }
 
+        // Store filter name for search function
+        public string Name { get; set; }
 
         //Store which Rating was chosen for filtering
         public ProductRating Rating { get; set; }
