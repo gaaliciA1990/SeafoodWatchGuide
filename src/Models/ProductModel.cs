@@ -31,7 +31,7 @@ namespace ContosoCrafts.WebSite.Models
         public ProductRating Rating { get; set; }
 
         //Contains the description of the product
-        [StringLength(120)]
+        [StringLength(300)]
         [Required]
         public string Description { get; set; }
 
@@ -41,6 +41,8 @@ namespace ContosoCrafts.WebSite.Models
         [DataType(DataType.Url)]
         public string Image { get; set; }
 
+        [StringLength(75, MinimumLength = 3)]
+        [Required]
         public List<string> Sources { get; set; }
 
         /// <summary>
