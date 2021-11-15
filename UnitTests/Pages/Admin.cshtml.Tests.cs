@@ -118,6 +118,27 @@ namespace UnitTests.Pages.Admin
         }
 
         /// <summary>
+        /// Tests OnPost method where product list is filtered by a invalid Title
+        /// </summary>
+        [Test]
+        public void OnPost_InValid_Region_Search_Name_Should_Return_Empty_List()
+        {
+            //Arrange
+            PageModel.Filter.Name = "Bogus";
+
+            IEnumerable<ProductModel> productList = PageModel.ProductService.GetAllData();
+            productList = productList.Where(m => m.Title.Contains("Bogus"));
+
+            //Act
+            PageModel.OnPost();
+
+            //Reset
+
+            //Assert
+            Assert.AreEqual(productList.Count(), PageModel.Products.Count());
+        }
+
+        /// <summary>
         /// The Region can be be a bogus value not found on any product
         /// When it is bogus, it returns an empty set, so Any will be false
         /// </summary>
