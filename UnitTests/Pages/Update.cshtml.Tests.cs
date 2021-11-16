@@ -29,11 +29,12 @@ namespace UnitTests.Pages.Update
 
         #endregion TestSetup
 
+        #region OnGet
         /// <summary>
         /// Test OnGet function with valid state, which it should then fetch the
         /// correct item to get updated
         /// </summary>
-        #region OnGet
+
         [Test]
         public void OnGet_Valid_Should_Return_Products()
         {
@@ -47,6 +48,26 @@ namespace UnitTests.Pages.Update
             // Assert
             Assert.AreEqual(true, PageModel.ModelState.IsValid);
             Assert.AreEqual("Bigeye Scad", PageModel.Product.Title);
+        }
+
+        /// <summary>
+        /// Test OnGet function with invalid id, which should let the product
+        /// variable be null and return error message
+        /// </summary>
+        [Test]
+        public void OnGet_Invalid_ID_Bogus_Should_Return_Null()
+        {
+            // Arrange
+            PageModel.ModelState.AddModelError("bogus", "bogus error");
+
+            // Act
+            PageModel.OnGet("bogus");
+
+            //Reset
+
+            // Assert
+            Assert.AreEqual(false, PageModel.ModelState.IsValid);
+            Assert.AreEqual(null, PageModel.Product);
         }
         #endregion OnGet
 
