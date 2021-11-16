@@ -41,7 +41,7 @@ namespace ContosoCrafts.WebSite.Models
         [DataType(DataType.Url)]
         public string Image { get; set; }
 
-        [StringLength(75, MinimumLength = 3)]
+        [ListStringLength(MaxStringLength = 75, MinStringLength = 3)]
         [Required]
         public List<string> Sources { get; set; }
 
