@@ -33,10 +33,11 @@ namespace UnitTests.Pages.Delete
 
         #endregion TestSetup
 
+        #region OnGet
         /// <summary>
         /// Test OnGet function, which should fetch the correct item requested
         /// </summary>
-        #region OnGet
+
         [Test]
         public void OnGet_Valid_ID_Should_Return_Product()
         {
@@ -54,7 +55,30 @@ namespace UnitTests.Pages.Delete
 
         }
 
+        /// <summary>
+        /// Test OnGet function with invalid id, which should let the product
+        /// variable be null and return error message
+        /// </summary>
+        [Test]
+        public void OnGet_Invalid_ID_Bogus_Should_Return_Null()
+        {
+            // Arrange
+            PageName.ModelState.AddModelError("bogus", "bogus error");
 
+            // Act
+            PageName.OnGet("bogus");
+
+            //Reset
+
+            // Assert
+            Assert.AreEqual(false, PageName.ModelState.IsValid);
+            Assert.AreEqual(null, PageName.Product);
+            Assert.AreEqual(true, PageName.errorOccurred);
+        }
+
+        #endregion OnGet
+
+        #region OnPost
         /// <summary>
         /// Test OnPost function where deletion should happen successfully, and
         /// user gets directed back to Admin page.
@@ -79,6 +103,8 @@ namespace UnitTests.Pages.Delete
 
 
         }
-        #endregion OnGet
+
+        #endregion OnPost
+
     }
 }
