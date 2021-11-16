@@ -13,6 +13,9 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class DeleteModel : PageModel
     {
+        //Variable to notify if an error has happened
+        public bool errorOccurred = false;
+
         //Logger to help with debugging
         private readonly ILogger<DeleteModel> _logger;
 
@@ -42,6 +45,12 @@ namespace ContosoCrafts.WebSite.Pages
         public void OnGet(string id)
         {
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+
+            //Flag if an error happened
+            if (Product == null)
+            {
+                errorOccurred = true;
+            }
         }
 
         /// <summary>
