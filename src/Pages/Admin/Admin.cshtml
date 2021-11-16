@@ -39,7 +39,7 @@ can be edited with CRUD implementation
             <form method="post">
                 <div class="row">
                     <div class="col">
-                        <input id="search" type="text" asp-for="@Model.Filter.Name" />
+                        <input id="search" type="text" asp-for="@Model.Filter.Name" placeholder="Find fish..."/>
                         <button class="btn btn-success">Search</button>
                         <button class="btn btn-danger" onclick="$('#search').val('')">Cancel</button>
                     </div>
