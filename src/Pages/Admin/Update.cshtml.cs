@@ -12,6 +12,8 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class UpdateModel : PageModel
     {
+        //Variable to notify if an error has happened
+        public bool errorOccurred = false;
 
         /// <summary>
         /// Constructor for Update page
@@ -38,6 +40,13 @@ namespace ContosoCrafts.WebSite.Pages
         public void OnGet(string id)
         {
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
+
+            //Flag if an error happened
+            if (Product == null)
+            {
+                errorOccurred = true;
+                //return RedirectToPage("./Admin");
+            }
         }
 
         /// <summary>
