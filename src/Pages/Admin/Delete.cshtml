@@ -9,52 +9,62 @@
 
 
 <!-- Make sure the model is in valid state before we create anything. If error is null, then there's no error. Proceed.-->
-
-@using (Html.BeginForm(FormMethod.Post))
+@if (@Model.errorOccurred == true)
 {
-    <div class="form-group">
-        <label>ID</label>
-        <input class="form-control" type="text" asp-for="Product.Id" readonly>
+    <div>
+        <h1> <b> Error: Item not found. <br>Click 'Okay' to get redirected back to Administrator page.</b> </h1>
+        <a asp-page="./Admin" class="btn btn-primary"> Okay </a>
     </div>
+}
 
-    <div class="form-group">
-        <label>Title</label>
-        <input class="form-control" type="text" asp-for="Product.Title" readonly>
-    </div>
+@if (Model.errorOccurred == false)
+{
+    @using (Html.BeginForm(FormMethod.Post))
+    {
+        <div class="form-group">
+            <label>ID</label>
+            <input class="form-control" type="text" asp-for="Product.Id" readonly>
+        </div>
 
-    <div class="form-group">
-        <label>Region</label>
-        <input class="form-control" type="text" asp-for="Product.Region" readonly>
-    </div>
+        <div class="form-group">
+            <label>Title</label>
+            <input class="form-control" type="text" asp-for="Product.Title" readonly>
+        </div>
 
-    <div class="form-group">
-        @if (Model.Product.Sources != null && Model.Product.Sources.Count > 0)
-        {
-            <label>Sources</label>
-            <ul>
-                @foreach (string source in Model.Product.Sources)
-                {
-                    <li><input class="form-control" type="text" value="@source" readonly></li>
-                }
-            </ul>
-        }
-    </div>
+        <div class="form-group">
+            <label>Region</label>
+            <input class="form-control" type="text" asp-for="Product.Region" readonly>
+        </div>
 
-    <div class="form-group">
-        <label>Rating</label>
-        <input class="form-control" type="text" asp-for="Product.Rating" readonly>
-    </div>
+        <div class="form-group">
+            @if (Model.Product.Sources != null && Model.Product.Sources.Count > 0)
+            {
+                <label>Sources</label>
+                <ul>
+                    @foreach (string source in Model.Product.Sources)
+                    {
+                        <li><input class="form-control" type="text" value="@source" readonly></li>
+                    }
+                </ul>
+            }
+        </div>
 
-    <div class="form-group">
-        <label>Description</label>
-        <textarea class="form-control" asp-for="Product.Description" readonly></textarea>
-    </div>
+        <div class="form-group">
+            <label>Rating</label>
+            <input class="form-control" type="text" asp-for="Product.Rating" readonly>
+        </div>
 
-    <div class="form-group">
-        <label>Image</label>
-        <input class="form-control" type="text" asp-for="Product.Image" readonly>
-    </div>
+        <div class="form-group">
+            <label>Description</label>
+            <textarea class="form-control" asp-for="Product.Description" readonly></textarea>
+        </div>
 
-    <a class="btn btn-primary" asp-page="Read" asp-route-id="@(Model.Product.Id)">Cancel</a>
-    <button type="submit" class="btn btn-danger">Delete</button>
+        <div class="form-group">
+            <label>Image</label>
+            <input class="form-control" type="text" asp-for="Product.Image" readonly>
+        </div>
+
+        <a class="btn btn-primary" asp-page="Read" asp-route-id="@(Model.Product.Id)">Cancel</a>
+        <button type="submit" class="btn btn-danger">Delete</button>
+    }
 }
