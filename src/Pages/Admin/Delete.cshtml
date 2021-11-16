@@ -36,18 +36,15 @@
             <input class="form-control" type="text" asp-for="Product.Region" readonly>
         </div>
 
-        <div class="form-group">
+        <ul id="sources">
             @if (Model.Product.Sources != null && Model.Product.Sources.Count > 0)
             {
-                <label>Sources</label>
-                <ul>
-                    @foreach (string source in Model.Product.Sources)
-                    {
-                        <li><input class="form-control" type="text" value="@source" readonly></li>
-                    }
-                </ul>
+                @for (var i = 0; i < Model.Product.Sources.Count; i++)
+                {
+                    <li><input class="form-control" type="text" name="Product.Sources[@i]" value="@Model.Product.Sources[i]" readonly></li>
+                }
             }
-        </div>
+        </ul>
 
         <div class="form-group">
             <label>Rating</label>
