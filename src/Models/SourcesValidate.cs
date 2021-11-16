@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 namespace ContosoCrafts.WebSite.Models
 {
@@ -18,16 +19,25 @@ namespace ContosoCrafts.WebSite.Models
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public override bool IsValid(object value)
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
+            if (value is null) {
+                return new ValidationResult("The Sounces field is required.");
+            }
+
             foreach (var str in value as List<string>)
             {
+                if (Regex.Matches(str, @"[a-zA-Z]").Count <= 0)
+                {
+                    return new ValidationResult("Sources require aphabetical characters.");
+                }
+
                 if (str.Length > MaxStringLength || str.Length < MinStringLength) 
-                { 
-                    return false;
+                {
+                    return new ValidationResult("Source length between "+ MinStringLength + "-"+ MaxStringLength + ".");
                 }
             }
-            return true;
+            return ValidationResult.Success;
         }
     }
 }
