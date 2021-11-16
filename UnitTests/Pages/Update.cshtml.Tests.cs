@@ -68,6 +68,7 @@ namespace UnitTests.Pages.Update
             // Assert
             Assert.AreEqual(false, PageModel.ModelState.IsValid);
             Assert.AreEqual(null, PageModel.Product);
+            Assert.AreEqual(true, PageModel.errorOccurred);
         }
         #endregion OnGet
 
