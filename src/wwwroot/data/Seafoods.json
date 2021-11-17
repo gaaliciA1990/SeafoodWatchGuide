@@ -5228,16 +5228,5 @@
       "Wisconsin",
       "Lake Winnipeg"
     ]
-  },
-  {
-    "Id": "4a6b3ea2-722d-439b-bacf-b22d24984471",
-    "Title": "Test",
-    "Region": "Central",
-    "Rating": "GOOD_ALTERNATIVE",
-    "Description": "to be deleted",
-    "img": "https://i.natgeofe.com/n/633757ae-c0c5-43e6-a1fe-11342b9b4b72/fish-hero_2x3.jpg",
-    "Sources": [
-      "1235496849"
-    ]
   }
 ]
