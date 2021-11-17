@@ -27,6 +27,11 @@ namespace ContosoCrafts.WebSite.Models
 
             foreach (var str in value as List<string>)
             {
+                if (str == null || str == "")
+                {
+                    return new ValidationResult("Sources field is required");
+                }
+
                 if (Regex.Matches(str, @"[a-zA-Z]").Count <= 0)
                 {
                     return new ValidationResult("Sources require aphabetical characters.");
