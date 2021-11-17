@@ -12,7 +12,7 @@ namespace UnitTests.Pages.TakeAction
     {
         #region TestSetup
         //TakeAction object used to test our About page model
-        public static AboutModel PageModel;
+        public static TakeActionModel PageModel;
 
         /// <summary>
         /// Set up the test framework
@@ -20,16 +20,15 @@ namespace UnitTests.Pages.TakeAction
         [SetUp]
         public void TestInitialize()
         {
-            var MockLoggerDirect = Mock.Of<ILogger<AboutModel>>();
+            var MockLoggerDirect = Mock.Of<ILogger<TakeActionModel>>();
 
-            PageModel = new AboutModel(MockLoggerDirect)
+            PageModel = new TakeActionModel(MockLoggerDirect)
             {
                 PageContext = TestHelper.PageContext,
                 TempData = TestHelper.TempData,
             };
         }
         #endregion TestSetup
-
 
         #region OnGet
         /// <summary>
