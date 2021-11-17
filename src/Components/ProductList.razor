@@ -17,7 +17,7 @@
 
 @foreach (ProductRating ev in Enum.GetValues(typeof(ProductRating)))
 {
-    var collapse = RatingStringCollapse(ev);
+    var collapse = SetRatingStringCollapse(ev);
 
     if(collapse == null)
     {
@@ -161,7 +161,7 @@
     /// </summary>
     /// <param name="rating"></param>
     /// <returns></returns>
-    public string RatingStringCollapse(ProductRating rating)
+    public string SetRatingStringCollapse(ProductRating rating)
     {
         var collapse = "";
 
