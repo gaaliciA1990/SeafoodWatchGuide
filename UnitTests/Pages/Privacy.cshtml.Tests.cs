@@ -29,7 +29,6 @@ namespace UnitTests.Pages.Privacy
                 TempData = TestHelper.TempData,
             };
         }
-
         #endregion TestSetup
 
         #region OnGet
