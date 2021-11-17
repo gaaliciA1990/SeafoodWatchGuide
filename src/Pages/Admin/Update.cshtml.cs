@@ -6,7 +6,6 @@ using System.Linq;
 
 namespace ContosoCrafts.WebSite.Pages
 {
-
     /// <summary>
     /// Template for page creation
     /// </summary>
@@ -27,11 +26,9 @@ namespace ContosoCrafts.WebSite.Pages
         //Product service object
         public JsonFileProductService ProductService { get; }
 
-
         //Product model object
         [BindProperty]
         public ProductModel Product { get; set; }
-
 
         /// <summary>
         /// get the product details 
