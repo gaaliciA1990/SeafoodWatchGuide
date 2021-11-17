@@ -95,6 +95,93 @@ namespace UnitTests.Components
             Assert.AreEqual(true, button.InnerHtml.Contains("Oysters"));
             Assert.AreEqual(false, button.InnerHtml.Contains("Octopus"));
         }
+
+
+
+
+
+        /// <summary>
+        /// Clicking on the more info button for a best choice fish
+        /// checks if the modal shows up 
+        /// makes sure the title and rating is correct for that fish
+        /// </summary>
+        [Test]
+        public void SelectFish_Valid_Best_Choice_Fish_Should_have_Modal_With_Correct_Title_And_Best_Choice_Rating()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+
+            var region = "Northeast";
+            var id = "NE16";
+            var title = "Swordfish";
+            var page = RenderComponent<ProductList>(parameters => parameters.Add(p => p.region, region));
+
+            //Act
+            page.Find("#" + id + "_more_info").Click();
+            var mark = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, mark.Contains("#productModal"));
+            Assert.AreEqual(title, page.Find("#productModal #productTitle").InnerHtml);
+            Assert.AreEqual("Best choice", page.Find("#productModal .card-footer").InnerHtml);
+        }
+
+
+        /// <summary>
+        /// Clicking on the more info button for good alternative a fish
+        /// checks if the modal shows up 
+        /// makes sure the title and rating is correct for that fish
+        /// </summary>
+        [Test]
+        public void SelectFish_Valid_Good_Alternative_Fish_Should_have_Modal_With_Correct_Title_And_Good_Alternative_Rating()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var region = "Northeast";
+            var id = "NE21";
+            var title = "Bluefish";
+            var page = RenderComponent<ProductList>(parameters => parameters.Add(p => p.region, region));
+
+            //Act
+            page.Find("#" + id + "_more_info").Click();
+            var mark = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, mark.Contains("#productModal"));
+            Assert.AreEqual(title, page.Find("#productModal #productTitle").InnerHtml);
+            Assert.AreEqual("Good alternative", page.Find("#productModal .card-footer").InnerHtml);
+        }
+
+
+
+        /// <summary>
+        /// Clicking on the more info button for an avoid fish
+        /// checks if the modal shows up 
+        /// makes sure the title and rating is correct for that fish
+        /// </summary>
+        [Test]
+        public void SelectFish_Valid_Avoid_Fish_Should_have_Modal_With_Correct_Title_And_Avoid_Rating()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var region = "Northeast";
+            var id = "NE49";
+            var title = "Atlantic Halbut";
+            var page = RenderComponent<ProductList>(parameters => parameters.Add(p => p.region, region));
+
+            //Act
+            page.Find("#" + id + "_more_info").Click();
+            var mark = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, mark.Contains("#productModal"));
+            Assert.AreEqual(title, page.Find("#productModal #productTitle").InnerHtml);
+            Assert.AreEqual("Avoid", page.Find("#productModal .card-footer").InnerHtml);
+        }
+
+
+
+
         #endregion SelectProduct
     }
 }
