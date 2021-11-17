@@ -11,7 +11,6 @@ namespace ContosoCrafts.WebSite.Pages
         //Logger to help with debugging
         private readonly ILogger<PrivacyModel> _logger;
 
-
         /// <summary>
         /// Constructor for Privacy page
         /// </summary>
@@ -20,7 +19,6 @@ namespace ContosoCrafts.WebSite.Pages
         {
             _logger = logger;
         }
-
 
         /// <summary>
         /// OnGet method for Privacy page. Essentially doing nothing for now
