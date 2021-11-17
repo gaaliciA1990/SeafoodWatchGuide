@@ -13,7 +13,6 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class IndexModel : PageModel
     {
-
         //Logger to help with debugging
         private readonly ILogger<IndexModel> _logger;
 
