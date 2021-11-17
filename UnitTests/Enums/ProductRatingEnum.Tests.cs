@@ -11,7 +11,7 @@ namespace UnitTests.ProductRatingEnum
     {
         #region TestSetup
         //ProductRating array variable used to test Product rating Enums
-        public Array ratings;
+        public Array Ratings;
 
         /// <summary>
         /// Test constructor.
@@ -21,7 +21,7 @@ namespace UnitTests.ProductRatingEnum
         [SetUp]
         public void TestInitialize()
         {
-            ratings = Enum.GetValues(typeof(ProductRating));
+            Ratings = Enum.GetValues(typeof(ProductRating));
         }
         #endregion
 
@@ -36,7 +36,7 @@ namespace UnitTests.ProductRatingEnum
             // Arrange
 
             // Act
-            ProductRating unknown = (ProductRating)(ratings.GetValue(0));
+            ProductRating unknown = (ProductRating)(Ratings.GetValue(0));
 
             //Reset
 
@@ -54,7 +54,7 @@ namespace UnitTests.ProductRatingEnum
             // Arrange
 
             // Act
-            ProductRating unknown = (ProductRating)(ratings.GetValue(1));
+            ProductRating unknown = (ProductRating)(Ratings.GetValue(1));
 
             //Reset
 
@@ -72,7 +72,7 @@ namespace UnitTests.ProductRatingEnum
             // Arrange
 
             // Act
-            ProductRating unknown = (ProductRating)(ratings.GetValue(2));
+            ProductRating unknown = (ProductRating)(Ratings.GetValue(2));
 
             //Reset
 
@@ -90,7 +90,7 @@ namespace UnitTests.ProductRatingEnum
             // Arrange
 
             // Act
-            ProductRating unknown = (ProductRating)(ratings.GetValue(3));
+            ProductRating unknown = (ProductRating)(Ratings.GetValue(3));
 
             //Reset
 
