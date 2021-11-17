@@ -7,7 +7,7 @@ using ContosoCrafts.WebSite.RatingEnums;
 namespace UnitTests.Model
 {
     /// <summary>
-    /// This class contains all the tests for the application's ProductModel
+    /// This class contains all the tests for the ProductModel's Sources list
     /// </summary>
     public class SourceValidateTests
     {
@@ -29,8 +29,7 @@ namespace UnitTests.Model
 
         #region DataAnnotationCheck
         /// <summary>
-        /// UT for testing the serializer is acting as expected. Author
-        /// unknown?
+        /// checking if all strings in the Sources list are all between min and max character length
         /// </summary>
         [Test]
         public void ListStringLength_Return_True_When_All_List_Items_Are_Between_Lenght_Boundaries()
@@ -56,8 +55,7 @@ namespace UnitTests.Model
         }
 
         /// <summary>
-        /// UT for testing the serializer is acting as expected. Author
-        /// unknown?
+        /// checking if all strings in the Sources list are all outside min and max character length
         /// </summary>
         [Test]
         public void ListStringLength_Return_False_When_All_List_Items_Are_outside_Lenght_Boundaries()
@@ -81,9 +79,9 @@ namespace UnitTests.Model
             // Assert
             Assert.AreEqual(attributeVal, false);
         }
+
         /// <summary>
-        /// UT for testing the serializer is acting as expected. Author
-        /// unknown?
+        /// checking if list items in sources list are empty
         /// </summary>
         [Test]
         public void ListStringLength_Return_False_When_List_Items_is_empty()
@@ -100,6 +98,10 @@ namespace UnitTests.Model
             // Assert
             Assert.AreEqual(attributeVal, false);
         }
+
+        /// <summary>
+        /// checking if items in list are null
+        /// </summary>
         [Test]
         public void ListStringLength_Return_False_When_List_Items_is_null()
         {
@@ -116,6 +118,10 @@ namespace UnitTests.Model
             // Assert
             Assert.AreEqual(attributeVal, false);
         }
+
+        /// <summary>
+        /// checking if some strings in the Source list are outside min and max character length
+        /// </summary>
         [Test]
         public void ListStringLength_Return_False_When_Some_List_Items_Are_outside_Lenght_Boundaries()
         {
@@ -139,8 +145,12 @@ namespace UnitTests.Model
             Assert.AreEqual(attributeVal, false);
         }
 
+
+        /// <summary>
+        /// checking if Sources list is null
+        /// </summary>
         [Test]
-        public void ListStringLength_Return_False_List_is_Null()
+        public void ListStringLength_Return_False_If_List_is_Null()
         {
             // Arrange
             int minLenth = 4;
@@ -154,8 +164,12 @@ namespace UnitTests.Model
             // Assert
             Assert.AreEqual(attributeVal, false);
         }
+
+        /// <summary>
+        /// checking if Sources list has strings with no alphabetical characters
+        /// </summary>
         [Test]
-        public void ListStringLength_Return_List_Item_Has_No_Alphabetical_Characters()
+        public void ListStringLength_Return_List_Item_If_It_Has_No_Alphabetical_Characters()
         {
             // Arrange
             // declare a list of strings to implement the source field
