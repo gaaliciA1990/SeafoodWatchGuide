@@ -7,7 +7,6 @@ using Microsoft.Extensions.Logging;
 
 namespace ContosoCrafts.WebSite.Pages
 {
-
     /// <summary>
     /// Template for page creation
     /// </summary>
@@ -25,7 +24,6 @@ namespace ContosoCrafts.WebSite.Pages
         //Variable to notify if an error has happened
         public bool errorOccurred = false;
 
-
         /// <summary>
         /// Constructor for Read Page
         /// </summary>
@@ -37,7 +35,6 @@ namespace ContosoCrafts.WebSite.Pages
             _logger = logger;
             ProductService = productService;
         }
-
 
         /// <summary>
         /// Method to load the selected item to be shown
@@ -55,7 +52,6 @@ namespace ContosoCrafts.WebSite.Pages
             return Page();
         }
 
-
         /// <summary>
         /// Method for redirecting users to Delete page when they choose to Delete
         /// the item.
@@ -66,8 +62,6 @@ namespace ContosoCrafts.WebSite.Pages
         {
             return RedirectToPage("Delete", new { id = Id });
         }
-
-
 
         /// <summary>
         /// Method for redirecting users to Update page when they choose to
