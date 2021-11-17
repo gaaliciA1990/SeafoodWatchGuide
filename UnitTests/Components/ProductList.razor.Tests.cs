@@ -7,10 +7,16 @@ using System.Linq;
 
 namespace UnitTests.Components
 {
+    /// <summary>
+    /// This class contains all tests for ProductList.razor
+    /// </summary>
     public class ProductListTests : BunitTestContext
     {
         #region TestSetup
 
+        /// <summary>
+        /// Set up for testing
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -18,6 +24,10 @@ namespace UnitTests.Components
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Test if ProductList rendered correctly, which should have a container
+        /// called Best Choice.
+        /// </summary>
         [Test]
         public void ProductList_Default_Should_Return_Content()
         {
