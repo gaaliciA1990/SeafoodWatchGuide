@@ -9,7 +9,7 @@
     -->
 @{
     var regionData = ProductService.GetRegionData(region);
-    if(!String.IsNullOrEmpty(search))
+    if (!String.IsNullOrEmpty(search))
     {
         regionData = regionData.Where(m => m.Title.ToLower().Contains(search.ToLower()));
     }
@@ -17,22 +17,13 @@
 
 @foreach (ProductRating ev in Enum.GetValues(typeof(ProductRating)))
 {
-    if (ev == ProductRating.UNKNOWN)
-        continue;
+    var collapse = RatingStringCollapse(ev);
 
-    var collapse = "";
-    if (ev == ProductRating.BEST_CHOICE)
+    if(collapse == null)
     {
-        collapse = "collapse1";
+        continue;
     }
-    else if (ev == ProductRating.GOOD_ALTERNATIVE)
-    {
-        collapse = "collapse2";
-    }
-    else if (ev == ProductRating.AVOID)
-    {
-        collapse = "collapse3";
-    }
+
     var ratingData = regionData.Where(m => m.Rating.Equals(ev));
 
     <div class="region-container" id="div_@ev.ToString()">
@@ -163,4 +154,35 @@
     //Holds search string
     [Parameter]
     public string search { get; set; }
+
+    /// <summary>
+    /// This will assign a collapse value for each fish rating so we can use this for 
+    /// grouping the fishe into each container
+    /// </summary>
+    /// <param name="rating"></param>
+    /// <returns></returns>
+    public string RatingStringCollapse(ProductRating rating)
+    {
+        var collapse = "";
+
+        switch (rating)
+        {
+            case ProductRating.UNKNOWN:
+                return null;
+
+            case ProductRating.BEST_CHOICE:
+                collapse = "collapse1";
+                break;
+
+            case ProductRating.GOOD_ALTERNATIVE:
+                collapse = "collapse2";
+                break;
+
+            case ProductRating.AVOID:
+                collapse = "collapse3";
+
+                break;
+        }
+        return collapse;
+    }
 }
