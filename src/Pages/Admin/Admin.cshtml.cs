@@ -8,7 +8,6 @@ using System.Linq;
 
 namespace ContosoCrafts.WebSite.Pages
 {
-
     /// <summary>
     /// Template for index (ie.Admin) page creation
     /// </summary>
@@ -46,7 +45,6 @@ namespace ContosoCrafts.WebSite.Pages
         {
             Products = ProductService.GetAllData();
         }
-
 
         /// <summary>
         /// Method to react to an action of clicking on the Create button
