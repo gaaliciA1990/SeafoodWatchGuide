@@ -72,7 +72,7 @@ namespace ContosoCrafts.WebSite.Pages
             //Check on url, whether the link leads to a valid image file
             if(validURL() == false)
             {
-                ModelState.AddModelError(string.Empty, "Please enter a valid image url.");
+                ModelState.AddModelError(string.Empty, "Please enter an image url with the following extensions: .jpg, .jpeg, .png, .gif");
                 return Page();
             }
 
