@@ -96,10 +96,6 @@ namespace UnitTests.Components
             Assert.AreEqual(false, button.InnerHtml.Contains("Octopus"));
         }
 
-
-
-
-
         /// <summary>
         /// Clicking on the more info button for a best choice fish
         /// checks if the modal shows up 
@@ -126,7 +122,6 @@ namespace UnitTests.Components
             Assert.AreEqual("Best choice", page.Find("#productModal .card-footer").InnerHtml);
         }
 
-
         /// <summary>
         /// Clicking on the more info button for good alternative a fish
         /// checks if the modal shows up 
@@ -152,8 +147,6 @@ namespace UnitTests.Components
             Assert.AreEqual("Good alternative", page.Find("#productModal .card-footer").InnerHtml);
         }
 
-
-
         /// <summary>
         /// Clicking on the more info button for an avoid fish
         /// checks if the modal shows up 
@@ -178,10 +171,6 @@ namespace UnitTests.Components
             Assert.AreEqual(title, page.Find("#productModal #productTitle").InnerHtml);
             Assert.AreEqual("Avoid", page.Find("#productModal .card-footer").InnerHtml);
         }
-
-
-
-
         #endregion SelectProduct
     }
 }
