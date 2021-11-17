@@ -6,7 +6,6 @@ using ContosoCrafts.WebSite.Models;
 
 namespace ContosoCrafts.WebSite.Pages
 {
-
     /// <summary>
     /// The region page will display only the data of the region that is selected from the homepage.
     /// This removes the need for more than one guide page as we can pass the region string
