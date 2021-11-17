@@ -81,6 +81,26 @@ namespace UnitTests.Model
             // Assert
             Assert.AreEqual(attributeVal, false);
         }
+        /// <summary>
+        /// UT for testing the serializer is acting as expected. Author
+        /// unknown?
+        /// </summary>
+        [Test]
+        public void ListStringLength_Return_False_When_List_Items_is_empty()
+        {
+            // Arrange
+            // declare a list of strings to implement the source field
+            List<string> sources = new List<string>();
+            sources.Add("");
+
+
+            // Act
+            var attributeVal = attribute.IsValid(sources);
+
+            // Assert
+            Assert.AreEqual(attributeVal, false);
+        }
+
         [Test]
         public void ListStringLength_Return_False_When_Some_List_Items_Are_outside_Lenght_Boundaries()
         {
