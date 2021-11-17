@@ -13,9 +13,10 @@
             {
                 @Html.Hidden("region", Model.region)
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" asp-for="@Model.search" placeholder="Find fish..." asp->
+                    <input id="search" type="text" class="form-control" asp-for="@Model.search" placeholder="Find fish..." asp->
                     <div class="input-group-append">
                         <button class="btn btn-secondary" type="submit">Search</button>
+                        <button class="btn btn-danger" type="submit" onclick="$('#search').val('')">Cancel</button>
                     </div>
                 </div>
             }
