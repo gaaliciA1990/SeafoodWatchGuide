@@ -20,7 +20,6 @@ namespace ContosoCrafts.WebSite.Pages
         //Logger to help with debugging when there is an error
         private readonly ILogger<ErrorModel> _logger;
 
-
         /// <summary>
         /// Constructor for Error page
         /// </summary>
@@ -29,7 +28,6 @@ namespace ContosoCrafts.WebSite.Pages
         {
             _logger = logger;
         }
-
 
         /// <summary>
         /// Method to fetch error stack trace
