@@ -7,7 +7,6 @@ using System.Linq;
 
 namespace ContosoCrafts.WebSite.Pages
 {
-
     /// <summary>
     /// Class for Delete page in CRUDi implementation
     /// </summary>
@@ -36,7 +35,6 @@ namespace ContosoCrafts.WebSite.Pages
         //Product model object
         [BindProperty]
         public ProductModel Product { get; set; }
-
 
         /// <summary>
         /// Method for loading the requested item to get deleted
