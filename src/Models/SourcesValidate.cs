@@ -12,8 +12,10 @@ namespace ContosoCrafts.WebSite.Models
     {
         //max character allowed in Kist item
         public int MinStringLength { get; set; }
+
         //min character allowed in Kist item
         public int MaxStringLength { get; set; }
+
         /// <summary>
         /// validate list items in value
         /// </summary>
