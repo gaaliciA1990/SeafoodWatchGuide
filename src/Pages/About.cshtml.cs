@@ -3,7 +3,6 @@ using Microsoft.Extensions.Logging;
 
 namespace ContosoCrafts.WebSite.Pages
 {
-
     /// <summary>
     /// Page place holder for base code from index page
     /// </summary>
@@ -21,7 +20,6 @@ namespace ContosoCrafts.WebSite.Pages
             _logger = logger;
             /// ProductService = productService;
         }
-
 
         /// <summary>
         /// Placeholder method to fetch info needed
