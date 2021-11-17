@@ -35,7 +35,7 @@
     }
     var ratingData = regionData.Where(m => m.Rating.Equals(ev));
 
-    <div class="region-container">
+    <div class="region-container" id="div_@ev.ToString()">
         <button type="button" class="region-block @(ev + "_color")" data-toggle="collapse" aria-expanded="false" href=#@collapse>
             <h2 class="region_container_text">@EnumExtensions.convertToString(ev) (@ratingData.Count())</h2>
         </button>

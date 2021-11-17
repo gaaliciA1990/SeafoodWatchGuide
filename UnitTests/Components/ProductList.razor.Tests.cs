@@ -35,30 +35,36 @@ namespace UnitTests.Components
         }
 
         #region SelectProduct
+        /// <summary>
+        /// Pass as part of the parameters to the ProductList Component, the Region of Central
+        /// Then find the Div that holds the Best Choice items
+        /// Look inside that inner HTML for that div, looking for the items
+        /// Tuna should be there
+        /// Octopus should not
+        /// </summary>
         [Test]
-        public void SelectProduct_Valid_ID_jenlooper_Should_Return_Content()
+        public void SelectRegion_Valid_Region_Central_Best_Choice_Should_Contain_Tuna()
         {
             // Arrange
             Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
-            var id = "H50";
+            var id = "div_BEST_CHOICE";
 
-            var page = RenderComponent<ProductList>();
-            //var result = page.Markup;
+            var page = RenderComponent<ProductList>(parameters => parameters.Add(p => p.region, "Central"));
+
+            var resultTest = page.Markup;
 
             // Find the Buttons (more info)
-            var buttonList = page.FindAll("Button");
+            var buttonList = page.FindAll("Div");
+
+            // Act
 
             // Find the one that matches the ID looking for and click it
             var button = buttonList.First(m => m.OuterHtml.Contains(id));
 
-            // Act
-            button.Click();
-
-            // Get the markup to use for the assert
-            var pageMarkup = page.Markup;
-
             // Assert
-            Assert.AreEqual(true, pageMarkup.Contains("Mano/Sharks"));
+            Assert.AreEqual(true, button.InnerHtml.Contains("Tuna-Albacore"));
+
+            Assert.AreEqual(false, button.InnerHtml.Contains("Octopus"));
         }
         #endregion SelectProduct
     }
