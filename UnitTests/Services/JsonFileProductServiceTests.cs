@@ -158,7 +158,7 @@ namespace UnitTests.Services
         /// Test GetAllRegions method, should return all supported regions
         /// </summary>
         [Test]
-        public void GetAllRegions_Should_Return_All_Region()
+        public void GetAllRegions_Valid_Should_Return_All_Region()
         {
 
             // Arrange
@@ -172,7 +172,5 @@ namespace UnitTests.Services
             //Assert
             Assert.AreEqual(checking, result);
         }
-
-
     }
 }
