@@ -19,6 +19,9 @@ namespace ContosoCrafts.WebSite.RatingEnums
         AVOID = 3
     }
 
+    /// <summary>
+    /// This is an extension class for ENUMs to implement additional functionality
+    /// </summary>
    public static class EnumExtensions
     {
         /// <summary>
