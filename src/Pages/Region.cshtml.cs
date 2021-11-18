@@ -28,6 +28,7 @@ namespace ContosoCrafts.WebSite.Pages
 
         //Variable to store the ID of the region being requested
         public string region;
+
         //Variable to store seafood search string
         public string search;
 
