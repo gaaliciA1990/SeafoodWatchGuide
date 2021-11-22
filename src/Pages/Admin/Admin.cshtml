@@ -50,6 +50,8 @@ can be edited with CRUD implementation
                 <tr>
                     <th>Title</th>
 
+                    <th>Source(s)</th>
+
                     <th>
                         <select class="custom-select" form="wow" asp-for="@Model.Filter.Region" onchange="this.form.submit()">
                             <option value="@null">Regions</option>
@@ -87,26 +89,31 @@ can be edited with CRUD implementation
 
                 @foreach (var item in Model.Products)
                 {
-                    <tr>
-                        <!--<td>Html.DisplayFor(modelItem => item.Id)</td> - commenting out this code as we don't need to show users the ID-->
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Title)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Region)
-                        </td>
-                        <td>
-                            @EnumExtensions.convertToString((item.Rating))
-                        </td>
-                        <td>
-                            <div class="truncate">
-                                @Html.DisplayFor(modelItem => item.Description)
-                            </div>
-                        </td>
-                        <td>
-                            <a class="btn btn-primary" asp-page="Read" asp-route-id="@(item.Id)">Edit</a>
-                        </td>
-                    </tr>
+                <tr>
+                    <!--<td>Html.DisplayFor(modelItem => item.Id)</td> - commenting out this code as we don't need to show users the ID-->
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sources)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Region)
+                    </td>
+                    <td>
+                        @EnumExtensions.convertToString((item.Rating))
+                    </td>
+                    <td>
+                        <div class="truncate">
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </div>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" asp-page="Read" asp-route-id="@(item.Id)">Edit</a>
+                    </td>
+                </tr>
                 }
             </tbody>
         </table>
