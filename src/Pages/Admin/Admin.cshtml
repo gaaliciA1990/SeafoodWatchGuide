@@ -33,21 +33,25 @@ can be edited with CRUD implementation
         <!--The Create button for adding a new record of Seafood-->
         <a class="btn btn-primary" asp-page-handler="Create"> Create</a>
 
+
+        <form id="wow" method="post"></form>
+
+
         <!--Table to display all of the seafood records-->
-        <table class="table">
-            <form method="post">
-                <div class="row">
-                    <div class="col">
-                        <input id="search" type="text" asp-for="@Model.Filter.Name" placeholder="Find fish..."/>
-                        <button class="btn btn-success">Search</button>
-                        <button class="btn btn-danger" onclick="$('#search').val('')">Clear</button>
-                    </div>
+        <table id="adminTable" class="table">
+            <div class="row">
+                <div class="col">
+                    <input id="search" form="wow" type="text" asp-for="@Model.Filter.Name" placeholder="Find fish..." />
+                    <button class="btn btn-success" form="wow" type="submit">Search</button>
+                    <button class="btn btn-danger" form="wow" type="submit" onclick="$('#search').val('')">Cancel</button>
                 </div>
-                    <tr>
+            </div>
+            <thead>
+                <tr>
                     <th>Title</th>
 
                     <th>
-                        <select class="custom-select" asp-for="@Model.Filter.Region" onchange="this.form.submit()">
+                        <select class="custom-select" form="wow" asp-for="@Model.Filter.Region" onchange="this.form.submit()">
                             <option value="@null">Regions</option>
                             @{
                                 foreach (string region in regions)
@@ -58,7 +62,7 @@ can be edited with CRUD implementation
                         </select>
                     </th>
                     <th>
-                        <select class="custom-select" asp-for="@Model.Filter.Rating" onchange="this.form.submit()">
+                        <select class="custom-select" form="wow" asp-for="@Model.Filter.Rating" onchange="this.form.submit()">
                             <option value="@null">Ratings</option>
                             @{
                                 var rating = Enum.GetValues(typeof(ProductRating));
@@ -78,31 +82,50 @@ can be edited with CRUD implementation
                     <th>Decription</th>
                     <th>Actions</th>
                 </tr>
-            </form>
-            @foreach (var item in Model.Products)
-            {
-                <tr>
-                    <!--<td>Html.DisplayFor(modelItem => item.Id)</td> - commenting out this code as we don't need to show users the ID-->
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Title)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Region)
-                    </td>
-                    <td>
-                        @EnumExtensions.convertToString((item.Rating))
-                    </td>
-                    <td>
-                        <div class="truncate">
-                            @Html.DisplayFor(modelItem => item.Description)
-                        </div>
-                    </td>
-                    <td>
-                        <a class="btn btn-primary" asp-page="Read" asp-route-id="@(item.Id)">Edit</a>
-                    </td>
-                </tr>
-            }
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model.Products)
+                {
+                    <tr>
+                        <!--<td>Html.DisplayFor(modelItem => item.Id)</td> - commenting out this code as we don't need to show users the ID-->
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Region)
+                        </td>
+                        <td>
+                            @EnumExtensions.convertToString((item.Rating))
+                        </td>
+                        <td>
+                            <div class="truncate">
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </div>
+                        </td>
+                        <td>
+                            <a class="btn btn-primary" asp-page="Read" asp-route-id="@(item.Id)">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
         </table>
     </div>
 </body>
 <script src="_framework/blazor.server.js"></script>
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            var adminTable = $('#adminTable').DataTable({
+                ordering: false,
+                searching: false,
+                pagingType: "numbers",
+                iDisplayLength: 15,
+                bLengthChange: false,
+            });
+            $('.dataTables_length').addClass('bs-select');
+        });
+    </script>
+}
