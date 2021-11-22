@@ -24,24 +24,24 @@ namespace ContosoCrafts.WebSite.Models
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             if (value is null) {
-                return new ValidationResult("The Sounces field is required.");
+                return new ValidationResult("The sources field is required.");
             }
 
             foreach (var str in value as List<string>)
             {
                 if (str == null || str == "")
                 {
-                    return new ValidationResult("Sources field is required");
+                    return new ValidationResult("sources field is required");
                 }
 
                 if (Regex.Matches(str, @"[a-zA-Z]").Count <= 0)
                 {
-                    return new ValidationResult("Sources require aphabetical characters.");
+                    return new ValidationResult("sources require aphabetical characters.");
                 }
 
                 if (str.Length > MaxStringLength || str.Length < MinStringLength) 
                 {
-                    return new ValidationResult("Source length between "+ MinStringLength + "-"+ MaxStringLength + ".");
+                    return new ValidationResult("sources length between " + MinStringLength + "-"+ MaxStringLength + ".");
                 }
             }
             return ValidationResult.Success;
