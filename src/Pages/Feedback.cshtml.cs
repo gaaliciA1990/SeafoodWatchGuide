@@ -17,7 +17,7 @@ namespace ContosoCrafts.WebSite.Pages
         private readonly ILogger<FeedbackPageModel> _logger;
 
         //To get connected to all provided services
-        public JsonFileProductService ProductService { get; }
+        public JsonFileFeedbackService FeedbackService { get; }
 
         //To store all products currently in database
         public IEnumerable<FeedbackModel> Feedback { get; private set; }
