@@ -21,10 +21,7 @@
 {
     @using (Html.BeginForm(FormMethod.Post))
     {
-        <div class="form-group">
-            <label>ID</label>
-            <input class="form-control" type="text" asp-for="Product.Id" readonly>
-        </div>
+        @Html.HiddenFor(m => m.Product.Id)
 
         <div class="form-group">
             <label>Title</label>
