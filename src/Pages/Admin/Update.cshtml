@@ -115,13 +115,14 @@
             <input class="form-control" data-toggle="popover-hover" type="url" pattern="https://.*" size="30" required asp-for="Product.Image">
         </div>
 
+        <a class="btn btn-primary" asp-page="Read" asp-route-id="@(Model.Product.Id)">Cancel</a>
         <input class="btn btn-primary" type="submit" id="Submit">
     }
 }
 
 @section scripts{
     <script>
-    $(document).ready(function () {
+        $(document).ready(function () {
             $('[data-toggle="popover-hover"]').popover({
                 html: true,
                 trigger: 'hover',
