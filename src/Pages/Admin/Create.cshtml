@@ -13,8 +13,8 @@
             $('#btnAddSource').click(function (e) {
                 var numOfSources = $("#sources").children().length;
                 $("#sources").append(`<li><input class="form-control" name="Product.Sources[${numOfSources++}]" value=""/></li>`);
-                document.getElementById("btnAddSource").hidden = (numOfSources >= 5)?true:false;
-                document.getElementById("btnRemoveSource").hidden = (numOfSources > 0)?false:true;
+                document.getElementById("btnAddSource").hidden = (numOfSources >= 5) ? true : false;
+                document.getElementById("btnRemoveSource").hidden = (numOfSources > 0) ? false : true;
             });
             $('#btnRemoveSource').click(function (e) {
                 $('#sources').children().last().remove();
@@ -33,10 +33,7 @@
 {
     <div asp-validation-summary="All"></div>
 
-    <div class="form-group">
-        <label>ID</label>
-        <input class="form-control" type="text" asp-for="Product.Id" value="@System.Guid.NewGuid().ToString()" readonly>
-    </div>
+    @Html.HiddenFor(m => m.Product.Id, new { Value = @System.Guid.NewGuid().ToString() })
 
     <div class="form-group">
         <label>Title</label>
