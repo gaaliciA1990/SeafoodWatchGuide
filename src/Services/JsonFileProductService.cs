@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 namespace ContosoCrafts.WebSite.Services
 {
     /// <summary>
-    /// Class for managing the Service for JSON file
+    /// Class for managing the Service for seafood JSON file
     /// </summary>
     public class JsonFileProductService
     {
