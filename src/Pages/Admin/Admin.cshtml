@@ -43,7 +43,7 @@ can be edited with CRUD implementation
                 <div class="col">
                     <input id="search" form="wow" type="text" asp-for="@Model.Filter.Name" placeholder="Find fish..." />
                     <button class="btn btn-success" form="wow" type="submit">Search</button>
-                    <button class="btn btn-danger" form="wow" type="submit" onclick="$('#search').val('')">Clear</button>
+                    <button class="btn btn-danger" form="wow" type="submit" onclick="$('#search').val('');$('#region').val('')">Clear</button>
                 </div>
             </div>
             <thead>
@@ -53,7 +53,7 @@ can be edited with CRUD implementation
                     <th>Source(s)</th>
 
                     <th>
-                        <select class="custom-select" form="wow" asp-for="@Model.Filter.Region" onchange="this.form.submit()">
+                        <select id="region" class="custom-select" form="wow" asp-for="@Model.Filter.Region" onchange="this.form.submit()">
                             <option value="@null">Regions</option>
                             @{
                                 foreach (string region in regions)
