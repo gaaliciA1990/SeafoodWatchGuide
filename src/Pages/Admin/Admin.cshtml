@@ -43,7 +43,7 @@ can be edited with CRUD implementation
                 <div class="col">
                     <input id="search" form="wow" type="text" asp-for="@Model.Filter.Name" placeholder="Find fish..." />
                     <button class="btn btn-success" form="wow" type="submit">Search</button>
-                    <button class="btn btn-danger" form="wow" type="submit" onclick="$('#search').val('');$('#region').val('')">Clear</button>
+                    <button class="btn btn-danger" form="wow" type="submit" onclick="$('#search').val('');$('#region').val('');$('#rating').val('@ProductRating.UNKNOWN')">Clear</button>
                 </div>
             </div>
             <thead>
@@ -64,7 +64,7 @@ can be edited with CRUD implementation
                         </select>
                     </th>
                     <th>
-                        <select class="custom-select" form="wow" asp-for="@Model.Filter.Rating" onchange="this.form.submit()">
+                        <select id="rating" class="custom-select" form="wow" asp-for="@Model.Filter.Rating" onchange="this.form.submit()">
                             <option value="@null">Ratings</option>
                             @{
                                 var rating = Enum.GetValues(typeof(ProductRating));
