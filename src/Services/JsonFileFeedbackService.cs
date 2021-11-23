@@ -9,6 +9,9 @@ namespace ContosoCrafts.WebSite.Services
 {
     public class JsonFileFeedbackService
     {
+        // Class member variable for setting our JSON writing options when reading data
+        private JsonWriterOptions writerOptions = new JsonWriterOptions { SkipValidation = false, Indented = true };
+
         public JsonFileFeedbackService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
@@ -38,7 +41,7 @@ namespace ContosoCrafts.WebSite.Services
         /// After create the user can update to set values
         /// </summary>
         /// <returns></returns>
-        public FeedbackModel CreateFeedback(int rating, string comment)
+        public void CreateFeedback(int rating, string comment)
         {
             var feedback = new FeedbackModel()
             {
@@ -53,7 +56,7 @@ namespace ContosoCrafts.WebSite.Services
 
             SaveFeedback(feedbackSet);
 
-            return feedback;
+            //return feedback;
         }
 
         /// <summary>
