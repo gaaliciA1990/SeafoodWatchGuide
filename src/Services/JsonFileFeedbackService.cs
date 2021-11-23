@@ -7,23 +7,42 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
 {
+    /// <summary>
+    /// Class for managing the Service for the feedback JSON file
+    /// </summary>
     public class JsonFileFeedbackService
     {
         // Class member variable for setting our JSON writing options when reading data
         private JsonWriterOptions writerOptions = new JsonWriterOptions { SkipValidation = false, Indented = true };
 
+        /// <summary>
+        /// Constructor method for the web host environment
+        /// </summary>
+        /// <param name="webHostEnvironment"></param>
         public JsonFileFeedbackService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
 
+        /// <summary>
+        /// A getter method for the webhost
+        /// </summary>
         public IWebHostEnvironment WebHostEnvironment { get; }
 
+        /// <summary>
+        /// This simplified the file path for the JSON file so it can be inferred instead
+        /// of being hardcoded. Makes tracking data easier
+        /// </summary>
         private string JsonFileName
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "SiteFeedback.json"); }
         }
 
+        /// <summary>
+        /// This is creating a list of Feedback Models.
+        /// IEnumerable is a list type
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<FeedbackModel> GetAllFeedback()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
