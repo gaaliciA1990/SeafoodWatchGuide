@@ -158,7 +158,7 @@ namespace ContosoCrafts.WebSite.Services
         public string[] GetAllRegions()
         {
             return new string[7]{"West Coast", "Southwest", "Central", "Southeast",
-                                "Northeast", "Hawai'i", "National"};
+                                "Northeast", "Hawaii", "National"};
         }
     }
 }
