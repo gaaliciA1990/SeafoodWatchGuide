@@ -4,6 +4,7 @@ using ContosoCrafts.WebSite.RatingEnums;
 using ContosoCrafts.WebSite.Controllers;
 using System.Linq;
 
+/**
 namespace UnitTests.Controller
 {
     /// <summary>
@@ -94,4 +95,4 @@ namespace UnitTests.Controller
         }
         #endregion
     }
-}
+}*/
