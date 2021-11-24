@@ -21,9 +21,6 @@ namespace ContosoCrafts.WebSite.Pages
         //To get connected to all provided services
         public JsonFileFeedbackService FeedbackService { get; }
 
-        //To store all products currently in database
-        public IEnumerable<FeedbackModel> AllFeedbacks { get; private set; }
-
         //To store submitted feedback
         [BindProperty]
         public FeedbackModel Feedback { get; set; }
