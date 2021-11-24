@@ -9,14 +9,14 @@ using NUnit.Framework;
 namespace UnitTests.Pages.Startup
 {
     /// <summary>
-    /// 
+    /// Tests for Startup.cs
     /// </summary>
     public class StartupTests
     {
         #region TestSetup
 
         /// <summary>
-        /// 
+        /// Initilizer for tests
         /// </summary>
         [SetUp]
         public void TestInitialize()
@@ -24,7 +24,7 @@ namespace UnitTests.Pages.Startup
         }
 
         /// <summary>
-        /// 
+        /// Test constructor
         /// </summary>
         public class Startup : ContosoCrafts.WebSite.Startup
         {
@@ -34,7 +34,8 @@ namespace UnitTests.Pages.Startup
 
         #region ConfigureServices
         /// <summary>
-        /// 
+        /// Test configure Service with valid states, webhost should return
+        /// not null
         /// </summary>
         [Test]
         public void Startup_ConfigureServices_Valid_Defaut_Should_Pass()
@@ -46,7 +47,7 @@ namespace UnitTests.Pages.Startup
 
         #region Configure
         /// <summary>
-        /// 
+        /// Test configure, webhost should return not null
         /// </summary>
         [Test]
         public void Startup_Configure_Valid_Defaut_Should_Pass()
