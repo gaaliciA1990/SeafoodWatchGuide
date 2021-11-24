@@ -42,19 +42,19 @@
             {
                 if (numFeed < 4)
                 {
-                    <div class="row">
-                        @for (int i = 1; i < 6; i++)
-                        {
-                            var checkedText = "";
+                <div class="row">
+                    @for (int i = 1; i < 6; i++)
+                    {
+                        var checkedText = "";
 
-                            if (i <= @feed.Rating)
-                            {
-                                checkedText = "checked";
-                                <span class="fa fa-star @checkedText"></span>
-                            }
+                        if (i <= @feed.Rating)
+                        {
+                            checkedText = "checked";
                         }
-                        <p class="font-weight-bold"> "@feed.Comment" </p>
-                    </div>
+                        <span class="fa fa-star @checkedText"></span>
+                    }
+                    <p class="font-weight-bold"> "@feed.Comment" </p>
+                </div>
                     numFeed++;
                 }
             }
