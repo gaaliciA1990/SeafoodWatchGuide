@@ -350,3 +350,7 @@ input.input-validation-error {
     left: 0;
     color: #FFD700;
 }
+
+.checked {
+    color: lightskyblue;
+}
