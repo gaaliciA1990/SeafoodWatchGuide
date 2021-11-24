@@ -60,7 +60,7 @@ namespace ContosoCrafts.WebSite.Services
         /// After create the user can update to set values
         /// </summary>
         /// <returns></returns>
-        public void CreateFeedback(int rating, string comment)
+        public FeedbackModel CreateFeedback(int rating, string comment)
         {
             var feedback = new FeedbackModel()
             {
@@ -75,31 +75,7 @@ namespace ContosoCrafts.WebSite.Services
 
             SaveFeedback(feedbackSet);
 
-            //return feedback;
-        }
-
-        /// <summary>
-        /// Find the feedback record
-        /// Update the fields
-        /// Save to the data store
-        /// </summary>
-        /// <param name="data"></param>
-        public FeedbackModel UpdateFeedback(FeedbackModel data)
-        {
-            var feedback = GetAllFeedback();
-            var feedbackData = feedback.FirstOrDefault(x => x.ID.Equals(data.ID));
-            if (feedbackData == null)
-            {
-                return null;
-            }
-
-            // Update the data to the new passed in values
-            feedbackData.Rating = data.Rating;
-            feedbackData.Comment = data.Comment.Trim();
-
-            SaveFeedback(feedback);
-
-            return feedbackData;
+            return feedback;
         }
 
         /// <summary>
@@ -119,23 +95,6 @@ namespace ContosoCrafts.WebSite.Services
                     feedback
                 );
             }
-        }
-
-        /// <summary>
-        /// Remove the feedback from the system
-        /// </summary>
-        /// <returns></returns>
-        public FeedbackModel DeleteFeedback(string id)
-        {
-            // Get the current set, and append the new record to it
-            var feedbackSet = GetAllFeedback();
-            var feedback = feedbackSet.FirstOrDefault(m => m.ID.Equals(id));
-
-            var newFeedbackSet = GetAllFeedback().Where(m => m.ID.Equals(id) == false);
-
-            SaveFeedback(newFeedbackSet);
-
-            return feedback;
         }
     }
 }
