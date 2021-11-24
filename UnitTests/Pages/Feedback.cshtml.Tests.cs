@@ -39,7 +39,7 @@ namespace UnitTests.Pages.Feedback
         public void OnGet_Valid_Activity_Set_Should_Return_Valid_Model_State()
         {
             // Arrange
-
+            var data = PageModel.previewFeedBacks;
             // Act
             PageModel.OnGet();
 
