@@ -34,7 +34,9 @@ Included items must then not match any entries in the exclude list to remain inc
               </Include>
               <Exclude>
                 <ModulePath>.*CPPUnitTestFramework.*</ModulePath>
+                <ModulePath>.*anglesharpwrappers.*</ModulePath>
                 <ModulePath>.*NUnit.*</ModulePath>
+                <ModulePath>.*bunit.*</ModulePath>
                 <ModulePath>.*moq.*</ModulePath>
                 <ModulePath>.*biliweb.views.*</ModulePath>
               </Exclude>
