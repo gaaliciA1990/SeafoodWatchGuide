@@ -163,7 +163,7 @@ namespace UnitTests.Services
 
             // Arrange
             var checking = new string[7]{"West Coast", "Southwest", "Central", "Southeast",
-                                "Northeast", "Hawai'i", "National"};
+                                "Northeast", "Hawaii", "National"};
 
             //Act
             var result = TestHelper.ProductService.GetAllRegions();
