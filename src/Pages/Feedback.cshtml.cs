@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 
 namespace ContosoCrafts.WebSite.Pages
 {
-
     /// <summary>
     /// Home page for Seafood Watch Guide from GladiatorMonkys 
     /// group in Fundamentals of Software Engineering, CPSC 5110
@@ -20,6 +20,12 @@ namespace ContosoCrafts.WebSite.Pages
 
         //To get connected to all provided services
         public JsonFileFeedbackService FeedbackService { get; }
+
+        //To store all products currently in database
+        public IEnumerable<FeedbackModel> AllFeedbacks { get; private set; }
+
+        //To store highest feedbacks currently in database
+        public IEnumerable<FeedbackModel> previewFeedBacks { get; set; }
 
         //To store submitted feedback
         [BindProperty]
@@ -37,14 +43,16 @@ namespace ContosoCrafts.WebSite.Pages
         {
             _logger = logger;
             FeedbackService = feedbackService;
+            AllFeedbacks = FeedbackService.GetAllFeedback();
         }
 
         /// <summary>
-        /// Method to display message shown on the Feedback page
+        /// Method to fetch all items to be shown on the Index page
         /// </summary>
         public void OnGet()
         {
-            //AllFeedbacks = FeedbackService.GetAllFeedback();
+            previewFeedBacks = AllFeedbacks.Reverse();
+
             displayThankYouMessage = false;
         }
 
