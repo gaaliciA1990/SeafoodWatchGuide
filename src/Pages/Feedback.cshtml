@@ -38,10 +38,10 @@
             <label>Give us a rating</label>
             <div class="rating">
                 @{
-                    for (int i = 1; i < 6; i++)
+                    for (int i = 5; i > 0; i--)
                     {
                         string label = "star" + i;
-                        <input id="@label" name="star" type="radio" asp-for="Feedback.Rating" value="@i" class="radio-btn hide" />
+                        <input id="@label" type="radio" required asp-for="Feedback.Rating" value="@i" class="radio-btn hide" />
                         <label for="@label">☆</label>
                     }
                 }
