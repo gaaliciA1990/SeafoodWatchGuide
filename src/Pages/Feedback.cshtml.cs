@@ -43,7 +43,7 @@ namespace ContosoCrafts.WebSite.Pages
         }
 
         /// <summary>
-        /// Method to fetch all items to be shown on the Index page
+        /// Method to display message shown on the Feedback page
         /// </summary>
         public void OnGet()
         {
