@@ -26,7 +26,6 @@ namespace UnitTests.ProductRatingEnum
         #endregion
 
         #region EnumTests
-
         /// <summary>
         /// Test the value 0 return Unknown
         /// </summary>
@@ -42,7 +41,6 @@ namespace UnitTests.ProductRatingEnum
 
             // Assert
             Assert.AreEqual(ProductRating.UNKNOWN, unknown);
-
         }
 
         /// <summary>
@@ -60,7 +58,6 @@ namespace UnitTests.ProductRatingEnum
 
             // Assert
             Assert.AreEqual(ProductRating.BEST_CHOICE, unknown);
-
         }
 
         /// <summary>
@@ -78,7 +75,6 @@ namespace UnitTests.ProductRatingEnum
 
             // Assert
             Assert.AreEqual(ProductRating.GOOD_ALTERNATIVE, unknown);
-
         }
 
         /// <summary>
@@ -96,7 +92,6 @@ namespace UnitTests.ProductRatingEnum
 
             // Assert
             Assert.AreEqual(ProductRating.AVOID, unknown);
-
         }
         #endregion
 
@@ -135,7 +130,6 @@ namespace UnitTests.ProductRatingEnum
 
             // Assert
             Assert.AreEqual("Good alternative", Result);
-
         }
 
         /// <summary>
@@ -154,7 +148,6 @@ namespace UnitTests.ProductRatingEnum
 
             // Assert
             Assert.AreEqual("Avoid", Result);
-
         }
     }
     #endregion
