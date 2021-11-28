@@ -15,7 +15,6 @@ namespace UnitTests.Pages.Error
         //ErrorModel object used to test Error page's model
         public static ErrorModel PageModel;
 
-
         /// <summary>
         /// Test constructor
         /// </summary>
@@ -30,7 +29,6 @@ namespace UnitTests.Pages.Error
                 TempData = TestHelper.TempData,
             };
         }
-
         #endregion TestSetup
 
         #region OnGet
@@ -77,7 +75,6 @@ namespace UnitTests.Pages.Error
             Assert.AreEqual("trace", PageModel.RequestId);
             Assert.AreEqual(true, PageModel.ShowRequestId);
         }
-
         #endregion OnGet
     }
 }
