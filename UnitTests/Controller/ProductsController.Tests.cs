@@ -26,7 +26,6 @@ namespace UnitTests.Controller
         }
         #endregion
 
-
         #region ConvertToString
         /// <summary>
         /// This tests the convertToSTring in ProductModel.cs to confirm that the correct string is displayed 
