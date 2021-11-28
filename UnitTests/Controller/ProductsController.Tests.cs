@@ -7,7 +7,7 @@ using System.Linq;
 namespace UnitTests.Controller
 {
     /// <summary>
-    /// This class contains all the tests for the application's ProductModel
+    /// This class contains all the tests for the application's ProductController
     /// </summary>
     public class ProductControllerTests
     {
