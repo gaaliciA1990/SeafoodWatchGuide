@@ -52,7 +52,6 @@ namespace UnitTests.Pages.Admin
 
             // Assert
             Assert.AreEqual(PageModel.Products.Count(), randomProduct.Count());
-
         }
 
         /// <summary>
