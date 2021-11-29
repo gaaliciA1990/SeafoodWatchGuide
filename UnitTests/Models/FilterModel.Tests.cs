@@ -46,7 +46,6 @@ namespace UnitTests.Model
             Assert.AreEqual(null, Model.Region);
             Assert.AreEqual(ProductRating.UNKNOWN, Model.Rating);
         }
-
         #endregion ClearData
     }
 }
