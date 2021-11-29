@@ -31,8 +31,6 @@ namespace UnitTests.Pages.Admin
             {
             };
         }
-
-
         #endregion TestSetup
 
         #region OnGet
