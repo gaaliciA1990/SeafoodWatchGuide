@@ -92,7 +92,6 @@ namespace UnitTests.Pages.Admin
             Assert.AreEqual(null, PageModel.Filter.Region);
             Assert.AreEqual(ContosoCrafts.WebSite.RatingEnums.ProductRating.UNKNOWN, PageModel.Filter.Rating);
         }
-
         #endregion OnGet
 
         #region OnPost
