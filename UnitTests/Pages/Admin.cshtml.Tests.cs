@@ -36,7 +36,6 @@ namespace UnitTests.Pages.Admin
         #endregion TestSetup
 
         #region OnGet
-
         /// <summary>
         /// test OnGet function when it fetches all data to be shown
         /// </summary>
