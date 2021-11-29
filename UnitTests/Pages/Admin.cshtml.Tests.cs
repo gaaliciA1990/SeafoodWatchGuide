@@ -70,7 +70,6 @@ namespace UnitTests.Pages.Admin
 
             // Assert
             Assert.AreEqual("Create", page.PageName);
-
         }
 
         /// <summary>
