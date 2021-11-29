@@ -216,7 +216,6 @@ namespace UnitTests.Pages.Admin
             Assert.AreEqual(true, PageModel.Products.Any());
         }
 
-
         /// <summary>
         /// The Region can be be a bogus value not found on any product
         /// When it is bogus, it returns an empty set, so Any will be false
