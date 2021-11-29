@@ -30,7 +30,6 @@ namespace UnitTests.Pages.About
         }
         #endregion TestSetup
 
-
         #region OnGet
         /// <summary>
         /// Test OnGet function on About model
