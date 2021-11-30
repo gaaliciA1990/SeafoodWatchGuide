@@ -45,6 +45,19 @@ namespace ContosoCrafts.WebSite.Models
         [ListStringLength(MaxStringLength = 75, MinStringLength = 3)]
         public List<string> Sources { get; set; }
 
+        public string getSources()
+        {
+            string toReturn = "";
+            for (int i = 0; i < Sources.Count; i++)
+            {
+                toReturn += Sources[i];
+
+                toReturn += i == Sources.Count - 1 ? "" : ", ";   
+            }
+
+            return toReturn;
+        }
+
         /// <summary>
         /// The is a toString method that will convert this class (the model) to a string version. 
         /// This is using the JSON mechanism for serializing the model data to a string
