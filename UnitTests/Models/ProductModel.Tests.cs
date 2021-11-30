@@ -26,6 +26,42 @@ namespace UnitTests.Model
         }
         #endregion
 
+        #region GetSources
+        /// <summary>
+        /// Test GetSources function. Should return all sources as a formatted string
+        /// </summary>
+        [Test]
+        public void GetSources_Valid_Should_Return_Formatted_Source_As_String()
+        {
+            //Arrange
+            List<string> sources = new List<string>();
+            sources.Add("US Farm");
+            sources.Add("Farmed");
+
+            string original = "US Farm, Farmed";
+
+            var obj = new ProductModel()
+            {
+                Id = "id",
+                Region = "region",
+                Image = "image",
+                Title = "title",
+                Description = "description",
+                Rating = ProductRating.BEST_CHOICE,
+                Sources = sources
+            };
+
+
+            //Act
+            var result = obj.GetSources();
+
+            //Assert
+            Assert.AreEqual(sources.Count, obj.Sources.Count);
+            Assert.AreEqual(sources[0], obj.Sources[0]);
+            Assert.AreEqual("Farmed", obj.Sources[1]);
+            Assert.AreEqual(original, result);
+        }
+        #endregion GetSources
 
         #region ConvertToString
         /// <summary>
