@@ -28,7 +28,7 @@
 
     <div class="region-container" id="div_@ev.ToString()">
         <button type="button" class="region-block @(ev + "_color")" data-toggle="collapse" aria-expanded="false" href=#@collapse>
-            <h2 class="region_container_text">@EnumExtensions.convertToString(ev) (@ratingData.Count())</h2>
+            <h2 class="region_container_text">@EnumExtensions.ConvertToString(ev) (@ratingData.Count())</h2>
         </button>
 
         <div id=@collapse class="collapse">
@@ -113,15 +113,15 @@
                 <div class="modal-footer">
                     @if (selectedProduct.Rating == ProductRating.BEST_CHOICE)
                     {
-                        <div class="card-footer bg-success text-white">@EnumExtensions.convertToString(selectedProduct.Rating)</div>
+                        <div class="card-footer bg-success text-white">@EnumExtensions.ConvertToString(selectedProduct.Rating)</div>
                     }
                     else if (selectedProduct.Rating == ProductRating.GOOD_ALTERNATIVE)
                     {
-                        <div class="card-footer bg-warning text-white">@EnumExtensions.convertToString(selectedProduct.Rating)</div>
+                        <div class="card-footer bg-warning text-white">@EnumExtensions.ConvertToString(selectedProduct.Rating)</div>
                     }
                     else
                     {
-                        <div class="card-footer bg-danger text-white">@EnumExtensions.convertToString(selectedProduct.Rating)</div>
+                        <div class="card-footer bg-danger text-white">@EnumExtensions.ConvertToString(selectedProduct.Rating)</div>
                     }
                 </div>
             </div>
