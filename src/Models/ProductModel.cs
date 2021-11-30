@@ -49,7 +49,7 @@ namespace ContosoCrafts.WebSite.Models
         /// Function to get sources in a display format
         /// </summary>
         /// <returns></returns>
-        public string getSources()
+        public string GetSources()
         {
             string toReturn = "";
             for (int i = 0; i < Sources.Count; i++)
