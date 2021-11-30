@@ -30,7 +30,7 @@ namespace ContosoCrafts.WebSite.RatingEnums
         /// </summary>
         /// <param name="rating"></param>
         /// <returns></returns>
-        public static string convertToString(ProductRating rating)
+        public static string ConvertToString(ProductRating rating)
         {
             string str = Enum.GetName(rating);
             str = str.Replace("_", " ");
