@@ -76,7 +76,7 @@ can be edited with CRUD implementation
                                     {
                                         continue;
                                     }
-                                    <option value="@i">@EnumExtensions.convertToString((ProductRating)i)</option>
+                                    <option value="@i">@EnumExtensions.ConvertToString((ProductRating)i)</option>
                                 }
                             }
                         </select>
@@ -96,14 +96,14 @@ can be edited with CRUD implementation
                     </td>
 
                     <td>
-                        @item.getSources()
+                        @item.GetSources()
                     </td>
 
                     <td>
                         @Html.DisplayFor(modelItem => item.Region)
                     </td>
                     <td>
-                        @EnumExtensions.convertToString((item.Rating))
+                        @EnumExtensions.ConvertToString((item.Rating))
                     </td>
                     <td>
                         <div class="truncate">
