@@ -124,6 +124,33 @@ namespace UnitTests.Pages.Update
         }
 
         /// <summary>
+        /// Tests Onpost with invalid title input, model state should be invalid
+        /// and page gets returned without submission.
+        /// </summary>
+        [Test]
+        public void OnPost_InValid_Description_Input_NotValid_Return_Page()
+        {
+            // Arrange
+            PageModel.Product = new ProductModel
+            {
+                Id = "Crab",
+                Image = "data/Fish_img/Crab.bmp",
+                Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.AVOID,
+                Description = "3947508437",
+                Region = "West Coast",
+                Title = "392847#($*#$"
+            };
+
+            // Act
+            var result = PageModel.OnPost() as ActionResult;
+
+            //Reset
+
+            // Assert
+            Assert.AreEqual(false, PageModel.ModelState.IsValid);
+        }
+
+        /// <summary>
         /// Test OnPost function with valid state, which should allow the update
         /// to happen. Done by checking if the model is in valid state, if update
         /// happened, the function should also redirect the user back to
