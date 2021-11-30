@@ -45,6 +45,10 @@ namespace ContosoCrafts.WebSite.Models
         [ListStringLength(MaxStringLength = 75, MinStringLength = 3)]
         public List<string> Sources { get; set; }
 
+        /// <summary>
+        /// Function to get sources in a display format
+        /// </summary>
+        /// <returns></returns>
         public string getSources()
         {
             string toReturn = "";
