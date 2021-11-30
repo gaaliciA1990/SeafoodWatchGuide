@@ -16,6 +16,15 @@ p, h1, ul {
     font-family: 'Nunito', sans-serif;
 }
 
+#header1 {
+    text-align:center;
+}
+
+#region-welcome {
+    text-align:center;
+    padding: 50px;
+}
+
 @media (min-width: 768px) {
     html {
         font-size: 16px;
