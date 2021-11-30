@@ -138,7 +138,7 @@ namespace UnitTests.Pages.Update
                 Rating = ContosoCrafts.WebSite.RatingEnums.ProductRating.AVOID,
                 Description = "3947508437",
                 Region = "West Coast",
-                Title = "392847#($*#$"
+                Title = "Test"
             };
 
             // Act
