@@ -106,7 +106,7 @@ namespace UnitTests.ProductRatingEnum
             // Arrange - not needed
 
             // Act
-            var Result = EnumExtensions.convertToString(ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE);
+            var Result = EnumExtensions.ConvertToString(ContosoCrafts.WebSite.RatingEnums.ProductRating.BEST_CHOICE);
 
             //Reset
 
@@ -124,7 +124,7 @@ namespace UnitTests.ProductRatingEnum
             // Arrange - not needed
 
             // Act
-            var Result = EnumExtensions.convertToString(ContosoCrafts.WebSite.RatingEnums.ProductRating.GOOD_ALTERNATIVE);
+            var Result = EnumExtensions.ConvertToString(ContosoCrafts.WebSite.RatingEnums.ProductRating.GOOD_ALTERNATIVE);
 
             //Reset
 
@@ -142,7 +142,7 @@ namespace UnitTests.ProductRatingEnum
             // Arrange - not needed
 
             // Act
-            var Result = EnumExtensions.convertToString(ContosoCrafts.WebSite.RatingEnums.ProductRating.AVOID);
+            var Result = EnumExtensions.ConvertToString(ContosoCrafts.WebSite.RatingEnums.ProductRating.AVOID);
 
             //Reset
 
