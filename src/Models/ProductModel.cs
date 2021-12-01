@@ -4,8 +4,6 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using ContosoCrafts.WebSite.RatingEnums;
 
-
-
 namespace ContosoCrafts.WebSite.Models
 {
     /// <summary>
